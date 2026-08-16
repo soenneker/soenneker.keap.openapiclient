@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Keap.OpenApiClient.Models
 {
     /// <summary>
-    /// Historical contact counts for this goal
+    /// Historical contact counts for this sequence
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class HistoricalCounts : IAdditionalDataHolder, IParsable

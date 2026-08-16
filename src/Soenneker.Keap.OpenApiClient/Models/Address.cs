@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Keap.OpenApiClient.Models
 {
     /// <summary>
-    /// The user&apos;s address
+    /// The shipping address for the subscription.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Address : IAdditionalDataHolder, IParsable
