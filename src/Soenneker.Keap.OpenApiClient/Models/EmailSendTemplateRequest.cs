@@ -15,7 +15,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Email field of each Contact record to address the email to, such as &apos;Email&apos;, &apos;EmailAddress2&apos;, &apos;EmailAddress3&apos; or &apos;_CustomFieldName&apos;, defaulting to the contact&apos;s primary email</summary>
+        /// <summary>Email field of each Contact record to address the email to, such as &apos;Email&apos;, &apos;EmailAddress2&apos;, &apos;EmailAddress3&apos; or &apos;_CustomFieldName&apos;, defaulting to the contact&apos;s primary email. Values are case-sensitive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AddressField { get; set; }

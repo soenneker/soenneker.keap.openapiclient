@@ -62,7 +62,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
 #endif
         /// <summary>The amount to pay. Must not exceed the current balance of the order. Must be greater than 0 if charging with a payment_method_id</summary>
         public double? PaymentAmount { get; set; }
-        /// <summary>The payment method id to charge immediately against this order. Omit if you want to add a payment record instead.</summary>
+        /// <summary>The payment method id to charge immediately against this order. At least one of payment_method_id or payment_method_type is required. If payment_method_id is provided, payment_method_type is ignored. Omit if you want to add a payment record instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentMethodId { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
 #else
         public string PaymentMethodId { get; set; }
 #endif
-        /// <summary>The manual payment method type for manually recording a payment. Value must match against the list of types defined under your application&apos;s Order Settings. Ignored if payment_method_id is provided.</summary>
+        /// <summary>The manual payment method type for manually recording a payment. At least one of payment_method_id or payment_method_type is required. Ignored if payment_method_id is provided. Value must exactly match one of the Manual Payment Types configured for your application under Ecommerce Settings &gt; Orders (e.g. &apos;Credit Card (Manual)&apos;, &apos;Check&apos;, &apos;Cash&apos;, &apos;Money Order&apos;, &apos;Adjustment&apos;); unrecognized values will be rejected. Add custom types there if the one you need isn&apos;t listed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentMethodType { get; set; }

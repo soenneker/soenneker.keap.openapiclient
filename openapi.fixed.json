@@ -50270,11 +50270,11 @@
           },
           "payment_method_id": {
             "type": "string",
-            "description": "The payment method id to charge immediately against this order. Omit if you want to add a payment record instead."
+            "description": "The payment method id to charge immediately against this order. At least one of payment_method_id or payment_method_type is required. If payment_method_id is provided, payment_method_type is ignored. Omit if you want to add a payment record instead."
           },
           "payment_method_type": {
             "type": "string",
-            "description": "The manual payment method type for manually recording a payment. Value must match against the list of types defined under your application\u0027s Order Settings. Ignored if payment_method_id is provided."
+            "description": "The manual payment method type for manually recording a payment. At least one of payment_method_id or payment_method_type is required. Ignored if payment_method_id is provided. Value must exactly match one of the Manual Payment Types configured for your application under Ecommerce Settings \u003E Orders (e.g. \u0027Credit Card (Manual)\u0027, \u0027Check\u0027, \u0027Cash\u0027, \u0027Money Order\u0027, \u0027Adjustment\u0027); unrecognized values will be rejected. Add custom types there if the one you need isn\u0027t listed."
           },
           "payment_time": {
             "type": "string",
@@ -51613,8 +51613,8 @@
           },
           "address_field": {
             "type": "string",
-            "description": "Email field of each Contact record to address the email to, such as \u0027Email\u0027, \u0027EmailAddress2\u0027, \u0027EmailAddress3\u0027 or \u0027_CustomFieldName\u0027, defaulting to the contact\u0027s primary email",
-            "example": "EMAIL1"
+            "description": "Email field of each Contact record to address the email to, such as \u0027Email\u0027, \u0027EmailAddress2\u0027, \u0027EmailAddress3\u0027 or \u0027_CustomFieldName\u0027, defaulting to the contact\u0027s primary email. Values are case-sensitive.",
+            "example": "Email"
           }
         },
         "description": "Request to send an email to contacts"
@@ -51742,8 +51742,8 @@
           },
           "address_field": {
             "type": "string",
-            "description": "Email field of each Contact record to address the email to, such as \u0027Email\u0027, \u0027EmailAddress2\u0027, \u0027EmailAddress3\u0027 or \u0027_CustomFieldName\u0027, defaulting to the contact\u0027s primary email",
-            "example": "EMAIL1"
+            "description": "Email field of each Contact record to address the email to, such as \u0027Email\u0027, \u0027EmailAddress2\u0027, \u0027EmailAddress3\u0027 or \u0027_CustomFieldName\u0027, defaulting to the contact\u0027s primary email. Values are case-sensitive.",
+            "example": "Email"
           }
         },
         "description": "Use a template to send an email to a list of contacts "
