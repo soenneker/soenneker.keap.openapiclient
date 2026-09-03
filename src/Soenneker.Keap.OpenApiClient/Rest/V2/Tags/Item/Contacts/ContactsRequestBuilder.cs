@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Keap.OpenApiClient.Models;
+using Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Item.Contacts.Count;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -17,6 +18,11 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Item.Contacts
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ContactsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The count property</summary>
+        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Item.Contacts.Count.CountRequestBuilder Count
+        {
+            get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Item.Contacts.Count.CountRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Item.Contacts.ContactsRequestBuilder"/> and sets the default values.
         /// </summary>

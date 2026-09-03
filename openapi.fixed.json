@@ -17184,7 +17184,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Filter to apply, allowed fields are:\n- (String) \u0060id\u0060 - Allowable operators: \u0022==\u0022,\u0022\u003C=\u0022, \u0022\u003C\u0022, \u0022\u003E=\u0022, \u0022\u003E\u0022, \u0022!=\u0022\n- (String) \u0060name\u0060 - Wildcard matching allowed\n- (String) \u0060contact_id\u0060\n- (String) \u0060referral_contact_id\u0060\n- (String) \u0060status\u0060\n- (String) \u0060code\u0060\n- (Custom) Custom field names - Reference by field name (e.g., \u0060tier\u0060, \u0060region\u0060)\n\nYou will need to apply the \u0060==\u0060 operator to check the equality of one of the filters with the\nvalue you want to match, in the encoded form \u0060%3D%3D\u0060. For the filters listed above,\nhere are some examples:\n- \u0060filter=id%3C123\u0060\n- \u0060filter=id%3D%3D123\u0060\n- \u0060filter=name%3D%3DBob\u0060\n- \u0060filter=contact_id%3D%3D567\u0060\n- \u0060filter=contact_id%3D%3D123%3Bcode%3D%3D567\u0060\n\nFor fields which allow wildcard matching, you may use the * wildcard character (or its encoded form %2A)\nfor case-insensitive partial matching on text fields. Example of a valid pattern of wildcard usage:\n- \u0060field==foo*\u0060 finds anything in \u0060field\u0060 that begins with \u0060foo\u0060\n\nCustom Field Filtering:\nCustom fields are referenced by their field name as configured in the system.\nStandard field names take precedence over custom field names.\n\nSupported operators by field type:\n- Text fields and single-value choice fields with text options (dropdown, radio, state): ==, and wildcard support (e.g., \u0060value*\u0060)\n- Numeric fields (including user, month, day of week): ==, \u003C, \u003C=, \u003E, \u003E=\n- Date fields: ==, \u003C, \u003C=, \u003E, \u003E= (ISO 8601 format)\n- Yes/No and drilldown fields: ==\n- Multi-select fields: == (matches if value is present)\n\nExamples of custom field filtering:\n- \u0060filter=tier%3D%3DPlatinum\u0060 - Text field exact match\n- \u0060filter=region%3D%3DWest%2A\u0060 - Text field with wildcard (starts with \u0022West\u0022)\n- \u0060filter=revenue%3E100000\u0060 - Numeric field greater than 100000\n- \u0060filter=join_date%3E%3D2024-01-01\u0060 - Date field on or after Jan 1, 2024\n- \u0060filter=name%3D%3DBob%3Btier%3D%3DGold\u0060 - Combine standard and custom fields\n\nNote: Leading wildcards (e.g., \u0060*value\u0060) are not supported for performance reasons.\nOnly prefix wildcards (e.g., \u0060value*\u0060) are allowed.\n",
+            "description": "Filter to apply, allowed fields are:\n- (String) \u0060id\u0060 - Allowable operators: \u0022==\u0022,\u0022\u003C=\u0022, \u0022\u003C\u0022, \u0022\u003E=\u0022, \u0022\u003E\u0022, \u0022!=\u0022\n- (String) \u0060name\u0060 - Wildcard matching allowed\n- (String) \u0060contact_id\u0060\n- (String) \u0060referral_contact_id\u0060\n- (String) \u0060status\u0060\n- (String) \u0060code\u0060 - Wildcard matching allowed\n- (Custom) Custom field names - Reference by field name (e.g., \u0060tier\u0060, \u0060region\u0060)\n\nYou will need to apply the \u0060==\u0060 operator to check the equality of one of the filters with the\nvalue you want to match, in the encoded form \u0060%3D%3D\u0060. For the filters listed above,\nhere are some examples:\n- \u0060filter=id%3C123\u0060\n- \u0060filter=id%3D%3D123\u0060\n- \u0060filter=name%3D%3DBob\u0060\n- \u0060filter=contact_id%3D%3D567\u0060\n- \u0060filter=contact_id%3D%3D123%3Bcode%3D%3D567\u0060\n\nFor fields which allow wildcard matching, you may use the * wildcard character (or its encoded form %2A)\nfor case-insensitive partial matching on text fields. Example of a valid pattern of wildcard usage:\n- \u0060field==foo*\u0060 finds anything in \u0060field\u0060 that begins with \u0060foo\u0060\n\nCustom Field Filtering:\nCustom fields are referenced by their field name as configured in the system.\nStandard field names take precedence over custom field names.\n\nSupported operators by field type:\n- Text fields and single-value choice fields with text options (dropdown, radio, state): ==, and wildcard support (e.g., \u0060value*\u0060)\n- Numeric fields (including user, month, day of week): ==, \u003C, \u003C=, \u003E, \u003E=\n- Date fields: ==, \u003C, \u003C=, \u003E, \u003E= (ISO 8601 format)\n- Yes/No and drilldown fields: ==\n- Multi-select fields: == (matches if value is present)\n\nExamples of custom field filtering:\n- \u0060filter=tier%3D%3DPlatinum\u0060 - Text field exact match\n- \u0060filter=region%3D%3DWest%2A\u0060 - Text field with wildcard (starts with \u0022West\u0022)\n- \u0060filter=revenue%3E100000\u0060 - Numeric field greater than 100000\n- \u0060filter=join_date%3E%3D2024-01-01\u0060 - Date field on or after Jan 1, 2024\n- \u0060filter=name%3D%3DBob%3Btier%3D%3DGold\u0060 - Combine standard and custom fields\n\nNote: Leading wildcards (e.g., \u0060*value\u0060) are not supported for performance reasons.\nOnly prefix wildcards (e.g., \u0060value*\u0060) are allowed. Any other characters in the value,\nincluding \u0060%\u0060, \u0060_\u0060, and \u0060\\\u0060, are matched literally and are not treated as wildcards.\n",
             "schema": {
               "type": "string"
             }
@@ -39943,6 +39943,127 @@
         }
       }
     },
+    "/rest/v2/tags/{tagId}/contacts/count": {
+      "get": {
+        "tags": [
+          "Tags"
+        ],
+        "summary": "Tag Contact Count",
+        "description": "Returns the total number of contacts associated with the given tag.",
+        "operationId": "CountContactsForTag",
+        "parameters": [
+          {
+            "name": "tagId",
+            "in": "path",
+            "description": "The ID of the tag whose contacts are counted",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter to apply, allowed fields are:\n- (String) \u0060given_name\u0060\n- (String) \u0060family_name\u0060\n- (String) \u0060email\u0060\n- (String) \u0060since_applied_time\u0060\n- (String) \u0060until_applied_time\u0060\n\nYou will need to apply the \u0060==\u0060 operator to check the equality of one of the filters with your searched\nword, in the encoded form \u0060%3D%3D\u0060. If NONE is passed in for \u0060email\u0060, \u0060given_name\u0060, or \u0060family_name\u0060, it\nwill check for the non-existence of that field. For the filters listed above, here are some examples:\n- \u0060filter=given_name%3D%3DJohn\u0060\n- \u0060filter=family_name%3D%3DSmith\u0060\n- \u0060filter=email%3D%3DNONE\u0060\n- \u0060filter=since_applied_time%3D%3D2025-04-16T20:33:02.321Z;until_applied_time%3D%3D2025-08-16T20:33:02.321Z;\u0060\n\nOmit the filter to count every contact associated with the tag.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Method Not Implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagContactCount"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/rest/v2/tags/{tagId}/companies": {
       "get": {
         "tags": [
@@ -57739,6 +57860,18 @@
             "example": "2023-10-01T12:00:00Z"
           }
         }
+      },
+      "TagContactCount": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "description": "Number of Contacts for the Tag matching the active filters.",
+            "format": "int64",
+            "example": 12500
+          }
+        },
+        "description": "The count of Contacts associated with a Tag"
       },
       "ListTaggedCompaniesResponse": {
         "type": "object",
