@@ -172,7 +172,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.AutomationCategory
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.AutomationCategory.AutomationCategoryRequestBuilder.AutomationCategoryRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/rest/v2/automationCategory?ids={ids}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/rest/v2/automationCategory{?ids*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -235,12 +235,16 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.AutomationCategory
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("ids")]
             public long?[]? Ids { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("ids")]
             public long?[] Ids { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

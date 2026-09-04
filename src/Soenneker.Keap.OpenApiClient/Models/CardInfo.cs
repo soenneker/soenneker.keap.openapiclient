@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Keap.OpenApiClient.Models
 {
-    /// <summary>
-    /// If present, it provides additional details for payment methods of payment_method_type CARD.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class CardInfo : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Keap.OpenApiClient.Models
 {
-    /// <summary>
-    /// The company the tag is applied to
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class Company : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>The company&apos;s account ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

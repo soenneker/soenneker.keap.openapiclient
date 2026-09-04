@@ -143,7 +143,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Links.Types.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PATCH, "{+baseurl}/rest/v2/contacts/links/types/{linkTypeId}?update_mask={update_mask}", PathParameters);
+            var requestInfo = new RequestInformation(Method.PATCH, "{+baseurl}/rest/v2/contacts/links/types/{linkTypeId}{?update_mask*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

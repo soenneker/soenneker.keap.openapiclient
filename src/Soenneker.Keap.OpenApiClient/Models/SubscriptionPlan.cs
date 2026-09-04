@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Keap.OpenApiClient.Models
 {
-    /// <summary>
-    /// If the order item is a subscription type, the details of the subscription plan.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class SubscriptionPlan : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>If the subscription plan is active or not.</summary>
         public bool? Active { get; set; }
