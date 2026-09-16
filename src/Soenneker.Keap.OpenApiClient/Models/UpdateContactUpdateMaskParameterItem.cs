@@ -124,10 +124,6 @@ namespace Soenneker.Keap.OpenApiClient.Models
         #pragma warning disable CS1591
         Suffix,
         #pragma warning restore CS1591
-        [EnumMember(Value = "tag_ids")]
-        #pragma warning disable CS1591
-        TagIds,
-        #pragma warning restore CS1591
         [EnumMember(Value = "time_zone")]
         #pragma warning disable CS1591
         TimeZone,

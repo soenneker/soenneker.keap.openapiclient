@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Keap.OpenApiClient.Models;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Categories;
+using Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Contacts;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Item;
 using System.Collections.Generic;
 using System.IO;
@@ -23,6 +24,11 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Tags
         public global::Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Categories.CategoriesRequestBuilder Categories
         {
             get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Categories.CategoriesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The contacts property</summary>
+        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Contacts.ContactsRequestBuilder Contacts
+        {
+            get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Contacts.ContactsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Keap.OpenApiClient.rest.v2.tags.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
