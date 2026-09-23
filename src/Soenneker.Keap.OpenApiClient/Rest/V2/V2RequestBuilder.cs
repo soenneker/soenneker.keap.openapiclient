@@ -13,7 +13,6 @@ using Soenneker.Keap.OpenApiClient.Rest.V2.ContactsLink;
 using Soenneker.Keap.OpenApiClient.Rest.V2.ContactsMerge;
 using Soenneker.Keap.OpenApiClient.Rest.V2.ContactsUnlink;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Discounts;
-using Soenneker.Keap.OpenApiClient.Rest.V2.EasyAutomations;
 using Soenneker.Keap.OpenApiClient.Rest.V2.EmailAddresses;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Emails;
 using Soenneker.Keap.OpenApiClient.Rest.V2.EmailsBatchAdd;
@@ -111,11 +110,6 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2
         public global::Soenneker.Keap.OpenApiClient.Rest.V2.Discounts.DiscountsRequestBuilder Discounts
         {
             get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Discounts.DiscountsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The easyAutomations property</summary>
-        public global::Soenneker.Keap.OpenApiClient.Rest.V2.EasyAutomations.EasyAutomationsRequestBuilder EasyAutomations
-        {
-            get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.EasyAutomations.EasyAutomationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The emailAddresses property</summary>
         public global::Soenneker.Keap.OpenApiClient.Rest.V2.EmailAddresses.EmailAddressesRequestBuilder EmailAddresses
