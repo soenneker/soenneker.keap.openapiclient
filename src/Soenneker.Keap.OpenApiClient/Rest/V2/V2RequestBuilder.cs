@@ -40,6 +40,7 @@ using Soenneker.Keap.OpenApiClient.Rest.V2.Settings;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Shipping;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Subscriptions;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Tags;
+using Soenneker.Keap.OpenApiClient.Rest.V2.TaskAppointments;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Tasks;
 using Soenneker.Keap.OpenApiClient.Rest.V2.UserGroups;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Users;
@@ -245,6 +246,11 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2
         public global::Soenneker.Keap.OpenApiClient.Rest.V2.Tags.TagsRequestBuilder Tags
         {
             get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Tags.TagsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The taskAppointments property</summary>
+        public global::Soenneker.Keap.OpenApiClient.Rest.V2.TaskAppointments.TaskAppointmentsRequestBuilder TaskAppointments
+        {
+            get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.TaskAppointments.TaskAppointmentsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tasks property</summary>
         public global::Soenneker.Keap.OpenApiClient.Rest.V2.Tasks.TasksRequestBuilder Tasks
