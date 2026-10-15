@@ -24,6 +24,14 @@ namespace Soenneker.Keap.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>The discount details. Used only for discount item types; ignored for every other type. When omitted, discount_method defaults to AMOUNT and amount to 0.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Keap.OpenApiClient.Models.Discount? Discount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Keap.OpenApiClient.Models.Discount Discount { get; set; }
+#endif
         /// <summary>The type of this order item. Will default to [PRODUCT] if omitted.</summary>
         public global::Soenneker.Keap.OpenApiClient.Models.CreateOrderItemRequestItemType? ItemType { get; set; }
         /// <summary>The name of the order item. Must not be whitespace. If not specified, the product name will be used.</summary>
@@ -97,6 +105,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             {
                 { "cost_per_unit", n => { CostPerUnit = n.GetDoubleValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.Discount>(global::Soenneker.Keap.OpenApiClient.Models.Discount.CreateFromDiscriminatorValue); } },
                 { "item_type", n => { ItemType = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CreateOrderItemRequestItemType>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
@@ -116,6 +125,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("cost_per_unit", CostPerUnit);
             writer.WriteStringValue("description", Description);
+            writer.WriteObjectValue<global::Soenneker.Keap.OpenApiClient.Models.Discount>("discount", Discount);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CreateOrderItemRequestItemType>("item_type", ItemType);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("notes", Notes);

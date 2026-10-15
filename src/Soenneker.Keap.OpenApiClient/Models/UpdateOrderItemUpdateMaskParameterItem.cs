@@ -44,5 +44,9 @@ namespace Soenneker.Keap.OpenApiClient.Models
         #pragma warning disable CS1591
         SubscriptionPlanDescription,
         #pragma warning restore CS1591
+        [EnumMember(Value = "discount")]
+        #pragma warning disable CS1591
+        Discount,
+        #pragma warning restore CS1591
     }
 }

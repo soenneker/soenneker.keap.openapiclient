@@ -192,7 +192,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>The total amount of the order.</summary>
+        /// <summary>The full amount of the order (the sum of all order items, including any discounts, taxes and shipping). This value does not change as payments are made or as payment plan installments come due. The remaining balance of the order can be calculated as total - total_paid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? Total { get; set; }
@@ -200,7 +200,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
 #else
         public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue Total { get; set; }
 #endif
-        /// <summary>The total amount of the order that is due. This is not current balance.</summary>
+        /// <summary>The portion of the order total that has come due, before any payments are subtracted. This is not the current balance. Without a payment plan, this is equal to total. With a payment plan, this is the sum of the payment plan installments whose due date has passed (never more than total), as of the last time the order amounts were recalculated. The amount currently owed (past due) can be calculated as total_due - total_paid. Omitted when zero.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? TotalDue { get; set; }
@@ -208,7 +208,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
 #else
         public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue TotalDue { get; set; }
 #endif
-        /// <summary>The total amount paid to the order.</summary>
+        /// <summary>The sum of all payments applied to the order, regardless of whether the order has a payment plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? TotalPaid { get; set; }
