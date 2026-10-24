@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.Referrals
 {
     /// <summary>
-    /// Builds and executes requests for operations under \rest\v2\affiliates\{affiliate-id}\referrals
+    /// Builds and executes requests for operations under \rest\v2\affiliates\{id}\referrals
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReferralsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.Referrals
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReferralsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliate%2Did}/referrals{?filter*,order_by*,page_size*,page_token*}", pathParameters)
+        public ReferralsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}/referrals{?filter*,order_by*,page_size*,page_token*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.Referrals
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReferralsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliate%2Did}/referrals{?filter*,order_by*,page_size*,page_token*}", rawUrl)
+        public ReferralsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}/referrals{?filter*,order_by*,page_size*,page_token*}", rawUrl)
         {
         }
         /// <summary>

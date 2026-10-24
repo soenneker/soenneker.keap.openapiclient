@@ -9,8 +9,8 @@ using Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Model;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Redirects;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Summaries;
-using Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdAssignToProgram;
+using Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdRemoveFromProgram;
 using System.Collections.Generic;
 using System.IO;
@@ -47,14 +47,14 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates
         }
         /// <summary>Gets an item from the Soenneker.Keap.OpenApiClient.rest.v2.affiliates.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder"/></returns>
-        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder"/></returns>
+        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("affiliate%2Did", position);
-                return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -191,16 +191,6 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates
             return requestInfo;
         }
         /// <summary>
-        /// Builds and executes requests for operations under \rest\v2\affiliates\{affiliateId}:commissions
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder"/></returns>
-        /// <param name="affiliateId">The path parameter: affiliateId</param>
-        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder WithAffiliateIdCommissions(string affiliateId)
-        {
-            if(string.IsNullOrEmpty(affiliateId)) throw new ArgumentNullException(nameof(affiliateId));
-            return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder(PathParameters, RequestAdapter, affiliateId);
-        }
-        /// <summary>
         /// Builds and executes requests for operations under \rest\v2\affiliates\{id}:assignToProgram
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdAssignToProgram.WithIdAssignToProgramRequestBuilder"/></returns>
@@ -209,6 +199,16 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates
         {
             if(string.IsNullOrEmpty(id)) throw new ArgumentNullException(nameof(id));
             return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdAssignToProgram.WithIdAssignToProgramRequestBuilder(PathParameters, RequestAdapter, id);
+        }
+        /// <summary>
+        /// Builds and executes requests for operations under \rest\v2\affiliates\{id}:commissions
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder"/></returns>
+        /// <param name="id">The path parameter: id</param>
+        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder WithIdCommissions(string id)
+        {
+            if(string.IsNullOrEmpty(id)) throw new ArgumentNullException(nameof(id));
+            return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder(PathParameters, RequestAdapter, id);
         }
         /// <summary>
         /// Builds and executes requests for operations under \rest\v2\affiliates\{id}:removeFromProgram

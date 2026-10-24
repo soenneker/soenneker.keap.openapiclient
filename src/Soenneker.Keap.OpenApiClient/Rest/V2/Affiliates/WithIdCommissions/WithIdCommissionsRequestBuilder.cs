@@ -9,30 +9,30 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions
+namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \rest\v2\affiliates\{affiliateId}:commissions
+    /// Builds and executes requests for operations under \rest\v2\affiliates\{id}:commissions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WithAffiliateIdCommissionsRequestBuilder : BaseRequestBuilder
+    public partial class WithIdCommissionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder"/> and sets the default values.
         /// </summary>
-        /// <param name="affiliateId">The path parameter: affiliateId</param>
+        /// <param name="id">The path parameter: id</param>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithAffiliateIdCommissionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter, string affiliateId = "") : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliateId}:commissions{?filter*,order_by*,page_size*,page_token*}", pathParameters)
+        public WithIdCommissionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter, string id = "") : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}:commissions{?filter*,order_by*,page_size*,page_token*}", pathParameters)
         {
-            if (!string.IsNullOrWhiteSpace(affiliateId)) PathParameters.Add("affiliateId", affiliateId);
+            if (!string.IsNullOrWhiteSpace(id)) PathParameters.Add("id", id);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithAffiliateIdCommissionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliateId}:commissions{?filter*,order_by*,page_size*,page_token*}", rawUrl)
+        public WithIdCommissionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}:commissions{?filter*,order_by*,page_size*,page_token*}", rawUrl)
         {
         }
         /// <summary>
@@ -51,11 +51,11 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommiss
         /// <exception cref="global::Soenneker.Keap.OpenApiClient.Models.Error">When receiving a 501 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Keap.OpenApiClient.Models.ListAffiliateCommissionsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder.WithAffiliateIdCommissionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Keap.OpenApiClient.Models.ListAffiliateCommissionsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder.WithIdCommissionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Keap.OpenApiClient.Models.ListAffiliateCommissionsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder.WithAffiliateIdCommissionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Keap.OpenApiClient.Models.ListAffiliateCommissionsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder.WithIdCommissionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -79,11 +79,11 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommiss
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder.WithAffiliateIdCommissionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder.WithIdCommissionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder.WithAffiliateIdCommissionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder.WithIdCommissionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -94,17 +94,17 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommiss
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithAffiliateIdCommissions.WithAffiliateIdCommissionsRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.WithIdCommissions.WithIdCommissionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Retrieve a list of Affiliate&apos;s Commissions
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithAffiliateIdCommissionsRequestBuilderGetQueryParameters 
+        public partial class WithIdCommissionsRequestBuilderGetQueryParameters 
         {
             /// <summary>Filter to apply, allowed fields are:- (String) `since_time`- (String) `until_time`You will need to apply the `==` operator to check the equality of one of the filters with your searchedword, in the encoded form `%3D%3D`. For the filters listed above, here are some examples:- `filter=since_time%3D%3D2024-05-21T23:00:00Z%3Buntil_time%3D%3D2025-05-21T23:00:00Z`- `filter=until_time%3D%3D2025-05-21T23:00:00Z`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.Payments
 {
     /// <summary>
-    /// Builds and executes requests for operations under \rest\v2\affiliates\{affiliate-id}\payments
+    /// Builds and executes requests for operations under \rest\v2\affiliates\{id}\payments
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.Payments
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PaymentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliate%2Did}/payments{?filter*,order_by*,page_size*,page_token*}", pathParameters)
+        public PaymentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}/payments{?filter*,order_by*,page_size*,page_token*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.Payments
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PaymentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliate%2Did}/payments{?filter*,order_by*,page_size*,page_token*}", rawUrl)
+        public PaymentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}/payments{?filter*,order_by*,page_size*,page_token*}", rawUrl)
         {
         }
         /// <summary>

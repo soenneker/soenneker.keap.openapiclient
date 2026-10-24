@@ -43,10 +43,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ShippingMethodSettingsProperty? Settings { get; set; }
+        public UntypedNode? Settings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ShippingMethodSettingsProperty Settings { get; set; }
+        public UntypedNode Settings { get; set; }
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,7 +93,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "international", n => { International = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.ShippingMethodSettingsProperty>(global::Soenneker.Keap.OpenApiClient.Models.ShippingMethodSettingsProperty.CreateFromDiscriminatorValue); } },
+                { "settings", n => { Settings = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -109,7 +109,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("international", International);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Keap.OpenApiClient.Models.ShippingMethodSettingsProperty>("settings", Settings);
+            writer.WriteObjectValue<UntypedNode>("settings", Settings);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

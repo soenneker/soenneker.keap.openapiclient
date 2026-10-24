@@ -7,7 +7,6 @@ using Soenneker.Keap.OpenApiClient.Models;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Item;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Links;
 using Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Model;
-using Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Tags;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -26,15 +25,15 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Contacts
         {
             get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Links.LinksRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The minus property</summary>
+        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Minus_RequestBuilder Minus
+        {
+            get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Minus_RequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The model property</summary>
         public global::Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Model.ModelRequestBuilder Model
         {
             get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Model.ModelRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The tags property</summary>
-        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Tags.TagsRequestBuilder Tags
-        {
-            get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Contacts.Tags.TagsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Keap.OpenApiClient.rest.v2.contacts.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>

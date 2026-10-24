@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Contacts
 {
     /// <summary>
-    /// Builds and executes requests for operations under \rest\v2\tags\contacts
+    /// Builds and executes requests for operations under \rest\v2\tags\-\contacts
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ContactsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Contacts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ContactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/tags/contacts{?filter*,order_by*,page_size*,page_token*}", pathParameters)
+        public ContactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/tags/-/contacts{?filter*,order_by*,page_size*,page_token*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Tags.Contacts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ContactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/tags/contacts{?filter*,order_by*,page_size*,page_token*}", rawUrl)
+        public ContactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/tags/-/contacts{?filter*,order_by*,page_size*,page_token*}", rawUrl)
         {
         }
         /// <summary>

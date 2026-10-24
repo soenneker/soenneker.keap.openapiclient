@@ -46,14 +46,14 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.CommissionPrograms
         }
         /// <summary>Gets an item from the Soenneker.Keap.OpenApiClient.rest.v2.affiliates.commissionPrograms.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.CommissionPrograms.Item.WithCommissionProgramItemRequestBuilder"/></returns>
-        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.CommissionPrograms.Item.WithCommissionProgramItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.CommissionPrograms.Item.WithCommissionItemRequestBuilder"/></returns>
+        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.CommissionPrograms.Item.WithCommissionItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("commissionProgramId", position);
-                return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.CommissionPrograms.Item.WithCommissionProgramItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("commissionId", position);
+                return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.CommissionPrograms.Item.WithCommissionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -15,10 +15,10 @@ using System;
 namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \rest\v2\affiliates\{affiliate-id}
+    /// Builds and executes requests for operations under \rest\v2\affiliates\{id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AffiliateItemRequestBuilder : BaseRequestBuilder
+    public partial class AffiliatesItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The commissionTotal property</summary>
         public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.CommissionTotal.CommissionTotalRequestBuilder CommissionTotal
@@ -36,19 +36,19 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item
             get => new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.Referrals.ReferralsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AffiliateItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliate%2Did}{?update_mask*}", pathParameters)
+        public AffiliatesItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}{?update_mask*}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AffiliateItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliate%2Did}{?update_mask*}", rawUrl)
+        public AffiliatesItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}{?update_mask*}", rawUrl)
         {
         }
         /// <summary>
@@ -141,11 +141,11 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item
         /// <exception cref="global::Soenneker.Keap.OpenApiClient.Models.Error">When receiving a 501 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Keap.OpenApiClient.Models.RestAffiliate?> PatchAsync(global::Soenneker.Keap.OpenApiClient.Models.UpdateAffiliateRequest body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder.AffiliateItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Keap.OpenApiClient.Models.RestAffiliate?> PatchAsync(global::Soenneker.Keap.OpenApiClient.Models.UpdateAffiliateRequest body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder.AffiliatesItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Keap.OpenApiClient.Models.RestAffiliate> PatchAsync(global::Soenneker.Keap.OpenApiClient.Models.UpdateAffiliateRequest body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder.AffiliateItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Keap.OpenApiClient.Models.RestAffiliate> PatchAsync(global::Soenneker.Keap.OpenApiClient.Models.UpdateAffiliateRequest body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder.AffiliatesItemRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -209,11 +209,11 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Keap.OpenApiClient.Models.UpdateAffiliateRequest body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder.AffiliateItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Keap.OpenApiClient.Models.UpdateAffiliateRequest body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder.AffiliatesItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Keap.OpenApiClient.Models.UpdateAffiliateRequest body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder.AffiliateItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Keap.OpenApiClient.Models.UpdateAffiliateRequest body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder.AffiliatesItemRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -226,17 +226,17 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliateItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.AffiliatesItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Updates a single Affiliate
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class AffiliateItemRequestBuilderPatchQueryParameters 
+        public partial class AffiliatesItemRequestBuilderPatchQueryParameters 
         {
             /// <summary>An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

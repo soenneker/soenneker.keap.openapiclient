@@ -17,10 +17,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The value of the custom field. Text custom field values have a maximum length of 65535 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValueContent? Content { get; set; }
+        public UntypedNode? Content { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValueContent Content { get; set; }
+        public UntypedNode Content { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "content", n => { Content = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValueContent>(global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValueContent.CreateFromDiscriminatorValue); } },
+                { "content", n => { Content = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValueContent>("content", Content);
+            writer.WriteObjectValue<UntypedNode>("content", Content);
             writer.WriteStringValue("id", Id);
             writer.WriteAdditionalData(AdditionalData);
         }

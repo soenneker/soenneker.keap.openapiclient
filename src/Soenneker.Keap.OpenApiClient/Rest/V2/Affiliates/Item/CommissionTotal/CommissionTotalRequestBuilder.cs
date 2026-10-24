@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.CommissionTotal
 {
     /// <summary>
-    /// Builds and executes requests for operations under \rest\v2\affiliates\{affiliate-id}\commissionTotal
+    /// Builds and executes requests for operations under \rest\v2\affiliates\{id}\commissionTotal
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CommissionTotalRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.CommissionTotal
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CommissionTotalRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliate%2Did}/commissionTotal", pathParameters)
+        public CommissionTotalRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}/commissionTotal", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Affiliates.Item.CommissionTotal
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CommissionTotalRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{affiliate%2Did}/commissionTotal", rawUrl)
+        public CommissionTotalRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/v2/affiliates/{id}/commissionTotal", rawUrl)
         {
         }
         /// <summary>

@@ -117,7 +117,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>Task priority</summary>
         public global::Soenneker.Keap.OpenApiClient.Models.UpdateTaskResponsePriority? Priority { get; set; }
         /// <summary>Reminder minutes before due.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.UpdateTaskResponseRemindTimeMins? RemindTimeMins { get; set; }
+        public int? RemindTimeMins { get; set; }
         /// <summary>Task title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -174,7 +174,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "modification_time", n => { ModificationTime = n.GetStringValue(); } },
                 { "opportunity_id", n => { OpportunityId = n.GetStringValue(); } },
                 { "priority", n => { Priority = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateTaskResponsePriority>(); } },
-                { "remind_time_mins", n => { RemindTimeMins = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateTaskResponseRemindTimeMins>(); } },
+                { "remind_time_mins", n => { RemindTimeMins = n.GetIntValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -201,7 +201,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("modification_time", ModificationTime);
             writer.WriteStringValue("opportunity_id", OpportunityId);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateTaskResponsePriority>("priority", Priority);
-            writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateTaskResponseRemindTimeMins>("remind_time_mins", RemindTimeMins);
+            writer.WriteIntValue("remind_time_mins", RemindTimeMins);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
