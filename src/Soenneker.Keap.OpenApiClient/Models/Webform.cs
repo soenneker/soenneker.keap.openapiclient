@@ -11,82 +11,123 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Webform : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("custom_slug") is { } nullNodeCustomSlug && nullNodeCustomSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomSlug = null;
+            if (parseNode.GetChildNode("duplicate_check_option") is { } nullNodeDuplicateCheckOption && nullNodeDuplicateCheckOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuplicateCheckOption = null;
+            if (parseNode.GetChildNode("exit_option") is { } nullNodeExitOption && nullNodeExitOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExitOption = null;
+            if (parseNode.GetChildNode("funnel_id") is { } nullNodeFunnelId && nullNodeFunnelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunnelId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pretty_webform_url") is { } nullNodePrettyWebformUrl && nullNodePrettyWebformUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrettyWebformUrl = null;
+            if (parseNode.GetChildNode("thank_you_page_url") is { } nullNodeThankYouPageUrl && nullNodeThankYouPageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThankYouPageUrl = null;
+            if (parseNode.GetChildNode("update_time") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
+            if (parseNode.GetChildNode("webform_type") is { } nullNodeWebformType && nullNodeWebformType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebformType = null;
+            if (parseNode.GetChildNode("webform_url") is { } nullNodeWebformUrl && nullNodeWebformUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebformUrl = null;
+            if (parseNode.GetChildNode("xid") is { } nullNodeXid && nullNodeXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Xid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When the webform was created</summary>
-        public DateTimeOffset? CreateTime { get; set; }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>The custom slug of the webform. Used in pretty webform URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomSlug { get; set; }
+        public string? CustomSlug { get => _explicitNullValueCustomSlug; set { _explicitNullValueCustomSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_slug"); else _explicitNullProperties?.Remove("custom_slug"); } }
+        private string? _explicitNullValueCustomSlug = default!;
 #nullable restore
 #else
-        public string CustomSlug { get; set; }
+        public string CustomSlug { get => _explicitNullValueCustomSlug; set { _explicitNullValueCustomSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_slug"); else _explicitNullProperties?.Remove("custom_slug"); } }
+        private string _explicitNullValueCustomSlug = default!;
 #endif
         /// <summary>The option that determines if the lead submitted through the form is a duplicate or not. If it&apos;s a duplicate, then the lead will be merged with the existing contact record</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.WebformDuplicateCheckOption? DuplicateCheckOption { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.WebformDuplicateCheckOption? DuplicateCheckOption { get => _explicitNullValueDuplicateCheckOption; set { _explicitNullValueDuplicateCheckOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicate_check_option"); else _explicitNullProperties?.Remove("duplicate_check_option"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.WebformDuplicateCheckOption? _explicitNullValueDuplicateCheckOption = default!;
         /// <summary>The option that determines what happens after the form is submitted</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.WebformExitOption? ExitOption { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.WebformExitOption? ExitOption { get => _explicitNullValueExitOption; set { _explicitNullValueExitOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exit_option"); else _explicitNullProperties?.Remove("exit_option"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.WebformExitOption? _explicitNullValueExitOption = default!;
         /// <summary>The id of the funnel this webform belongs to, if any</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FunnelId { get; set; }
+        public string? FunnelId { get => _explicitNullValueFunnelId; set { _explicitNullValueFunnelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funnel_id"); else _explicitNullProperties?.Remove("funnel_id"); } }
+        private string? _explicitNullValueFunnelId = default!;
 #nullable restore
 #else
-        public string FunnelId { get; set; }
+        public string FunnelId { get => _explicitNullValueFunnelId; set { _explicitNullValueFunnelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funnel_id"); else _explicitNullProperties?.Remove("funnel_id"); } }
+        private string _explicitNullValueFunnelId = default!;
 #endif
         /// <summary>The unique identifier for this webform</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The name of this webform</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The URL for this webform that uses the custom slug to identify it</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrettyWebformUrl { get; set; }
+        public string? PrettyWebformUrl { get => _explicitNullValuePrettyWebformUrl; set { _explicitNullValuePrettyWebformUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pretty_webform_url"); else _explicitNullProperties?.Remove("pretty_webform_url"); } }
+        private string? _explicitNullValuePrettyWebformUrl = default!;
 #nullable restore
 #else
-        public string PrettyWebformUrl { get; set; }
+        public string PrettyWebformUrl { get => _explicitNullValuePrettyWebformUrl; set { _explicitNullValuePrettyWebformUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pretty_webform_url"); else _explicitNullProperties?.Remove("pretty_webform_url"); } }
+        private string _explicitNullValuePrettyWebformUrl = default!;
 #endif
         /// <summary>The URL of the thank you page for this webform</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThankYouPageUrl { get; set; }
+        public string? ThankYouPageUrl { get => _explicitNullValueThankYouPageUrl; set { _explicitNullValueThankYouPageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thank_you_page_url"); else _explicitNullProperties?.Remove("thank_you_page_url"); } }
+        private string? _explicitNullValueThankYouPageUrl = default!;
 #nullable restore
 #else
-        public string ThankYouPageUrl { get; set; }
+        public string ThankYouPageUrl { get => _explicitNullValueThankYouPageUrl; set { _explicitNullValueThankYouPageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thank_you_page_url"); else _explicitNullProperties?.Remove("thank_you_page_url"); } }
+        private string _explicitNullValueThankYouPageUrl = default!;
 #endif
         /// <summary>When the webform was last updated</summary>
-        public DateTimeOffset? UpdateTime { get; set; }
+        public DateTimeOffset? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
+        private DateTimeOffset? _explicitNullValueUpdateTime = default!;
         /// <summary>The type of webform this is</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.WebformWebformType? WebformType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.WebformWebformType? WebformType { get => _explicitNullValueWebformType; set { _explicitNullValueWebformType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webform_type"); else _explicitNullProperties?.Remove("webform_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.WebformWebformType? _explicitNullValueWebformType = default!;
         /// <summary>The URL for this webform that uses the xid to identify it</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebformUrl { get; set; }
+        public string? WebformUrl { get => _explicitNullValueWebformUrl; set { _explicitNullValueWebformUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webform_url"); else _explicitNullProperties?.Remove("webform_url"); } }
+        private string? _explicitNullValueWebformUrl = default!;
 #nullable restore
 #else
-        public string WebformUrl { get; set; }
+        public string WebformUrl { get => _explicitNullValueWebformUrl; set { _explicitNullValueWebformUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webform_url"); else _explicitNullProperties?.Remove("webform_url"); } }
+        private string _explicitNullValueWebformUrl = default!;
 #endif
         /// <summary>The public unique identifier for this webform, used in webform URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Xid { get; set; }
+        public string? Xid { get => _explicitNullValueXid; set { _explicitNullValueXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("xid"); else _explicitNullProperties?.Remove("xid"); } }
+        private string? _explicitNullValueXid = default!;
 #nullable restore
 #else
-        public string Xid { get; set; }
+        public string Xid { get => _explicitNullValueXid; set { _explicitNullValueXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("xid"); else _explicitNullProperties?.Remove("xid"); } }
+        private string _explicitNullValueXid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.Webform"/> and sets the default values.
@@ -103,7 +144,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.Webform CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.Webform();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.Webform(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +189,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.WebformWebformType>("webform_type", WebformType);
             writer.WriteStringValue("webform_url", WebformUrl);
             writer.WriteStringValue("xid", Xid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

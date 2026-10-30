@@ -12,124 +12,182 @@ namespace Soenneker.Keap.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateOrderRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("due_time") is { } nullNodeDueTime && nullNodeDueTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueTime = null;
+            if (parseNode.GetChildNode("external_create_time") is { } nullNodeExternalCreateTime && nullNodeExternalCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalCreateTime = null;
+            if (parseNode.GetChildNode("external_create_user") is { } nullNodeExternalCreateUser && nullNodeExternalCreateUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalCreateUser = null;
+            if (parseNode.GetChildNode("external_update_time") is { } nullNodeExternalUpdateTime && nullNodeExternalUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUpdateTime = null;
+            if (parseNode.GetChildNode("invoice_number") is { } nullNodeInvoiceNumber && nullNodeInvoiceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceNumber = null;
+            if (parseNode.GetChildNode("lead_affiliate_id") is { } nullNodeLeadAffiliateId && nullNodeLeadAffiliateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadAffiliateId = null;
+            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("order_time") is { } nullNodeOrderTime && nullNodeOrderTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderTime = null;
+            if (parseNode.GetChildNode("order_title") is { } nullNodeOrderTitle && nullNodeOrderTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderTitle = null;
+            if (parseNode.GetChildNode("order_type") is { } nullNodeOrderType && nullNodeOrderType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderType = null;
+            if (parseNode.GetChildNode("payment_plan") is { } nullNodePaymentPlan && nullNodePaymentPlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentPlan = null;
+            if (parseNode.GetChildNode("promo_codes") is { } nullNodePromoCodes && nullNodePromoCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoCodes = null;
+            if (parseNode.GetChildNode("sales_affiliate_id") is { } nullNodeSalesAffiliateId && nullNodeSalesAffiliateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SalesAffiliateId = null;
+            if (parseNode.GetChildNode("sent_time") is { } nullNodeSentTime && nullNodeSentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SentTime = null;
+            if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+            if (parseNode.GetChildNode("terms") is { } nullNodeTerms && nullNodeTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Terms = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the contact for this order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get; set; }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get; set; }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>List of custom field values to apply to this order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>? CustomFields { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue> CustomFields { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>The date and time the invoice is due. In ISO-8601 format (e.g. 2024-05-21T23:00:00Z)</summary>
-        public DateTimeOffset? DueTime { get; set; }
+        public DateTimeOffset? DueTime { get => _explicitNullValueDueTime; set { _explicitNullValueDueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_time"); else _explicitNullProperties?.Remove("due_time"); } }
+        private DateTimeOffset? _explicitNullValueDueTime = default!;
         /// <summary>The date and time the order was created in the external system. In ISO-8601 format (e.g. 2024-05-21T23:00:00Z)</summary>
-        public DateTimeOffset? ExternalCreateTime { get; set; }
+        public DateTimeOffset? ExternalCreateTime { get => _explicitNullValueExternalCreateTime; set { _explicitNullValueExternalCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_create_time"); else _explicitNullProperties?.Remove("external_create_time"); } }
+        private DateTimeOffset? _explicitNullValueExternalCreateTime = default!;
         /// <summary>The external system user that created this order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalCreateUser { get; set; }
+        public string? ExternalCreateUser { get => _explicitNullValueExternalCreateUser; set { _explicitNullValueExternalCreateUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_create_user"); else _explicitNullProperties?.Remove("external_create_user"); } }
+        private string? _explicitNullValueExternalCreateUser = default!;
 #nullable restore
 #else
-        public string ExternalCreateUser { get; set; }
+        public string ExternalCreateUser { get => _explicitNullValueExternalCreateUser; set { _explicitNullValueExternalCreateUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_create_user"); else _explicitNullProperties?.Remove("external_create_user"); } }
+        private string _explicitNullValueExternalCreateUser = default!;
 #endif
         /// <summary>The date and time the order was last updated in the external system. In ISO-8601 format (e.g. 2024-05-21T23:00:00Z)</summary>
-        public DateTimeOffset? ExternalUpdateTime { get; set; }
+        public DateTimeOffset? ExternalUpdateTime { get => _explicitNullValueExternalUpdateTime; set { _explicitNullValueExternalUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_update_time"); else _explicitNullProperties?.Remove("external_update_time"); } }
+        private DateTimeOffset? _explicitNullValueExternalUpdateTime = default!;
         /// <summary>Invoice number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceNumber { get; set; }
+        public string? InvoiceNumber { get => _explicitNullValueInvoiceNumber; set { _explicitNullValueInvoiceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_number"); else _explicitNullProperties?.Remove("invoice_number"); } }
+        private string? _explicitNullValueInvoiceNumber = default!;
 #nullable restore
 #else
-        public string InvoiceNumber { get; set; }
+        public string InvoiceNumber { get => _explicitNullValueInvoiceNumber; set { _explicitNullValueInvoiceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_number"); else _explicitNullProperties?.Remove("invoice_number"); } }
+        private string _explicitNullValueInvoiceNumber = default!;
 #endif
         /// <summary>Lead affiliate ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadAffiliateId { get; set; }
+        public string? LeadAffiliateId { get => _explicitNullValueLeadAffiliateId; set { _explicitNullValueLeadAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_affiliate_id"); else _explicitNullProperties?.Remove("lead_affiliate_id"); } }
+        private string? _explicitNullValueLeadAffiliateId = default!;
 #nullable restore
 #else
-        public string LeadAffiliateId { get; set; }
+        public string LeadAffiliateId { get => _explicitNullValueLeadAffiliateId; set { _explicitNullValueLeadAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_affiliate_id"); else _explicitNullProperties?.Remove("lead_affiliate_id"); } }
+        private string _explicitNullValueLeadAffiliateId = default!;
 #endif
         /// <summary>Internal notes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get; set; }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get; set; }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>The date and time of the order. In ISO-8601 format (e.g. 2024-05-21T23:00:00Z)</summary>
-        public DateTimeOffset? OrderTime { get; set; }
+        public DateTimeOffset? OrderTime { get => _explicitNullValueOrderTime; set { _explicitNullValueOrderTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_time"); else _explicitNullProperties?.Remove("order_time"); } }
+        private DateTimeOffset? _explicitNullValueOrderTime = default!;
         /// <summary>Title for the order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderTitle { get; set; }
+        public string? OrderTitle { get => _explicitNullValueOrderTitle; set { _explicitNullValueOrderTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_title"); else _explicitNullProperties?.Remove("order_title"); } }
+        private string? _explicitNullValueOrderTitle = default!;
 #nullable restore
 #else
-        public string OrderTitle { get; set; }
+        public string OrderTitle { get => _explicitNullValueOrderTitle; set { _explicitNullValueOrderTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_title"); else _explicitNullProperties?.Remove("order_title"); } }
+        private string _explicitNullValueOrderTitle = default!;
 #endif
         /// <summary>The order type.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.UpdateOrderRequestOrderType? OrderType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.UpdateOrderRequestOrderType? OrderType { get => _explicitNullValueOrderType; set { _explicitNullValueOrderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_type"); else _explicitNullProperties?.Remove("order_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.UpdateOrderRequestOrderType? _explicitNullValueOrderType = default!;
         /// <summary>Payment plan details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.UpdatedPaymentPlan? PaymentPlan { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.UpdatedPaymentPlan? PaymentPlan { get => _explicitNullValuePaymentPlan; set { _explicitNullValuePaymentPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_plan"); else _explicitNullProperties?.Remove("payment_plan"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.UpdatedPaymentPlan? _explicitNullValuePaymentPlan = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.UpdatedPaymentPlan PaymentPlan { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.UpdatedPaymentPlan PaymentPlan { get => _explicitNullValuePaymentPlan; set { _explicitNullValuePaymentPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_plan"); else _explicitNullProperties?.Remove("payment_plan"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.UpdatedPaymentPlan _explicitNullValuePaymentPlan = default!;
 #endif
         /// <summary>Uses multiple strings as promo codes. The corresponding discount will be applied to the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PromoCodes { get; set; }
+        public List<string>? PromoCodes { get => _explicitNullValuePromoCodes; set { _explicitNullValuePromoCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_codes"); else _explicitNullProperties?.Remove("promo_codes"); } }
+        private List<string>? _explicitNullValuePromoCodes = default!;
 #nullable restore
 #else
-        public List<string> PromoCodes { get; set; }
+        public List<string> PromoCodes { get => _explicitNullValuePromoCodes; set { _explicitNullValuePromoCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_codes"); else _explicitNullProperties?.Remove("promo_codes"); } }
+        private List<string> _explicitNullValuePromoCodes = default!;
 #endif
         /// <summary>Sales affiliate ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SalesAffiliateId { get; set; }
+        public string? SalesAffiliateId { get => _explicitNullValueSalesAffiliateId; set { _explicitNullValueSalesAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sales_affiliate_id"); else _explicitNullProperties?.Remove("sales_affiliate_id"); } }
+        private string? _explicitNullValueSalesAffiliateId = default!;
 #nullable restore
 #else
-        public string SalesAffiliateId { get; set; }
+        public string SalesAffiliateId { get => _explicitNullValueSalesAffiliateId; set { _explicitNullValueSalesAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sales_affiliate_id"); else _explicitNullProperties?.Remove("sales_affiliate_id"); } }
+        private string _explicitNullValueSalesAffiliateId = default!;
 #endif
         /// <summary>The date and time the invoice was sent. In ISO-8601 format (e.g. 2024-05-21T23:00:00Z)</summary>
-        public DateTimeOffset? SentTime { get; set; }
+        public DateTimeOffset? SentTime { get => _explicitNullValueSentTime; set { _explicitNullValueSentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sent_time"); else _explicitNullProperties?.Remove("sent_time"); } }
+        private DateTimeOffset? _explicitNullValueSentTime = default!;
         /// <summary>Shipping address for the order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.AddressInformation? ShippingAddress { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.AddressInformation? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.AddressInformation? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.AddressInformation ShippingAddress { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.AddressInformation ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.AddressInformation _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>Order terms</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Terms { get; set; }
+        public string? Terms { get => _explicitNullValueTerms; set { _explicitNullValueTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms"); else _explicitNullProperties?.Remove("terms"); } }
+        private string? _explicitNullValueTerms = default!;
 #nullable restore
 #else
-        public string Terms { get; set; }
+        public string Terms { get => _explicitNullValueTerms; set { _explicitNullValueTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms"); else _explicitNullProperties?.Remove("terms"); } }
+        private string _explicitNullValueTerms = default!;
 #endif
         /// <summary>A title for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.UpdateOrderRequest"/> and sets the default values.
@@ -146,7 +204,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.UpdateOrderRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.UpdateOrderRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.UpdateOrderRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -203,6 +261,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Keap.OpenApiClient.Models.AddressInformation>("shipping_address", ShippingAddress);
             writer.WriteStringValue("terms", Terms);
             writer.WriteStringValue("title", Title);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

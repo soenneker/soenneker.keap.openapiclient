@@ -11,29 +11,51 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TextOption : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_spaces") is { } nullNodeAllowSpaces && nullNodeAllowSpaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowSpaces = null;
+            if (parseNode.GetChildNode("error_message") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
+            if (parseNode.GetChildNode("maximum_characters") is { } nullNodeMaximumCharacters && nullNodeMaximumCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumCharacters = null;
+            if (parseNode.GetChildNode("minimum_characters") is { } nullNodeMinimumCharacters && nullNodeMinimumCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumCharacters = null;
+            if (parseNode.GetChildNode("only_contains") is { } nullNodeOnlyContains && nullNodeOnlyContains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlyContains = null;
+            if (parseNode.GetChildNode("only_ends_with") is { } nullNodeOnlyEndsWith && nullNodeOnlyEndsWith.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlyEndsWith = null;
+            if (parseNode.GetChildNode("only_starts_with") is { } nullNodeOnlyStartsWith && nullNodeOnlyStartsWith.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlyStartsWith = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether or not to allow whitespace in the text.</summary>
-        public bool? AllowSpaces { get; set; }
+        public bool? AllowSpaces { get => _explicitNullValueAllowSpaces; set { _explicitNullValueAllowSpaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_spaces"); else _explicitNullProperties?.Remove("allow_spaces"); } }
+        private bool? _explicitNullValueAllowSpaces = default!;
         /// <summary>An error message to display if any rules are broken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorMessage { get; set; }
+        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        private string? _explicitNullValueErrorMessage = default!;
 #nullable restore
 #else
-        public string ErrorMessage { get; set; }
+        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        private string _explicitNullValueErrorMessage = default!;
 #endif
         /// <summary>Maximum allowable characters. Minimum is 0.</summary>
-        public int? MaximumCharacters { get; set; }
+        public int? MaximumCharacters { get => _explicitNullValueMaximumCharacters; set { _explicitNullValueMaximumCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_characters"); else _explicitNullProperties?.Remove("maximum_characters"); } }
+        private int? _explicitNullValueMaximumCharacters = default!;
         /// <summary>Minimum allowable characters. Minimum is 0.</summary>
-        public int? MinimumCharacters { get; set; }
+        public int? MinimumCharacters { get => _explicitNullValueMinimumCharacters; set { _explicitNullValueMinimumCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_characters"); else _explicitNullProperties?.Remove("minimum_characters"); } }
+        private int? _explicitNullValueMinimumCharacters = default!;
         /// <summary>Restricts the text to contain certain character types. Valid values are NONE, LETTER, DIGIT, BOTH.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyContains? OnlyContains { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyContains? OnlyContains { get => _explicitNullValueOnlyContains; set { _explicitNullValueOnlyContains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_contains"); else _explicitNullProperties?.Remove("only_contains"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyContains? _explicitNullValueOnlyContains = default!;
         /// <summary>Restricts the text to end with certain character types. Valid values are NONE, LETTER, DIGIT, BOTH.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyEndsWith? OnlyEndsWith { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyEndsWith? OnlyEndsWith { get => _explicitNullValueOnlyEndsWith; set { _explicitNullValueOnlyEndsWith = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_ends_with"); else _explicitNullProperties?.Remove("only_ends_with"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyEndsWith? _explicitNullValueOnlyEndsWith = default!;
         /// <summary>Restricts the text to start with certain character types. Valid values are NONE, LETTER, DIGIT, BOTH.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyStartsWith? OnlyStartsWith { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyStartsWith? OnlyStartsWith { get => _explicitNullValueOnlyStartsWith; set { _explicitNullValueOnlyStartsWith = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_starts_with"); else _explicitNullProperties?.Remove("only_starts_with"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyStartsWith? _explicitNullValueOnlyStartsWith = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.TextOption"/> and sets the default values.
         /// </summary>
@@ -49,7 +71,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.TextOption CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.TextOption();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.TextOption(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyContains>("only_contains", OnlyContains);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyEndsWith>("only_ends_with", OnlyEndsWith);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.TextOptionOnlyStartsWith>("only_starts_with", OnlyStartsWith);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

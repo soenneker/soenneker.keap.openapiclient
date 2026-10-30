@@ -11,35 +11,58 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApplicationConfigurationModuleAffiliate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("choose_affiliate") is { } nullNodeChooseAffiliate && nullNodeChooseAffiliate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChooseAffiliate = null;
+            if (parseNode.GetChildNode("commission") is { } nullNodeCommission && nullNodeCommission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Commission = null;
+            if (parseNode.GetChildNode("custom_affiliate_url") is { } nullNodeCustomAffiliateUrl && nullNodeCustomAffiliateUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAffiliateUrl = null;
+            if (parseNode.GetChildNode("display_affiliate_ip_address") is { } nullNodeDisplayAffiliateIpAddress && nullNodeDisplayAffiliateIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayAffiliateIpAddress = null;
+            if (parseNode.GetChildNode("do_not_notify_affiliate") is { } nullNodeDoNotNotifyAffiliate && nullNodeDoNotNotifyAffiliate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoNotNotifyAffiliate = null;
+            if (parseNode.GetChildNode("skip_pay_if_unused") is { } nullNodeSkipPayIfUnused && nullNodeSkipPayIfUnused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipPayIfUnused = null;
+            if (parseNode.GetChildNode("use_referral_history_if_no_tracking_cookie") is { } nullNodeUseReferralHistoryIfNoTrackingCookie && nullNodeUseReferralHistoryIfNoTrackingCookie.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseReferralHistoryIfNoTrackingCookie = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The choose_affiliate property</summary>
-        public bool? ChooseAffiliate { get; set; }
+        public bool? ChooseAffiliate { get => _explicitNullValueChooseAffiliate; set { _explicitNullValueChooseAffiliate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("choose_affiliate"); else _explicitNullProperties?.Remove("choose_affiliate"); } }
+        private bool? _explicitNullValueChooseAffiliate = default!;
         /// <summary>The commission property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliateCommission? Commission { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliateCommission? Commission { get => _explicitNullValueCommission; set { _explicitNullValueCommission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commission"); else _explicitNullProperties?.Remove("commission"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliateCommission? _explicitNullValueCommission = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliateCommission Commission { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliateCommission Commission { get => _explicitNullValueCommission; set { _explicitNullValueCommission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commission"); else _explicitNullProperties?.Remove("commission"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliateCommission _explicitNullValueCommission = default!;
 #endif
         /// <summary>The custom_affiliate_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomAffiliateUrl { get; set; }
+        public string? CustomAffiliateUrl { get => _explicitNullValueCustomAffiliateUrl; set { _explicitNullValueCustomAffiliateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_affiliate_url"); else _explicitNullProperties?.Remove("custom_affiliate_url"); } }
+        private string? _explicitNullValueCustomAffiliateUrl = default!;
 #nullable restore
 #else
-        public string CustomAffiliateUrl { get; set; }
+        public string CustomAffiliateUrl { get => _explicitNullValueCustomAffiliateUrl; set { _explicitNullValueCustomAffiliateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_affiliate_url"); else _explicitNullProperties?.Remove("custom_affiliate_url"); } }
+        private string _explicitNullValueCustomAffiliateUrl = default!;
 #endif
         /// <summary>The display_affiliate_ip_address property</summary>
-        public bool? DisplayAffiliateIpAddress { get; set; }
+        public bool? DisplayAffiliateIpAddress { get => _explicitNullValueDisplayAffiliateIpAddress; set { _explicitNullValueDisplayAffiliateIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_affiliate_ip_address"); else _explicitNullProperties?.Remove("display_affiliate_ip_address"); } }
+        private bool? _explicitNullValueDisplayAffiliateIpAddress = default!;
         /// <summary>The do_not_notify_affiliate property</summary>
-        public bool? DoNotNotifyAffiliate { get; set; }
+        public bool? DoNotNotifyAffiliate { get => _explicitNullValueDoNotNotifyAffiliate; set { _explicitNullValueDoNotNotifyAffiliate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("do_not_notify_affiliate"); else _explicitNullProperties?.Remove("do_not_notify_affiliate"); } }
+        private bool? _explicitNullValueDoNotNotifyAffiliate = default!;
         /// <summary>The skip_pay_if_unused property</summary>
-        public bool? SkipPayIfUnused { get; set; }
+        public bool? SkipPayIfUnused { get => _explicitNullValueSkipPayIfUnused; set { _explicitNullValueSkipPayIfUnused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_pay_if_unused"); else _explicitNullProperties?.Remove("skip_pay_if_unused"); } }
+        private bool? _explicitNullValueSkipPayIfUnused = default!;
         /// <summary>The use_referral_history_if_no_tracking_cookie property</summary>
-        public bool? UseReferralHistoryIfNoTrackingCookie { get; set; }
+        public bool? UseReferralHistoryIfNoTrackingCookie { get => _explicitNullValueUseReferralHistoryIfNoTrackingCookie; set { _explicitNullValueUseReferralHistoryIfNoTrackingCookie = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_referral_history_if_no_tracking_cookie"); else _explicitNullProperties?.Remove("use_referral_history_if_no_tracking_cookie"); } }
+        private bool? _explicitNullValueUseReferralHistoryIfNoTrackingCookie = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate"/> and sets the default values.
         /// </summary>
@@ -55,7 +78,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteBoolValue("do_not_notify_affiliate", DoNotNotifyAffiliate);
             writer.WriteBoolValue("skip_pay_if_unused", SkipPayIfUnused);
             writer.WriteBoolValue("use_referral_history_if_no_tracking_cookie", UseReferralHistoryIfNoTrackingCookie);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

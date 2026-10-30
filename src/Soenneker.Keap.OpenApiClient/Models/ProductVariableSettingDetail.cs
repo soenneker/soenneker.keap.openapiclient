@@ -11,28 +11,50 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProductVariableSettingDetail : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contains") is { } nullNodeContains && nullNodeContains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contains = null;
+            if (parseNode.GetChildNode("contain_spaces") is { } nullNodeContainSpaces && nullNodeContainSpaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainSpaces = null;
+            if (parseNode.GetChildNode("end_with") is { } nullNodeEndWith && nullNodeEndWith.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndWith = null;
+            if (parseNode.GetChildNode("max_chars") is { } nullNodeMaxChars && nullNodeMaxChars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxChars = null;
+            if (parseNode.GetChildNode("min_chars") is { } nullNodeMinChars && nullNodeMinChars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinChars = null;
+            if (parseNode.GetChildNode("start_with") is { } nullNodeStartWith && nullNodeStartWith.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWith = null;
+            if (parseNode.GetChildNode("validation_msg") is { } nullNodeValidationMsg && nullNodeValidationMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationMsg = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Requires the value (excluding start and end) to contain given type.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailContains? Contains { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailContains? Contains { get => _explicitNullValueContains; set { _explicitNullValueContains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains"); else _explicitNullProperties?.Remove("contains"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailContains? _explicitNullValueContains = default!;
         /// <summary>If spaces are allowed for the option</summary>
-        public bool? ContainSpaces { get; set; }
+        public bool? ContainSpaces { get => _explicitNullValueContainSpaces; set { _explicitNullValueContainSpaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contain_spaces"); else _explicitNullProperties?.Remove("contain_spaces"); } }
+        private bool? _explicitNullValueContainSpaces = default!;
         /// <summary>Requires the value to end with the given type.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailEndWith? EndWith { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailEndWith? EndWith { get => _explicitNullValueEndWith; set { _explicitNullValueEndWith = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_with"); else _explicitNullProperties?.Remove("end_with"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailEndWith? _explicitNullValueEndWith = default!;
         /// <summary>Max allowable chars. Its value must be greater than min_chars</summary>
-        public int? MaxChars { get; set; }
+        public int? MaxChars { get => _explicitNullValueMaxChars; set { _explicitNullValueMaxChars = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_chars"); else _explicitNullProperties?.Remove("max_chars"); } }
+        private int? _explicitNullValueMaxChars = default!;
         /// <summary>Minimum allowable characters</summary>
-        public int? MinChars { get; set; }
+        public int? MinChars { get => _explicitNullValueMinChars; set { _explicitNullValueMinChars = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_chars"); else _explicitNullProperties?.Remove("min_chars"); } }
+        private int? _explicitNullValueMinChars = default!;
         /// <summary>Requires the value to start with the given type.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailStartWith? StartWith { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailStartWith? StartWith { get => _explicitNullValueStartWith; set { _explicitNullValueStartWith = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_with"); else _explicitNullProperties?.Remove("start_with"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailStartWith? _explicitNullValueStartWith = default!;
         /// <summary>Customized validation message to display when option criteria aren&apos;t met</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValidationMsg { get; set; }
+        public string? ValidationMsg { get => _explicitNullValueValidationMsg; set { _explicitNullValueValidationMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_msg"); else _explicitNullProperties?.Remove("validation_msg"); } }
+        private string? _explicitNullValueValidationMsg = default!;
 #nullable restore
 #else
-        public string ValidationMsg { get; set; }
+        public string ValidationMsg { get => _explicitNullValueValidationMsg; set { _explicitNullValueValidationMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_msg"); else _explicitNullProperties?.Remove("validation_msg"); } }
+        private string _explicitNullValueValidationMsg = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetail"/> and sets the default values.
@@ -49,7 +71,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteIntValue("min_chars", MinChars);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailStartWith>("start_with", StartWith);
             writer.WriteStringValue("validation_msg", ValidationMsg);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

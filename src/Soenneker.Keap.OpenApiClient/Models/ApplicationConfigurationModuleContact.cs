@@ -11,66 +11,96 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApplicationConfigurationModuleContact : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address_labels") is { } nullNodeAddressLabels && nullNodeAddressLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressLabels = null;
+            if (parseNode.GetChildNode("contact_types") is { } nullNodeContactTypes && nullNodeContactTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactTypes = null;
+            if (parseNode.GetChildNode("default_new_contact_form") is { } nullNodeDefaultNewContactForm && nullNodeDefaultNewContactForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultNewContactForm = null;
+            if (parseNode.GetChildNode("disable_contact_edit_in_client_login") is { } nullNodeDisableContactEditInClientLogin && nullNodeDisableContactEditInClientLogin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableContactEditInClientLogin = null;
+            if (parseNode.GetChildNode("fax_types") is { } nullNodeFaxTypes && nullNodeFaxTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxTypes = null;
+            if (parseNode.GetChildNode("phone_types") is { } nullNodePhoneTypes && nullNodePhoneTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneTypes = null;
+            if (parseNode.GetChildNode("suffix_types") is { } nullNodeSuffixTypes && nullNodeSuffixTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuffixTypes = null;
+            if (parseNode.GetChildNode("title_types") is { } nullNodeTitleTypes && nullNodeTitleTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TitleTypes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address_labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContactAddressLabels? AddressLabels { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContactAddressLabels? AddressLabels { get => _explicitNullValueAddressLabels; set { _explicitNullValueAddressLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_labels"); else _explicitNullProperties?.Remove("address_labels"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContactAddressLabels? _explicitNullValueAddressLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContactAddressLabels AddressLabels { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContactAddressLabels AddressLabels { get => _explicitNullValueAddressLabels; set { _explicitNullValueAddressLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_labels"); else _explicitNullProperties?.Remove("address_labels"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContactAddressLabels _explicitNullValueAddressLabels = default!;
 #endif
         /// <summary>The contact_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactTypes { get; set; }
+        public string? ContactTypes { get => _explicitNullValueContactTypes; set { _explicitNullValueContactTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_types"); else _explicitNullProperties?.Remove("contact_types"); } }
+        private string? _explicitNullValueContactTypes = default!;
 #nullable restore
 #else
-        public string ContactTypes { get; set; }
+        public string ContactTypes { get => _explicitNullValueContactTypes; set { _explicitNullValueContactTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_types"); else _explicitNullProperties?.Remove("contact_types"); } }
+        private string _explicitNullValueContactTypes = default!;
 #endif
         /// <summary>The default_new_contact_form property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultNewContactForm { get; set; }
+        public string? DefaultNewContactForm { get => _explicitNullValueDefaultNewContactForm; set { _explicitNullValueDefaultNewContactForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_new_contact_form"); else _explicitNullProperties?.Remove("default_new_contact_form"); } }
+        private string? _explicitNullValueDefaultNewContactForm = default!;
 #nullable restore
 #else
-        public string DefaultNewContactForm { get; set; }
+        public string DefaultNewContactForm { get => _explicitNullValueDefaultNewContactForm; set { _explicitNullValueDefaultNewContactForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_new_contact_form"); else _explicitNullProperties?.Remove("default_new_contact_form"); } }
+        private string _explicitNullValueDefaultNewContactForm = default!;
 #endif
         /// <summary>The disable_contact_edit_in_client_login property</summary>
-        public bool? DisableContactEditInClientLogin { get; set; }
+        public bool? DisableContactEditInClientLogin { get => _explicitNullValueDisableContactEditInClientLogin; set { _explicitNullValueDisableContactEditInClientLogin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_contact_edit_in_client_login"); else _explicitNullProperties?.Remove("disable_contact_edit_in_client_login"); } }
+        private bool? _explicitNullValueDisableContactEditInClientLogin = default!;
         /// <summary>The fax_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FaxTypes { get; set; }
+        public string? FaxTypes { get => _explicitNullValueFaxTypes; set { _explicitNullValueFaxTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_types"); else _explicitNullProperties?.Remove("fax_types"); } }
+        private string? _explicitNullValueFaxTypes = default!;
 #nullable restore
 #else
-        public string FaxTypes { get; set; }
+        public string FaxTypes { get => _explicitNullValueFaxTypes; set { _explicitNullValueFaxTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_types"); else _explicitNullProperties?.Remove("fax_types"); } }
+        private string _explicitNullValueFaxTypes = default!;
 #endif
         /// <summary>The phone_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneTypes { get; set; }
+        public string? PhoneTypes { get => _explicitNullValuePhoneTypes; set { _explicitNullValuePhoneTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_types"); else _explicitNullProperties?.Remove("phone_types"); } }
+        private string? _explicitNullValuePhoneTypes = default!;
 #nullable restore
 #else
-        public string PhoneTypes { get; set; }
+        public string PhoneTypes { get => _explicitNullValuePhoneTypes; set { _explicitNullValuePhoneTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_types"); else _explicitNullProperties?.Remove("phone_types"); } }
+        private string _explicitNullValuePhoneTypes = default!;
 #endif
         /// <summary>The suffix_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuffixTypes { get; set; }
+        public string? SuffixTypes { get => _explicitNullValueSuffixTypes; set { _explicitNullValueSuffixTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suffix_types"); else _explicitNullProperties?.Remove("suffix_types"); } }
+        private string? _explicitNullValueSuffixTypes = default!;
 #nullable restore
 #else
-        public string SuffixTypes { get; set; }
+        public string SuffixTypes { get => _explicitNullValueSuffixTypes; set { _explicitNullValueSuffixTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suffix_types"); else _explicitNullProperties?.Remove("suffix_types"); } }
+        private string _explicitNullValueSuffixTypes = default!;
 #endif
         /// <summary>The title_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TitleTypes { get; set; }
+        public string? TitleTypes { get => _explicitNullValueTitleTypes; set { _explicitNullValueTitleTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_types"); else _explicitNullProperties?.Remove("title_types"); } }
+        private string? _explicitNullValueTitleTypes = default!;
 #nullable restore
 #else
-        public string TitleTypes { get; set; }
+        public string TitleTypes { get => _explicitNullValueTitleTypes; set { _explicitNullValueTitleTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_types"); else _explicitNullProperties?.Remove("title_types"); } }
+        private string _explicitNullValueTitleTypes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact"/> and sets the default values.
@@ -87,7 +117,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +152,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("phone_types", PhoneTypes);
             writer.WriteStringValue("suffix_types", SuffixTypes);
             writer.WriteStringValue("title_types", TitleTypes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

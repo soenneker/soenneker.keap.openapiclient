@@ -11,57 +11,87 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentMethod : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("card_info") is { } nullNodeCardInfo && nullNodeCardInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardInfo = null;
+            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
+            if (parseNode.GetChildNode("credit_card_id") is { } nullNodeCreditCardId && nullNodeCreditCardId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardId = null;
+            if (parseNode.GetChildNode("merchant_account_id") is { } nullNodeMerchantAccountId && nullNodeMerchantAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountId = null;
+            if (parseNode.GetChildNode("merchant_account_type") is { } nullNodeMerchantAccountType && nullNodeMerchantAccountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountType = null;
+            if (parseNode.GetChildNode("payment_method_id") is { } nullNodePaymentMethodId && nullNodePaymentMethodId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodId = null;
+            if (parseNode.GetChildNode("payment_method_type") is { } nullNodePaymentMethodType && nullNodePaymentMethodType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodType = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If present, it provides additional details for payment methods of payment_method_type CARD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CardInfo? CardInfo { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CardInfo? CardInfo { get => _explicitNullValueCardInfo; set { _explicitNullValueCardInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_info"); else _explicitNullProperties?.Remove("card_info"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CardInfo? _explicitNullValueCardInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CardInfo CardInfo { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CardInfo CardInfo { get => _explicitNullValueCardInfo; set { _explicitNullValueCardInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_info"); else _explicitNullProperties?.Remove("card_info"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CardInfo _explicitNullValueCardInfo = default!;
 #endif
         /// <summary>The id of the contact the payment method is associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get; set; }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get; set; }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>When this payment method was made. In ISO-8601 format.</summary>
-        public DateTimeOffset? CreatedTime { get; set; }
+        public DateTimeOffset? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        private DateTimeOffset? _explicitNullValueCreatedTime = default!;
         /// <summary>For backward-compatibility with v1 endpoints. If present, it&apos;s the credit card id this payment method refers to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreditCardId { get; set; }
+        public string? CreditCardId { get => _explicitNullValueCreditCardId; set { _explicitNullValueCreditCardId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_id"); else _explicitNullProperties?.Remove("credit_card_id"); } }
+        private string? _explicitNullValueCreditCardId = default!;
 #nullable restore
 #else
-        public string CreditCardId { get; set; }
+        public string CreditCardId { get => _explicitNullValueCreditCardId; set { _explicitNullValueCreditCardId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_id"); else _explicitNullProperties?.Remove("credit_card_id"); } }
+        private string _explicitNullValueCreditCardId = default!;
 #endif
         /// <summary>The merchant account id through which the payment method was tokenize.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantAccountId { get; set; }
+        public string? MerchantAccountId { get => _explicitNullValueMerchantAccountId; set { _explicitNullValueMerchantAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_account_id"); else _explicitNullProperties?.Remove("merchant_account_id"); } }
+        private string? _explicitNullValueMerchantAccountId = default!;
 #nullable restore
 #else
-        public string MerchantAccountId { get; set; }
+        public string MerchantAccountId { get => _explicitNullValueMerchantAccountId; set { _explicitNullValueMerchantAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_account_id"); else _explicitNullProperties?.Remove("merchant_account_id"); } }
+        private string _explicitNullValueMerchantAccountId = default!;
 #endif
         /// <summary>The merchant account type through which the payment method was tokenized.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.PaymentMethodMerchantAccountType? MerchantAccountType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.PaymentMethodMerchantAccountType? MerchantAccountType { get => _explicitNullValueMerchantAccountType; set { _explicitNullValueMerchantAccountType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_account_type"); else _explicitNullProperties?.Remove("merchant_account_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.PaymentMethodMerchantAccountType? _explicitNullValueMerchantAccountType = default!;
         /// <summary>The unique identifier of the payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethodId { get; set; }
+        public string? PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
+        private string? _explicitNullValuePaymentMethodId = default!;
 #nullable restore
 #else
-        public string PaymentMethodId { get; set; }
+        public string PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
+        private string _explicitNullValuePaymentMethodId = default!;
 #endif
         /// <summary>The type of payment method. For now, only CARD is supported.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CardPaymentMethodType? PaymentMethodType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CardPaymentMethodType? PaymentMethodType { get => _explicitNullValuePaymentMethodType; set { _explicitNullValuePaymentMethodType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_type"); else _explicitNullProperties?.Remove("payment_method_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CardPaymentMethodType? _explicitNullValuePaymentMethodType = default!;
         /// <summary>Status of the payment method. Fow now, only EXPIRED is supported.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ExpiredStatus? Status { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ExpiredStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ExpiredStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod"/> and sets the default values.
         /// </summary>
@@ -77,7 +107,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +144,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("payment_method_id", PaymentMethodId);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CardPaymentMethodType>("payment_method_type", PaymentMethodType);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ExpiredStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

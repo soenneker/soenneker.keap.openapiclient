@@ -11,16 +11,26 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RemoveContactsFromSequenceResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("remove_from_sequence_results") is { } nullNodeRemoveFromSequenceResults && nullNodeRemoveFromSequenceResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveFromSequenceResults = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A map containing the contact ID as key and the result of removing them from the sequence as value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty? RemoveFromSequenceResults { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty? RemoveFromSequenceResults { get => _explicitNullValueRemoveFromSequenceResults; set { _explicitNullValueRemoveFromSequenceResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_from_sequence_results"); else _explicitNullProperties?.Remove("remove_from_sequence_results"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty? _explicitNullValueRemoveFromSequenceResults = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty RemoveFromSequenceResults { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty RemoveFromSequenceResults { get => _explicitNullValueRemoveFromSequenceResults; set { _explicitNullValueRemoveFromSequenceResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_from_sequence_results"); else _explicitNullProperties?.Remove("remove_from_sequence_results"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty _explicitNullValueRemoveFromSequenceResults = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponse"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty>("remove_from_sequence_results", RemoveFromSequenceResults);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

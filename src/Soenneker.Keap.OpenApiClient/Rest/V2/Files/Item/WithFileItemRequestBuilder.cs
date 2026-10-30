@@ -66,6 +66,8 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item
                 { "409", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "501", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -103,6 +105,8 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item
                 { "409", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "501", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Keap.OpenApiClient.Models.FileMetadata>(requestInfo, global::Soenneker.Keap.OpenApiClient.Models.FileMetadata.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -123,11 +127,11 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item
         /// <exception cref="global::Soenneker.Keap.OpenApiClient.Models.Error">When receiving a 501 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Keap.OpenApiClient.Models.FileMetadata?> PostAsync(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item.WithFileItemRequestBuilder.WithFileItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Keap.OpenApiClient.Models.FileMetadata?> PostAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item.WithFileItemRequestBuilder.WithFileItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Keap.OpenApiClient.Models.FileMetadata> PostAsync(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item.WithFileItemRequestBuilder.WithFileItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Keap.OpenApiClient.Models.FileMetadata> PostAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item.WithFileItemRequestBuilder.WithFileItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -142,6 +146,8 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item
                 { "409", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "501", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Keap.OpenApiClient.Models.FileMetadata>(requestInfo, global::Soenneker.Keap.OpenApiClient.Models.FileMetadata.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -191,11 +197,11 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item.WithFileItemRequestBuilder.WithFileItemRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item.WithFileItemRequestBuilder.WithFileItemRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item.WithFileItemRequestBuilder.WithFileItemRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Files.Item.WithFileItemRequestBuilder.WithFileItemRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

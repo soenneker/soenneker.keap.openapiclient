@@ -13,33 +13,54 @@ namespace Soenneker.Keap.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApplyCommissionRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("affiliate_id") is { } nullNodeAffiliateId && nullNodeAffiliateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateId = null;
+            if (parseNode.GetChildNode("commission_amount") is { } nullNodeCommissionAmount && nullNodeCommissionAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommissionAmount = null;
+            if (parseNode.GetChildNode("commission_date") is { } nullNodeCommissionDate && nullNodeCommissionDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommissionDate = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("payout_type") is { } nullNodePayoutType && nullNodePayoutType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutType = null;
+            if (parseNode.GetChildNode("pay_percent") is { } nullNodePayPercent && nullNodePayPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayPercent = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The affiliate id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AffiliateId { get; set; }
+        public string? AffiliateId { get => _explicitNullValueAffiliateId; set { _explicitNullValueAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_id"); else _explicitNullProperties?.Remove("affiliate_id"); } }
+        private string? _explicitNullValueAffiliateId = default!;
 #nullable restore
 #else
-        public string AffiliateId { get; set; }
+        public string AffiliateId { get => _explicitNullValueAffiliateId; set { _explicitNullValueAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_id"); else _explicitNullProperties?.Remove("affiliate_id"); } }
+        private string _explicitNullValueAffiliateId = default!;
 #endif
         /// <summary>Fixed commission amount</summary>
-        public double? CommissionAmount { get; set; }
+        public double? CommissionAmount { get => _explicitNullValueCommissionAmount; set { _explicitNullValueCommissionAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commission_amount"); else _explicitNullProperties?.Remove("commission_amount"); } }
+        private double? _explicitNullValueCommissionAmount = default!;
         /// <summary>Date of the commission</summary>
-        public Date? CommissionDate { get; set; }
+        public Date? CommissionDate { get => _explicitNullValueCommissionDate; set { _explicitNullValueCommissionDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commission_date"); else _explicitNullProperties?.Remove("commission_date"); } }
+        private Date? _explicitNullValueCommissionDate = default!;
         /// <summary>Commission description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The payout type</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplyCommissionRequestPayoutType? PayoutType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplyCommissionRequestPayoutType? PayoutType { get => _explicitNullValuePayoutType; set { _explicitNullValuePayoutType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_type"); else _explicitNullProperties?.Remove("payout_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ApplyCommissionRequestPayoutType? _explicitNullValuePayoutType = default!;
         /// <summary>Commission percentage</summary>
-        public double? PayPercent { get; set; }
+        public double? PayPercent { get => _explicitNullValuePayPercent; set { _explicitNullValuePayPercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pay_percent"); else _explicitNullProperties?.Remove("pay_percent"); } }
+        private double? _explicitNullValuePayPercent = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ApplyCommissionRequest"/> and sets the default values.
         /// </summary>
@@ -55,7 +76,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ApplyCommissionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ApplyCommissionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ApplyCommissionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +107,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ApplyCommissionRequestPayoutType>("payout_type", PayoutType);
             writer.WriteDoubleValue("pay_percent", PayPercent);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

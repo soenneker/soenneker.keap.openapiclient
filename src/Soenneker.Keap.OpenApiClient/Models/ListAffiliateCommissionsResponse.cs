@@ -11,30 +11,49 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListAffiliateCommissionsResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("affiliate_commissions") is { } nullNodeAffiliateCommissions && nullNodeAffiliateCommissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateCommissions = null;
+            if (parseNode.GetChildNode("amount_earned") is { } nullNodeAmountEarned && nullNodeAmountEarned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountEarned = null;
+            if (parseNode.GetChildNode("clawbacks") is { } nullNodeClawbacks && nullNodeClawbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clawbacks = null;
+            if (parseNode.GetChildNode("commission_total") is { } nullNodeCommissionTotal && nullNodeCommissionTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommissionTotal = null;
+            if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of commissions for this affiliate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommission>? AffiliateCommissions { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommission>? AffiliateCommissions { get => _explicitNullValueAffiliateCommissions; set { _explicitNullValueAffiliateCommissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_commissions"); else _explicitNullProperties?.Remove("affiliate_commissions"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommission>? _explicitNullValueAffiliateCommissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommission> AffiliateCommissions { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommission> AffiliateCommissions { get => _explicitNullValueAffiliateCommissions; set { _explicitNullValueAffiliateCommissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_commissions"); else _explicitNullProperties?.Remove("affiliate_commissions"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommission> _explicitNullValueAffiliateCommissions = default!;
 #endif
         /// <summary>Calculated total amount earned from the returned commissions.</summary>
-        public double? AmountEarned { get; set; }
+        public double? AmountEarned { get => _explicitNullValueAmountEarned; set { _explicitNullValueAmountEarned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_earned"); else _explicitNullProperties?.Remove("amount_earned"); } }
+        private double? _explicitNullValueAmountEarned = default!;
         /// <summary>Calculated total amount of clawbacks from the returned commissions. </summary>
-        public double? Clawbacks { get; set; }
+        public double? Clawbacks { get => _explicitNullValueClawbacks; set { _explicitNullValueClawbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clawbacks"); else _explicitNullProperties?.Remove("clawbacks"); } }
+        private double? _explicitNullValueClawbacks = default!;
         /// <summary>Calculated total commission amount (amount earned - amount clawbacks) from the returned commissions</summary>
-        public double? CommissionTotal { get; set; }
+        public double? CommissionTotal { get => _explicitNullValueCommissionTotal; set { _explicitNullValueCommissionTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commission_total"); else _explicitNullProperties?.Remove("commission_total"); } }
+        private double? _explicitNullValueCommissionTotal = default!;
         /// <summary>The next_page_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get; set; }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get; set; }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ListAffiliateCommissionsResponse"/> and sets the default values.
@@ -51,7 +70,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ListAffiliateCommissionsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ListAffiliateCommissionsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ListAffiliateCommissionsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteDoubleValue("clawbacks", Clawbacks);
             writer.WriteDoubleValue("commission_total", CommissionTotal);
             writer.WriteStringValue("next_page_token", NextPageToken);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

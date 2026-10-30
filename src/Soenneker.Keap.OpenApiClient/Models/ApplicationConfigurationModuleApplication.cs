@@ -11,40 +11,59 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApplicationConfigurationModuleApplication : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("company") is { } nullNodeCompany && nullNodeCompany.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Company = null;
+            if (parseNode.GetChildNode("default_view_locale") is { } nullNodeDefaultViewLocale && nullNodeDefaultViewLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultViewLocale = null;
+            if (parseNode.GetChildNode("features_enabled") is { } nullNodeFeaturesEnabled && nullNodeFeaturesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeaturesEnabled = null;
+            if (parseNode.GetChildNode("time_zone") is { } nullNodeTimeZone && nullNodeTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZone = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The company property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationCompany? Company { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationCompany? Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ApplicationCompany? _explicitNullValueCompany = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationCompany Company { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationCompany Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ApplicationCompany _explicitNullValueCompany = default!;
 #endif
         /// <summary>The default_view_locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultViewLocale { get; set; }
+        public string? DefaultViewLocale { get => _explicitNullValueDefaultViewLocale; set { _explicitNullValueDefaultViewLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_view_locale"); else _explicitNullProperties?.Remove("default_view_locale"); } }
+        private string? _explicitNullValueDefaultViewLocale = default!;
 #nullable restore
 #else
-        public string DefaultViewLocale { get; set; }
+        public string DefaultViewLocale { get => _explicitNullValueDefaultViewLocale; set { _explicitNullValueDefaultViewLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_view_locale"); else _explicitNullProperties?.Remove("default_view_locale"); } }
+        private string _explicitNullValueDefaultViewLocale = default!;
 #endif
         /// <summary>The features_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationFeaturesEnabled? FeaturesEnabled { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationFeaturesEnabled? FeaturesEnabled { get => _explicitNullValueFeaturesEnabled; set { _explicitNullValueFeaturesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features_enabled"); else _explicitNullProperties?.Remove("features_enabled"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ApplicationFeaturesEnabled? _explicitNullValueFeaturesEnabled = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationFeaturesEnabled FeaturesEnabled { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationFeaturesEnabled FeaturesEnabled { get => _explicitNullValueFeaturesEnabled; set { _explicitNullValueFeaturesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features_enabled"); else _explicitNullProperties?.Remove("features_enabled"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.ApplicationFeaturesEnabled _explicitNullValueFeaturesEnabled = default!;
 #endif
         /// <summary>The time_zone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeZone { get; set; }
+        public string? TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_zone"); else _explicitNullProperties?.Remove("time_zone"); } }
+        private string? _explicitNullValueTimeZone = default!;
 #nullable restore
 #else
-        public string TimeZone { get; set; }
+        public string TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_zone"); else _explicitNullProperties?.Remove("time_zone"); } }
+        private string _explicitNullValueTimeZone = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("default_view_locale", DefaultViewLocale);
             writer.WriteObjectValue<global::Soenneker.Keap.OpenApiClient.Models.ApplicationFeaturesEnabled>("features_enabled", FeaturesEnabled);
             writer.WriteStringValue("time_zone", TimeZone);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

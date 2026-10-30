@@ -11,49 +11,81 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateOrderTotalDiscountCriteriaBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("plan_id") is { } nullNodePlanId && nullNodePlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanId = null;
+            if (parseNode.GetChildNode("product_id") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
+            if (parseNode.GetChildNode("product_quantity_max") is { } nullNodeProductQuantityMax && nullNodeProductQuantityMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductQuantityMax = null;
+            if (parseNode.GetChildNode("product_quantity_min") is { } nullNodeProductQuantityMin && nullNodeProductQuantityMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductQuantityMin = null;
+            if (parseNode.GetChildNode("range_end_time") is { } nullNodeRangeEndTime && nullNodeRangeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeEndTime = null;
+            if (parseNode.GetChildNode("range_start_time") is { } nullNodeRangeStartTime && nullNodeRangeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeStartTime = null;
+            if (parseNode.GetChildNode("subscription_quantity") is { } nullNodeSubscriptionQuantity && nullNodeSubscriptionQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionQuantity = null;
+            if (parseNode.GetChildNode("total_amount") is { } nullNodeTotalAmount && nullNodeTotalAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalAmount = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Promotional code for PROMO_CODE criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get; set; }
+        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        private string? _explicitNullValueCode = default!;
 #nullable restore
 #else
-        public string Code { get; set; }
+        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        private string _explicitNullValueCode = default!;
 #endif
         /// <summary>Comparison operator for ORDER_TOTAL criteria: LESS_THAN or GREATER_THAN</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBodyOperator? Operator { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBodyOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBodyOperator? _explicitNullValueOperator = default!;
         /// <summary>Subscription plan ID for SUBSCRIPTION_PLAN criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlanId { get; set; }
+        public string? PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
+        private string? _explicitNullValuePlanId = default!;
 #nullable restore
 #else
-        public string PlanId { get; set; }
+        public string PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
+        private string _explicitNullValuePlanId = default!;
 #endif
         /// <summary>Product ID for PRODUCT criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductId { get; set; }
+        public string? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
+        private string? _explicitNullValueProductId = default!;
 #nullable restore
 #else
-        public string ProductId { get; set; }
+        public string ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
+        private string _explicitNullValueProductId = default!;
 #endif
         /// <summary>Maximum product quantity for PRODUCT criteria</summary>
-        public int? ProductQuantityMax { get; set; }
+        public int? ProductQuantityMax { get => _explicitNullValueProductQuantityMax; set { _explicitNullValueProductQuantityMax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_quantity_max"); else _explicitNullProperties?.Remove("product_quantity_max"); } }
+        private int? _explicitNullValueProductQuantityMax = default!;
         /// <summary>Minimum product quantity for PRODUCT criteria</summary>
-        public int? ProductQuantityMin { get; set; }
+        public int? ProductQuantityMin { get => _explicitNullValueProductQuantityMin; set { _explicitNullValueProductQuantityMin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_quantity_min"); else _explicitNullProperties?.Remove("product_quantity_min"); } }
+        private int? _explicitNullValueProductQuantityMin = default!;
         /// <summary>End date/time for DATE_RANGE criteria (ISO-8601 format)</summary>
-        public DateTimeOffset? RangeEndTime { get; set; }
+        public DateTimeOffset? RangeEndTime { get => _explicitNullValueRangeEndTime; set { _explicitNullValueRangeEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_end_time"); else _explicitNullProperties?.Remove("range_end_time"); } }
+        private DateTimeOffset? _explicitNullValueRangeEndTime = default!;
         /// <summary>Start date/time for DATE_RANGE criteria (ISO-8601 format)</summary>
-        public DateTimeOffset? RangeStartTime { get; set; }
+        public DateTimeOffset? RangeStartTime { get => _explicitNullValueRangeStartTime; set { _explicitNullValueRangeStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_start_time"); else _explicitNullProperties?.Remove("range_start_time"); } }
+        private DateTimeOffset? _explicitNullValueRangeStartTime = default!;
         /// <summary>Subscription quantity for SUBSCRIPTION_PLAN criteria</summary>
-        public int? SubscriptionQuantity { get; set; }
+        public int? SubscriptionQuantity { get => _explicitNullValueSubscriptionQuantity; set { _explicitNullValueSubscriptionQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_quantity"); else _explicitNullProperties?.Remove("subscription_quantity"); } }
+        private int? _explicitNullValueSubscriptionQuantity = default!;
         /// <summary>Total amount threshold for ORDER_TOTAL criteria</summary>
-        public double? TotalAmount { get; set; }
+        public double? TotalAmount { get => _explicitNullValueTotalAmount; set { _explicitNullValueTotalAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_amount"); else _explicitNullProperties?.Remove("total_amount"); } }
+        private double? _explicitNullValueTotalAmount = default!;
         /// <summary>Type of criteria: DATE_RANGE, PROMO_CODE, PRODUCT, SUBSCRIPTION_PLAN, or ORDER_TOTAL</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBodyType? Type { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBodyType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBodyType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBody"/> and sets the default values.
         /// </summary>
@@ -69,7 +101,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,6 +142,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteIntValue("subscription_quantity", SubscriptionQuantity);
             writer.WriteDoubleValue("total_amount", TotalAmount);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CreateOrderTotalDiscountCriteriaBodyType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

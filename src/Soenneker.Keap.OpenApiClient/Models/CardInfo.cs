@@ -11,50 +11,74 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CardInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("brand") is { } nullNodeBrand && nullNodeBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Brand = null;
+            if (parseNode.GetChildNode("card_type") is { } nullNodeCardType && nullNodeCardType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardType = null;
+            if (parseNode.GetChildNode("expiration_month") is { } nullNodeExpirationMonth && nullNodeExpirationMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationMonth = null;
+            if (parseNode.GetChildNode("expiration_year") is { } nullNodeExpirationYear && nullNodeExpirationYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationYear = null;
+            if (parseNode.GetChildNode("fingerprint") is { } nullNodeFingerprint && nullNodeFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fingerprint = null;
+            if (parseNode.GetChildNode("last_four") is { } nullNodeLastFour && nullNodeLastFour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFour = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The brand property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Brand { get; set; }
+        public string? Brand { get => _explicitNullValueBrand; set { _explicitNullValueBrand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand"); else _explicitNullProperties?.Remove("brand"); } }
+        private string? _explicitNullValueBrand = default!;
 #nullable restore
 #else
-        public string Brand { get; set; }
+        public string Brand { get => _explicitNullValueBrand; set { _explicitNullValueBrand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand"); else _explicitNullProperties?.Remove("brand"); } }
+        private string _explicitNullValueBrand = default!;
 #endif
         /// <summary>The card type. Valid values are: CREDIT, DEBIT, PREPAID.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CardInfoCardType? CardType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CardInfoCardType? CardType { get => _explicitNullValueCardType; set { _explicitNullValueCardType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card_type"); else _explicitNullProperties?.Remove("card_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CardInfoCardType? _explicitNullValueCardType = default!;
         /// <summary>Two-digit expiration month</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExpirationMonth { get; set; }
+        public string? ExpirationMonth { get => _explicitNullValueExpirationMonth; set { _explicitNullValueExpirationMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_month"); else _explicitNullProperties?.Remove("expiration_month"); } }
+        private string? _explicitNullValueExpirationMonth = default!;
 #nullable restore
 #else
-        public string ExpirationMonth { get; set; }
+        public string ExpirationMonth { get => _explicitNullValueExpirationMonth; set { _explicitNullValueExpirationMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_month"); else _explicitNullProperties?.Remove("expiration_month"); } }
+        private string _explicitNullValueExpirationMonth = default!;
 #endif
         /// <summary>Four-digit expiration year</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExpirationYear { get; set; }
+        public string? ExpirationYear { get => _explicitNullValueExpirationYear; set { _explicitNullValueExpirationYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_year"); else _explicitNullProperties?.Remove("expiration_year"); } }
+        private string? _explicitNullValueExpirationYear = default!;
 #nullable restore
 #else
-        public string ExpirationYear { get; set; }
+        public string ExpirationYear { get => _explicitNullValueExpirationYear; set { _explicitNullValueExpirationYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_year"); else _explicitNullProperties?.Remove("expiration_year"); } }
+        private string _explicitNullValueExpirationYear = default!;
 #endif
         /// <summary>A token that uniquely identifies the card info</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Fingerprint { get; set; }
+        public string? Fingerprint { get => _explicitNullValueFingerprint; set { _explicitNullValueFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprint"); else _explicitNullProperties?.Remove("fingerprint"); } }
+        private string? _explicitNullValueFingerprint = default!;
 #nullable restore
 #else
-        public string Fingerprint { get; set; }
+        public string Fingerprint { get => _explicitNullValueFingerprint; set { _explicitNullValueFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprint"); else _explicitNullProperties?.Remove("fingerprint"); } }
+        private string _explicitNullValueFingerprint = default!;
 #endif
         /// <summary>The last_four property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastFour { get; set; }
+        public string? LastFour { get => _explicitNullValueLastFour; set { _explicitNullValueLastFour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_four"); else _explicitNullProperties?.Remove("last_four"); } }
+        private string? _explicitNullValueLastFour = default!;
 #nullable restore
 #else
-        public string LastFour { get; set; }
+        public string LastFour { get => _explicitNullValueLastFour; set { _explicitNullValueLastFour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_four"); else _explicitNullProperties?.Remove("last_four"); } }
+        private string _explicitNullValueLastFour = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.CardInfo"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.CardInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.CardInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.CardInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("expiration_year", ExpirationYear);
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("last_four", LastFour);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

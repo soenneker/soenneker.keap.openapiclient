@@ -11,18 +11,30 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AffiliateCommissionEarned : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("affiliate_commission_total") is { } nullNodeAffiliateCommissionTotal && nullNodeAffiliateCommissionTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateCommissionTotal = null;
+            if (parseNode.GetChildNode("view_ledger_url") is { } nullNodeViewLedgerUrl && nullNodeViewLedgerUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewLedgerUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total commission earned by affiliate</summary>
-        public double? AffiliateCommissionTotal { get; set; }
+        public double? AffiliateCommissionTotal { get => _explicitNullValueAffiliateCommissionTotal; set { _explicitNullValueAffiliateCommissionTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_commission_total"); else _explicitNullProperties?.Remove("affiliate_commission_total"); } }
+        private double? _explicitNullValueAffiliateCommissionTotal = default!;
         /// <summary>URL to view affiliate ledger</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ViewLedgerUrl { get; set; }
+        public string? ViewLedgerUrl { get => _explicitNullValueViewLedgerUrl; set { _explicitNullValueViewLedgerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_ledger_url"); else _explicitNullProperties?.Remove("view_ledger_url"); } }
+        private string? _explicitNullValueViewLedgerUrl = default!;
 #nullable restore
 #else
-        public string ViewLedgerUrl { get; set; }
+        public string ViewLedgerUrl { get => _explicitNullValueViewLedgerUrl; set { _explicitNullValueViewLedgerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_ledger_url"); else _explicitNullProperties?.Remove("view_ledger_url"); } }
+        private string _explicitNullValueViewLedgerUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommissionEarned"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommissionEarned CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommissionEarned();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.AffiliateCommissionEarned(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("affiliate_commission_total", AffiliateCommissionTotal);
             writer.WriteStringValue("view_ledger_url", ViewLedgerUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

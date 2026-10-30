@@ -12,29 +12,51 @@ namespace Soenneker.Keap.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RestEmailAddressStatus : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("last_click_time") is { } nullNodeLastClickTime && nullNodeLastClickTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastClickTime = null;
+            if (parseNode.GetChildNode("last_open_time") is { } nullNodeLastOpenTime && nullNodeLastOpenTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastOpenTime = null;
+            if (parseNode.GetChildNode("last_sent_time") is { } nullNodeLastSentTime && nullNodeLastSentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSentTime = null;
+            if (parseNode.GetChildNode("opted_in") is { } nullNodeOptedIn && nullNodeOptedIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptedIn = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When the email status was first recorded, in ISO-8601 format</summary>
-        public DateTimeOffset? CreateTime { get; set; }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>The email address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The most recent click on an email sent to this address, in ISO-8601 format</summary>
-        public DateTimeOffset? LastClickTime { get; set; }
+        public DateTimeOffset? LastClickTime { get => _explicitNullValueLastClickTime; set { _explicitNullValueLastClickTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_click_time"); else _explicitNullProperties?.Remove("last_click_time"); } }
+        private DateTimeOffset? _explicitNullValueLastClickTime = default!;
         /// <summary>The most recent open of an email sent to this address, in ISO-8601 format</summary>
-        public DateTimeOffset? LastOpenTime { get; set; }
+        public DateTimeOffset? LastOpenTime { get => _explicitNullValueLastOpenTime; set { _explicitNullValueLastOpenTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_open_time"); else _explicitNullProperties?.Remove("last_open_time"); } }
+        private DateTimeOffset? _explicitNullValueLastOpenTime = default!;
         /// <summary>The most recent time an email was sent to this address, in ISO-8601 format</summary>
-        public DateTimeOffset? LastSentTime { get; set; }
+        public DateTimeOffset? LastSentTime { get => _explicitNullValueLastSentTime; set { _explicitNullValueLastSentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sent_time"); else _explicitNullProperties?.Remove("last_sent_time"); } }
+        private DateTimeOffset? _explicitNullValueLastSentTime = default!;
         /// <summary>Whether the email address is opted in for marketing</summary>
-        public bool? OptedIn { get; set; }
+        public bool? OptedIn { get => _explicitNullValueOptedIn; set { _explicitNullValueOptedIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opted_in"); else _explicitNullProperties?.Remove("opted_in"); } }
+        private bool? _explicitNullValueOptedIn = default!;
         /// <summary>The opt-in status of the email address</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.RestEmailAddressStatusStatus? Status { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.RestEmailAddressStatusStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.RestEmailAddressStatusStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.RestEmailAddressStatus"/> and sets the default values.
         /// </summary>
@@ -50,7 +72,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.RestEmailAddressStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.RestEmailAddressStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.RestEmailAddressStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +105,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("last_sent_time", LastSentTime);
             writer.WriteBoolValue("opted_in", OptedIn);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.RestEmailAddressStatusStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

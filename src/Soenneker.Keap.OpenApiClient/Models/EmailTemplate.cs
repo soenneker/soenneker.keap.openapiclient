@@ -12,92 +12,133 @@ namespace Soenneker.Keap.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EmailTemplate : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bcc_address") is { } nullNodeBccAddress && nullNodeBccAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BccAddress = null;
+            if (parseNode.GetChildNode("categories") is { } nullNodeCategories && nullNodeCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Categories = null;
+            if (parseNode.GetChildNode("cc_address") is { } nullNodeCcAddress && nullNodeCcAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcAddress = null;
+            if (parseNode.GetChildNode("content_type") is { } nullNodeContentType && nullNodeContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentType = null;
+            if (parseNode.GetChildNode("from_address") is { } nullNodeFromAddress && nullNodeFromAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromAddress = null;
+            if (parseNode.GetChildNode("html_body") is { } nullNodeHtmlBody && nullNodeHtmlBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlBody = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("merge_context") is { } nullNodeMergeContext && nullNodeMergeContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeContext = null;
+            if (parseNode.GetChildNode("piece_title") is { } nullNodePieceTitle && nullNodePieceTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PieceTitle = null;
+            if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
+            if (parseNode.GetChildNode("text_body") is { } nullNodeTextBody && nullNodeTextBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextBody = null;
+            if (parseNode.GetChildNode("to_address") is { } nullNodeToAddress && nullNodeToAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToAddress = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bcc address of the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BccAddress { get; set; }
+        public string? BccAddress { get => _explicitNullValueBccAddress; set { _explicitNullValueBccAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bcc_address"); else _explicitNullProperties?.Remove("bcc_address"); } }
+        private string? _explicitNullValueBccAddress = default!;
 #nullable restore
 #else
-        public string BccAddress { get; set; }
+        public string BccAddress { get => _explicitNullValueBccAddress; set { _explicitNullValueBccAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bcc_address"); else _explicitNullProperties?.Remove("bcc_address"); } }
+        private string _explicitNullValueBccAddress = default!;
 #endif
         /// <summary>The categories associated with the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Categories { get; set; }
+        public List<string>? Categories { get => _explicitNullValueCategories; set { _explicitNullValueCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categories"); else _explicitNullProperties?.Remove("categories"); } }
+        private List<string>? _explicitNullValueCategories = default!;
 #nullable restore
 #else
-        public List<string> Categories { get; set; }
+        public List<string> Categories { get => _explicitNullValueCategories; set { _explicitNullValueCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categories"); else _explicitNullProperties?.Remove("categories"); } }
+        private List<string> _explicitNullValueCategories = default!;
 #endif
         /// <summary>The cc address of the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CcAddress { get; set; }
+        public string? CcAddress { get => _explicitNullValueCcAddress; set { _explicitNullValueCcAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_address"); else _explicitNullProperties?.Remove("cc_address"); } }
+        private string? _explicitNullValueCcAddress = default!;
 #nullable restore
 #else
-        public string CcAddress { get; set; }
+        public string CcAddress { get => _explicitNullValueCcAddress; set { _explicitNullValueCcAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_address"); else _explicitNullProperties?.Remove("cc_address"); } }
+        private string _explicitNullValueCcAddress = default!;
 #endif
         /// <summary>The content type of the email</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.EmailTemplateContentType? ContentType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.EmailTemplateContentType? ContentType { get => _explicitNullValueContentType; set { _explicitNullValueContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_type"); else _explicitNullProperties?.Remove("content_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.EmailTemplateContentType? _explicitNullValueContentType = default!;
         /// <summary>The from address of the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromAddress { get; set; }
+        public string? FromAddress { get => _explicitNullValueFromAddress; set { _explicitNullValueFromAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address"); else _explicitNullProperties?.Remove("from_address"); } }
+        private string? _explicitNullValueFromAddress = default!;
 #nullable restore
 #else
-        public string FromAddress { get; set; }
+        public string FromAddress { get => _explicitNullValueFromAddress; set { _explicitNullValueFromAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address"); else _explicitNullProperties?.Remove("from_address"); } }
+        private string _explicitNullValueFromAddress = default!;
 #endif
         /// <summary>The HTML body of the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlBody { get; set; }
+        public string? HtmlBody { get => _explicitNullValueHtmlBody; set { _explicitNullValueHtmlBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_body"); else _explicitNullProperties?.Remove("html_body"); } }
+        private string? _explicitNullValueHtmlBody = default!;
 #nullable restore
 #else
-        public string HtmlBody { get; set; }
+        public string HtmlBody { get => _explicitNullValueHtmlBody; set { _explicitNullValueHtmlBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_body"); else _explicitNullProperties?.Remove("html_body"); } }
+        private string _explicitNullValueHtmlBody = default!;
 #endif
         /// <summary>The id of the template</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The merge context of the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergeContext { get; set; }
+        public string? MergeContext { get => _explicitNullValueMergeContext; set { _explicitNullValueMergeContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_context"); else _explicitNullProperties?.Remove("merge_context"); } }
+        private string? _explicitNullValueMergeContext = default!;
 #nullable restore
 #else
-        public string MergeContext { get; set; }
+        public string MergeContext { get => _explicitNullValueMergeContext; set { _explicitNullValueMergeContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_context"); else _explicitNullProperties?.Remove("merge_context"); } }
+        private string _explicitNullValueMergeContext = default!;
 #endif
         /// <summary>The title of the template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PieceTitle { get; set; }
+        public string? PieceTitle { get => _explicitNullValuePieceTitle; set { _explicitNullValuePieceTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("piece_title"); else _explicitNullProperties?.Remove("piece_title"); } }
+        private string? _explicitNullValuePieceTitle = default!;
 #nullable restore
 #else
-        public string PieceTitle { get; set; }
+        public string PieceTitle { get => _explicitNullValuePieceTitle; set { _explicitNullValuePieceTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("piece_title"); else _explicitNullProperties?.Remove("piece_title"); } }
+        private string _explicitNullValuePieceTitle = default!;
 #endif
         /// <summary>The subject of the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get; set; }
+        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string? _explicitNullValueSubject = default!;
 #nullable restore
 #else
-        public string Subject { get; set; }
+        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string _explicitNullValueSubject = default!;
 #endif
         /// <summary>The text body of the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextBody { get; set; }
+        public string? TextBody { get => _explicitNullValueTextBody; set { _explicitNullValueTextBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_body"); else _explicitNullProperties?.Remove("text_body"); } }
+        private string? _explicitNullValueTextBody = default!;
 #nullable restore
 #else
-        public string TextBody { get; set; }
+        public string TextBody { get => _explicitNullValueTextBody; set { _explicitNullValueTextBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_body"); else _explicitNullProperties?.Remove("text_body"); } }
+        private string _explicitNullValueTextBody = default!;
 #endif
         /// <summary>The to address of the email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToAddress { get; set; }
+        public string? ToAddress { get => _explicitNullValueToAddress; set { _explicitNullValueToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_address"); else _explicitNullProperties?.Remove("to_address"); } }
+        private string? _explicitNullValueToAddress = default!;
 #nullable restore
 #else
-        public string ToAddress { get; set; }
+        public string ToAddress { get => _explicitNullValueToAddress; set { _explicitNullValueToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_address"); else _explicitNullProperties?.Remove("to_address"); } }
+        private string _explicitNullValueToAddress = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.EmailTemplate"/> and sets the default values.
@@ -114,7 +155,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.EmailTemplate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.EmailTemplate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.EmailTemplate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -157,6 +198,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("subject", Subject);
             writer.WriteStringValue("text_body", TextBody);
             writer.WriteStringValue("to_address", ToAddress);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

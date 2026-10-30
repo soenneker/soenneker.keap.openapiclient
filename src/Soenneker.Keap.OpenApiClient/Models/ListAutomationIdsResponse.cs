@@ -12,32 +12,48 @@ namespace Soenneker.Keap.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListAutomationIdsResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("automation_ids") is { } nullNodeAutomationIds && nullNodeAutomationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomationIds = null;
+            if (parseNode.GetChildNode("locked_automation_ids") is { } nullNodeLockedAutomationIds && nullNodeLockedAutomationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockedAutomationIds = null;
+            if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of automation IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AutomationIds { get; set; }
+        public List<string>? AutomationIds { get => _explicitNullValueAutomationIds; set { _explicitNullValueAutomationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automation_ids"); else _explicitNullProperties?.Remove("automation_ids"); } }
+        private List<string>? _explicitNullValueAutomationIds = default!;
 #nullable restore
 #else
-        public List<string> AutomationIds { get; set; }
+        public List<string> AutomationIds { get => _explicitNullValueAutomationIds; set { _explicitNullValueAutomationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automation_ids"); else _explicitNullProperties?.Remove("automation_ids"); } }
+        private List<string> _explicitNullValueAutomationIds = default!;
 #endif
         /// <summary>List of automation IDs that are currently locked for editing</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LockedAutomationIds { get; set; }
+        public List<string>? LockedAutomationIds { get => _explicitNullValueLockedAutomationIds; set { _explicitNullValueLockedAutomationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked_automation_ids"); else _explicitNullProperties?.Remove("locked_automation_ids"); } }
+        private List<string>? _explicitNullValueLockedAutomationIds = default!;
 #nullable restore
 #else
-        public List<string> LockedAutomationIds { get; set; }
+        public List<string> LockedAutomationIds { get => _explicitNullValueLockedAutomationIds; set { _explicitNullValueLockedAutomationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked_automation_ids"); else _explicitNullProperties?.Remove("locked_automation_ids"); } }
+        private List<string> _explicitNullValueLockedAutomationIds = default!;
 #endif
         /// <summary>The next_page_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get; set; }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get; set; }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ListAutomationIdsResponse"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ListAutomationIdsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ListAutomationIdsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ListAutomationIdsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("automation_ids", AutomationIds);
             writer.WriteCollectionOfPrimitiveValues<string>("locked_automation_ids", LockedAutomationIds);
             writer.WriteStringValue("next_page_token", NextPageToken);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,23 +11,39 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CategoryDiscountCriteriaRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("range_end_time") is { } nullNodeRangeEndTime && nullNodeRangeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeEndTime = null;
+            if (parseNode.GetChildNode("range_start_time") is { } nullNodeRangeStartTime && nullNodeRangeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeStartTime = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Promotional code for PROMO_CODE criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get; set; }
+        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        private string? _explicitNullValueCode = default!;
 #nullable restore
 #else
-        public string Code { get; set; }
+        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        private string _explicitNullValueCode = default!;
 #endif
         /// <summary>End date/time for DATE_RANGE criteria (ISO-8601 format)</summary>
-        public DateTimeOffset? RangeEndTime { get; set; }
+        public DateTimeOffset? RangeEndTime { get => _explicitNullValueRangeEndTime; set { _explicitNullValueRangeEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_end_time"); else _explicitNullProperties?.Remove("range_end_time"); } }
+        private DateTimeOffset? _explicitNullValueRangeEndTime = default!;
         /// <summary>Start date/time for DATE_RANGE criteria (ISO-8601 format)</summary>
-        public DateTimeOffset? RangeStartTime { get; set; }
+        public DateTimeOffset? RangeStartTime { get => _explicitNullValueRangeStartTime; set { _explicitNullValueRangeStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_start_time"); else _explicitNullProperties?.Remove("range_start_time"); } }
+        private DateTimeOffset? _explicitNullValueRangeStartTime = default!;
         /// <summary>Type of criteria: DATE_RANGE or PROMO_CODE</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaRequestType? Type { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaRequestType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaRequestType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaRequest"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("range_end_time", RangeEndTime);
             writer.WriteDateTimeOffsetValue("range_start_time", RangeStartTime);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaRequestType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

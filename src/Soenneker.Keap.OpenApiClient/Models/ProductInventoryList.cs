@@ -11,21 +11,35 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProductInventoryList : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("email_for_inventory_notifications") is { } nullNodeEmailForInventoryNotifications && nullNodeEmailForInventoryNotifications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailForInventoryNotifications = null;
+            if (parseNode.GetChildNode("inventory_limit") is { } nullNodeInventoryLimit && nullNodeInventoryLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InventoryLimit = null;
+            if (parseNode.GetChildNode("out_of_stock_enabled") is { } nullNodeOutOfStockEnabled && nullNodeOutOfStockEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutOfStockEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The email address for notifications about inventory</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailForInventoryNotifications { get; set; }
+        public string? EmailForInventoryNotifications { get => _explicitNullValueEmailForInventoryNotifications; set { _explicitNullValueEmailForInventoryNotifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_for_inventory_notifications"); else _explicitNullProperties?.Remove("email_for_inventory_notifications"); } }
+        private string? _explicitNullValueEmailForInventoryNotifications = default!;
 #nullable restore
 #else
-        public string EmailForInventoryNotifications { get; set; }
+        public string EmailForInventoryNotifications { get => _explicitNullValueEmailForInventoryNotifications; set { _explicitNullValueEmailForInventoryNotifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_for_inventory_notifications"); else _explicitNullProperties?.Remove("email_for_inventory_notifications"); } }
+        private string _explicitNullValueEmailForInventoryNotifications = default!;
 #endif
         /// <summary>The inventory limit for this product. Must be greater than or equal to 0.</summary>
-        public int? InventoryLimit { get; set; }
+        public int? InventoryLimit { get => _explicitNullValueInventoryLimit; set { _explicitNullValueInventoryLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inventory_limit"); else _explicitNullProperties?.Remove("inventory_limit"); } }
+        private int? _explicitNullValueInventoryLimit = default!;
         /// <summary>The flag to enable out of stock inventory</summary>
-        public bool? OutOfStockEnabled { get; set; }
+        public bool? OutOfStockEnabled { get => _explicitNullValueOutOfStockEnabled; set { _explicitNullValueOutOfStockEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("out_of_stock_enabled"); else _explicitNullProperties?.Remove("out_of_stock_enabled"); } }
+        private bool? _explicitNullValueOutOfStockEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ProductInventoryList"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ProductInventoryList CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ProductInventoryList();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ProductInventoryList(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("email_for_inventory_notifications", EmailForInventoryNotifications);
             writer.WriteIntValue("inventory_limit", InventoryLimit);
             writer.WriteBoolValue("out_of_stock_enabled", OutOfStockEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

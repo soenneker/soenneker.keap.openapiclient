@@ -69,6 +69,8 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Orders.Item.Payments.Item
                 { "409", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "501", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Keap.OpenApiClient.Models.InvoiceOrderPayment>(requestInfo, global::Soenneker.Keap.OpenApiClient.Models.InvoiceOrderPayment.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

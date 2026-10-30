@@ -11,23 +11,44 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateSubscriptionPlanRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("allow_prorating") is { } nullNodeAllowProrating && nullNodeAllowProrating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowProrating = null;
+            if (parseNode.GetChildNode("cycle_type") is { } nullNodeCycleType && nullNodeCycleType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CycleType = null;
+            if (parseNode.GetChildNode("display_order_index") is { } nullNodeDisplayOrderIndex && nullNodeDisplayOrderIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayOrderIndex = null;
+            if (parseNode.GetChildNode("frequency") is { } nullNodeFrequency && nullNodeFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Frequency = null;
+            if (parseNode.GetChildNode("plan_price") is { } nullNodePlanPrice && nullNodePlanPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanPrice = null;
+            if (parseNode.GetChildNode("total_cycles") is { } nullNodeTotalCycles && nullNodeTotalCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCycles = null;
+        }
+
         /// <summary>Whether the subscription plan is active.</summary>
-        public bool? Active { get; set; }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Allow prorating of the subscription plan.</summary>
-        public bool? AllowProrating { get; set; }
+        public bool? AllowProrating { get => _explicitNullValueAllowProrating; set { _explicitNullValueAllowProrating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_prorating"); else _explicitNullProperties?.Remove("allow_prorating"); } }
+        private bool? _explicitNullValueAllowProrating = default!;
         /// <summary>The cycle type of the subscription plan.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionPlanRequestCycleType? CycleType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionPlanRequestCycleType? CycleType { get => _explicitNullValueCycleType; set { _explicitNullValueCycleType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cycle_type"); else _explicitNullProperties?.Remove("cycle_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionPlanRequestCycleType? _explicitNullValueCycleType = default!;
         /// <summary>The order that this plan will be displayed to the user.</summary>
-        public int? DisplayOrderIndex { get; set; }
+        public int? DisplayOrderIndex { get => _explicitNullValueDisplayOrderIndex; set { _explicitNullValueDisplayOrderIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_order_index"); else _explicitNullProperties?.Remove("display_order_index"); } }
+        private int? _explicitNullValueDisplayOrderIndex = default!;
         /// <summary>The frequency of the subscription plan. Must be greater than 0.</summary>
-        public int? Frequency { get; set; }
+        public int? Frequency { get => _explicitNullValueFrequency; set { _explicitNullValueFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frequency"); else _explicitNullProperties?.Remove("frequency"); } }
+        private int? _explicitNullValueFrequency = default!;
         /// <summary>The price of the subscription plan in the smallest currency unit. Must be greater than or equal to 0.</summary>
-        public double? PlanPrice { get; set; }
+        public double? PlanPrice { get => _explicitNullValuePlanPrice; set { _explicitNullValuePlanPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_price"); else _explicitNullProperties?.Remove("plan_price"); } }
+        private double? _explicitNullValuePlanPrice = default!;
         /// <summary>How many cycles the subscription plan will have. 0 means infinite.</summary>
-        public int? TotalCycles { get; set; }
+        public int? TotalCycles { get => _explicitNullValueTotalCycles; set { _explicitNullValueTotalCycles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_cycles"); else _explicitNullProperties?.Remove("total_cycles"); } }
+        private int? _explicitNullValueTotalCycles = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionPlanRequest"/> and sets the default values.
         /// </summary>
@@ -43,7 +64,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionPlanRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionPlanRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionPlanRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +97,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteIntValue("frequency", Frequency);
             writer.WriteDoubleValue("plan_price", PlanPrice);
             writer.WriteIntValue("total_cycles", TotalCycles);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

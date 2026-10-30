@@ -12,39 +12,61 @@ namespace Soenneker.Keap.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GoalEventResultDto : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("automation_id") is { } nullNodeAutomationId && nullNodeAutomationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomationId = null;
+            if (parseNode.GetChildNode("flow_start_results") is { } nullNodeFlowStartResults && nullNodeFlowStartResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowStartResults = null;
+            if (parseNode.GetChildNode("flow_stop_results") is { } nullNodeFlowStopResults && nullNodeFlowStopResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowStopResults = null;
+            if (parseNode.GetChildNode("goal_id") is { } nullNodeGoalId && nullNodeGoalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoalId = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The automation ID where the goal was achieved</summary>
-        public long? AutomationId { get; set; }
+        public long? AutomationId { get => _explicitNullValueAutomationId; set { _explicitNullValueAutomationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automation_id"); else _explicitNullProperties?.Remove("automation_id"); } }
+        private long? _explicitNullValueAutomationId = default!;
         /// <summary>List of flows that were started as a result of achieving this goal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto>? FlowStartResults { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto>? FlowStartResults { get => _explicitNullValueFlowStartResults; set { _explicitNullValueFlowStartResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_start_results"); else _explicitNullProperties?.Remove("flow_start_results"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto>? _explicitNullValueFlowStartResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto> FlowStartResults { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto> FlowStartResults { get => _explicitNullValueFlowStartResults; set { _explicitNullValueFlowStartResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_start_results"); else _explicitNullProperties?.Remove("flow_start_results"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto> _explicitNullValueFlowStartResults = default!;
 #endif
         /// <summary>List of flows that were stopped as a result of achieving this goal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto>? FlowStopResults { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto>? FlowStopResults { get => _explicitNullValueFlowStopResults; set { _explicitNullValueFlowStopResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_stop_results"); else _explicitNullProperties?.Remove("flow_stop_results"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto>? _explicitNullValueFlowStopResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto> FlowStopResults { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto> FlowStopResults { get => _explicitNullValueFlowStopResults; set { _explicitNullValueFlowStopResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_stop_results"); else _explicitNullProperties?.Remove("flow_stop_results"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.FlowEventResultDto> _explicitNullValueFlowStopResults = default!;
 #endif
         /// <summary>The goal ID that was achieved</summary>
-        public long? GoalId { get; set; }
+        public long? GoalId { get => _explicitNullValueGoalId; set { _explicitNullValueGoalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal_id"); else _explicitNullProperties?.Remove("goal_id"); } }
+        private long? _explicitNullValueGoalId = default!;
         /// <summary>A message with details about the result</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>Whether the goal was successfully achieved</summary>
-        public bool? Success { get; set; }
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        private bool? _explicitNullValueSuccess = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.GoalEventResultDto"/> and sets the default values.
         /// </summary>
@@ -60,7 +82,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.GoalEventResultDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.GoalEventResultDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.GoalEventResultDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,6 +113,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteLongValue("goal_id", GoalId);
             writer.WriteStringValue("message", Message);
             writer.WriteBoolValue("success", Success);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

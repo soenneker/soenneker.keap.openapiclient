@@ -11,24 +11,37 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ReportExecutionResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("page_token") is { } nullNodePageToken && nullNodePageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageToken = null;
+            if (parseNode.GetChildNode("results") is { } nullNodeResults && nullNodeResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Results = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Token for retrieving the next page of results</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageToken { get; set; }
+        public string? PageToken { get => _explicitNullValuePageToken; set { _explicitNullValuePageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_token"); else _explicitNullProperties?.Remove("page_token"); } }
+        private string? _explicitNullValuePageToken = default!;
 #nullable restore
 #else
-        public string PageToken { get; set; }
+        public string PageToken { get => _explicitNullValuePageToken; set { _explicitNullValuePageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_token"); else _explicitNullProperties?.Remove("page_token"); } }
+        private string _explicitNullValuePageToken = default!;
 #endif
         /// <summary>The list of report result records</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ReportEntryRecord>? Results { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ReportEntryRecord>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.ReportEntryRecord>? _explicitNullValueResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ReportEntryRecord> Results { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ReportEntryRecord> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.ReportEntryRecord> _explicitNullValueResults = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ReportExecutionResult"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ReportExecutionResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ReportExecutionResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ReportExecutionResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("page_token", PageToken);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Keap.OpenApiClient.Models.ReportEntryRecord>("results", Results);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

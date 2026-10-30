@@ -11,37 +11,57 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListOption : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("item_code") is { } nullNodeItemCode && nullNodeItemCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemCode = null;
+            if (parseNode.GetChildNode("item_display_order") is { } nullNodeItemDisplayOrder && nullNodeItemDisplayOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDisplayOrder = null;
+            if (parseNode.GetChildNode("item_id") is { } nullNodeItemId && nullNodeItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemId = null;
+            if (parseNode.GetChildNode("item_label") is { } nullNodeItemLabel && nullNodeItemLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemLabel = null;
+            if (parseNode.GetChildNode("price_adjustment") is { } nullNodePriceAdjustment && nullNodePriceAdjustment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceAdjustment = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An internal code (e.g. sku) to associate the item option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemCode { get; set; }
+        public string? ItemCode { get => _explicitNullValueItemCode; set { _explicitNullValueItemCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_code"); else _explicitNullProperties?.Remove("item_code"); } }
+        private string? _explicitNullValueItemCode = default!;
 #nullable restore
 #else
-        public string ItemCode { get; set; }
+        public string ItemCode { get => _explicitNullValueItemCode; set { _explicitNullValueItemCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_code"); else _explicitNullProperties?.Remove("item_code"); } }
+        private string _explicitNullValueItemCode = default!;
 #endif
         /// <summary>The order in which this item will be displayed among other items. Minimum is 0. Lower values indicate higher priority in order.</summary>
-        public long? ItemDisplayOrder { get; set; }
+        public long? ItemDisplayOrder { get => _explicitNullValueItemDisplayOrder; set { _explicitNullValueItemDisplayOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_display_order"); else _explicitNullProperties?.Remove("item_display_order"); } }
+        private long? _explicitNullValueItemDisplayOrder = default!;
         /// <summary>The unique id of this option’s item value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemId { get; set; }
+        public string? ItemId { get => _explicitNullValueItemId; set { _explicitNullValueItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_id"); else _explicitNullProperties?.Remove("item_id"); } }
+        private string? _explicitNullValueItemId = default!;
 #nullable restore
 #else
-        public string ItemId { get; set; }
+        public string ItemId { get => _explicitNullValueItemId; set { _explicitNullValueItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_id"); else _explicitNullProperties?.Remove("item_id"); } }
+        private string _explicitNullValueItemId = default!;
 #endif
         /// <summary>The displayable name of the option item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemLabel { get; set; }
+        public string? ItemLabel { get => _explicitNullValueItemLabel; set { _explicitNullValueItemLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_label"); else _explicitNullProperties?.Remove("item_label"); } }
+        private string? _explicitNullValueItemLabel = default!;
 #nullable restore
 #else
-        public string ItemLabel { get; set; }
+        public string ItemLabel { get => _explicitNullValueItemLabel; set { _explicitNullValueItemLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_label"); else _explicitNullProperties?.Remove("item_label"); } }
+        private string _explicitNullValueItemLabel = default!;
 #endif
         /// <summary>An amount to adjust to the product price is selected. Negative value indicates subtraction from price.</summary>
-        public double? PriceAdjustment { get; set; }
+        public double? PriceAdjustment { get => _explicitNullValuePriceAdjustment; set { _explicitNullValuePriceAdjustment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_adjustment"); else _explicitNullProperties?.Remove("price_adjustment"); } }
+        private double? _explicitNullValuePriceAdjustment = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ListOption"/> and sets the default values.
         /// </summary>
@@ -57,7 +77,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ListOption CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ListOption();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ListOption(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("item_id", ItemId);
             writer.WriteStringValue("item_label", ItemLabel);
             writer.WriteDoubleValue("price_adjustment", PriceAdjustment);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

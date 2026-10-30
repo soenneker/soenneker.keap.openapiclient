@@ -12,80 +12,114 @@ namespace Soenneker.Keap.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OpportunityStageMove : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("move_from_stage_id") is { } nullNodeMoveFromStageId && nullNodeMoveFromStageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveFromStageId = null;
+            if (parseNode.GetChildNode("move_time") is { } nullNodeMoveTime && nullNodeMoveTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveTime = null;
+            if (parseNode.GetChildNode("move_to_stage_id") is { } nullNodeMoveToStageId && nullNodeMoveToStageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveToStageId = null;
+            if (parseNode.GetChildNode("opportunity_id") is { } nullNodeOpportunityId && nullNodeOpportunityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpportunityId = null;
+            if (parseNode.GetChildNode("prev_stage_move_time") is { } nullNodePrevStageMoveTime && nullNodePrevStageMoveTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrevStageMoveTime = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the user who created this record</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedBy { get; set; }
+        public string? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private string? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public string CreatedBy { get; set; }
+        public string CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private string _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>Date-time this record was created (ISO-8601 UTC)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateTime { get; set; }
+        public string? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        private string? _explicitNullValueCreateTime = default!;
 #nullable restore
 #else
-        public string CreateTime { get; set; }
+        public string CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        private string _explicitNullValueCreateTime = default!;
 #endif
         /// <summary>Unique ID of this stage-move record</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>ID of the stage moved FROM. 0 = no previous stage (first move)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MoveFromStageId { get; set; }
+        public string? MoveFromStageId { get => _explicitNullValueMoveFromStageId; set { _explicitNullValueMoveFromStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_from_stage_id"); else _explicitNullProperties?.Remove("move_from_stage_id"); } }
+        private string? _explicitNullValueMoveFromStageId = default!;
 #nullable restore
 #else
-        public string MoveFromStageId { get; set; }
+        public string MoveFromStageId { get => _explicitNullValueMoveFromStageId; set { _explicitNullValueMoveFromStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_from_stage_id"); else _explicitNullProperties?.Remove("move_from_stage_id"); } }
+        private string _explicitNullValueMoveFromStageId = default!;
 #endif
         /// <summary>Date-time when the move occurred (ISO-8601 UTC)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MoveTime { get; set; }
+        public string? MoveTime { get => _explicitNullValueMoveTime; set { _explicitNullValueMoveTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_time"); else _explicitNullProperties?.Remove("move_time"); } }
+        private string? _explicitNullValueMoveTime = default!;
 #nullable restore
 #else
-        public string MoveTime { get; set; }
+        public string MoveTime { get => _explicitNullValueMoveTime; set { _explicitNullValueMoveTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_time"); else _explicitNullProperties?.Remove("move_time"); } }
+        private string _explicitNullValueMoveTime = default!;
 #endif
         /// <summary>ID of the stage moved TO</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MoveToStageId { get; set; }
+        public string? MoveToStageId { get => _explicitNullValueMoveToStageId; set { _explicitNullValueMoveToStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_to_stage_id"); else _explicitNullProperties?.Remove("move_to_stage_id"); } }
+        private string? _explicitNullValueMoveToStageId = default!;
 #nullable restore
 #else
-        public string MoveToStageId { get; set; }
+        public string MoveToStageId { get => _explicitNullValueMoveToStageId; set { _explicitNullValueMoveToStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_to_stage_id"); else _explicitNullProperties?.Remove("move_to_stage_id"); } }
+        private string _explicitNullValueMoveToStageId = default!;
 #endif
         /// <summary>ID of the opportunity that was moved</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OpportunityId { get; set; }
+        public string? OpportunityId { get => _explicitNullValueOpportunityId; set { _explicitNullValueOpportunityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_id"); else _explicitNullProperties?.Remove("opportunity_id"); } }
+        private string? _explicitNullValueOpportunityId = default!;
 #nullable restore
 #else
-        public string OpportunityId { get; set; }
+        public string OpportunityId { get => _explicitNullValueOpportunityId; set { _explicitNullValueOpportunityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity_id"); else _explicitNullProperties?.Remove("opportunity_id"); } }
+        private string _explicitNullValueOpportunityId = default!;
 #endif
         /// <summary>Date-time of the previous stage-move (ISO-8601 UTC). Null if first move.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrevStageMoveTime { get; set; }
+        public string? PrevStageMoveTime { get => _explicitNullValuePrevStageMoveTime; set { _explicitNullValuePrevStageMoveTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev_stage_move_time"); else _explicitNullProperties?.Remove("prev_stage_move_time"); } }
+        private string? _explicitNullValuePrevStageMoveTime = default!;
 #nullable restore
 #else
-        public string PrevStageMoveTime { get; set; }
+        public string PrevStageMoveTime { get => _explicitNullValuePrevStageMoveTime; set { _explicitNullValuePrevStageMoveTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev_stage_move_time"); else _explicitNullProperties?.Remove("prev_stage_move_time"); } }
+        private string _explicitNullValuePrevStageMoveTime = default!;
 #endif
         /// <summary>ID of the user associated with this move</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.OpportunityStageMove"/> and sets the default values.
@@ -102,7 +136,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.OpportunityStageMove CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.OpportunityStageMove();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.OpportunityStageMove(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -139,6 +173,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("opportunity_id", OpportunityId);
             writer.WriteStringValue("prev_stage_move_time", PrevStageMoveTime);
             writer.WriteStringValue("user_id", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

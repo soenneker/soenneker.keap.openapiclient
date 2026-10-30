@@ -2,7 +2,7 @@
   "descriptionHash": "66FABAAF1A6BE5645FBD2EB59E731373C596AD6E1676406042F076EEE64890EB4059A8E6270451EF970FF0F40130A9AB95E2EB7B8B174EDF72074F6F0EF43191",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.1",
+  "kiotaVersion": "1.37.0",
   "clientClassName": "KeapOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Keap.OpenApiClient",

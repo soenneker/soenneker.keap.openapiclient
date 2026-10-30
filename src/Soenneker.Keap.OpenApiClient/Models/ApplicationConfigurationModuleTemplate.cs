@@ -11,18 +11,30 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApplicationConfigurationModuleTemplate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("default_country_code") is { } nullNodeDefaultCountryCode && nullNodeDefaultCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCountryCode = null;
+            if (parseNode.GetChildNode("default_user_id") is { } nullNodeDefaultUserId && nullNodeDefaultUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultUserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The default_country_code property</summary>
-        public int? DefaultCountryCode { get; set; }
+        public int? DefaultCountryCode { get => _explicitNullValueDefaultCountryCode; set { _explicitNullValueDefaultCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_country_code"); else _explicitNullProperties?.Remove("default_country_code"); } }
+        private int? _explicitNullValueDefaultCountryCode = default!;
         /// <summary>The default_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultUserId { get; set; }
+        public string? DefaultUserId { get => _explicitNullValueDefaultUserId; set { _explicitNullValueDefaultUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_user_id"); else _explicitNullProperties?.Remove("default_user_id"); } }
+        private string? _explicitNullValueDefaultUserId = default!;
 #nullable restore
 #else
-        public string DefaultUserId { get; set; }
+        public string DefaultUserId { get => _explicitNullValueDefaultUserId; set { _explicitNullValueDefaultUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_user_id"); else _explicitNullProperties?.Remove("default_user_id"); } }
+        private string _explicitNullValueDefaultUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("default_country_code", DefaultCountryCode);
             writer.WriteStringValue("default_user_id", DefaultUserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

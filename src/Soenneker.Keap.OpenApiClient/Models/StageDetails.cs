@@ -11,23 +11,39 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StageDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("checklist_items") is { } nullNodeChecklistItems && nullNodeChecklistItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecklistItems = null;
+            if (parseNode.GetChildNode("probability") is { } nullNodeProbability && nullNodeProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Probability = null;
+            if (parseNode.GetChildNode("stage_order") is { } nullNodeStageOrder && nullNodeStageOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StageOrder = null;
+            if (parseNode.GetChildNode("target_num_days") is { } nullNodeTargetNumDays && nullNodeTargetNumDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNumDays = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Stage checklist items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CheckListItemDetails>? ChecklistItems { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CheckListItemDetails>? ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.CheckListItemDetails>? _explicitNullValueChecklistItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CheckListItemDetails> ChecklistItems { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CheckListItemDetails> ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.CheckListItemDetails> _explicitNullValueChecklistItems = default!;
 #endif
         /// <summary>Win probability (0-100)</summary>
-        public int? Probability { get; set; }
+        public int? Probability { get => _explicitNullValueProbability; set { _explicitNullValueProbability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("probability"); else _explicitNullProperties?.Remove("probability"); } }
+        private int? _explicitNullValueProbability = default!;
         /// <summary>Stage order in pipeline</summary>
-        public int? StageOrder { get; set; }
+        public int? StageOrder { get => _explicitNullValueStageOrder; set { _explicitNullValueStageOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage_order"); else _explicitNullProperties?.Remove("stage_order"); } }
+        private int? _explicitNullValueStageOrder = default!;
         /// <summary>Target days in stage</summary>
-        public int? TargetNumDays { get; set; }
+        public int? TargetNumDays { get => _explicitNullValueTargetNumDays; set { _explicitNullValueTargetNumDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_num_days"); else _explicitNullProperties?.Remove("target_num_days"); } }
+        private int? _explicitNullValueTargetNumDays = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.StageDetails"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.StageDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.StageDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.StageDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteIntValue("probability", Probability);
             writer.WriteIntValue("stage_order", StageOrder);
             writer.WriteIntValue("target_num_days", TargetNumDays);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

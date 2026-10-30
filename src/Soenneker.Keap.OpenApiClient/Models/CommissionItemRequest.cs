@@ -11,40 +11,59 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CommissionItemRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("lead_amount") is { } nullNodeLeadAmount && nullNodeLeadAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadAmount = null;
+            if (parseNode.GetChildNode("lead_percent") is { } nullNodeLeadPercent && nullNodeLeadPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadPercent = null;
+            if (parseNode.GetChildNode("sale_amount") is { } nullNodeSaleAmount && nullNodeSaleAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaleAmount = null;
+            if (parseNode.GetChildNode("sale_percent") is { } nullNodeSalePercent && nullNodeSalePercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SalePercent = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fixed dollar amount to be paid for Lead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadAmount { get; set; }
+        public string? LeadAmount { get => _explicitNullValueLeadAmount; set { _explicitNullValueLeadAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_amount"); else _explicitNullProperties?.Remove("lead_amount"); } }
+        private string? _explicitNullValueLeadAmount = default!;
 #nullable restore
 #else
-        public string LeadAmount { get; set; }
+        public string LeadAmount { get => _explicitNullValueLeadAmount; set { _explicitNullValueLeadAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_amount"); else _explicitNullProperties?.Remove("lead_amount"); } }
+        private string _explicitNullValueLeadAmount = default!;
 #endif
         /// <summary>The percentage to be paid for Lead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadPercent { get; set; }
+        public string? LeadPercent { get => _explicitNullValueLeadPercent; set { _explicitNullValueLeadPercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_percent"); else _explicitNullProperties?.Remove("lead_percent"); } }
+        private string? _explicitNullValueLeadPercent = default!;
 #nullable restore
 #else
-        public string LeadPercent { get; set; }
+        public string LeadPercent { get => _explicitNullValueLeadPercent; set { _explicitNullValueLeadPercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_percent"); else _explicitNullProperties?.Remove("lead_percent"); } }
+        private string _explicitNullValueLeadPercent = default!;
 #endif
         /// <summary>The fixed dollar amount to be paid for Sale.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaleAmount { get; set; }
+        public string? SaleAmount { get => _explicitNullValueSaleAmount; set { _explicitNullValueSaleAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sale_amount"); else _explicitNullProperties?.Remove("sale_amount"); } }
+        private string? _explicitNullValueSaleAmount = default!;
 #nullable restore
 #else
-        public string SaleAmount { get; set; }
+        public string SaleAmount { get => _explicitNullValueSaleAmount; set { _explicitNullValueSaleAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sale_amount"); else _explicitNullProperties?.Remove("sale_amount"); } }
+        private string _explicitNullValueSaleAmount = default!;
 #endif
         /// <summary>The percentage to be paid for Sale.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SalePercent { get; set; }
+        public string? SalePercent { get => _explicitNullValueSalePercent; set { _explicitNullValueSalePercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sale_percent"); else _explicitNullProperties?.Remove("sale_percent"); } }
+        private string? _explicitNullValueSalePercent = default!;
 #nullable restore
 #else
-        public string SalePercent { get; set; }
+        public string SalePercent { get => _explicitNullValueSalePercent; set { _explicitNullValueSalePercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sale_percent"); else _explicitNullProperties?.Remove("sale_percent"); } }
+        private string _explicitNullValueSalePercent = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.CommissionItemRequest"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.CommissionItemRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.CommissionItemRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.CommissionItemRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("lead_percent", LeadPercent);
             writer.WriteStringValue("sale_amount", SaleAmount);
             writer.WriteStringValue("sale_percent", SalePercent);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

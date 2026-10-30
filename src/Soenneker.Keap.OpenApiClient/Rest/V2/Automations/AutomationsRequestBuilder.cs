@@ -103,6 +103,8 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Automations
                 { "409", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "501", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -140,6 +142,8 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Automations
                 { "409", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
                 { "501", global::Soenneker.Keap.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Keap.OpenApiClient.Models.ListAutomationResponse>(requestInfo, global::Soenneker.Keap.OpenApiClient.Models.ListAutomationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

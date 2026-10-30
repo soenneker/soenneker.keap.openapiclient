@@ -12,242 +12,338 @@ namespace Soenneker.Keap.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateUpdateContactRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addresses") is { } nullNodeAddresses && nullNodeAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Addresses = null;
+            if (parseNode.GetChildNode("anniversary_date") is { } nullNodeAnniversaryDate && nullNodeAnniversaryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnniversaryDate = null;
+            if (parseNode.GetChildNode("assistant_name") is { } nullNodeAssistantName && nullNodeAssistantName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssistantName = null;
+            if (parseNode.GetChildNode("assistant_phone") is { } nullNodeAssistantPhone && nullNodeAssistantPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssistantPhone = null;
+            if (parseNode.GetChildNode("billing_information") is { } nullNodeBillingInformation && nullNodeBillingInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingInformation = null;
+            if (parseNode.GetChildNode("birth_date") is { } nullNodeBirthDate && nullNodeBirthDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BirthDate = null;
+            if (parseNode.GetChildNode("company") is { } nullNodeCompany && nullNodeCompany.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Company = null;
+            if (parseNode.GetChildNode("contact_type") is { } nullNodeContactType && nullNodeContactType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactType = null;
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("email_addresses") is { } nullNodeEmailAddresses && nullNodeEmailAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddresses = null;
+            if (parseNode.GetChildNode("family_name") is { } nullNodeFamilyName && nullNodeFamilyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FamilyName = null;
+            if (parseNode.GetChildNode("fax_numbers") is { } nullNodeFaxNumbers && nullNodeFaxNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxNumbers = null;
+            if (parseNode.GetChildNode("given_name") is { } nullNodeGivenName && nullNodeGivenName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GivenName = null;
+            if (parseNode.GetChildNode("job_title") is { } nullNodeJobTitle && nullNodeJobTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobTitle = null;
+            if (parseNode.GetChildNode("leadsource_id") is { } nullNodeLeadsourceId && nullNodeLeadsourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadsourceId = null;
+            if (parseNode.GetChildNode("middle_name") is { } nullNodeMiddleName && nullNodeMiddleName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MiddleName = null;
+            if (parseNode.GetChildNode("origin") is { } nullNodeOrigin && nullNodeOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Origin = null;
+            if (parseNode.GetChildNode("owner_id") is { } nullNodeOwnerId && nullNodeOwnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerId = null;
+            if (parseNode.GetChildNode("phone_numbers") is { } nullNodePhoneNumbers && nullNodePhoneNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumbers = null;
+            if (parseNode.GetChildNode("preferred_locale") is { } nullNodePreferredLocale && nullNodePreferredLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredLocale = null;
+            if (parseNode.GetChildNode("preferred_name") is { } nullNodePreferredName && nullNodePreferredName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredName = null;
+            if (parseNode.GetChildNode("prefix") is { } nullNodePrefix && nullNodePrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prefix = null;
+            if (parseNode.GetChildNode("referral_code") is { } nullNodeReferralCode && nullNodeReferralCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferralCode = null;
+            if (parseNode.GetChildNode("social_accounts") is { } nullNodeSocialAccounts && nullNodeSocialAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialAccounts = null;
+            if (parseNode.GetChildNode("source_type") is { } nullNodeSourceType && nullNodeSourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceType = null;
+            if (parseNode.GetChildNode("spouse_name") is { } nullNodeSpouseName && nullNodeSpouseName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpouseName = null;
+            if (parseNode.GetChildNode("suffix") is { } nullNodeSuffix && nullNodeSuffix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Suffix = null;
+            if (parseNode.GetChildNode("time_zone") is { } nullNodeTimeZone && nullNodeTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZone = null;
+            if (parseNode.GetChildNode("utm_parameters") is { } nullNodeUtmParameters && nullNodeUtmParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtmParameters = null;
+            if (parseNode.GetChildNode("website") is { } nullNodeWebsite && nullNodeWebsite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Website = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Any item not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.Address>? Addresses { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.Address>? Addresses { get => _explicitNullValueAddresses; set { _explicitNullValueAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addresses"); else _explicitNullProperties?.Remove("addresses"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.Address>? _explicitNullValueAddresses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.Address> Addresses { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.Address> Addresses { get => _explicitNullValueAddresses; set { _explicitNullValueAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addresses"); else _explicitNullProperties?.Remove("addresses"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.Address> _explicitNullValueAddresses = default!;
 #endif
         /// <summary>The anniversary date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AnniversaryDate { get; set; }
+        public string? AnniversaryDate { get => _explicitNullValueAnniversaryDate; set { _explicitNullValueAnniversaryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anniversary_date"); else _explicitNullProperties?.Remove("anniversary_date"); } }
+        private string? _explicitNullValueAnniversaryDate = default!;
 #nullable restore
 #else
-        public string AnniversaryDate { get; set; }
+        public string AnniversaryDate { get => _explicitNullValueAnniversaryDate; set { _explicitNullValueAnniversaryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anniversary_date"); else _explicitNullProperties?.Remove("anniversary_date"); } }
+        private string _explicitNullValueAnniversaryDate = default!;
 #endif
         /// <summary>Assistant&apos;s name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssistantName { get; set; }
+        public string? AssistantName { get => _explicitNullValueAssistantName; set { _explicitNullValueAssistantName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assistant_name"); else _explicitNullProperties?.Remove("assistant_name"); } }
+        private string? _explicitNullValueAssistantName = default!;
 #nullable restore
 #else
-        public string AssistantName { get; set; }
+        public string AssistantName { get => _explicitNullValueAssistantName; set { _explicitNullValueAssistantName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assistant_name"); else _explicitNullProperties?.Remove("assistant_name"); } }
+        private string _explicitNullValueAssistantName = default!;
 #endif
         /// <summary>Assistant&apos;s phone number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssistantPhone { get; set; }
+        public string? AssistantPhone { get => _explicitNullValueAssistantPhone; set { _explicitNullValueAssistantPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assistant_phone"); else _explicitNullProperties?.Remove("assistant_phone"); } }
+        private string? _explicitNullValueAssistantPhone = default!;
 #nullable restore
 #else
-        public string AssistantPhone { get; set; }
+        public string AssistantPhone { get => _explicitNullValueAssistantPhone; set { _explicitNullValueAssistantPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assistant_phone"); else _explicitNullProperties?.Remove("assistant_phone"); } }
+        private string _explicitNullValueAssistantPhone = default!;
 #endif
         /// <summary>Billing information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingInformation { get; set; }
+        public string? BillingInformation { get => _explicitNullValueBillingInformation; set { _explicitNullValueBillingInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_information"); else _explicitNullProperties?.Remove("billing_information"); } }
+        private string? _explicitNullValueBillingInformation = default!;
 #nullable restore
 #else
-        public string BillingInformation { get; set; }
+        public string BillingInformation { get => _explicitNullValueBillingInformation; set { _explicitNullValueBillingInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_information"); else _explicitNullProperties?.Remove("billing_information"); } }
+        private string _explicitNullValueBillingInformation = default!;
 #endif
         /// <summary>The birth date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BirthDate { get; set; }
+        public string? BirthDate { get => _explicitNullValueBirthDate; set { _explicitNullValueBirthDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("birth_date"); else _explicitNullProperties?.Remove("birth_date"); } }
+        private string? _explicitNullValueBirthDate = default!;
 #nullable restore
 #else
-        public string BirthDate { get; set; }
+        public string BirthDate { get => _explicitNullValueBirthDate; set { _explicitNullValueBirthDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("birth_date"); else _explicitNullProperties?.Remove("birth_date"); } }
+        private string _explicitNullValueBirthDate = default!;
 #endif
         /// <summary>The company property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.BasicCompany? Company { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.BasicCompany? Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.BasicCompany? _explicitNullValueCompany = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.BasicCompany Company { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.BasicCompany Company { get => _explicitNullValueCompany; set { _explicitNullValueCompany = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("company"); else _explicitNullProperties?.Remove("company"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.BasicCompany _explicitNullValueCompany = default!;
 #endif
         /// <summary>Type of contact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactType { get; set; }
+        public string? ContactType { get => _explicitNullValueContactType; set { _explicitNullValueContactType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_type"); else _explicitNullProperties?.Remove("contact_type"); } }
+        private string? _explicitNullValueContactType = default!;
 #nullable restore
 #else
-        public string ContactType { get; set; }
+        public string ContactType { get => _explicitNullValueContactType; set { _explicitNullValueContactType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_type"); else _explicitNullProperties?.Remove("contact_type"); } }
+        private string _explicitNullValueContactType = default!;
 #endif
         /// <summary>Any item not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>? CustomFields { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue> CustomFields { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>Any item not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressRequest>? EmailAddresses { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressRequest>? EmailAddresses { get => _explicitNullValueEmailAddresses; set { _explicitNullValueEmailAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_addresses"); else _explicitNullProperties?.Remove("email_addresses"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressRequest>? _explicitNullValueEmailAddresses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressRequest> EmailAddresses { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressRequest> EmailAddresses { get => _explicitNullValueEmailAddresses; set { _explicitNullValueEmailAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_addresses"); else _explicitNullProperties?.Remove("email_addresses"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressRequest> _explicitNullValueEmailAddresses = default!;
 #endif
         /// <summary>Last name / surname</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FamilyName { get; set; }
+        public string? FamilyName { get => _explicitNullValueFamilyName; set { _explicitNullValueFamilyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("family_name"); else _explicitNullProperties?.Remove("family_name"); } }
+        private string? _explicitNullValueFamilyName = default!;
 #nullable restore
 #else
-        public string FamilyName { get; set; }
+        public string FamilyName { get => _explicitNullValueFamilyName; set { _explicitNullValueFamilyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("family_name"); else _explicitNullProperties?.Remove("family_name"); } }
+        private string _explicitNullValueFamilyName = default!;
 #endif
         /// <summary>Any item not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.FaxNumber>? FaxNumbers { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.FaxNumber>? FaxNumbers { get => _explicitNullValueFaxNumbers; set { _explicitNullValueFaxNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_numbers"); else _explicitNullProperties?.Remove("fax_numbers"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.FaxNumber>? _explicitNullValueFaxNumbers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.FaxNumber> FaxNumbers { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.FaxNumber> FaxNumbers { get => _explicitNullValueFaxNumbers; set { _explicitNullValueFaxNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_numbers"); else _explicitNullProperties?.Remove("fax_numbers"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.FaxNumber> _explicitNullValueFaxNumbers = default!;
 #endif
         /// <summary>First name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GivenName { get; set; }
+        public string? GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
+        private string? _explicitNullValueGivenName = default!;
 #nullable restore
 #else
-        public string GivenName { get; set; }
+        public string GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
+        private string _explicitNullValueGivenName = default!;
 #endif
         /// <summary>Job title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JobTitle { get; set; }
+        public string? JobTitle { get => _explicitNullValueJobTitle; set { _explicitNullValueJobTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_title"); else _explicitNullProperties?.Remove("job_title"); } }
+        private string? _explicitNullValueJobTitle = default!;
 #nullable restore
 #else
-        public string JobTitle { get; set; }
+        public string JobTitle { get => _explicitNullValueJobTitle; set { _explicitNullValueJobTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_title"); else _explicitNullProperties?.Remove("job_title"); } }
+        private string _explicitNullValueJobTitle = default!;
 #endif
         /// <summary>Lead source identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadsourceId { get; set; }
+        public string? LeadsourceId { get => _explicitNullValueLeadsourceId; set { _explicitNullValueLeadsourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadsource_id"); else _explicitNullProperties?.Remove("leadsource_id"); } }
+        private string? _explicitNullValueLeadsourceId = default!;
 #nullable restore
 #else
-        public string LeadsourceId { get; set; }
+        public string LeadsourceId { get => _explicitNullValueLeadsourceId; set { _explicitNullValueLeadsourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadsource_id"); else _explicitNullProperties?.Remove("leadsource_id"); } }
+        private string _explicitNullValueLeadsourceId = default!;
 #endif
         /// <summary>Middle name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MiddleName { get; set; }
+        public string? MiddleName { get => _explicitNullValueMiddleName; set { _explicitNullValueMiddleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("middle_name"); else _explicitNullProperties?.Remove("middle_name"); } }
+        private string? _explicitNullValueMiddleName = default!;
 #nullable restore
 #else
-        public string MiddleName { get; set; }
+        public string MiddleName { get => _explicitNullValueMiddleName; set { _explicitNullValueMiddleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("middle_name"); else _explicitNullProperties?.Remove("middle_name"); } }
+        private string _explicitNullValueMiddleName = default!;
 #endif
         /// <summary>The origin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.OriginRequest? Origin { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.OriginRequest? Origin { get => _explicitNullValueOrigin; set { _explicitNullValueOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin"); else _explicitNullProperties?.Remove("origin"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.OriginRequest? _explicitNullValueOrigin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.OriginRequest Origin { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.OriginRequest Origin { get => _explicitNullValueOrigin; set { _explicitNullValueOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin"); else _explicitNullProperties?.Remove("origin"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.OriginRequest _explicitNullValueOrigin = default!;
 #endif
         /// <summary>ID of the user who owns this contact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerId { get; set; }
+        public string? OwnerId { get => _explicitNullValueOwnerId; set { _explicitNullValueOwnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_id"); else _explicitNullProperties?.Remove("owner_id"); } }
+        private string? _explicitNullValueOwnerId = default!;
 #nullable restore
 #else
-        public string OwnerId { get; set; }
+        public string OwnerId { get => _explicitNullValueOwnerId; set { _explicitNullValueOwnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_id"); else _explicitNullProperties?.Remove("owner_id"); } }
+        private string _explicitNullValueOwnerId = default!;
 #endif
         /// <summary>Any item not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.PhoneNumber>? PhoneNumbers { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.PhoneNumber>? PhoneNumbers { get => _explicitNullValuePhoneNumbers; set { _explicitNullValuePhoneNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers"); else _explicitNullProperties?.Remove("phone_numbers"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.PhoneNumber>? _explicitNullValuePhoneNumbers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.PhoneNumber> PhoneNumbers { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.PhoneNumber> PhoneNumbers { get => _explicitNullValuePhoneNumbers; set { _explicitNullValuePhoneNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers"); else _explicitNullProperties?.Remove("phone_numbers"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.PhoneNumber> _explicitNullValuePhoneNumbers = default!;
 #endif
         /// <summary>Preferred locale</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferredLocale { get; set; }
+        public string? PreferredLocale { get => _explicitNullValuePreferredLocale; set { _explicitNullValuePreferredLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_locale"); else _explicitNullProperties?.Remove("preferred_locale"); } }
+        private string? _explicitNullValuePreferredLocale = default!;
 #nullable restore
 #else
-        public string PreferredLocale { get; set; }
+        public string PreferredLocale { get => _explicitNullValuePreferredLocale; set { _explicitNullValuePreferredLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_locale"); else _explicitNullProperties?.Remove("preferred_locale"); } }
+        private string _explicitNullValuePreferredLocale = default!;
 #endif
         /// <summary>Preferred name or nickname</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferredName { get; set; }
+        public string? PreferredName { get => _explicitNullValuePreferredName; set { _explicitNullValuePreferredName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_name"); else _explicitNullProperties?.Remove("preferred_name"); } }
+        private string? _explicitNullValuePreferredName = default!;
 #nullable restore
 #else
-        public string PreferredName { get; set; }
+        public string PreferredName { get => _explicitNullValuePreferredName; set { _explicitNullValuePreferredName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_name"); else _explicitNullProperties?.Remove("preferred_name"); } }
+        private string _explicitNullValuePreferredName = default!;
 #endif
         /// <summary>Name prefix</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Prefix { get; set; }
+        public string? Prefix { get => _explicitNullValuePrefix; set { _explicitNullValuePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prefix"); else _explicitNullProperties?.Remove("prefix"); } }
+        private string? _explicitNullValuePrefix = default!;
 #nullable restore
 #else
-        public string Prefix { get; set; }
+        public string Prefix { get => _explicitNullValuePrefix; set { _explicitNullValuePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prefix"); else _explicitNullProperties?.Remove("prefix"); } }
+        private string _explicitNullValuePrefix = default!;
 #endif
         /// <summary>Referral code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferralCode { get; set; }
+        public string? ReferralCode { get => _explicitNullValueReferralCode; set { _explicitNullValueReferralCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_code"); else _explicitNullProperties?.Remove("referral_code"); } }
+        private string? _explicitNullValueReferralCode = default!;
 #nullable restore
 #else
-        public string ReferralCode { get; set; }
+        public string ReferralCode { get => _explicitNullValueReferralCode; set { _explicitNullValueReferralCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_code"); else _explicitNullProperties?.Remove("referral_code"); } }
+        private string _explicitNullValueReferralCode = default!;
 #endif
         /// <summary>Any item not listed here will be removed if it already exists. If an empty array is specified, all existing values will be removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.SocialAccount>? SocialAccounts { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.SocialAccount>? SocialAccounts { get => _explicitNullValueSocialAccounts; set { _explicitNullValueSocialAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_accounts"); else _explicitNullProperties?.Remove("social_accounts"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.SocialAccount>? _explicitNullValueSocialAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.SocialAccount> SocialAccounts { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.SocialAccount> SocialAccounts { get => _explicitNullValueSocialAccounts; set { _explicitNullValueSocialAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_accounts"); else _explicitNullProperties?.Remove("social_accounts"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.SocialAccount> _explicitNullValueSocialAccounts = default!;
 #endif
         /// <summary>The source_type property</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CreateUpdateContactRequestSourceType? SourceType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CreateUpdateContactRequestSourceType? SourceType { get => _explicitNullValueSourceType; set { _explicitNullValueSourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_type"); else _explicitNullProperties?.Remove("source_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CreateUpdateContactRequestSourceType? _explicitNullValueSourceType = default!;
         /// <summary>Spouse&apos;s name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpouseName { get; set; }
+        public string? SpouseName { get => _explicitNullValueSpouseName; set { _explicitNullValueSpouseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spouse_name"); else _explicitNullProperties?.Remove("spouse_name"); } }
+        private string? _explicitNullValueSpouseName = default!;
 #nullable restore
 #else
-        public string SpouseName { get; set; }
+        public string SpouseName { get => _explicitNullValueSpouseName; set { _explicitNullValueSpouseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spouse_name"); else _explicitNullProperties?.Remove("spouse_name"); } }
+        private string _explicitNullValueSpouseName = default!;
 #endif
         /// <summary>Name suffix</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Suffix { get; set; }
+        public string? Suffix { get => _explicitNullValueSuffix; set { _explicitNullValueSuffix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suffix"); else _explicitNullProperties?.Remove("suffix"); } }
+        private string? _explicitNullValueSuffix = default!;
 #nullable restore
 #else
-        public string Suffix { get; set; }
+        public string Suffix { get => _explicitNullValueSuffix; set { _explicitNullValueSuffix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suffix"); else _explicitNullProperties?.Remove("suffix"); } }
+        private string _explicitNullValueSuffix = default!;
 #endif
         /// <summary>Contact&apos;s timezone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeZone { get; set; }
+        public string? TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_zone"); else _explicitNullProperties?.Remove("time_zone"); } }
+        private string? _explicitNullValueTimeZone = default!;
 #nullable restore
 #else
-        public string TimeZone { get; set; }
+        public string TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_zone"); else _explicitNullProperties?.Remove("time_zone"); } }
+        private string _explicitNullValueTimeZone = default!;
 #endif
         /// <summary>The utm_parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CreateContactUtmPropertiesRequest? UtmParameters { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CreateContactUtmPropertiesRequest? UtmParameters { get => _explicitNullValueUtmParameters; set { _explicitNullValueUtmParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utm_parameters"); else _explicitNullProperties?.Remove("utm_parameters"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CreateContactUtmPropertiesRequest? _explicitNullValueUtmParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CreateContactUtmPropertiesRequest UtmParameters { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CreateContactUtmPropertiesRequest UtmParameters { get => _explicitNullValueUtmParameters; set { _explicitNullValueUtmParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utm_parameters"); else _explicitNullProperties?.Remove("utm_parameters"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CreateContactUtmPropertiesRequest _explicitNullValueUtmParameters = default!;
 #endif
         /// <summary>Personal website URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Website { get; set; }
+        public string? Website { get => _explicitNullValueWebsite; set { _explicitNullValueWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website"); else _explicitNullProperties?.Remove("website"); } }
+        private string? _explicitNullValueWebsite = default!;
 #nullable restore
 #else
-        public string Website { get; set; }
+        public string Website { get => _explicitNullValueWebsite; set { _explicitNullValueWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website"); else _explicitNullProperties?.Remove("website"); } }
+        private string _explicitNullValueWebsite = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.CreateUpdateContactRequest"/> and sets the default values.
@@ -264,7 +360,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.CreateUpdateContactRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.CreateUpdateContactRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.CreateUpdateContactRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -343,6 +439,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("time_zone", TimeZone);
             writer.WriteObjectValue<global::Soenneker.Keap.OpenApiClient.Models.CreateContactUtmPropertiesRequest>("utm_parameters", UtmParameters);
             writer.WriteStringValue("website", Website);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

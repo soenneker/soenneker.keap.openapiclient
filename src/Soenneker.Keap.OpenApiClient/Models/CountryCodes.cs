@@ -11,24 +11,37 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CountryCodes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alpha2") is { } nullNodeAlpha2 && nullNodeAlpha2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alpha2 = null;
+            if (parseNode.GetChildNode("alpha3") is { } nullNodeAlpha3 && nullNodeAlpha3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alpha3 = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The alpha2 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Alpha2 { get; set; }
+        public string? Alpha2 { get => _explicitNullValueAlpha2; set { _explicitNullValueAlpha2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alpha2"); else _explicitNullProperties?.Remove("alpha2"); } }
+        private string? _explicitNullValueAlpha2 = default!;
 #nullable restore
 #else
-        public string Alpha2 { get; set; }
+        public string Alpha2 { get => _explicitNullValueAlpha2; set { _explicitNullValueAlpha2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alpha2"); else _explicitNullProperties?.Remove("alpha2"); } }
+        private string _explicitNullValueAlpha2 = default!;
 #endif
         /// <summary>The alpha3 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Alpha3 { get; set; }
+        public string? Alpha3 { get => _explicitNullValueAlpha3; set { _explicitNullValueAlpha3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alpha3"); else _explicitNullProperties?.Remove("alpha3"); } }
+        private string? _explicitNullValueAlpha3 = default!;
 #nullable restore
 #else
-        public string Alpha3 { get; set; }
+        public string Alpha3 { get => _explicitNullValueAlpha3; set { _explicitNullValueAlpha3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alpha3"); else _explicitNullProperties?.Remove("alpha3"); } }
+        private string _explicitNullValueAlpha3 = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.CountryCodes"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.CountryCodes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.CountryCodes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.CountryCodes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("alpha2", Alpha2);
             writer.WriteStringValue("alpha3", Alpha3);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,56 +11,86 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SubscriptionCommission : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dollar_amount") is { } nullNodeDollarAmount && nullNodeDollarAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DollarAmount = null;
+            if (parseNode.GetChildNode("level_1") is { } nullNodeLevel1 && nullNodeLevel1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level1 = null;
+            if (parseNode.GetChildNode("level_2") is { } nullNodeLevel2 && nullNodeLevel2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level2 = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("payout_type") is { } nullNodePayoutType && nullNodePayoutType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutType = null;
+            if (parseNode.GetChildNode("percentage") is { } nullNodePercentage && nullNodePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Percentage = null;
+            if (parseNode.GetChildNode("plan_price") is { } nullNodePlanPrice && nullNodePlanPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanPrice = null;
+            if (parseNode.GetChildNode("subscription_id") is { } nullNodeSubscriptionId && nullNodeSubscriptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionId = null;
+            if (parseNode.GetChildNode("unused") is { } nullNodeUnused && nullNodeUnused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unused = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Level 1 fixed dollar amount to be paid for commission. This will be set for the Sale. This is deprecated for `level_1`</summary>
-        public double? DollarAmount { get; set; }
+        public double? DollarAmount { get => _explicitNullValueDollarAmount; set { _explicitNullValueDollarAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dollar_amount"); else _explicitNullProperties?.Remove("dollar_amount"); } }
+        private double? _explicitNullValueDollarAmount = default!;
         /// <summary>Payout rules for Level 1 recipients of the commission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem? Level1 { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem? Level1 { get => _explicitNullValueLevel1; set { _explicitNullValueLevel1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level_1"); else _explicitNullProperties?.Remove("level_1"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CommissionItem? _explicitNullValueLevel1 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem Level1 { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem Level1 { get => _explicitNullValueLevel1; set { _explicitNullValueLevel1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level_1"); else _explicitNullProperties?.Remove("level_1"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CommissionItem _explicitNullValueLevel1 = default!;
 #endif
         /// <summary>Payout rules for Level 2 recipients of the commission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem? Level2 { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem? Level2 { get => _explicitNullValueLevel2; set { _explicitNullValueLevel2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level_2"); else _explicitNullProperties?.Remove("level_2"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CommissionItem? _explicitNullValueLevel2 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem Level2 { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem Level2 { get => _explicitNullValueLevel2; set { _explicitNullValueLevel2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level_2"); else _explicitNullProperties?.Remove("level_2"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CommissionItem _explicitNullValueLevel2 = default!;
 #endif
         /// <summary>Subscription name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The payout type for this commission.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommissionPayoutType? PayoutType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommissionPayoutType? PayoutType { get => _explicitNullValuePayoutType; set { _explicitNullValuePayoutType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_type"); else _explicitNullProperties?.Remove("payout_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommissionPayoutType? _explicitNullValuePayoutType = default!;
         /// <summary>Level 1 percentage to be paid for commission (0-100). This will be set for the Sale. This is deprecated for `level_1`</summary>
-        public double? Percentage { get; set; }
+        public double? Percentage { get => _explicitNullValuePercentage; set { _explicitNullValuePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage"); else _explicitNullProperties?.Remove("percentage"); } }
+        private double? _explicitNullValuePercentage = default!;
         /// <summary>Plan price</summary>
-        public double? PlanPrice { get; set; }
+        public double? PlanPrice { get => _explicitNullValuePlanPrice; set { _explicitNullValuePlanPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_price"); else _explicitNullProperties?.Remove("plan_price"); } }
+        private double? _explicitNullValuePlanPrice = default!;
         /// <summary>Subscription ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionId { get; set; }
+        public string? SubscriptionId { get => _explicitNullValueSubscriptionId; set { _explicitNullValueSubscriptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_id"); else _explicitNullProperties?.Remove("subscription_id"); } }
+        private string? _explicitNullValueSubscriptionId = default!;
 #nullable restore
 #else
-        public string SubscriptionId { get; set; }
+        public string SubscriptionId { get => _explicitNullValueSubscriptionId; set { _explicitNullValueSubscriptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_id"); else _explicitNullProperties?.Remove("subscription_id"); } }
+        private string _explicitNullValueSubscriptionId = default!;
 #endif
         /// <summary>Payout rules for any unused commissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem? Unused { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem? Unused { get => _explicitNullValueUnused; set { _explicitNullValueUnused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unused"); else _explicitNullProperties?.Remove("unused"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CommissionItem? _explicitNullValueUnused = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem Unused { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CommissionItem Unused { get => _explicitNullValueUnused; set { _explicitNullValueUnused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unused"); else _explicitNullProperties?.Remove("unused"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CommissionItem _explicitNullValueUnused = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission"/> and sets the default values.
@@ -77,7 +107,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +144,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteDoubleValue("plan_price", PlanPrice);
             writer.WriteStringValue("subscription_id", SubscriptionId);
             writer.WriteObjectValue<global::Soenneker.Keap.OpenApiClient.Models.CommissionItem>("unused", Unused);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

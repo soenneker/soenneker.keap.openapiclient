@@ -11,42 +11,63 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApplicationConfigurationModuleEmail : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("append_contact_key_to_links") is { } nullNodeAppendContactKeyToLinks && nullNodeAppendContactKeyToLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppendContactKeyToLinks = null;
+            if (parseNode.GetChildNode("default_opt_in_link") is { } nullNodeDefaultOptInLink && nullNodeDefaultOptInLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultOptInLink = null;
+            if (parseNode.GetChildNode("default_opt_out_link") is { } nullNodeDefaultOptOutLink && nullNodeDefaultOptOutLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultOptOutLink = null;
+            if (parseNode.GetChildNode("hide_emails_to_and_from_domains") is { } nullNodeHideEmailsToAndFromDomains && nullNodeHideEmailsToAndFromDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HideEmailsToAndFromDomains = null;
+            if (parseNode.GetChildNode("whitelisted_domains") is { } nullNodeWhitelistedDomains && nullNodeWhitelistedDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhitelistedDomains = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The append_contact_key_to_links property</summary>
-        public bool? AppendContactKeyToLinks { get; set; }
+        public bool? AppendContactKeyToLinks { get => _explicitNullValueAppendContactKeyToLinks; set { _explicitNullValueAppendContactKeyToLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_contact_key_to_links"); else _explicitNullProperties?.Remove("append_contact_key_to_links"); } }
+        private bool? _explicitNullValueAppendContactKeyToLinks = default!;
         /// <summary>The default_opt_in_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultOptInLink { get; set; }
+        public string? DefaultOptInLink { get => _explicitNullValueDefaultOptInLink; set { _explicitNullValueDefaultOptInLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_in_link"); else _explicitNullProperties?.Remove("default_opt_in_link"); } }
+        private string? _explicitNullValueDefaultOptInLink = default!;
 #nullable restore
 #else
-        public string DefaultOptInLink { get; set; }
+        public string DefaultOptInLink { get => _explicitNullValueDefaultOptInLink; set { _explicitNullValueDefaultOptInLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_in_link"); else _explicitNullProperties?.Remove("default_opt_in_link"); } }
+        private string _explicitNullValueDefaultOptInLink = default!;
 #endif
         /// <summary>The default_opt_out_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultOptOutLink { get; set; }
+        public string? DefaultOptOutLink { get => _explicitNullValueDefaultOptOutLink; set { _explicitNullValueDefaultOptOutLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_out_link"); else _explicitNullProperties?.Remove("default_opt_out_link"); } }
+        private string? _explicitNullValueDefaultOptOutLink = default!;
 #nullable restore
 #else
-        public string DefaultOptOutLink { get; set; }
+        public string DefaultOptOutLink { get => _explicitNullValueDefaultOptOutLink; set { _explicitNullValueDefaultOptOutLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_out_link"); else _explicitNullProperties?.Remove("default_opt_out_link"); } }
+        private string _explicitNullValueDefaultOptOutLink = default!;
 #endif
         /// <summary>The hide_emails_to_and_from_domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HideEmailsToAndFromDomains { get; set; }
+        public string? HideEmailsToAndFromDomains { get => _explicitNullValueHideEmailsToAndFromDomains; set { _explicitNullValueHideEmailsToAndFromDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_emails_to_and_from_domains"); else _explicitNullProperties?.Remove("hide_emails_to_and_from_domains"); } }
+        private string? _explicitNullValueHideEmailsToAndFromDomains = default!;
 #nullable restore
 #else
-        public string HideEmailsToAndFromDomains { get; set; }
+        public string HideEmailsToAndFromDomains { get => _explicitNullValueHideEmailsToAndFromDomains; set { _explicitNullValueHideEmailsToAndFromDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_emails_to_and_from_domains"); else _explicitNullProperties?.Remove("hide_emails_to_and_from_domains"); } }
+        private string _explicitNullValueHideEmailsToAndFromDomains = default!;
 #endif
         /// <summary>The whitelisted_domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhitelistedDomains { get; set; }
+        public string? WhitelistedDomains { get => _explicitNullValueWhitelistedDomains; set { _explicitNullValueWhitelistedDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_domains"); else _explicitNullProperties?.Remove("whitelisted_domains"); } }
+        private string? _explicitNullValueWhitelistedDomains = default!;
 #nullable restore
 #else
-        public string WhitelistedDomains { get; set; }
+        public string WhitelistedDomains { get => _explicitNullValueWhitelistedDomains; set { _explicitNullValueWhitelistedDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_domains"); else _explicitNullProperties?.Remove("whitelisted_domains"); } }
+        private string _explicitNullValueWhitelistedDomains = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("default_opt_out_link", DefaultOptOutLink);
             writer.WriteStringValue("hide_emails_to_and_from_domains", HideEmailsToAndFromDomains);
             writer.WriteStringValue("whitelisted_domains", WhitelistedDomains);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,49 +12,81 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentPlan : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auto_charge") is { } nullNodeAutoCharge && nullNodeAutoCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCharge = null;
+            if (parseNode.GetChildNode("days_between_payments") is { } nullNodeDaysBetweenPayments && nullNodeDaysBetweenPayments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysBetweenPayments = null;
+            if (parseNode.GetChildNode("days_between_retries") is { } nullNodeDaysBetweenRetries && nullNodeDaysBetweenRetries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysBetweenRetries = null;
+            if (parseNode.GetChildNode("initial_payment_amount") is { } nullNodeInitialPaymentAmount && nullNodeInitialPaymentAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialPaymentAmount = null;
+            if (parseNode.GetChildNode("initial_payment_date") is { } nullNodeInitialPaymentDate && nullNodeInitialPaymentDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialPaymentDate = null;
+            if (parseNode.GetChildNode("initial_payment_percent") is { } nullNodeInitialPaymentPercent && nullNodeInitialPaymentPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialPaymentPercent = null;
+            if (parseNode.GetChildNode("max_charge_attempts") is { } nullNodeMaxChargeAttempts && nullNodeMaxChargeAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxChargeAttempts = null;
+            if (parseNode.GetChildNode("number_of_payments") is { } nullNodeNumberOfPayments && nullNodeNumberOfPayments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfPayments = null;
+            if (parseNode.GetChildNode("payment_method_id") is { } nullNodePaymentMethodId && nullNodePaymentMethodId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodId = null;
+            if (parseNode.GetChildNode("payment_plan_items") is { } nullNodePaymentPlanItems && nullNodePaymentPlanItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentPlanItems = null;
+            if (parseNode.GetChildNode("plan_start_date") is { } nullNodePlanStartDate && nullNodePlanStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanStartDate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to auto-charge payments</summary>
-        public bool? AutoCharge { get; set; }
+        public bool? AutoCharge { get => _explicitNullValueAutoCharge; set { _explicitNullValueAutoCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_charge"); else _explicitNullProperties?.Remove("auto_charge"); } }
+        private bool? _explicitNullValueAutoCharge = default!;
         /// <summary>Days between each payment</summary>
-        public long? DaysBetweenPayments { get; set; }
+        public long? DaysBetweenPayments { get => _explicitNullValueDaysBetweenPayments; set { _explicitNullValueDaysBetweenPayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days_between_payments"); else _explicitNullProperties?.Remove("days_between_payments"); } }
+        private long? _explicitNullValueDaysBetweenPayments = default!;
         /// <summary>Days between retry attempts</summary>
-        public long? DaysBetweenRetries { get; set; }
+        public long? DaysBetweenRetries { get => _explicitNullValueDaysBetweenRetries; set { _explicitNullValueDaysBetweenRetries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days_between_retries"); else _explicitNullProperties?.Remove("days_between_retries"); } }
+        private long? _explicitNullValueDaysBetweenRetries = default!;
         /// <summary>Initial payment amount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? InitialPaymentAmount { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? InitialPaymentAmount { get => _explicitNullValueInitialPaymentAmount; set { _explicitNullValueInitialPaymentAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_payment_amount"); else _explicitNullProperties?.Remove("initial_payment_amount"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? _explicitNullValueInitialPaymentAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue InitialPaymentAmount { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue InitialPaymentAmount { get => _explicitNullValueInitialPaymentAmount; set { _explicitNullValueInitialPaymentAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_payment_amount"); else _explicitNullProperties?.Remove("initial_payment_amount"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue _explicitNullValueInitialPaymentAmount = default!;
 #endif
         /// <summary>The initial payment date. In ISO-8601 date format (e.g. 2024-05-21)</summary>
-        public Date? InitialPaymentDate { get; set; }
+        public Date? InitialPaymentDate { get => _explicitNullValueInitialPaymentDate; set { _explicitNullValueInitialPaymentDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_payment_date"); else _explicitNullProperties?.Remove("initial_payment_date"); } }
+        private Date? _explicitNullValueInitialPaymentDate = default!;
         /// <summary>Initial payment as percentage</summary>
-        public double? InitialPaymentPercent { get; set; }
+        public double? InitialPaymentPercent { get => _explicitNullValueInitialPaymentPercent; set { _explicitNullValueInitialPaymentPercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_payment_percent"); else _explicitNullProperties?.Remove("initial_payment_percent"); } }
+        private double? _explicitNullValueInitialPaymentPercent = default!;
         /// <summary>Maximum charge attempts</summary>
-        public long? MaxChargeAttempts { get; set; }
+        public long? MaxChargeAttempts { get => _explicitNullValueMaxChargeAttempts; set { _explicitNullValueMaxChargeAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_charge_attempts"); else _explicitNullProperties?.Remove("max_charge_attempts"); } }
+        private long? _explicitNullValueMaxChargeAttempts = default!;
         /// <summary>Number of payments in the plan</summary>
-        public long? NumberOfPayments { get; set; }
+        public long? NumberOfPayments { get => _explicitNullValueNumberOfPayments; set { _explicitNullValueNumberOfPayments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_payments"); else _explicitNullProperties?.Remove("number_of_payments"); } }
+        private long? _explicitNullValueNumberOfPayments = default!;
         /// <summary>Payment method ID to charge</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethodId { get; set; }
+        public string? PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
+        private string? _explicitNullValuePaymentMethodId = default!;
 #nullable restore
 #else
-        public string PaymentMethodId { get; set; }
+        public string PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
+        private string _explicitNullValuePaymentMethodId = default!;
 #endif
         /// <summary>List of scheduled payment items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItem>? PaymentPlanItems { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItem>? PaymentPlanItems { get => _explicitNullValuePaymentPlanItems; set { _explicitNullValuePaymentPlanItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_plan_items"); else _explicitNullProperties?.Remove("payment_plan_items"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItem>? _explicitNullValuePaymentPlanItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItem> PaymentPlanItems { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItem> PaymentPlanItems { get => _explicitNullValuePaymentPlanItems; set { _explicitNullValuePaymentPlanItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_plan_items"); else _explicitNullProperties?.Remove("payment_plan_items"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItem> _explicitNullValuePaymentPlanItems = default!;
 #endif
         /// <summary>The start date of the payment plan. In ISO-8601 date format (e.g. 2024-05-21)</summary>
-        public Date? PlanStartDate { get; set; }
+        public Date? PlanStartDate { get => _explicitNullValuePlanStartDate; set { _explicitNullValuePlanStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_start_date"); else _explicitNullProperties?.Remove("plan_start_date"); } }
+        private Date? _explicitNullValuePlanStartDate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.PaymentPlan"/> and sets the default values.
         /// </summary>
@@ -70,7 +102,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.PaymentPlan CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.PaymentPlan();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.PaymentPlan(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -111,6 +143,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteStringValue("payment_method_id", PaymentMethodId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItem>("payment_plan_items", PaymentPlanItems);
             writer.WriteDateValue("plan_start_date", PlanStartDate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

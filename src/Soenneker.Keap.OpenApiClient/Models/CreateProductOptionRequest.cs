@@ -11,38 +11,60 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateProductOptionRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("display_order") is { } nullNodeDisplayOrder && nullNodeDisplayOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayOrder = null;
+            if (parseNode.GetChildNode("list_items") is { } nullNodeListItems && nullNodeListItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListItems = null;
+            if (parseNode.GetChildNode("option_label") is { } nullNodeOptionLabel && nullNodeOptionLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionLabel = null;
+            if (parseNode.GetChildNode("option_type") is { } nullNodeOptionType && nullNodeOptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionType = null;
+            if (parseNode.GetChildNode("required") is { } nullNodeRequired && nullNodeRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Required = null;
+            if (parseNode.GetChildNode("text_rules") is { } nullNodeTextRules && nullNodeTextRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextRules = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The order in which this option will be displayed among other options. Minimum is 0. Lower values indicate higher priority in order.</summary>
-        public int? DisplayOrder { get; set; }
+        public int? DisplayOrder { get => _explicitNullValueDisplayOrder; set { _explicitNullValueDisplayOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_order"); else _explicitNullProperties?.Remove("display_order"); } }
+        private int? _explicitNullValueDisplayOrder = default!;
         /// <summary>Appears only for option_type of LIST. A fixed list of available selectable items for this product option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionListOption>? ListItems { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionListOption>? ListItems { get => _explicitNullValueListItems; set { _explicitNullValueListItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_items"); else _explicitNullProperties?.Remove("list_items"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionListOption>? _explicitNullValueListItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionListOption> ListItems { get; set; }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionListOption> ListItems { get => _explicitNullValueListItems; set { _explicitNullValueListItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_items"); else _explicitNullProperties?.Remove("list_items"); } }
+        private List<global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionListOption> _explicitNullValueListItems = default!;
 #endif
         /// <summary>The displayable name of the option (e.g. Size). Cannot be whitespace only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptionLabel { get; set; }
+        public string? OptionLabel { get => _explicitNullValueOptionLabel; set { _explicitNullValueOptionLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_label"); else _explicitNullProperties?.Remove("option_label"); } }
+        private string? _explicitNullValueOptionLabel = default!;
 #nullable restore
 #else
-        public string OptionLabel { get; set; }
+        public string OptionLabel { get => _explicitNullValueOptionLabel; set { _explicitNullValueOptionLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_label"); else _explicitNullProperties?.Remove("option_label"); } }
+        private string _explicitNullValueOptionLabel = default!;
 #endif
         /// <summary>The type of option. Possible valid values are LIST and TEXT.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionRequestOptionType? OptionType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionRequestOptionType? OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_type"); else _explicitNullProperties?.Remove("option_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionRequestOptionType? _explicitNullValueOptionType = default!;
         /// <summary>Whether this option is required for product purchase.</summary>
-        public bool? Required { get; set; }
+        public bool? Required { get => _explicitNullValueRequired; set { _explicitNullValueRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required"); else _explicitNullProperties?.Remove("required"); } }
+        private bool? _explicitNullValueRequired = default!;
         /// <summary>The option is a user-defined free-form field. The settings define the restrictions on what can be entered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionTextOption? TextRules { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionTextOption? TextRules { get => _explicitNullValueTextRules; set { _explicitNullValueTextRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_rules"); else _explicitNullProperties?.Remove("text_rules"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionTextOption? _explicitNullValueTextRules = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionTextOption TextRules { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionTextOption TextRules { get => _explicitNullValueTextRules; set { _explicitNullValueTextRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_rules"); else _explicitNullProperties?.Remove("text_rules"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionTextOption _explicitNullValueTextRules = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionRequest"/> and sets the default values.
@@ -60,7 +82,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,6 +113,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionRequestOptionType>("option_type", OptionType);
             writer.WriteBoolValue("required", Required);
             writer.WriteObjectValue<global::Soenneker.Keap.OpenApiClient.Models.CreateProductOptionTextOption>("text_rules", TextRules);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

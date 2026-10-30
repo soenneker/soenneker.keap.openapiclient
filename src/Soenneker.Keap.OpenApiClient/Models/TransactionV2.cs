@@ -11,101 +11,150 @@ namespace Soenneker.Keap.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TransactionV2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("contact") is { } nullNodeContact && nullNodeContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact = null;
+            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("error_details") is { } nullNodeErrorDetails && nullNodeErrorDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorDetails = null;
+            if (parseNode.GetChildNode("external_reference_id") is { } nullNodeExternalReferenceId && nullNodeExternalReferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalReferenceId = null;
+            if (parseNode.GetChildNode("external_response_code") is { } nullNodeExternalResponseCode && nullNodeExternalResponseCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalResponseCode = null;
+            if (parseNode.GetChildNode("is_successful") is { } nullNodeIsSuccessful && nullNodeIsSuccessful.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSuccessful = null;
+            if (parseNode.GetChildNode("merchant_account_id") is { } nullNodeMerchantAccountId && nullNodeMerchantAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountId = null;
+            if (parseNode.GetChildNode("merchant_account_type") is { } nullNodeMerchantAccountType && nullNodeMerchantAccountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountType = null;
+            if (parseNode.GetChildNode("order_ids") is { } nullNodeOrderIds && nullNodeOrderIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderIds = null;
+            if (parseNode.GetChildNode("payment_id") is { } nullNodePaymentId && nullNodePaymentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentId = null;
+            if (parseNode.GetChildNode("payment_method") is { } nullNodePaymentMethod && nullNodePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethod = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("transaction_method") is { } nullNodeTransactionMethod && nullNodeTransactionMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionMethod = null;
+            if (parseNode.GetChildNode("transaction_time") is { } nullNodeTransactionTime && nullNodeTransactionTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount of the transaction.</summary>
-        public double? Amount { get; set; }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private double? _explicitNullValueAmount = default!;
         /// <summary>Contact associated with this order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.BasicContact? Contact { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.BasicContact? Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.BasicContact? _explicitNullValueContact = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.BasicContact Contact { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.BasicContact Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.BasicContact _explicitNullValueContact = default!;
 #endif
         /// <summary>The id of the contact the transaction was for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get; set; }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get; set; }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>A description of the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Any details if the transaction failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorDetails { get; set; }
+        public string? ErrorDetails { get => _explicitNullValueErrorDetails; set { _explicitNullValueErrorDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_details"); else _explicitNullProperties?.Remove("error_details"); } }
+        private string? _explicitNullValueErrorDetails = default!;
 #nullable restore
 #else
-        public string ErrorDetails { get; set; }
+        public string ErrorDetails { get => _explicitNullValueErrorDetails; set { _explicitNullValueErrorDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_details"); else _explicitNullProperties?.Remove("error_details"); } }
+        private string _explicitNullValueErrorDetails = default!;
 #endif
         /// <summary>An external reference id - typically from a payment processor - that references this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalReferenceId { get; set; }
+        public string? ExternalReferenceId { get => _explicitNullValueExternalReferenceId; set { _explicitNullValueExternalReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_reference_id"); else _explicitNullProperties?.Remove("external_reference_id"); } }
+        private string? _explicitNullValueExternalReferenceId = default!;
 #nullable restore
 #else
-        public string ExternalReferenceId { get; set; }
+        public string ExternalReferenceId { get => _explicitNullValueExternalReferenceId; set { _explicitNullValueExternalReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_reference_id"); else _explicitNullProperties?.Remove("external_reference_id"); } }
+        private string _explicitNullValueExternalReferenceId = default!;
 #endif
         /// <summary>An external response code generated by payment processor</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalResponseCode { get; set; }
+        public string? ExternalResponseCode { get => _explicitNullValueExternalResponseCode; set { _explicitNullValueExternalResponseCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_response_code"); else _explicitNullProperties?.Remove("external_response_code"); } }
+        private string? _explicitNullValueExternalResponseCode = default!;
 #nullable restore
 #else
-        public string ExternalResponseCode { get; set; }
+        public string ExternalResponseCode { get => _explicitNullValueExternalResponseCode; set { _explicitNullValueExternalResponseCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_response_code"); else _explicitNullProperties?.Remove("external_response_code"); } }
+        private string _explicitNullValueExternalResponseCode = default!;
 #endif
         /// <summary>If the transaction completed in a successful state. PENDING transactions are treated `false`.</summary>
-        public bool? IsSuccessful { get; set; }
+        public bool? IsSuccessful { get => _explicitNullValueIsSuccessful; set { _explicitNullValueIsSuccessful = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_successful"); else _explicitNullProperties?.Remove("is_successful"); } }
+        private bool? _explicitNullValueIsSuccessful = default!;
         /// <summary>The merchant account id through which the transaction was made.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantAccountId { get; set; }
+        public string? MerchantAccountId { get => _explicitNullValueMerchantAccountId; set { _explicitNullValueMerchantAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_account_id"); else _explicitNullProperties?.Remove("merchant_account_id"); } }
+        private string? _explicitNullValueMerchantAccountId = default!;
 #nullable restore
 #else
-        public string MerchantAccountId { get; set; }
+        public string MerchantAccountId { get => _explicitNullValueMerchantAccountId; set { _explicitNullValueMerchantAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_account_id"); else _explicitNullProperties?.Remove("merchant_account_id"); } }
+        private string _explicitNullValueMerchantAccountId = default!;
 #endif
         /// <summary>The merchant account id through which the transaction was made.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.TransactionV2MerchantAccountType? MerchantAccountType { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.TransactionV2MerchantAccountType? MerchantAccountType { get => _explicitNullValueMerchantAccountType; set { _explicitNullValueMerchantAccountType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_account_type"); else _explicitNullProperties?.Remove("merchant_account_type"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.TransactionV2MerchantAccountType? _explicitNullValueMerchantAccountType = default!;
         /// <summary>List of order ids transaction was against.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? OrderIds { get; set; }
+        public List<string>? OrderIds { get => _explicitNullValueOrderIds; set { _explicitNullValueOrderIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_ids"); else _explicitNullProperties?.Remove("order_ids"); } }
+        private List<string>? _explicitNullValueOrderIds = default!;
 #nullable restore
 #else
-        public List<string> OrderIds { get; set; }
+        public List<string> OrderIds { get => _explicitNullValueOrderIds; set { _explicitNullValueOrderIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_ids"); else _explicitNullProperties?.Remove("order_ids"); } }
+        private List<string> _explicitNullValueOrderIds = default!;
 #endif
         /// <summary>Identifier of an order/invoice payment created by the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentId { get; set; }
+        public string? PaymentId { get => _explicitNullValuePaymentId; set { _explicitNullValuePaymentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_id"); else _explicitNullProperties?.Remove("payment_id"); } }
+        private string? _explicitNullValuePaymentId = default!;
 #nullable restore
 #else
-        public string PaymentId { get; set; }
+        public string PaymentId { get => _explicitNullValuePaymentId; set { _explicitNullValuePaymentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_id"); else _explicitNullProperties?.Remove("payment_id"); } }
+        private string _explicitNullValuePaymentId = default!;
 #endif
         /// <summary>Details of the payment method used for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod? PaymentMethod { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod? _explicitNullValuePaymentMethod = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod PaymentMethod { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod _explicitNullValuePaymentMethod = default!;
 #endif
         /// <summary>The resulting status of the transaction.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.TransactionV2Status? Status { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.TransactionV2Status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.TransactionV2Status? _explicitNullValueStatus = default!;
         /// <summary>The method of transaction.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.TransactionV2TransactionMethod? TransactionMethod { get; set; }
+        public global::Soenneker.Keap.OpenApiClient.Models.TransactionV2TransactionMethod? TransactionMethod { get => _explicitNullValueTransactionMethod; set { _explicitNullValueTransactionMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_method"); else _explicitNullProperties?.Remove("transaction_method"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.TransactionV2TransactionMethod? _explicitNullValueTransactionMethod = default!;
         /// <summary>When this transaction was made. In ISO-8601 format.</summary>
-        public DateTimeOffset? TransactionTime { get; set; }
+        public DateTimeOffset? TransactionTime { get => _explicitNullValueTransactionTime; set { _explicitNullValueTransactionTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_time"); else _explicitNullProperties?.Remove("transaction_time"); } }
+        private DateTimeOffset? _explicitNullValueTransactionTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.TransactionV2"/> and sets the default values.
         /// </summary>
@@ -121,7 +170,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public static global::Soenneker.Keap.OpenApiClient.Models.TransactionV2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Keap.OpenApiClient.Models.TransactionV2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Keap.OpenApiClient.Models.TransactionV2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -172,6 +221,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.TransactionV2Status>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.TransactionV2TransactionMethod>("transaction_method", TransactionMethod);
             writer.WriteDateTimeOffsetValue("transaction_time", TransactionTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
