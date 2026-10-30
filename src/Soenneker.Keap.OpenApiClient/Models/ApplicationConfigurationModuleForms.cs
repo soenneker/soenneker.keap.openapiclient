@@ -17,13 +17,14 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("spam_filters_enabled") is { } nullNodeSpamFiltersEnabled && nullNodeSpamFiltersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpamFiltersEnabled = null;
+            if (parseNode.GetChildNode("spam_filters_enabled") is null) { _explicitNullValueSpamFiltersEnabled = default!; _explicitNullProperties?.Remove("spam_filters_enabled"); }
+            else if (parseNode.GetChildNode("spam_filters_enabled") is { } nullNodeSpamFiltersEnabled && nullNodeSpamFiltersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpamFiltersEnabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The spam_filters_enabled property</summary>
-        public bool? SpamFiltersEnabled { get => _explicitNullValueSpamFiltersEnabled; set { _explicitNullValueSpamFiltersEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam_filters_enabled"); else _explicitNullProperties?.Remove("spam_filters_enabled"); } }
+        public bool? SpamFiltersEnabled { get => _explicitNullValueSpamFiltersEnabled; set { _explicitNullValueSpamFiltersEnabled = value; AdditionalData?.Remove("spam_filters_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam_filters_enabled"); else _explicitNullProperties?.Remove("spam_filters_enabled"); } }
         private bool? _explicitNullValueSpamFiltersEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleForms"/> and sets the default values.

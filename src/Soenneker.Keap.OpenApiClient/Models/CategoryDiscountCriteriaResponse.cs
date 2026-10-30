@@ -17,11 +17,16 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
-            if (parseNode.GetChildNode("criteria_id") is { } nullNodeCriteriaId && nullNodeCriteriaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CriteriaId = null;
-            if (parseNode.GetChildNode("range_end_time") is { } nullNodeRangeEndTime && nullNodeRangeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeEndTime = null;
-            if (parseNode.GetChildNode("range_start_time") is { } nullNodeRangeStartTime && nullNodeRangeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeStartTime = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("code") is null) { _explicitNullValueCode = default!; _explicitNullProperties?.Remove("code"); }
+            else if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("criteria_id") is null) { _explicitNullValueCriteriaId = default!; _explicitNullProperties?.Remove("criteria_id"); }
+            else if (parseNode.GetChildNode("criteria_id") is { } nullNodeCriteriaId && nullNodeCriteriaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CriteriaId = null;
+            if (parseNode.GetChildNode("range_end_time") is null) { _explicitNullValueRangeEndTime = default!; _explicitNullProperties?.Remove("range_end_time"); }
+            else if (parseNode.GetChildNode("range_end_time") is { } nullNodeRangeEndTime && nullNodeRangeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeEndTime = null;
+            if (parseNode.GetChildNode("range_start_time") is null) { _explicitNullValueRangeStartTime = default!; _explicitNullProperties?.Remove("range_start_time"); }
+            else if (parseNode.GetChildNode("range_start_time") is { } nullNodeRangeStartTime && nullNodeRangeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeStartTime = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,31 +34,31 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>Promotional code for PROMO_CODE criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private string? _explicitNullValueCode = default!;
 #nullable restore
 #else
-        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private string _explicitNullValueCode = default!;
 #endif
         /// <summary>Unique identifier for this criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CriteriaId { get => _explicitNullValueCriteriaId; set { _explicitNullValueCriteriaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria_id"); else _explicitNullProperties?.Remove("criteria_id"); } }
+        public string? CriteriaId { get => _explicitNullValueCriteriaId; set { _explicitNullValueCriteriaId = value; AdditionalData?.Remove("criteria_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria_id"); else _explicitNullProperties?.Remove("criteria_id"); } }
         private string? _explicitNullValueCriteriaId = default!;
 #nullable restore
 #else
-        public string CriteriaId { get => _explicitNullValueCriteriaId; set { _explicitNullValueCriteriaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria_id"); else _explicitNullProperties?.Remove("criteria_id"); } }
+        public string CriteriaId { get => _explicitNullValueCriteriaId; set { _explicitNullValueCriteriaId = value; AdditionalData?.Remove("criteria_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria_id"); else _explicitNullProperties?.Remove("criteria_id"); } }
         private string _explicitNullValueCriteriaId = default!;
 #endif
         /// <summary>End date/time for DATE_RANGE criteria (ISO-8601 format)</summary>
-        public DateTimeOffset? RangeEndTime { get => _explicitNullValueRangeEndTime; set { _explicitNullValueRangeEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_end_time"); else _explicitNullProperties?.Remove("range_end_time"); } }
+        public DateTimeOffset? RangeEndTime { get => _explicitNullValueRangeEndTime; set { _explicitNullValueRangeEndTime = value; AdditionalData?.Remove("range_end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_end_time"); else _explicitNullProperties?.Remove("range_end_time"); } }
         private DateTimeOffset? _explicitNullValueRangeEndTime = default!;
         /// <summary>Start date/time for DATE_RANGE criteria (ISO-8601 format)</summary>
-        public DateTimeOffset? RangeStartTime { get => _explicitNullValueRangeStartTime; set { _explicitNullValueRangeStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_start_time"); else _explicitNullProperties?.Remove("range_start_time"); } }
+        public DateTimeOffset? RangeStartTime { get => _explicitNullValueRangeStartTime; set { _explicitNullValueRangeStartTime = value; AdditionalData?.Remove("range_start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_start_time"); else _explicitNullProperties?.Remove("range_start_time"); } }
         private DateTimeOffset? _explicitNullValueRangeStartTime = default!;
         /// <summary>Type of criteria: DATE_RANGE or PROMO_CODE</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponseType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponseType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponseType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponse"/> and sets the default values.
@@ -84,7 +89,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "criteria_id", n => { CriteriaId = n.GetStringValue(); } },
                 { "range_end_time", n => { RangeEndTime = n.GetDateTimeOffsetValue(); } },
                 { "range_start_time", n => { RangeStartTime = n.GetDateTimeOffsetValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponseType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponseType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

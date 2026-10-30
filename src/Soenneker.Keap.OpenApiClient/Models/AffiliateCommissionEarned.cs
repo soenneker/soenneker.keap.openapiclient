@@ -17,23 +17,25 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("affiliate_commission_total") is { } nullNodeAffiliateCommissionTotal && nullNodeAffiliateCommissionTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateCommissionTotal = null;
-            if (parseNode.GetChildNode("view_ledger_url") is { } nullNodeViewLedgerUrl && nullNodeViewLedgerUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewLedgerUrl = null;
+            if (parseNode.GetChildNode("affiliate_commission_total") is null) { _explicitNullValueAffiliateCommissionTotal = default!; _explicitNullProperties?.Remove("affiliate_commission_total"); }
+            else if (parseNode.GetChildNode("affiliate_commission_total") is { } nullNodeAffiliateCommissionTotal && nullNodeAffiliateCommissionTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateCommissionTotal = null;
+            if (parseNode.GetChildNode("view_ledger_url") is null) { _explicitNullValueViewLedgerUrl = default!; _explicitNullProperties?.Remove("view_ledger_url"); }
+            else if (parseNode.GetChildNode("view_ledger_url") is { } nullNodeViewLedgerUrl && nullNodeViewLedgerUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewLedgerUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total commission earned by affiliate</summary>
-        public double? AffiliateCommissionTotal { get => _explicitNullValueAffiliateCommissionTotal; set { _explicitNullValueAffiliateCommissionTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_commission_total"); else _explicitNullProperties?.Remove("affiliate_commission_total"); } }
+        public double? AffiliateCommissionTotal { get => _explicitNullValueAffiliateCommissionTotal; set { _explicitNullValueAffiliateCommissionTotal = value; AdditionalData?.Remove("affiliate_commission_total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_commission_total"); else _explicitNullProperties?.Remove("affiliate_commission_total"); } }
         private double? _explicitNullValueAffiliateCommissionTotal = default!;
         /// <summary>URL to view affiliate ledger</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ViewLedgerUrl { get => _explicitNullValueViewLedgerUrl; set { _explicitNullValueViewLedgerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_ledger_url"); else _explicitNullProperties?.Remove("view_ledger_url"); } }
+        public string? ViewLedgerUrl { get => _explicitNullValueViewLedgerUrl; set { _explicitNullValueViewLedgerUrl = value; AdditionalData?.Remove("view_ledger_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_ledger_url"); else _explicitNullProperties?.Remove("view_ledger_url"); } }
         private string? _explicitNullValueViewLedgerUrl = default!;
 #nullable restore
 #else
-        public string ViewLedgerUrl { get => _explicitNullValueViewLedgerUrl; set { _explicitNullValueViewLedgerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_ledger_url"); else _explicitNullProperties?.Remove("view_ledger_url"); } }
+        public string ViewLedgerUrl { get => _explicitNullValueViewLedgerUrl; set { _explicitNullValueViewLedgerUrl = value; AdditionalData?.Remove("view_ledger_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_ledger_url"); else _explicitNullProperties?.Remove("view_ledger_url"); } }
         private string _explicitNullValueViewLedgerUrl = default!;
 #endif
         /// <summary>

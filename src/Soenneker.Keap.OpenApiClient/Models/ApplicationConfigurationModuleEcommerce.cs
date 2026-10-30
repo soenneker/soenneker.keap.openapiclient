@@ -17,19 +17,32 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("credit_card_types") is { } nullNodeCreditCardTypes && nullNodeCreditCardTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardTypes = null;
-            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
-            if (parseNode.GetChildNode("default_charge_max_retry_attempts") is { } nullNodeDefaultChargeMaxRetryAttempts && nullNodeDefaultChargeMaxRetryAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChargeMaxRetryAttempts = null;
-            if (parseNode.GetChildNode("default_country") is { } nullNodeDefaultCountry && nullNodeDefaultCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCountry = null;
-            if (parseNode.GetChildNode("default_merchant") is { } nullNodeDefaultMerchant && nullNodeDefaultMerchant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMerchant = null;
-            if (parseNode.GetChildNode("default_number_of_days_between_charge_attempts") is { } nullNodeDefaultNumberOfDaysBetweenChargeAttempts && nullNodeDefaultNumberOfDaysBetweenChargeAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultNumberOfDaysBetweenChargeAttempts = null;
-            if (parseNode.GetChildNode("default_tax") is { } nullNodeDefaultTax && nullNodeDefaultTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTax = null;
-            if (parseNode.GetChildNode("default_to_auto_charge") is { } nullNodeDefaultToAutoCharge && nullNodeDefaultToAutoCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultToAutoCharge = null;
-            if (parseNode.GetChildNode("merchant_account_max_retry_attempts") is { } nullNodeMerchantAccountMaxRetryAttempts && nullNodeMerchantAccountMaxRetryAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountMaxRetryAttempts = null;
-            if (parseNode.GetChildNode("payment_types") is { } nullNodePaymentTypes && nullNodePaymentTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentTypes = null;
-            if (parseNode.GetChildNode("promo_codes") is { } nullNodePromoCodes && nullNodePromoCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoCodes = null;
-            if (parseNode.GetChildNode("track_cost_per_unit") is { } nullNodeTrackCostPerUnit && nullNodeTrackCostPerUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackCostPerUnit = null;
-            if (parseNode.GetChildNode("track_inventory") is { } nullNodeTrackInventory && nullNodeTrackInventory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackInventory = null;
+            if (parseNode.GetChildNode("credit_card_types") is null) { _explicitNullValueCreditCardTypes = default!; _explicitNullProperties?.Remove("credit_card_types"); }
+            else if (parseNode.GetChildNode("credit_card_types") is { } nullNodeCreditCardTypes && nullNodeCreditCardTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardTypes = null;
+            if (parseNode.GetChildNode("currency") is null) { _explicitNullValueCurrency = default!; _explicitNullProperties?.Remove("currency"); }
+            else if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("default_charge_max_retry_attempts") is null) { _explicitNullValueDefaultChargeMaxRetryAttempts = default!; _explicitNullProperties?.Remove("default_charge_max_retry_attempts"); }
+            else if (parseNode.GetChildNode("default_charge_max_retry_attempts") is { } nullNodeDefaultChargeMaxRetryAttempts && nullNodeDefaultChargeMaxRetryAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultChargeMaxRetryAttempts = null;
+            if (parseNode.GetChildNode("default_country") is null) { _explicitNullValueDefaultCountry = default!; _explicitNullProperties?.Remove("default_country"); }
+            else if (parseNode.GetChildNode("default_country") is { } nullNodeDefaultCountry && nullNodeDefaultCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCountry = null;
+            if (parseNode.GetChildNode("default_merchant") is null) { _explicitNullValueDefaultMerchant = default!; _explicitNullProperties?.Remove("default_merchant"); }
+            else if (parseNode.GetChildNode("default_merchant") is { } nullNodeDefaultMerchant && nullNodeDefaultMerchant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMerchant = null;
+            if (parseNode.GetChildNode("default_number_of_days_between_charge_attempts") is null) { _explicitNullValueDefaultNumberOfDaysBetweenChargeAttempts = default!; _explicitNullProperties?.Remove("default_number_of_days_between_charge_attempts"); }
+            else if (parseNode.GetChildNode("default_number_of_days_between_charge_attempts") is { } nullNodeDefaultNumberOfDaysBetweenChargeAttempts && nullNodeDefaultNumberOfDaysBetweenChargeAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultNumberOfDaysBetweenChargeAttempts = null;
+            if (parseNode.GetChildNode("default_tax") is null) { _explicitNullValueDefaultTax = default!; _explicitNullProperties?.Remove("default_tax"); }
+            else if (parseNode.GetChildNode("default_tax") is { } nullNodeDefaultTax && nullNodeDefaultTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTax = null;
+            if (parseNode.GetChildNode("default_to_auto_charge") is null) { _explicitNullValueDefaultToAutoCharge = default!; _explicitNullProperties?.Remove("default_to_auto_charge"); }
+            else if (parseNode.GetChildNode("default_to_auto_charge") is { } nullNodeDefaultToAutoCharge && nullNodeDefaultToAutoCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultToAutoCharge = null;
+            if (parseNode.GetChildNode("merchant_account_max_retry_attempts") is null) { _explicitNullValueMerchantAccountMaxRetryAttempts = default!; _explicitNullProperties?.Remove("merchant_account_max_retry_attempts"); }
+            else if (parseNode.GetChildNode("merchant_account_max_retry_attempts") is { } nullNodeMerchantAccountMaxRetryAttempts && nullNodeMerchantAccountMaxRetryAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountMaxRetryAttempts = null;
+            if (parseNode.GetChildNode("payment_types") is null) { _explicitNullValuePaymentTypes = default!; _explicitNullProperties?.Remove("payment_types"); }
+            else if (parseNode.GetChildNode("payment_types") is { } nullNodePaymentTypes && nullNodePaymentTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentTypes = null;
+            if (parseNode.GetChildNode("promo_codes") is null) { _explicitNullValuePromoCodes = default!; _explicitNullProperties?.Remove("promo_codes"); }
+            else if (parseNode.GetChildNode("promo_codes") is { } nullNodePromoCodes && nullNodePromoCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoCodes = null;
+            if (parseNode.GetChildNode("track_cost_per_unit") is null) { _explicitNullValueTrackCostPerUnit = default!; _explicitNullProperties?.Remove("track_cost_per_unit"); }
+            else if (parseNode.GetChildNode("track_cost_per_unit") is { } nullNodeTrackCostPerUnit && nullNodeTrackCostPerUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackCostPerUnit = null;
+            if (parseNode.GetChildNode("track_inventory") is null) { _explicitNullValueTrackInventory = default!; _explicitNullProperties?.Remove("track_inventory"); }
+            else if (parseNode.GetChildNode("track_inventory") is { } nullNodeTrackInventory && nullNodeTrackInventory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackInventory = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,90 +50,90 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The credit_card_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreditCardTypes { get => _explicitNullValueCreditCardTypes; set { _explicitNullValueCreditCardTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_types"); else _explicitNullProperties?.Remove("credit_card_types"); } }
+        public string? CreditCardTypes { get => _explicitNullValueCreditCardTypes; set { _explicitNullValueCreditCardTypes = value; AdditionalData?.Remove("credit_card_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_types"); else _explicitNullProperties?.Remove("credit_card_types"); } }
         private string? _explicitNullValueCreditCardTypes = default!;
 #nullable restore
 #else
-        public string CreditCardTypes { get => _explicitNullValueCreditCardTypes; set { _explicitNullValueCreditCardTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_types"); else _explicitNullProperties?.Remove("credit_card_types"); } }
+        public string CreditCardTypes { get => _explicitNullValueCreditCardTypes; set { _explicitNullValueCreditCardTypes = value; AdditionalData?.Remove("credit_card_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_types"); else _explicitNullProperties?.Remove("credit_card_types"); } }
         private string _explicitNullValueCreditCardTypes = default!;
 #endif
         /// <summary>The currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The default_charge_max_retry_attempts property</summary>
-        public int? DefaultChargeMaxRetryAttempts { get => _explicitNullValueDefaultChargeMaxRetryAttempts; set { _explicitNullValueDefaultChargeMaxRetryAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_charge_max_retry_attempts"); else _explicitNullProperties?.Remove("default_charge_max_retry_attempts"); } }
+        public int? DefaultChargeMaxRetryAttempts { get => _explicitNullValueDefaultChargeMaxRetryAttempts; set { _explicitNullValueDefaultChargeMaxRetryAttempts = value; AdditionalData?.Remove("default_charge_max_retry_attempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_charge_max_retry_attempts"); else _explicitNullProperties?.Remove("default_charge_max_retry_attempts"); } }
         private int? _explicitNullValueDefaultChargeMaxRetryAttempts = default!;
         /// <summary>The default_country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultCountry { get => _explicitNullValueDefaultCountry; set { _explicitNullValueDefaultCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_country"); else _explicitNullProperties?.Remove("default_country"); } }
+        public string? DefaultCountry { get => _explicitNullValueDefaultCountry; set { _explicitNullValueDefaultCountry = value; AdditionalData?.Remove("default_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_country"); else _explicitNullProperties?.Remove("default_country"); } }
         private string? _explicitNullValueDefaultCountry = default!;
 #nullable restore
 #else
-        public string DefaultCountry { get => _explicitNullValueDefaultCountry; set { _explicitNullValueDefaultCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_country"); else _explicitNullProperties?.Remove("default_country"); } }
+        public string DefaultCountry { get => _explicitNullValueDefaultCountry; set { _explicitNullValueDefaultCountry = value; AdditionalData?.Remove("default_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_country"); else _explicitNullProperties?.Remove("default_country"); } }
         private string _explicitNullValueDefaultCountry = default!;
 #endif
         /// <summary>The default_merchant property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultMerchant { get => _explicitNullValueDefaultMerchant; set { _explicitNullValueDefaultMerchant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_merchant"); else _explicitNullProperties?.Remove("default_merchant"); } }
+        public string? DefaultMerchant { get => _explicitNullValueDefaultMerchant; set { _explicitNullValueDefaultMerchant = value; AdditionalData?.Remove("default_merchant"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_merchant"); else _explicitNullProperties?.Remove("default_merchant"); } }
         private string? _explicitNullValueDefaultMerchant = default!;
 #nullable restore
 #else
-        public string DefaultMerchant { get => _explicitNullValueDefaultMerchant; set { _explicitNullValueDefaultMerchant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_merchant"); else _explicitNullProperties?.Remove("default_merchant"); } }
+        public string DefaultMerchant { get => _explicitNullValueDefaultMerchant; set { _explicitNullValueDefaultMerchant = value; AdditionalData?.Remove("default_merchant"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_merchant"); else _explicitNullProperties?.Remove("default_merchant"); } }
         private string _explicitNullValueDefaultMerchant = default!;
 #endif
         /// <summary>The default_number_of_days_between_charge_attempts property</summary>
-        public int? DefaultNumberOfDaysBetweenChargeAttempts { get => _explicitNullValueDefaultNumberOfDaysBetweenChargeAttempts; set { _explicitNullValueDefaultNumberOfDaysBetweenChargeAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_number_of_days_between_charge_attempts"); else _explicitNullProperties?.Remove("default_number_of_days_between_charge_attempts"); } }
+        public int? DefaultNumberOfDaysBetweenChargeAttempts { get => _explicitNullValueDefaultNumberOfDaysBetweenChargeAttempts; set { _explicitNullValueDefaultNumberOfDaysBetweenChargeAttempts = value; AdditionalData?.Remove("default_number_of_days_between_charge_attempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_number_of_days_between_charge_attempts"); else _explicitNullProperties?.Remove("default_number_of_days_between_charge_attempts"); } }
         private int? _explicitNullValueDefaultNumberOfDaysBetweenChargeAttempts = default!;
         /// <summary>The default_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultTax { get => _explicitNullValueDefaultTax; set { _explicitNullValueDefaultTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tax"); else _explicitNullProperties?.Remove("default_tax"); } }
+        public string? DefaultTax { get => _explicitNullValueDefaultTax; set { _explicitNullValueDefaultTax = value; AdditionalData?.Remove("default_tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tax"); else _explicitNullProperties?.Remove("default_tax"); } }
         private string? _explicitNullValueDefaultTax = default!;
 #nullable restore
 #else
-        public string DefaultTax { get => _explicitNullValueDefaultTax; set { _explicitNullValueDefaultTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tax"); else _explicitNullProperties?.Remove("default_tax"); } }
+        public string DefaultTax { get => _explicitNullValueDefaultTax; set { _explicitNullValueDefaultTax = value; AdditionalData?.Remove("default_tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tax"); else _explicitNullProperties?.Remove("default_tax"); } }
         private string _explicitNullValueDefaultTax = default!;
 #endif
         /// <summary>The default_to_auto_charge property</summary>
-        public bool? DefaultToAutoCharge { get => _explicitNullValueDefaultToAutoCharge; set { _explicitNullValueDefaultToAutoCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_to_auto_charge"); else _explicitNullProperties?.Remove("default_to_auto_charge"); } }
+        public bool? DefaultToAutoCharge { get => _explicitNullValueDefaultToAutoCharge; set { _explicitNullValueDefaultToAutoCharge = value; AdditionalData?.Remove("default_to_auto_charge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_to_auto_charge"); else _explicitNullProperties?.Remove("default_to_auto_charge"); } }
         private bool? _explicitNullValueDefaultToAutoCharge = default!;
         /// <summary>The merchant_account_max_retry_attempts property</summary>
-        public int? MerchantAccountMaxRetryAttempts { get => _explicitNullValueMerchantAccountMaxRetryAttempts; set { _explicitNullValueMerchantAccountMaxRetryAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_account_max_retry_attempts"); else _explicitNullProperties?.Remove("merchant_account_max_retry_attempts"); } }
+        public int? MerchantAccountMaxRetryAttempts { get => _explicitNullValueMerchantAccountMaxRetryAttempts; set { _explicitNullValueMerchantAccountMaxRetryAttempts = value; AdditionalData?.Remove("merchant_account_max_retry_attempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_account_max_retry_attempts"); else _explicitNullProperties?.Remove("merchant_account_max_retry_attempts"); } }
         private int? _explicitNullValueMerchantAccountMaxRetryAttempts = default!;
         /// <summary>The payment_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentTypes { get => _explicitNullValuePaymentTypes; set { _explicitNullValuePaymentTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_types"); else _explicitNullProperties?.Remove("payment_types"); } }
+        public string? PaymentTypes { get => _explicitNullValuePaymentTypes; set { _explicitNullValuePaymentTypes = value; AdditionalData?.Remove("payment_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_types"); else _explicitNullProperties?.Remove("payment_types"); } }
         private string? _explicitNullValuePaymentTypes = default!;
 #nullable restore
 #else
-        public string PaymentTypes { get => _explicitNullValuePaymentTypes; set { _explicitNullValuePaymentTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_types"); else _explicitNullProperties?.Remove("payment_types"); } }
+        public string PaymentTypes { get => _explicitNullValuePaymentTypes; set { _explicitNullValuePaymentTypes = value; AdditionalData?.Remove("payment_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_types"); else _explicitNullProperties?.Remove("payment_types"); } }
         private string _explicitNullValuePaymentTypes = default!;
 #endif
         /// <summary>The promo_codes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PromoCodes { get => _explicitNullValuePromoCodes; set { _explicitNullValuePromoCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_codes"); else _explicitNullProperties?.Remove("promo_codes"); } }
+        public string? PromoCodes { get => _explicitNullValuePromoCodes; set { _explicitNullValuePromoCodes = value; AdditionalData?.Remove("promo_codes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_codes"); else _explicitNullProperties?.Remove("promo_codes"); } }
         private string? _explicitNullValuePromoCodes = default!;
 #nullable restore
 #else
-        public string PromoCodes { get => _explicitNullValuePromoCodes; set { _explicitNullValuePromoCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_codes"); else _explicitNullProperties?.Remove("promo_codes"); } }
+        public string PromoCodes { get => _explicitNullValuePromoCodes; set { _explicitNullValuePromoCodes = value; AdditionalData?.Remove("promo_codes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_codes"); else _explicitNullProperties?.Remove("promo_codes"); } }
         private string _explicitNullValuePromoCodes = default!;
 #endif
         /// <summary>The track_cost_per_unit property</summary>
-        public bool? TrackCostPerUnit { get => _explicitNullValueTrackCostPerUnit; set { _explicitNullValueTrackCostPerUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("track_cost_per_unit"); else _explicitNullProperties?.Remove("track_cost_per_unit"); } }
+        public bool? TrackCostPerUnit { get => _explicitNullValueTrackCostPerUnit; set { _explicitNullValueTrackCostPerUnit = value; AdditionalData?.Remove("track_cost_per_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("track_cost_per_unit"); else _explicitNullProperties?.Remove("track_cost_per_unit"); } }
         private bool? _explicitNullValueTrackCostPerUnit = default!;
         /// <summary>The track_inventory property</summary>
-        public bool? TrackInventory { get => _explicitNullValueTrackInventory; set { _explicitNullValueTrackInventory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("track_inventory"); else _explicitNullProperties?.Remove("track_inventory"); } }
+        public bool? TrackInventory { get => _explicitNullValueTrackInventory; set { _explicitNullValueTrackInventory = value; AdditionalData?.Remove("track_inventory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("track_inventory"); else _explicitNullProperties?.Remove("track_inventory"); } }
         private bool? _explicitNullValueTrackInventory = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEcommerce"/> and sets the default values.

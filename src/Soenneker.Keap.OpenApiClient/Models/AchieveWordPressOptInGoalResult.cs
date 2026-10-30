@@ -17,13 +17,14 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("successful") is { } nullNodeSuccessful && nullNodeSuccessful.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Successful = null;
+            if (parseNode.GetChildNode("successful") is null) { _explicitNullValueSuccessful = default!; _explicitNullProperties?.Remove("successful"); }
+            else if (parseNode.GetChildNode("successful") is { } nullNodeSuccessful && nullNodeSuccessful.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Successful = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The successful property</summary>
-        public bool? Successful { get => _explicitNullValueSuccessful; set { _explicitNullValueSuccessful = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("successful"); else _explicitNullProperties?.Remove("successful"); } }
+        public bool? Successful { get => _explicitNullValueSuccessful; set { _explicitNullValueSuccessful = value; AdditionalData?.Remove("successful"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("successful"); else _explicitNullProperties?.Remove("successful"); } }
         private bool? _explicitNullValueSuccessful = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.AchieveWordPressOptInGoalResult"/> and sets the default values.

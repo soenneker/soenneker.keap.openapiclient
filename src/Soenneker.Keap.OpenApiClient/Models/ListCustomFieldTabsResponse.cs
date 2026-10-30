@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tabs") is { } nullNodeTabs && nullNodeTabs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tabs = null;
+            if (parseNode.GetChildNode("tabs") is null) { _explicitNullValueTabs = default!; _explicitNullProperties?.Remove("tabs"); }
+            else if (parseNode.GetChildNode("tabs") is { } nullNodeTabs && nullNodeTabs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tabs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The tabs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldTab>? Tabs { get => _explicitNullValueTabs; set { _explicitNullValueTabs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabs"); else _explicitNullProperties?.Remove("tabs"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldTab>? Tabs { get => _explicitNullValueTabs; set { _explicitNullValueTabs = value; AdditionalData?.Remove("tabs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabs"); else _explicitNullProperties?.Remove("tabs"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldTab>? _explicitNullValueTabs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldTab> Tabs { get => _explicitNullValueTabs; set { _explicitNullValueTabs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabs"); else _explicitNullProperties?.Remove("tabs"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldTab> Tabs { get => _explicitNullValueTabs; set { _explicitNullValueTabs = value; AdditionalData?.Remove("tabs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabs"); else _explicitNullProperties?.Remove("tabs"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldTab> _explicitNullValueTabs = default!;
 #endif
         /// <summary>

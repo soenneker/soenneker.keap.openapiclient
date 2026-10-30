@@ -17,15 +17,24 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("expiration_time") is { } nullNodeExpirationTime && nullNodeExpirationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationTime = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
-            if (parseNode.GetChildNode("referral_partner_id") is { } nullNodeReferralPartnerId && nullNodeReferralPartnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferralPartnerId = null;
-            if (parseNode.GetChildNode("referral_time") is { } nullNodeReferralTime && nullNodeReferralTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferralTime = null;
-            if (parseNode.GetChildNode("referral_type") is { } nullNodeReferralType && nullNodeReferralType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferralType = null;
-            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("contact_id") is null) { _explicitNullValueContactId = default!; _explicitNullProperties?.Remove("contact_id"); }
+            else if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("expiration_time") is null) { _explicitNullValueExpirationTime = default!; _explicitNullProperties?.Remove("expiration_time"); }
+            else if (parseNode.GetChildNode("expiration_time") is { } nullNodeExpirationTime && nullNodeExpirationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationTime = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("ip_address") is null) { _explicitNullValueIpAddress = default!; _explicitNullProperties?.Remove("ip_address"); }
+            else if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
+            if (parseNode.GetChildNode("referral_partner_id") is null) { _explicitNullValueReferralPartnerId = default!; _explicitNullProperties?.Remove("referral_partner_id"); }
+            else if (parseNode.GetChildNode("referral_partner_id") is { } nullNodeReferralPartnerId && nullNodeReferralPartnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferralPartnerId = null;
+            if (parseNode.GetChildNode("referral_time") is null) { _explicitNullValueReferralTime = default!; _explicitNullProperties?.Remove("referral_time"); }
+            else if (parseNode.GetChildNode("referral_time") is { } nullNodeReferralTime && nullNodeReferralTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferralTime = null;
+            if (parseNode.GetChildNode("referral_type") is null) { _explicitNullValueReferralType = default!; _explicitNullProperties?.Remove("referral_type"); }
+            else if (parseNode.GetChildNode("referral_type") is { } nullNodeReferralType && nullNodeReferralType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferralType = null;
+            if (parseNode.GetChildNode("source") is null) { _explicitNullValueSource = default!; _explicitNullProperties?.Remove("source"); }
+            else if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,70 +42,70 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The referral&apos;s contact_id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>The referral description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The time when the referral expires.</summary>
-        public DateTimeOffset? ExpirationTime { get => _explicitNullValueExpirationTime; set { _explicitNullValueExpirationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_time"); else _explicitNullProperties?.Remove("expiration_time"); } }
+        public DateTimeOffset? ExpirationTime { get => _explicitNullValueExpirationTime; set { _explicitNullValueExpirationTime = value; AdditionalData?.Remove("expiration_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration_time"); else _explicitNullProperties?.Remove("expiration_time"); } }
         private DateTimeOffset? _explicitNullValueExpirationTime = default!;
         /// <summary>The unique identifier for this referral.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The IP address of the referral.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
         private string? _explicitNullValueIpAddress = default!;
 #nullable restore
 #else
-        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
         private string _explicitNullValueIpAddress = default!;
 #endif
         /// <summary>The referring affiliate ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferralPartnerId { get => _explicitNullValueReferralPartnerId; set { _explicitNullValueReferralPartnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_partner_id"); else _explicitNullProperties?.Remove("referral_partner_id"); } }
+        public string? ReferralPartnerId { get => _explicitNullValueReferralPartnerId; set { _explicitNullValueReferralPartnerId = value; AdditionalData?.Remove("referral_partner_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_partner_id"); else _explicitNullProperties?.Remove("referral_partner_id"); } }
         private string? _explicitNullValueReferralPartnerId = default!;
 #nullable restore
 #else
-        public string ReferralPartnerId { get => _explicitNullValueReferralPartnerId; set { _explicitNullValueReferralPartnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_partner_id"); else _explicitNullProperties?.Remove("referral_partner_id"); } }
+        public string ReferralPartnerId { get => _explicitNullValueReferralPartnerId; set { _explicitNullValueReferralPartnerId = value; AdditionalData?.Remove("referral_partner_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_partner_id"); else _explicitNullProperties?.Remove("referral_partner_id"); } }
         private string _explicitNullValueReferralPartnerId = default!;
 #endif
         /// <summary>The time of the referral.</summary>
-        public DateTimeOffset? ReferralTime { get => _explicitNullValueReferralTime; set { _explicitNullValueReferralTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_time"); else _explicitNullProperties?.Remove("referral_time"); } }
+        public DateTimeOffset? ReferralTime { get => _explicitNullValueReferralTime; set { _explicitNullValueReferralTime = value; AdditionalData?.Remove("referral_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_time"); else _explicitNullProperties?.Remove("referral_time"); } }
         private DateTimeOffset? _explicitNullValueReferralTime = default!;
         /// <summary>The referral type.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ReferralReferralType? ReferralType { get => _explicitNullValueReferralType; set { _explicitNullValueReferralType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_type"); else _explicitNullProperties?.Remove("referral_type"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ReferralReferralType? ReferralType { get => _explicitNullValueReferralType; set { _explicitNullValueReferralType = value; AdditionalData?.Remove("referral_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referral_type"); else _explicitNullProperties?.Remove("referral_type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ReferralReferralType? _explicitNullValueReferralType = default!;
         /// <summary>The source for the referral.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private string _explicitNullValueSource = default!;
 #endif
         /// <summary>
@@ -131,7 +140,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "referral_partner_id", n => { ReferralPartnerId = n.GetStringValue(); } },
                 { "referral_time", n => { ReferralTime = n.GetDateTimeOffsetValue(); } },
-                { "referral_type", n => { ReferralType = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ReferralReferralType>(); } },
+                { "referral_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ReferralReferralType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReferralType = default; _explicitNullProperties?.Remove("referral_type"); AdditionalData["referral_type"] = unknown; } else { ReferralType = parsed; AdditionalData.Remove("referral_type"); } } },
                 { "source", n => { Source = n.GetStringValue(); } },
             };
         }

@@ -17,9 +17,12 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("campaign_id") is { } nullNodeCampaignId && nullNodeCampaignId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignId = null;
-            if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
-            if (parseNode.GetChildNode("sequences") is { } nullNodeSequences && nullNodeSequences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sequences = null;
+            if (parseNode.GetChildNode("campaign_id") is null) { _explicitNullValueCampaignId = default!; _explicitNullProperties?.Remove("campaign_id"); }
+            else if (parseNode.GetChildNode("campaign_id") is { } nullNodeCampaignId && nullNodeCampaignId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignId = null;
+            if (parseNode.GetChildNode("next_page_token") is null) { _explicitNullValueNextPageToken = default!; _explicitNullProperties?.Remove("next_page_token"); }
+            else if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+            if (parseNode.GetChildNode("sequences") is null) { _explicitNullValueSequences = default!; _explicitNullProperties?.Remove("sequences"); }
+            else if (parseNode.GetChildNode("sequences") is { } nullNodeSequences && nullNodeSequences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sequences = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The campaign_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CampaignId { get => _explicitNullValueCampaignId; set { _explicitNullValueCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_id"); else _explicitNullProperties?.Remove("campaign_id"); } }
+        public string? CampaignId { get => _explicitNullValueCampaignId; set { _explicitNullValueCampaignId = value; AdditionalData?.Remove("campaign_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_id"); else _explicitNullProperties?.Remove("campaign_id"); } }
         private string? _explicitNullValueCampaignId = default!;
 #nullable restore
 #else
-        public string CampaignId { get => _explicitNullValueCampaignId; set { _explicitNullValueCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_id"); else _explicitNullProperties?.Remove("campaign_id"); } }
+        public string CampaignId { get => _explicitNullValueCampaignId; set { _explicitNullValueCampaignId = value; AdditionalData?.Remove("campaign_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_id"); else _explicitNullProperties?.Remove("campaign_id"); } }
         private string _explicitNullValueCampaignId = default!;
 #endif
         /// <summary>The next_page_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>The sequences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.Sequence>? Sequences { get => _explicitNullValueSequences; set { _explicitNullValueSequences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequences"); else _explicitNullProperties?.Remove("sequences"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.Sequence>? Sequences { get => _explicitNullValueSequences; set { _explicitNullValueSequences = value; AdditionalData?.Remove("sequences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequences"); else _explicitNullProperties?.Remove("sequences"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.Sequence>? _explicitNullValueSequences = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.Sequence> Sequences { get => _explicitNullValueSequences; set { _explicitNullValueSequences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequences"); else _explicitNullProperties?.Remove("sequences"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.Sequence> Sequences { get => _explicitNullValueSequences; set { _explicitNullValueSequences = value; AdditionalData?.Remove("sequences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sequences"); else _explicitNullProperties?.Remove("sequences"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.Sequence> _explicitNullValueSequences = default!;
 #endif
         /// <summary>

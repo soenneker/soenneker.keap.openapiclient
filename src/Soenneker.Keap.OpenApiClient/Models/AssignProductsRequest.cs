@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("product_ids") is { } nullNodeProductIds && nullNodeProductIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductIds = null;
+            if (parseNode.GetChildNode("product_ids") is null) { _explicitNullValueProductIds = default!; _explicitNullProperties?.Remove("product_ids"); }
+            else if (parseNode.GetChildNode("product_ids") is { } nullNodeProductIds && nullNodeProductIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The product_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ProductIds { get => _explicitNullValueProductIds; set { _explicitNullValueProductIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_ids"); else _explicitNullProperties?.Remove("product_ids"); } }
+        public List<string>? ProductIds { get => _explicitNullValueProductIds; set { _explicitNullValueProductIds = value; AdditionalData?.Remove("product_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_ids"); else _explicitNullProperties?.Remove("product_ids"); } }
         private List<string>? _explicitNullValueProductIds = default!;
 #nullable restore
 #else
-        public List<string> ProductIds { get => _explicitNullValueProductIds; set { _explicitNullValueProductIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_ids"); else _explicitNullProperties?.Remove("product_ids"); } }
+        public List<string> ProductIds { get => _explicitNullValueProductIds; set { _explicitNullValueProductIds = value; AdditionalData?.Remove("product_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_ids"); else _explicitNullProperties?.Remove("product_ids"); } }
         private List<string> _explicitNullValueProductIds = default!;
 #endif
         /// <summary>

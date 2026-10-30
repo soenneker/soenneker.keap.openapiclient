@@ -18,8 +18,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("file_data") is { } nullNodeFileData && nullNodeFileData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileData = null;
-            if (parseNode.GetChildNode("file_name") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
+            if (parseNode.GetChildNode("file_data") is null) { _explicitNullValueFileData = default!; _explicitNullProperties?.Remove("file_data"); }
+            else if (parseNode.GetChildNode("file_data") is { } nullNodeFileData && nullNodeFileData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileData = null;
+            if (parseNode.GetChildNode("file_name") is null) { _explicitNullValueFileName = default!; _explicitNullProperties?.Remove("file_name"); }
+            else if (parseNode.GetChildNode("file_name") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The content of the attachment, encoded in Base64</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileData { get => _explicitNullValueFileData; set { _explicitNullValueFileData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_data"); else _explicitNullProperties?.Remove("file_data"); } }
+        public string? FileData { get => _explicitNullValueFileData; set { _explicitNullValueFileData = value; AdditionalData?.Remove("file_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_data"); else _explicitNullProperties?.Remove("file_data"); } }
         private string? _explicitNullValueFileData = default!;
 #nullable restore
 #else
-        public string FileData { get => _explicitNullValueFileData; set { _explicitNullValueFileData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_data"); else _explicitNullProperties?.Remove("file_data"); } }
+        public string FileData { get => _explicitNullValueFileData; set { _explicitNullValueFileData = value; AdditionalData?.Remove("file_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_data"); else _explicitNullProperties?.Remove("file_data"); } }
         private string _explicitNullValueFileData = default!;
 #endif
         /// <summary>The filename of the attached file, including extension. The extension determines whether the attachment is accepted; only the following extensions are supported (case-insensitive):- Image: bmp, cdr, fpx, gif, jif, jiff, jp2, jpeg, jpg, jpx, j2k, pcd, pdf, png, psd, pspimage, thm, tif, tiff, yuv- Text/Document: doc, docx, err, log, msg, notes, pages, pwd, rtf, text, txt, vcf, wp, wp4, wp5, wp7, wpd, wps, wsd, xdl- Audio: mid, mp3, mp4, wav, wma- Video: avi, divx, f4p, flv, gvi, hdmov, hdv, m2ts, m4v, mnv, mov, movie, mp4, mp4v, mpeg, mpeg1, mpeg4, mpg, qt, rm, vob, wm, wmv- Data: csv, ics, key, pps, ppt, pptx, xlr, xls, xlsx, xml, zipRequests including an attachment with any other extension return `400 Bad Request` with the message &quot;attachment type is invalid&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
+        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; AdditionalData?.Remove("file_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
         private string? _explicitNullValueFileName = default!;
 #nullable restore
 #else
-        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
+        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; AdditionalData?.Remove("file_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
         private string _explicitNullValueFileName = default!;
 #endif
         /// <summary>

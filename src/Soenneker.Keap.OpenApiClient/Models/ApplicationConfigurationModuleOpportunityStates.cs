@@ -17,19 +17,22 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
-            if (parseNode.GetChildNode("loss") is { } nullNodeLoss && nullNodeLoss.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Loss = null;
-            if (parseNode.GetChildNode("win") is { } nullNodeWin && nullNodeWin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Win = null;
+            if (parseNode.GetChildNode("active") is null) { _explicitNullValueActive = default!; _explicitNullProperties?.Remove("active"); }
+            else if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("loss") is null) { _explicitNullValueLoss = default!; _explicitNullProperties?.Remove("loss"); }
+            else if (parseNode.GetChildNode("loss") is { } nullNodeLoss && nullNodeLoss.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Loss = null;
+            if (parseNode.GetChildNode("win") is null) { _explicitNullValueWin = default!; _explicitNullProperties?.Remove("win"); }
+            else if (parseNode.GetChildNode("win") is { } nullNodeWin && nullNodeWin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Win = null;
         }
 
         /// <summary>The active property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesActive? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesActive? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesActive? _explicitNullValueActive = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesActive Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesActive Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesActive _explicitNullValueActive = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,21 +40,21 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The loss property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesLoss? Loss { get => _explicitNullValueLoss; set { _explicitNullValueLoss = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loss"); else _explicitNullProperties?.Remove("loss"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesLoss? Loss { get => _explicitNullValueLoss; set { _explicitNullValueLoss = value; AdditionalData?.Remove("loss"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loss"); else _explicitNullProperties?.Remove("loss"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesLoss? _explicitNullValueLoss = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesLoss Loss { get => _explicitNullValueLoss; set { _explicitNullValueLoss = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loss"); else _explicitNullProperties?.Remove("loss"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesLoss Loss { get => _explicitNullValueLoss; set { _explicitNullValueLoss = value; AdditionalData?.Remove("loss"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loss"); else _explicitNullProperties?.Remove("loss"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesLoss _explicitNullValueLoss = default!;
 #endif
         /// <summary>The win property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesWin? Win { get => _explicitNullValueWin; set { _explicitNullValueWin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("win"); else _explicitNullProperties?.Remove("win"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesWin? Win { get => _explicitNullValueWin; set { _explicitNullValueWin = value; AdditionalData?.Remove("win"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("win"); else _explicitNullProperties?.Remove("win"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesWin? _explicitNullValueWin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesWin Win { get => _explicitNullValueWin; set { _explicitNullValueWin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("win"); else _explicitNullProperties?.Remove("win"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesWin Win { get => _explicitNullValueWin; set { _explicitNullValueWin = value; AdditionalData?.Remove("win"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("win"); else _explicitNullProperties?.Remove("win"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStatesWin _explicitNullValueWin = default!;
 #endif
         /// <summary>

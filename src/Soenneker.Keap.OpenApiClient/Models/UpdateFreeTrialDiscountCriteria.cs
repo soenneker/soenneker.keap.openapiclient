@@ -17,18 +17,30 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
-            if (parseNode.GetChildNode("criteria_id") is { } nullNodeCriteriaId && nullNodeCriteriaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CriteriaId = null;
-            if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
-            if (parseNode.GetChildNode("plan_id") is { } nullNodePlanId && nullNodePlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanId = null;
-            if (parseNode.GetChildNode("product_id") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
-            if (parseNode.GetChildNode("product_quantity_max") is { } nullNodeProductQuantityMax && nullNodeProductQuantityMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductQuantityMax = null;
-            if (parseNode.GetChildNode("product_quantity_min") is { } nullNodeProductQuantityMin && nullNodeProductQuantityMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductQuantityMin = null;
-            if (parseNode.GetChildNode("range_end_time") is { } nullNodeRangeEndTime && nullNodeRangeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeEndTime = null;
-            if (parseNode.GetChildNode("range_start_time") is { } nullNodeRangeStartTime && nullNodeRangeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeStartTime = null;
-            if (parseNode.GetChildNode("subscription_quantity") is { } nullNodeSubscriptionQuantity && nullNodeSubscriptionQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionQuantity = null;
-            if (parseNode.GetChildNode("total_amount") is { } nullNodeTotalAmount && nullNodeTotalAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalAmount = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("code") is null) { _explicitNullValueCode = default!; _explicitNullProperties?.Remove("code"); }
+            else if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("criteria_id") is null) { _explicitNullValueCriteriaId = default!; _explicitNullProperties?.Remove("criteria_id"); }
+            else if (parseNode.GetChildNode("criteria_id") is { } nullNodeCriteriaId && nullNodeCriteriaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CriteriaId = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("plan_id") is null) { _explicitNullValuePlanId = default!; _explicitNullProperties?.Remove("plan_id"); }
+            else if (parseNode.GetChildNode("plan_id") is { } nullNodePlanId && nullNodePlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanId = null;
+            if (parseNode.GetChildNode("product_id") is null) { _explicitNullValueProductId = default!; _explicitNullProperties?.Remove("product_id"); }
+            else if (parseNode.GetChildNode("product_id") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
+            if (parseNode.GetChildNode("product_quantity_max") is null) { _explicitNullValueProductQuantityMax = default!; _explicitNullProperties?.Remove("product_quantity_max"); }
+            else if (parseNode.GetChildNode("product_quantity_max") is { } nullNodeProductQuantityMax && nullNodeProductQuantityMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductQuantityMax = null;
+            if (parseNode.GetChildNode("product_quantity_min") is null) { _explicitNullValueProductQuantityMin = default!; _explicitNullProperties?.Remove("product_quantity_min"); }
+            else if (parseNode.GetChildNode("product_quantity_min") is { } nullNodeProductQuantityMin && nullNodeProductQuantityMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductQuantityMin = null;
+            if (parseNode.GetChildNode("range_end_time") is null) { _explicitNullValueRangeEndTime = default!; _explicitNullProperties?.Remove("range_end_time"); }
+            else if (parseNode.GetChildNode("range_end_time") is { } nullNodeRangeEndTime && nullNodeRangeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeEndTime = null;
+            if (parseNode.GetChildNode("range_start_time") is null) { _explicitNullValueRangeStartTime = default!; _explicitNullProperties?.Remove("range_start_time"); }
+            else if (parseNode.GetChildNode("range_start_time") is { } nullNodeRangeStartTime && nullNodeRangeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RangeStartTime = null;
+            if (parseNode.GetChildNode("subscription_quantity") is null) { _explicitNullValueSubscriptionQuantity = default!; _explicitNullProperties?.Remove("subscription_quantity"); }
+            else if (parseNode.GetChildNode("subscription_quantity") is { } nullNodeSubscriptionQuantity && nullNodeSubscriptionQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionQuantity = null;
+            if (parseNode.GetChildNode("total_amount") is null) { _explicitNullValueTotalAmount = default!; _explicitNullProperties?.Remove("total_amount"); }
+            else if (parseNode.GetChildNode("total_amount") is { } nullNodeTotalAmount && nullNodeTotalAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalAmount = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,66 +48,66 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>Promotional code for PROMO_CODE criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private string? _explicitNullValueCode = default!;
 #nullable restore
 #else
-        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private string _explicitNullValueCode = default!;
 #endif
         /// <summary>Unique identifier for this criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CriteriaId { get => _explicitNullValueCriteriaId; set { _explicitNullValueCriteriaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria_id"); else _explicitNullProperties?.Remove("criteria_id"); } }
+        public string? CriteriaId { get => _explicitNullValueCriteriaId; set { _explicitNullValueCriteriaId = value; AdditionalData?.Remove("criteria_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria_id"); else _explicitNullProperties?.Remove("criteria_id"); } }
         private string? _explicitNullValueCriteriaId = default!;
 #nullable restore
 #else
-        public string CriteriaId { get => _explicitNullValueCriteriaId; set { _explicitNullValueCriteriaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria_id"); else _explicitNullProperties?.Remove("criteria_id"); } }
+        public string CriteriaId { get => _explicitNullValueCriteriaId; set { _explicitNullValueCriteriaId = value; AdditionalData?.Remove("criteria_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria_id"); else _explicitNullProperties?.Remove("criteria_id"); } }
         private string _explicitNullValueCriteriaId = default!;
 #endif
         /// <summary>Comparison operator for ORDER_TOTAL criteria: LESS_THAN or GREATER_THAN</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaOperator? _explicitNullValueOperator = default!;
         /// <summary>Subscription plan ID for SUBSCRIPTION_PLAN criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
+        public string? PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; AdditionalData?.Remove("plan_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
         private string? _explicitNullValuePlanId = default!;
 #nullable restore
 #else
-        public string PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
+        public string PlanId { get => _explicitNullValuePlanId; set { _explicitNullValuePlanId = value; AdditionalData?.Remove("plan_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_id"); else _explicitNullProperties?.Remove("plan_id"); } }
         private string _explicitNullValuePlanId = default!;
 #endif
         /// <summary>Product ID for PRODUCT criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
+        public string? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; AdditionalData?.Remove("product_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
         private string? _explicitNullValueProductId = default!;
 #nullable restore
 #else
-        public string ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
+        public string ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; AdditionalData?.Remove("product_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
         private string _explicitNullValueProductId = default!;
 #endif
         /// <summary>Maximum product quantity for PRODUCT criteria</summary>
-        public int? ProductQuantityMax { get => _explicitNullValueProductQuantityMax; set { _explicitNullValueProductQuantityMax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_quantity_max"); else _explicitNullProperties?.Remove("product_quantity_max"); } }
+        public int? ProductQuantityMax { get => _explicitNullValueProductQuantityMax; set { _explicitNullValueProductQuantityMax = value; AdditionalData?.Remove("product_quantity_max"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_quantity_max"); else _explicitNullProperties?.Remove("product_quantity_max"); } }
         private int? _explicitNullValueProductQuantityMax = default!;
         /// <summary>Minimum product quantity for PRODUCT criteria</summary>
-        public int? ProductQuantityMin { get => _explicitNullValueProductQuantityMin; set { _explicitNullValueProductQuantityMin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_quantity_min"); else _explicitNullProperties?.Remove("product_quantity_min"); } }
+        public int? ProductQuantityMin { get => _explicitNullValueProductQuantityMin; set { _explicitNullValueProductQuantityMin = value; AdditionalData?.Remove("product_quantity_min"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_quantity_min"); else _explicitNullProperties?.Remove("product_quantity_min"); } }
         private int? _explicitNullValueProductQuantityMin = default!;
         /// <summary>End date/time for DATE_RANGE criteria (ISO-8601 format)</summary>
-        public DateTimeOffset? RangeEndTime { get => _explicitNullValueRangeEndTime; set { _explicitNullValueRangeEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_end_time"); else _explicitNullProperties?.Remove("range_end_time"); } }
+        public DateTimeOffset? RangeEndTime { get => _explicitNullValueRangeEndTime; set { _explicitNullValueRangeEndTime = value; AdditionalData?.Remove("range_end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_end_time"); else _explicitNullProperties?.Remove("range_end_time"); } }
         private DateTimeOffset? _explicitNullValueRangeEndTime = default!;
         /// <summary>Start date/time for DATE_RANGE criteria (ISO-8601 format)</summary>
-        public DateTimeOffset? RangeStartTime { get => _explicitNullValueRangeStartTime; set { _explicitNullValueRangeStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_start_time"); else _explicitNullProperties?.Remove("range_start_time"); } }
+        public DateTimeOffset? RangeStartTime { get => _explicitNullValueRangeStartTime; set { _explicitNullValueRangeStartTime = value; AdditionalData?.Remove("range_start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("range_start_time"); else _explicitNullProperties?.Remove("range_start_time"); } }
         private DateTimeOffset? _explicitNullValueRangeStartTime = default!;
         /// <summary>Subscription quantity for SUBSCRIPTION_PLAN criteria</summary>
-        public int? SubscriptionQuantity { get => _explicitNullValueSubscriptionQuantity; set { _explicitNullValueSubscriptionQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_quantity"); else _explicitNullProperties?.Remove("subscription_quantity"); } }
+        public int? SubscriptionQuantity { get => _explicitNullValueSubscriptionQuantity; set { _explicitNullValueSubscriptionQuantity = value; AdditionalData?.Remove("subscription_quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_quantity"); else _explicitNullProperties?.Remove("subscription_quantity"); } }
         private int? _explicitNullValueSubscriptionQuantity = default!;
         /// <summary>Total amount threshold for ORDER_TOTAL criteria</summary>
-        public double? TotalAmount { get => _explicitNullValueTotalAmount; set { _explicitNullValueTotalAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_amount"); else _explicitNullProperties?.Remove("total_amount"); } }
+        public double? TotalAmount { get => _explicitNullValueTotalAmount; set { _explicitNullValueTotalAmount = value; AdditionalData?.Remove("total_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_amount"); else _explicitNullProperties?.Remove("total_amount"); } }
         private double? _explicitNullValueTotalAmount = default!;
         /// <summary>Type of criteria: DATE_RANGE, PROMO_CODE, PRODUCT, SUBSCRIPTION_PLAN, or ORDER_TOTAL</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteria"/> and sets the default values.
@@ -124,7 +136,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             {
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "criteria_id", n => { CriteriaId = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaOperator>(); } },
+                { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperator = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { Operator = parsed; AdditionalData.Remove("operator"); } } },
                 { "plan_id", n => { PlanId = n.GetStringValue(); } },
                 { "product_id", n => { ProductId = n.GetStringValue(); } },
                 { "product_quantity_max", n => { ProductQuantityMax = n.GetIntValue(); } },
@@ -133,7 +145,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "range_start_time", n => { RangeStartTime = n.GetDateTimeOffsetValue(); } },
                 { "subscription_quantity", n => { SubscriptionQuantity = n.GetIntValue(); } },
                 { "total_amount", n => { TotalAmount = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteriaType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

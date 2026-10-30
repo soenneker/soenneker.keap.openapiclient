@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("remove_from_sequence_results") is { } nullNodeRemoveFromSequenceResults && nullNodeRemoveFromSequenceResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveFromSequenceResults = null;
+            if (parseNode.GetChildNode("remove_from_sequence_results") is null) { _explicitNullValueRemoveFromSequenceResults = default!; _explicitNullProperties?.Remove("remove_from_sequence_results"); }
+            else if (parseNode.GetChildNode("remove_from_sequence_results") is { } nullNodeRemoveFromSequenceResults && nullNodeRemoveFromSequenceResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveFromSequenceResults = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>A map containing the contact ID as key and the result of removing them from the sequence as value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty? RemoveFromSequenceResults { get => _explicitNullValueRemoveFromSequenceResults; set { _explicitNullValueRemoveFromSequenceResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_from_sequence_results"); else _explicitNullProperties?.Remove("remove_from_sequence_results"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty? RemoveFromSequenceResults { get => _explicitNullValueRemoveFromSequenceResults; set { _explicitNullValueRemoveFromSequenceResults = value; AdditionalData?.Remove("remove_from_sequence_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_from_sequence_results"); else _explicitNullProperties?.Remove("remove_from_sequence_results"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty? _explicitNullValueRemoveFromSequenceResults = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty RemoveFromSequenceResults { get => _explicitNullValueRemoveFromSequenceResults; set { _explicitNullValueRemoveFromSequenceResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_from_sequence_results"); else _explicitNullProperties?.Remove("remove_from_sequence_results"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty RemoveFromSequenceResults { get => _explicitNullValueRemoveFromSequenceResults; set { _explicitNullValueRemoveFromSequenceResults = value; AdditionalData?.Remove("remove_from_sequence_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_from_sequence_results"); else _explicitNullProperties?.Remove("remove_from_sequence_results"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.RemoveContactsFromSequenceResponseRemoveFromSequenceResultsProperty _explicitNullValueRemoveFromSequenceResults = default!;
 #endif
         /// <summary>

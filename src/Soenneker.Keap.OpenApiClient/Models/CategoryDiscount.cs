@@ -17,71 +17,78 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("apply_to_commissions") is { } nullNodeApplyToCommissions && nullNodeApplyToCommissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplyToCommissions = null;
-            if (parseNode.GetChildNode("criteria") is { } nullNodeCriteria && nullNodeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Criteria = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("discount_percent") is { } nullNodeDiscountPercent && nullNodeDiscountPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountPercent = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("product_categories") is { } nullNodeProductCategories && nullNodeProductCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductCategories = null;
+            if (parseNode.GetChildNode("apply_to_commissions") is null) { _explicitNullValueApplyToCommissions = default!; _explicitNullProperties?.Remove("apply_to_commissions"); }
+            else if (parseNode.GetChildNode("apply_to_commissions") is { } nullNodeApplyToCommissions && nullNodeApplyToCommissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplyToCommissions = null;
+            if (parseNode.GetChildNode("criteria") is null) { _explicitNullValueCriteria = default!; _explicitNullProperties?.Remove("criteria"); }
+            else if (parseNode.GetChildNode("criteria") is { } nullNodeCriteria && nullNodeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Criteria = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("discount_percent") is null) { _explicitNullValueDiscountPercent = default!; _explicitNullProperties?.Remove("discount_percent"); }
+            else if (parseNode.GetChildNode("discount_percent") is { } nullNodeDiscountPercent && nullNodeDiscountPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountPercent = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("product_categories") is null) { _explicitNullValueProductCategories = default!; _explicitNullProperties?.Remove("product_categories"); }
+            else if (parseNode.GetChildNode("product_categories") is { } nullNodeProductCategories && nullNodeProductCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductCategories = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to apply this discount to commission calculations</summary>
-        public bool? ApplyToCommissions { get => _explicitNullValueApplyToCommissions; set { _explicitNullValueApplyToCommissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apply_to_commissions"); else _explicitNullProperties?.Remove("apply_to_commissions"); } }
+        public bool? ApplyToCommissions { get => _explicitNullValueApplyToCommissions; set { _explicitNullValueApplyToCommissions = value; AdditionalData?.Remove("apply_to_commissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apply_to_commissions"); else _explicitNullProperties?.Remove("apply_to_commissions"); } }
         private bool? _explicitNullValueApplyToCommissions = default!;
         /// <summary>List of criteria that must be met for this discount to apply</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponse>? Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponse>? Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; AdditionalData?.Remove("criteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponse>? _explicitNullValueCriteria = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponse> Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponse> Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; AdditionalData?.Remove("criteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CategoryDiscountCriteriaResponse> _explicitNullValueCriteria = default!;
 #endif
         /// <summary>Description of the discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Percentage discount to apply (0-100)</summary>
-        public double? DiscountPercent { get => _explicitNullValueDiscountPercent; set { _explicitNullValueDiscountPercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_percent"); else _explicitNullProperties?.Remove("discount_percent"); } }
+        public double? DiscountPercent { get => _explicitNullValueDiscountPercent; set { _explicitNullValueDiscountPercent = value; AdditionalData?.Remove("discount_percent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_percent"); else _explicitNullProperties?.Remove("discount_percent"); } }
         private double? _explicitNullValueDiscountPercent = default!;
         /// <summary>Unique identifier for this category discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Name of the discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>List of product category IDs this discount applies to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
+        public List<string>? ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; AdditionalData?.Remove("product_categories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
         private List<string>? _explicitNullValueProductCategories = default!;
 #nullable restore
 #else
-        public List<string> ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
+        public List<string> ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; AdditionalData?.Remove("product_categories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
         private List<string> _explicitNullValueProductCategories = default!;
 #endif
         /// <summary>

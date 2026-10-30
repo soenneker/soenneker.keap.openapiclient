@@ -17,19 +17,32 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("affiliate") is { } nullNodeAffiliate && nullNodeAffiliate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Affiliate = null;
-            if (parseNode.GetChildNode("application") is { } nullNodeApplication && nullNodeApplication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Application = null;
-            if (parseNode.GetChildNode("appointment") is { } nullNodeAppointment && nullNodeAppointment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Appointment = null;
-            if (parseNode.GetChildNode("contact") is { } nullNodeContact && nullNodeContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact = null;
-            if (parseNode.GetChildNode("ecommerce") is { } nullNodeEcommerce && nullNodeEcommerce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ecommerce = null;
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("forms") is { } nullNodeForms && nullNodeForms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Forms = null;
-            if (parseNode.GetChildNode("fulfillment") is { } nullNodeFulfillment && nullNodeFulfillment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fulfillment = null;
-            if (parseNode.GetChildNode("invoice") is { } nullNodeInvoice && nullNodeInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invoice = null;
-            if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
-            if (parseNode.GetChildNode("opportunity") is { } nullNodeOpportunity && nullNodeOpportunity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opportunity = null;
-            if (parseNode.GetChildNode("task") is { } nullNodeTask && nullNodeTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Task = null;
-            if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+            if (parseNode.GetChildNode("affiliate") is null) { _explicitNullValueAffiliate = default!; _explicitNullProperties?.Remove("affiliate"); }
+            else if (parseNode.GetChildNode("affiliate") is { } nullNodeAffiliate && nullNodeAffiliate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Affiliate = null;
+            if (parseNode.GetChildNode("application") is null) { _explicitNullValueApplication = default!; _explicitNullProperties?.Remove("application"); }
+            else if (parseNode.GetChildNode("application") is { } nullNodeApplication && nullNodeApplication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Application = null;
+            if (parseNode.GetChildNode("appointment") is null) { _explicitNullValueAppointment = default!; _explicitNullProperties?.Remove("appointment"); }
+            else if (parseNode.GetChildNode("appointment") is { } nullNodeAppointment && nullNodeAppointment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Appointment = null;
+            if (parseNode.GetChildNode("contact") is null) { _explicitNullValueContact = default!; _explicitNullProperties?.Remove("contact"); }
+            else if (parseNode.GetChildNode("contact") is { } nullNodeContact && nullNodeContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact = null;
+            if (parseNode.GetChildNode("ecommerce") is null) { _explicitNullValueEcommerce = default!; _explicitNullProperties?.Remove("ecommerce"); }
+            else if (parseNode.GetChildNode("ecommerce") is { } nullNodeEcommerce && nullNodeEcommerce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ecommerce = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("forms") is null) { _explicitNullValueForms = default!; _explicitNullProperties?.Remove("forms"); }
+            else if (parseNode.GetChildNode("forms") is { } nullNodeForms && nullNodeForms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Forms = null;
+            if (parseNode.GetChildNode("fulfillment") is null) { _explicitNullValueFulfillment = default!; _explicitNullProperties?.Remove("fulfillment"); }
+            else if (parseNode.GetChildNode("fulfillment") is { } nullNodeFulfillment && nullNodeFulfillment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fulfillment = null;
+            if (parseNode.GetChildNode("invoice") is null) { _explicitNullValueInvoice = default!; _explicitNullProperties?.Remove("invoice"); }
+            else if (parseNode.GetChildNode("invoice") is { } nullNodeInvoice && nullNodeInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invoice = null;
+            if (parseNode.GetChildNode("note") is null) { _explicitNullValueNote = default!; _explicitNullProperties?.Remove("note"); }
+            else if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
+            if (parseNode.GetChildNode("opportunity") is null) { _explicitNullValueOpportunity = default!; _explicitNullProperties?.Remove("opportunity"); }
+            else if (parseNode.GetChildNode("opportunity") is { } nullNodeOpportunity && nullNodeOpportunity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opportunity = null;
+            if (parseNode.GetChildNode("task") is null) { _explicitNullValueTask = default!; _explicitNullProperties?.Remove("task"); }
+            else if (parseNode.GetChildNode("task") is { } nullNodeTask && nullNodeTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Task = null;
+            if (parseNode.GetChildNode("template") is null) { _explicitNullValueTemplate = default!; _explicitNullProperties?.Remove("template"); }
+            else if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,131 +50,131 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The affiliate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate? Affiliate { get => _explicitNullValueAffiliate; set { _explicitNullValueAffiliate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate"); else _explicitNullProperties?.Remove("affiliate"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate? Affiliate { get => _explicitNullValueAffiliate; set { _explicitNullValueAffiliate = value; AdditionalData?.Remove("affiliate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate"); else _explicitNullProperties?.Remove("affiliate"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate? _explicitNullValueAffiliate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate Affiliate { get => _explicitNullValueAffiliate; set { _explicitNullValueAffiliate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate"); else _explicitNullProperties?.Remove("affiliate"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate Affiliate { get => _explicitNullValueAffiliate; set { _explicitNullValueAffiliate = value; AdditionalData?.Remove("affiliate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate"); else _explicitNullProperties?.Remove("affiliate"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate _explicitNullValueAffiliate = default!;
 #endif
         /// <summary>The application property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication? Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication? Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; AdditionalData?.Remove("application"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication? _explicitNullValueApplication = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; AdditionalData?.Remove("application"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication _explicitNullValueApplication = default!;
 #endif
         /// <summary>The appointment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAppointment? Appointment { get => _explicitNullValueAppointment; set { _explicitNullValueAppointment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appointment"); else _explicitNullProperties?.Remove("appointment"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAppointment? Appointment { get => _explicitNullValueAppointment; set { _explicitNullValueAppointment = value; AdditionalData?.Remove("appointment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appointment"); else _explicitNullProperties?.Remove("appointment"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAppointment? _explicitNullValueAppointment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAppointment Appointment { get => _explicitNullValueAppointment; set { _explicitNullValueAppointment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appointment"); else _explicitNullProperties?.Remove("appointment"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAppointment Appointment { get => _explicitNullValueAppointment; set { _explicitNullValueAppointment = value; AdditionalData?.Remove("appointment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appointment"); else _explicitNullProperties?.Remove("appointment"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAppointment _explicitNullValueAppointment = default!;
 #endif
         /// <summary>The contact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact? Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact? Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; AdditionalData?.Remove("contact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact? _explicitNullValueContact = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact Contact { get => _explicitNullValueContact; set { _explicitNullValueContact = value; AdditionalData?.Remove("contact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact"); else _explicitNullProperties?.Remove("contact"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleContact _explicitNullValueContact = default!;
 #endif
         /// <summary>The ecommerce property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEcommerce? Ecommerce { get => _explicitNullValueEcommerce; set { _explicitNullValueEcommerce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecommerce"); else _explicitNullProperties?.Remove("ecommerce"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEcommerce? Ecommerce { get => _explicitNullValueEcommerce; set { _explicitNullValueEcommerce = value; AdditionalData?.Remove("ecommerce"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecommerce"); else _explicitNullProperties?.Remove("ecommerce"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEcommerce? _explicitNullValueEcommerce = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEcommerce Ecommerce { get => _explicitNullValueEcommerce; set { _explicitNullValueEcommerce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecommerce"); else _explicitNullProperties?.Remove("ecommerce"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEcommerce Ecommerce { get => _explicitNullValueEcommerce; set { _explicitNullValueEcommerce = value; AdditionalData?.Remove("ecommerce"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecommerce"); else _explicitNullProperties?.Remove("ecommerce"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEcommerce _explicitNullValueEcommerce = default!;
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleEmail _explicitNullValueEmail = default!;
 #endif
         /// <summary>The forms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleForms? Forms { get => _explicitNullValueForms; set { _explicitNullValueForms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forms"); else _explicitNullProperties?.Remove("forms"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleForms? Forms { get => _explicitNullValueForms; set { _explicitNullValueForms = value; AdditionalData?.Remove("forms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forms"); else _explicitNullProperties?.Remove("forms"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleForms? _explicitNullValueForms = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleForms Forms { get => _explicitNullValueForms; set { _explicitNullValueForms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forms"); else _explicitNullProperties?.Remove("forms"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleForms Forms { get => _explicitNullValueForms; set { _explicitNullValueForms = value; AdditionalData?.Remove("forms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forms"); else _explicitNullProperties?.Remove("forms"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleForms _explicitNullValueForms = default!;
 #endif
         /// <summary>The fulfillment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleFulfillment? Fulfillment { get => _explicitNullValueFulfillment; set { _explicitNullValueFulfillment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillment"); else _explicitNullProperties?.Remove("fulfillment"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleFulfillment? Fulfillment { get => _explicitNullValueFulfillment; set { _explicitNullValueFulfillment = value; AdditionalData?.Remove("fulfillment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillment"); else _explicitNullProperties?.Remove("fulfillment"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleFulfillment? _explicitNullValueFulfillment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleFulfillment Fulfillment { get => _explicitNullValueFulfillment; set { _explicitNullValueFulfillment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillment"); else _explicitNullProperties?.Remove("fulfillment"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleFulfillment Fulfillment { get => _explicitNullValueFulfillment; set { _explicitNullValueFulfillment = value; AdditionalData?.Remove("fulfillment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillment"); else _explicitNullProperties?.Remove("fulfillment"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleFulfillment _explicitNullValueFulfillment = default!;
 #endif
         /// <summary>The invoice property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleInvoice? Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleInvoice? Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; AdditionalData?.Remove("invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleInvoice? _explicitNullValueInvoice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleInvoice Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleInvoice Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; AdditionalData?.Remove("invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleInvoice _explicitNullValueInvoice = default!;
 #endif
         /// <summary>The note property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleNote? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleNote? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleNote? _explicitNullValueNote = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleNote Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleNote Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleNote _explicitNullValueNote = default!;
 #endif
         /// <summary>The opportunity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunity? Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunity? Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; AdditionalData?.Remove("opportunity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunity? _explicitNullValueOpportunity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunity Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunity Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; AdditionalData?.Remove("opportunity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunity _explicitNullValueOpportunity = default!;
 #endif
         /// <summary>The task property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTask? Task { get => _explicitNullValueTask; set { _explicitNullValueTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task"); else _explicitNullProperties?.Remove("task"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTask? Task { get => _explicitNullValueTask; set { _explicitNullValueTask = value; AdditionalData?.Remove("task"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task"); else _explicitNullProperties?.Remove("task"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTask? _explicitNullValueTask = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTask Task { get => _explicitNullValueTask; set { _explicitNullValueTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task"); else _explicitNullProperties?.Remove("task"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTask Task { get => _explicitNullValueTask; set { _explicitNullValueTask = value; AdditionalData?.Remove("task"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task"); else _explicitNullProperties?.Remove("task"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTask _explicitNullValueTask = default!;
 #endif
         /// <summary>The template property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleTemplate _explicitNullValueTemplate = default!;
 #endif
         /// <summary>

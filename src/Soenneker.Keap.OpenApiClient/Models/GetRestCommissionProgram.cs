@@ -17,15 +17,24 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("affiliate_ids") is { } nullNodeAffiliateIds && nullNodeAffiliateIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateIds = null;
-            if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
-            if (parseNode.GetChildNode("default_commission") is { } nullNodeDefaultCommission && nullNodeDefaultCommission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCommission = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
-            if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
-            if (parseNode.GetChildNode("product_commissions") is { } nullNodeProductCommissions && nullNodeProductCommissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductCommissions = null;
-            if (parseNode.GetChildNode("subscription_commissions") is { } nullNodeSubscriptionCommissions && nullNodeSubscriptionCommissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionCommissions = null;
+            if (parseNode.GetChildNode("affiliate_ids") is null) { _explicitNullValueAffiliateIds = default!; _explicitNullProperties?.Remove("affiliate_ids"); }
+            else if (parseNode.GetChildNode("affiliate_ids") is { } nullNodeAffiliateIds && nullNodeAffiliateIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateIds = null;
+            if (parseNode.GetChildNode("create_time") is null) { _explicitNullValueCreateTime = default!; _explicitNullProperties?.Remove("create_time"); }
+            else if (parseNode.GetChildNode("create_time") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("default_commission") is null) { _explicitNullValueDefaultCommission = default!; _explicitNullProperties?.Remove("default_commission"); }
+            else if (parseNode.GetChildNode("default_commission") is { } nullNodeDefaultCommission && nullNodeDefaultCommission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCommission = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("notes") is null) { _explicitNullValueNotes = default!; _explicitNullProperties?.Remove("notes"); }
+            else if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("priority") is null) { _explicitNullValuePriority = default!; _explicitNullProperties?.Remove("priority"); }
+            else if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("product_commissions") is null) { _explicitNullValueProductCommissions = default!; _explicitNullProperties?.Remove("product_commissions"); }
+            else if (parseNode.GetChildNode("product_commissions") is { } nullNodeProductCommissions && nullNodeProductCommissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductCommissions = null;
+            if (parseNode.GetChildNode("subscription_commissions") is null) { _explicitNullValueSubscriptionCommissions = default!; _explicitNullProperties?.Remove("subscription_commissions"); }
+            else if (parseNode.GetChildNode("subscription_commissions") is { } nullNodeSubscriptionCommissions && nullNodeSubscriptionCommissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionCommissions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,91 +42,91 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The list of affiliate_ids using this commission program</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AffiliateIds { get => _explicitNullValueAffiliateIds; set { _explicitNullValueAffiliateIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_ids"); else _explicitNullProperties?.Remove("affiliate_ids"); } }
+        public List<string>? AffiliateIds { get => _explicitNullValueAffiliateIds; set { _explicitNullValueAffiliateIds = value; AdditionalData?.Remove("affiliate_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_ids"); else _explicitNullProperties?.Remove("affiliate_ids"); } }
         private List<string>? _explicitNullValueAffiliateIds = default!;
 #nullable restore
 #else
-        public List<string> AffiliateIds { get => _explicitNullValueAffiliateIds; set { _explicitNullValueAffiliateIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_ids"); else _explicitNullProperties?.Remove("affiliate_ids"); } }
+        public List<string> AffiliateIds { get => _explicitNullValueAffiliateIds; set { _explicitNullValueAffiliateIds = value; AdditionalData?.Remove("affiliate_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliate_ids"); else _explicitNullProperties?.Remove("affiliate_ids"); } }
         private List<string> _explicitNullValueAffiliateIds = default!;
 #endif
         /// <summary>The created time of affiliate commission program</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        public string? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("create_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
         private string? _explicitNullValueCreateTime = default!;
 #nullable restore
 #else
-        public string CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
+        public string CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("create_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_time"); else _explicitNullProperties?.Remove("create_time"); } }
         private string _explicitNullValueCreateTime = default!;
 #endif
         /// <summary>The default_commission property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.DefaultCommission? DefaultCommission { get => _explicitNullValueDefaultCommission; set { _explicitNullValueDefaultCommission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_commission"); else _explicitNullProperties?.Remove("default_commission"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.DefaultCommission? DefaultCommission { get => _explicitNullValueDefaultCommission; set { _explicitNullValueDefaultCommission = value; AdditionalData?.Remove("default_commission"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_commission"); else _explicitNullProperties?.Remove("default_commission"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.DefaultCommission? _explicitNullValueDefaultCommission = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.DefaultCommission DefaultCommission { get => _explicitNullValueDefaultCommission; set { _explicitNullValueDefaultCommission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_commission"); else _explicitNullProperties?.Remove("default_commission"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.DefaultCommission DefaultCommission { get => _explicitNullValueDefaultCommission; set { _explicitNullValueDefaultCommission = value; AdditionalData?.Remove("default_commission"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_commission"); else _explicitNullProperties?.Remove("default_commission"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.DefaultCommission _explicitNullValueDefaultCommission = default!;
 #endif
         /// <summary>Commission program ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The affiliate commission program name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The affiliate commission program notes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
         private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
         private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>The Affiliate commission program priority</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        public string? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
         private string? _explicitNullValuePriority = default!;
 #nullable restore
 #else
-        public string Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        public string Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
         private string _explicitNullValuePriority = default!;
 #endif
         /// <summary>The product_commissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ProductCommission>? ProductCommissions { get => _explicitNullValueProductCommissions; set { _explicitNullValueProductCommissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_commissions"); else _explicitNullProperties?.Remove("product_commissions"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ProductCommission>? ProductCommissions { get => _explicitNullValueProductCommissions; set { _explicitNullValueProductCommissions = value; AdditionalData?.Remove("product_commissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_commissions"); else _explicitNullProperties?.Remove("product_commissions"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ProductCommission>? _explicitNullValueProductCommissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ProductCommission> ProductCommissions { get => _explicitNullValueProductCommissions; set { _explicitNullValueProductCommissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_commissions"); else _explicitNullProperties?.Remove("product_commissions"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ProductCommission> ProductCommissions { get => _explicitNullValueProductCommissions; set { _explicitNullValueProductCommissions = value; AdditionalData?.Remove("product_commissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_commissions"); else _explicitNullProperties?.Remove("product_commissions"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ProductCommission> _explicitNullValueProductCommissions = default!;
 #endif
         /// <summary>The subscription_commissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission>? SubscriptionCommissions { get => _explicitNullValueSubscriptionCommissions; set { _explicitNullValueSubscriptionCommissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_commissions"); else _explicitNullProperties?.Remove("subscription_commissions"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission>? SubscriptionCommissions { get => _explicitNullValueSubscriptionCommissions; set { _explicitNullValueSubscriptionCommissions = value; AdditionalData?.Remove("subscription_commissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_commissions"); else _explicitNullProperties?.Remove("subscription_commissions"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission>? _explicitNullValueSubscriptionCommissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission> SubscriptionCommissions { get => _explicitNullValueSubscriptionCommissions; set { _explicitNullValueSubscriptionCommissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_commissions"); else _explicitNullProperties?.Remove("subscription_commissions"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission> SubscriptionCommissions { get => _explicitNullValueSubscriptionCommissions; set { _explicitNullValueSubscriptionCommissions = value; AdditionalData?.Remove("subscription_commissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_commissions"); else _explicitNullProperties?.Remove("subscription_commissions"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.SubscriptionCommission> _explicitNullValueSubscriptionCommissions = default!;
 #endif
         /// <summary>

@@ -17,11 +17,16 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("updated_time") is { } nullNodeUpdatedTime && nullNodeUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTime = null;
-            if (parseNode.GetChildNode("user_ids") is { } nullNodeUserIds && nullNodeUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserIds = null;
+            if (parseNode.GetChildNode("created_time") is null) { _explicitNullValueCreatedTime = default!; _explicitNullProperties?.Remove("created_time"); }
+            else if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("updated_time") is null) { _explicitNullValueUpdatedTime = default!; _explicitNullProperties?.Remove("updated_time"); }
+            else if (parseNode.GetChildNode("updated_time") is { } nullNodeUpdatedTime && nullNodeUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTime = null;
+            if (parseNode.GetChildNode("user_ids") is null) { _explicitNullValueUserIds = default!; _explicitNullProperties?.Remove("user_ids"); }
+            else if (parseNode.GetChildNode("user_ids") is { } nullNodeUserIds && nullNodeUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The creation timestamp</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        public string? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; AdditionalData?.Remove("created_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
         private string? _explicitNullValueCreatedTime = default!;
 #nullable restore
 #else
-        public string CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        public string CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; AdditionalData?.Remove("created_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
         private string _explicitNullValueCreatedTime = default!;
 #endif
         /// <summary>The unique identifier of the report (Saved Search)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The name of the report</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The last update timestamp</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
+        public string? UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; AdditionalData?.Remove("updated_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
         private string? _explicitNullValueUpdatedTime = default!;
 #nullable restore
 #else
-        public string UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
+        public string UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; AdditionalData?.Remove("updated_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
         private string _explicitNullValueUpdatedTime = default!;
 #endif
         /// <summary>A list of Users who have access to this Saved Search, or ALL_USERS if visible to all</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_ids"); else _explicitNullProperties?.Remove("user_ids"); } }
+        public List<string>? UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; AdditionalData?.Remove("user_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_ids"); else _explicitNullProperties?.Remove("user_ids"); } }
         private List<string>? _explicitNullValueUserIds = default!;
 #nullable restore
 #else
-        public List<string> UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_ids"); else _explicitNullProperties?.Remove("user_ids"); } }
+        public List<string> UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; AdditionalData?.Remove("user_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_ids"); else _explicitNullProperties?.Remove("user_ids"); } }
         private List<string> _explicitNullValueUserIds = default!;
 #endif
         /// <summary>

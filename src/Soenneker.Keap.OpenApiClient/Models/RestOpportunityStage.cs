@@ -17,14 +17,22 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("checklist_items") is { } nullNodeChecklistItems && nullNodeChecklistItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecklistItems = null;
-            if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
-            if (parseNode.GetChildNode("probability") is { } nullNodeProbability && nullNodeProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Probability = null;
-            if (parseNode.GetChildNode("target_number_days") is { } nullNodeTargetNumberDays && nullNodeTargetNumberDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNumberDays = null;
-            if (parseNode.GetChildNode("updated_time") is { } nullNodeUpdatedTime && nullNodeUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTime = null;
+            if (parseNode.GetChildNode("checklist_items") is null) { _explicitNullValueChecklistItems = default!; _explicitNullProperties?.Remove("checklist_items"); }
+            else if (parseNode.GetChildNode("checklist_items") is { } nullNodeChecklistItems && nullNodeChecklistItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecklistItems = null;
+            if (parseNode.GetChildNode("created_time") is null) { _explicitNullValueCreatedTime = default!; _explicitNullProperties?.Remove("created_time"); }
+            else if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("order") is null) { _explicitNullValueOrder = default!; _explicitNullProperties?.Remove("order"); }
+            else if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("probability") is null) { _explicitNullValueProbability = default!; _explicitNullProperties?.Remove("probability"); }
+            else if (parseNode.GetChildNode("probability") is { } nullNodeProbability && nullNodeProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Probability = null;
+            if (parseNode.GetChildNode("target_number_days") is null) { _explicitNullValueTargetNumberDays = default!; _explicitNullProperties?.Remove("target_number_days"); }
+            else if (parseNode.GetChildNode("target_number_days") is { } nullNodeTargetNumberDays && nullNodeTargetNumberDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNumberDays = null;
+            if (parseNode.GetChildNode("updated_time") is null) { _explicitNullValueUpdatedTime = default!; _explicitNullProperties?.Remove("updated_time"); }
+            else if (parseNode.GetChildNode("updated_time") is { } nullNodeUpdatedTime && nullNodeUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,60 +40,60 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>Stage checklist items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ChecklistItem>? ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ChecklistItem>? ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; AdditionalData?.Remove("checklist_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ChecklistItem>? _explicitNullValueChecklistItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ChecklistItem> ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ChecklistItem> ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; AdditionalData?.Remove("checklist_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ChecklistItem> _explicitNullValueChecklistItems = default!;
 #endif
         /// <summary>Creation timestamp (ISO-8601)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        public string? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; AdditionalData?.Remove("created_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
         private string? _explicitNullValueCreatedTime = default!;
 #nullable restore
 #else
-        public string CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        public string CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; AdditionalData?.Remove("created_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
         private string _explicitNullValueCreatedTime = default!;
 #endif
         /// <summary>Stage ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Stage name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Stage order in pipeline</summary>
-        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; AdditionalData?.Remove("order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
         private int? _explicitNullValueOrder = default!;
         /// <summary>Win probability (0-100)</summary>
-        public int? Probability { get => _explicitNullValueProbability; set { _explicitNullValueProbability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("probability"); else _explicitNullProperties?.Remove("probability"); } }
+        public int? Probability { get => _explicitNullValueProbability; set { _explicitNullValueProbability = value; AdditionalData?.Remove("probability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("probability"); else _explicitNullProperties?.Remove("probability"); } }
         private int? _explicitNullValueProbability = default!;
         /// <summary>Target days in stage</summary>
-        public int? TargetNumberDays { get => _explicitNullValueTargetNumberDays; set { _explicitNullValueTargetNumberDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_number_days"); else _explicitNullProperties?.Remove("target_number_days"); } }
+        public int? TargetNumberDays { get => _explicitNullValueTargetNumberDays; set { _explicitNullValueTargetNumberDays = value; AdditionalData?.Remove("target_number_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_number_days"); else _explicitNullProperties?.Remove("target_number_days"); } }
         private int? _explicitNullValueTargetNumberDays = default!;
         /// <summary>Last update timestamp (ISO-8601)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
+        public string? UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; AdditionalData?.Remove("updated_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
         private string? _explicitNullValueUpdatedTime = default!;
 #nullable restore
 #else
-        public string UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
+        public string UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; AdditionalData?.Remove("updated_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
         private string _explicitNullValueUpdatedTime = default!;
 #endif
         /// <summary>

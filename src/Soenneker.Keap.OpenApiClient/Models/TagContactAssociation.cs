@@ -17,9 +17,12 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("applied_at") is { } nullNodeAppliedAt && nullNodeAppliedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppliedAt = null;
-            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
-            if (parseNode.GetChildNode("tag_id") is { } nullNodeTagId && nullNodeTagId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagId = null;
+            if (parseNode.GetChildNode("applied_at") is null) { _explicitNullValueAppliedAt = default!; _explicitNullProperties?.Remove("applied_at"); }
+            else if (parseNode.GetChildNode("applied_at") is { } nullNodeAppliedAt && nullNodeAppliedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppliedAt = null;
+            if (parseNode.GetChildNode("contact_id") is null) { _explicitNullValueContactId = default!; _explicitNullProperties?.Remove("contact_id"); }
+            else if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("tag_id") is null) { _explicitNullValueTagId = default!; _explicitNullProperties?.Remove("tag_id"); }
+            else if (parseNode.GetChildNode("tag_id") is { } nullNodeTagId && nullNodeTagId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The time the tag was applied to the contact, in ISO 8601 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppliedAt { get => _explicitNullValueAppliedAt; set { _explicitNullValueAppliedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_at"); else _explicitNullProperties?.Remove("applied_at"); } }
+        public string? AppliedAt { get => _explicitNullValueAppliedAt; set { _explicitNullValueAppliedAt = value; AdditionalData?.Remove("applied_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_at"); else _explicitNullProperties?.Remove("applied_at"); } }
         private string? _explicitNullValueAppliedAt = default!;
 #nullable restore
 #else
-        public string AppliedAt { get => _explicitNullValueAppliedAt; set { _explicitNullValueAppliedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_at"); else _explicitNullProperties?.Remove("applied_at"); } }
+        public string AppliedAt { get => _explicitNullValueAppliedAt; set { _explicitNullValueAppliedAt = value; AdditionalData?.Remove("applied_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_at"); else _explicitNullProperties?.Remove("applied_at"); } }
         private string _explicitNullValueAppliedAt = default!;
 #endif
         /// <summary>The contact ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>The tag ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TagId { get => _explicitNullValueTagId; set { _explicitNullValueTagId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_id"); else _explicitNullProperties?.Remove("tag_id"); } }
+        public string? TagId { get => _explicitNullValueTagId; set { _explicitNullValueTagId = value; AdditionalData?.Remove("tag_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_id"); else _explicitNullProperties?.Remove("tag_id"); } }
         private string? _explicitNullValueTagId = default!;
 #nullable restore
 #else
-        public string TagId { get => _explicitNullValueTagId; set { _explicitNullValueTagId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_id"); else _explicitNullProperties?.Remove("tag_id"); } }
+        public string TagId { get => _explicitNullValueTagId; set { _explicitNullValueTagId = value; AdditionalData?.Remove("tag_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_id"); else _explicitNullProperties?.Remove("tag_id"); } }
         private string _explicitNullValueTagId = default!;
 #endif
         /// <summary>

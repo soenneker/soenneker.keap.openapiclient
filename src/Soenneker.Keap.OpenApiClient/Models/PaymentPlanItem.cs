@@ -18,10 +18,14 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount_due") is { } nullNodeAmountDue && nullNodeAmountDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountDue = null;
-            if (parseNode.GetChildNode("amount_paid") is { } nullNodeAmountPaid && nullNodeAmountPaid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountPaid = null;
-            if (parseNode.GetChildNode("due_date") is { } nullNodeDueDate && nullNodeDueDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDate = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("amount_due") is null) { _explicitNullValueAmountDue = default!; _explicitNullProperties?.Remove("amount_due"); }
+            else if (parseNode.GetChildNode("amount_due") is { } nullNodeAmountDue && nullNodeAmountDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountDue = null;
+            if (parseNode.GetChildNode("amount_paid") is null) { _explicitNullValueAmountPaid = default!; _explicitNullProperties?.Remove("amount_paid"); }
+            else if (parseNode.GetChildNode("amount_paid") is { } nullNodeAmountPaid && nullNodeAmountPaid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountPaid = null;
+            if (parseNode.GetChildNode("due_date") is null) { _explicitNullValueDueDate = default!; _explicitNullProperties?.Remove("due_date"); }
+            else if (parseNode.GetChildNode("due_date") is { } nullNodeDueDate && nullNodeDueDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDate = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,28 +33,28 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The amount_due property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? AmountDue { get => _explicitNullValueAmountDue; set { _explicitNullValueAmountDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_due"); else _explicitNullProperties?.Remove("amount_due"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? AmountDue { get => _explicitNullValueAmountDue; set { _explicitNullValueAmountDue = value; AdditionalData?.Remove("amount_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_due"); else _explicitNullProperties?.Remove("amount_due"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? _explicitNullValueAmountDue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue AmountDue { get => _explicitNullValueAmountDue; set { _explicitNullValueAmountDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_due"); else _explicitNullProperties?.Remove("amount_due"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue AmountDue { get => _explicitNullValueAmountDue; set { _explicitNullValueAmountDue = value; AdditionalData?.Remove("amount_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_due"); else _explicitNullProperties?.Remove("amount_due"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue _explicitNullValueAmountDue = default!;
 #endif
         /// <summary>The amount_paid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? AmountPaid { get => _explicitNullValueAmountPaid; set { _explicitNullValueAmountPaid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_paid"); else _explicitNullProperties?.Remove("amount_paid"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? AmountPaid { get => _explicitNullValueAmountPaid; set { _explicitNullValueAmountPaid = value; AdditionalData?.Remove("amount_paid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_paid"); else _explicitNullProperties?.Remove("amount_paid"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue? _explicitNullValueAmountPaid = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue AmountPaid { get => _explicitNullValueAmountPaid; set { _explicitNullValueAmountPaid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_paid"); else _explicitNullProperties?.Remove("amount_paid"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue AmountPaid { get => _explicitNullValueAmountPaid; set { _explicitNullValueAmountPaid = value; AdditionalData?.Remove("amount_paid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_paid"); else _explicitNullProperties?.Remove("amount_paid"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue _explicitNullValueAmountPaid = default!;
 #endif
         /// <summary>The due date in the application&apos;s timezone, as an ISO 8601 calendar date string (date only), in the format YYYY-MM-DD</summary>
-        public Date? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
+        public Date? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; AdditionalData?.Remove("due_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
         private Date? _explicitNullValueDueDate = default!;
         /// <summary>The status of the payment plan item. Possible values are:- `UNPAID_MANUAL` - The item is set for manual charge, and its `amount_due` has not been completely paid.- `UNPAID_AUTOCHARGE` - The item is set for auto-charge, and its `amount_due` has not been completely paid.- `PAID` - The item has been completely paid.- `FAILED` - The item `amount_due` has not been completely paid, and there was a failure. (*Note: This status is deprecated and not currently used.*)</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItemStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItemStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItemStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItem"/> and sets the default values.
@@ -80,7 +84,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "amount_due", n => { AmountDue = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue>(global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue.CreateFromDiscriminatorValue); } },
                 { "amount_paid", n => { AmountPaid = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue>(global::Soenneker.Keap.OpenApiClient.Models.CurrencyValue.CreateFromDiscriminatorValue); } },
                 { "due_date", n => { DueDate = n.GetDateValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItemStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.PaymentPlanItemStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>

@@ -17,12 +17,18 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("criteria") is { } nullNodeCriteria && nullNodeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Criteria = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("free_trial_days") is { } nullNodeFreeTrialDays && nullNodeFreeTrialDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeTrialDays = null;
-            if (parseNode.GetChildNode("hide_price") is { } nullNodeHidePrice && nullNodeHidePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HidePrice = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("subscription_plan_id") is { } nullNodeSubscriptionPlanId && nullNodeSubscriptionPlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionPlanId = null;
+            if (parseNode.GetChildNode("criteria") is null) { _explicitNullValueCriteria = default!; _explicitNullProperties?.Remove("criteria"); }
+            else if (parseNode.GetChildNode("criteria") is { } nullNodeCriteria && nullNodeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Criteria = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("free_trial_days") is null) { _explicitNullValueFreeTrialDays = default!; _explicitNullProperties?.Remove("free_trial_days"); }
+            else if (parseNode.GetChildNode("free_trial_days") is { } nullNodeFreeTrialDays && nullNodeFreeTrialDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeTrialDays = null;
+            if (parseNode.GetChildNode("hide_price") is null) { _explicitNullValueHidePrice = default!; _explicitNullProperties?.Remove("hide_price"); }
+            else if (parseNode.GetChildNode("hide_price") is { } nullNodeHidePrice && nullNodeHidePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HidePrice = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("subscription_plan_id") is null) { _explicitNullValueSubscriptionPlanId = default!; _explicitNullProperties?.Remove("subscription_plan_id"); }
+            else if (parseNode.GetChildNode("subscription_plan_id") is { } nullNodeSubscriptionPlanId && nullNodeSubscriptionPlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionPlanId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,47 +36,47 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>List of criteria that must be met for this discount to apply</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteria>? Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteria>? Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; AdditionalData?.Remove("criteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteria>? _explicitNullValueCriteria = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteria> Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteria> Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; AdditionalData?.Remove("criteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.UpdateFreeTrialDiscountCriteria> _explicitNullValueCriteria = default!;
 #endif
         /// <summary>Description of the discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Number of free trial days</summary>
-        public int? FreeTrialDays { get => _explicitNullValueFreeTrialDays; set { _explicitNullValueFreeTrialDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_trial_days"); else _explicitNullProperties?.Remove("free_trial_days"); } }
+        public int? FreeTrialDays { get => _explicitNullValueFreeTrialDays; set { _explicitNullValueFreeTrialDays = value; AdditionalData?.Remove("free_trial_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_trial_days"); else _explicitNullProperties?.Remove("free_trial_days"); } }
         private int? _explicitNullValueFreeTrialDays = default!;
         /// <summary>Whether to hide the price during the trial period</summary>
-        public bool? HidePrice { get => _explicitNullValueHidePrice; set { _explicitNullValueHidePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_price"); else _explicitNullProperties?.Remove("hide_price"); } }
+        public bool? HidePrice { get => _explicitNullValueHidePrice; set { _explicitNullValueHidePrice = value; AdditionalData?.Remove("hide_price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_price"); else _explicitNullProperties?.Remove("hide_price"); } }
         private bool? _explicitNullValueHidePrice = default!;
         /// <summary>Name of the discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>ID of the subscription plan this trial applies to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionPlanId { get => _explicitNullValueSubscriptionPlanId; set { _explicitNullValueSubscriptionPlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_plan_id"); else _explicitNullProperties?.Remove("subscription_plan_id"); } }
+        public string? SubscriptionPlanId { get => _explicitNullValueSubscriptionPlanId; set { _explicitNullValueSubscriptionPlanId = value; AdditionalData?.Remove("subscription_plan_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_plan_id"); else _explicitNullProperties?.Remove("subscription_plan_id"); } }
         private string? _explicitNullValueSubscriptionPlanId = default!;
 #nullable restore
 #else
-        public string SubscriptionPlanId { get => _explicitNullValueSubscriptionPlanId; set { _explicitNullValueSubscriptionPlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_plan_id"); else _explicitNullProperties?.Remove("subscription_plan_id"); } }
+        public string SubscriptionPlanId { get => _explicitNullValueSubscriptionPlanId; set { _explicitNullValueSubscriptionPlanId = value; AdditionalData?.Remove("subscription_plan_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_plan_id"); else _explicitNullProperties?.Remove("subscription_plan_id"); } }
         private string _explicitNullValueSubscriptionPlanId = default!;
 #endif
         /// <summary>

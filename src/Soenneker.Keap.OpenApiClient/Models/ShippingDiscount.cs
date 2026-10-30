@@ -17,12 +17,18 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("criteria") is { } nullNodeCriteria && nullNodeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Criteria = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("discount_type") is { } nullNodeDiscountType && nullNodeDiscountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountType = null;
-            if (parseNode.GetChildNode("discount_value") is { } nullNodeDiscountValue && nullNodeDiscountValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountValue = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("criteria") is null) { _explicitNullValueCriteria = default!; _explicitNullProperties?.Remove("criteria"); }
+            else if (parseNode.GetChildNode("criteria") is { } nullNodeCriteria && nullNodeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Criteria = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("discount_type") is null) { _explicitNullValueDiscountType = default!; _explicitNullProperties?.Remove("discount_type"); }
+            else if (parseNode.GetChildNode("discount_type") is { } nullNodeDiscountType && nullNodeDiscountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountType = null;
+            if (parseNode.GetChildNode("discount_value") is null) { _explicitNullValueDiscountValue = default!; _explicitNullProperties?.Remove("discount_value"); }
+            else if (parseNode.GetChildNode("discount_value") is { } nullNodeDiscountValue && nullNodeDiscountValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountValue = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,47 +36,47 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>List of criteria that must be met for this discount to apply</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.DiscountCriteria>? Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.DiscountCriteria>? Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; AdditionalData?.Remove("criteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.DiscountCriteria>? _explicitNullValueCriteria = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.DiscountCriteria> Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.DiscountCriteria> Criteria { get => _explicitNullValueCriteria; set { _explicitNullValueCriteria = value; AdditionalData?.Remove("criteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("criteria"); else _explicitNullProperties?.Remove("criteria"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.DiscountCriteria> _explicitNullValueCriteria = default!;
 #endif
         /// <summary>Description of the discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Type of discount: AMOUNT (fixed amount) or PERCENT (percentage)</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ShippingDiscountDiscountType? DiscountType { get => _explicitNullValueDiscountType; set { _explicitNullValueDiscountType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_type"); else _explicitNullProperties?.Remove("discount_type"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ShippingDiscountDiscountType? DiscountType { get => _explicitNullValueDiscountType; set { _explicitNullValueDiscountType = value; AdditionalData?.Remove("discount_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_type"); else _explicitNullProperties?.Remove("discount_type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ShippingDiscountDiscountType? _explicitNullValueDiscountType = default!;
         /// <summary>Value of the discount (amount or percentage depending on discount_type)</summary>
-        public double? DiscountValue { get => _explicitNullValueDiscountValue; set { _explicitNullValueDiscountValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_value"); else _explicitNullProperties?.Remove("discount_value"); } }
+        public double? DiscountValue { get => _explicitNullValueDiscountValue; set { _explicitNullValueDiscountValue = value; AdditionalData?.Remove("discount_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_value"); else _explicitNullProperties?.Remove("discount_value"); } }
         private double? _explicitNullValueDiscountValue = default!;
         /// <summary>Unique identifier for this shipping discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Name of the discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>
@@ -100,7 +106,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             {
                 { "criteria", n => { Criteria = n.GetCollectionOfObjectValues<global::Soenneker.Keap.OpenApiClient.Models.DiscountCriteria>(global::Soenneker.Keap.OpenApiClient.Models.DiscountCriteria.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discount_type", n => { DiscountType = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ShippingDiscountDiscountType>(); } },
+                { "discount_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ShippingDiscountDiscountType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDiscountType = default; _explicitNullProperties?.Remove("discount_type"); AdditionalData["discount_type"] = unknown; } else { DiscountType = parsed; AdditionalData.Remove("discount_type"); } } },
                 { "discount_value", n => { DiscountValue = n.GetDoubleValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },

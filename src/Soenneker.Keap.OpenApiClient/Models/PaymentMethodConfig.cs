@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("session_key") is { } nullNodeSessionKey && nullNodeSessionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionKey = null;
+            if (parseNode.GetChildNode("session_key") is null) { _explicitNullValueSessionKey = default!; _explicitNullProperties?.Remove("session_key"); }
+            else if (parseNode.GetChildNode("session_key") is { } nullNodeSessionKey && nullNodeSessionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionKey = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>A temporary session key required for rendering Keap&apos;s payment component.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionKey { get => _explicitNullValueSessionKey; set { _explicitNullValueSessionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_key"); else _explicitNullProperties?.Remove("session_key"); } }
+        public string? SessionKey { get => _explicitNullValueSessionKey; set { _explicitNullValueSessionKey = value; AdditionalData?.Remove("session_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_key"); else _explicitNullProperties?.Remove("session_key"); } }
         private string? _explicitNullValueSessionKey = default!;
 #nullable restore
 #else
-        public string SessionKey { get => _explicitNullValueSessionKey; set { _explicitNullValueSessionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_key"); else _explicitNullProperties?.Remove("session_key"); } }
+        public string SessionKey { get => _explicitNullValueSessionKey; set { _explicitNullValueSessionKey = value; AdditionalData?.Remove("session_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_key"); else _explicitNullProperties?.Remove("session_key"); } }
         private string _explicitNullValueSessionKey = default!;
 #endif
         /// <summary>

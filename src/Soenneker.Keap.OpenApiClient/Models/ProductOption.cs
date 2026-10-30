@@ -17,75 +17,83 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("display_order") is { } nullNodeDisplayOrder && nullNodeDisplayOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayOrder = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("list_items") is { } nullNodeListItems && nullNodeListItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListItems = null;
-            if (parseNode.GetChildNode("option_label") is { } nullNodeOptionLabel && nullNodeOptionLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionLabel = null;
-            if (parseNode.GetChildNode("option_type") is { } nullNodeOptionType && nullNodeOptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionType = null;
-            if (parseNode.GetChildNode("product_id") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
-            if (parseNode.GetChildNode("required") is { } nullNodeRequired && nullNodeRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Required = null;
-            if (parseNode.GetChildNode("text_rules") is { } nullNodeTextRules && nullNodeTextRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextRules = null;
+            if (parseNode.GetChildNode("display_order") is null) { _explicitNullValueDisplayOrder = default!; _explicitNullProperties?.Remove("display_order"); }
+            else if (parseNode.GetChildNode("display_order") is { } nullNodeDisplayOrder && nullNodeDisplayOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayOrder = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("list_items") is null) { _explicitNullValueListItems = default!; _explicitNullProperties?.Remove("list_items"); }
+            else if (parseNode.GetChildNode("list_items") is { } nullNodeListItems && nullNodeListItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListItems = null;
+            if (parseNode.GetChildNode("option_label") is null) { _explicitNullValueOptionLabel = default!; _explicitNullProperties?.Remove("option_label"); }
+            else if (parseNode.GetChildNode("option_label") is { } nullNodeOptionLabel && nullNodeOptionLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionLabel = null;
+            if (parseNode.GetChildNode("option_type") is null) { _explicitNullValueOptionType = default!; _explicitNullProperties?.Remove("option_type"); }
+            else if (parseNode.GetChildNode("option_type") is { } nullNodeOptionType && nullNodeOptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionType = null;
+            if (parseNode.GetChildNode("product_id") is null) { _explicitNullValueProductId = default!; _explicitNullProperties?.Remove("product_id"); }
+            else if (parseNode.GetChildNode("product_id") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
+            if (parseNode.GetChildNode("required") is null) { _explicitNullValueRequired = default!; _explicitNullProperties?.Remove("required"); }
+            else if (parseNode.GetChildNode("required") is { } nullNodeRequired && nullNodeRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Required = null;
+            if (parseNode.GetChildNode("text_rules") is null) { _explicitNullValueTextRules = default!; _explicitNullProperties?.Remove("text_rules"); }
+            else if (parseNode.GetChildNode("text_rules") is { } nullNodeTextRules && nullNodeTextRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextRules = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The order in which this option will be displayed among other options. Minimum is 0. Lower values indicate higher priority in order.</summary>
-        public int? DisplayOrder { get => _explicitNullValueDisplayOrder; set { _explicitNullValueDisplayOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_order"); else _explicitNullProperties?.Remove("display_order"); } }
+        public int? DisplayOrder { get => _explicitNullValueDisplayOrder; set { _explicitNullValueDisplayOrder = value; AdditionalData?.Remove("display_order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_order"); else _explicitNullProperties?.Remove("display_order"); } }
         private int? _explicitNullValueDisplayOrder = default!;
         /// <summary>The unique id of the product option</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Appears only for option_type of LIST. A fixed list of available selectable items for this product option. e.g (Medium)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ListOption>? ListItems { get => _explicitNullValueListItems; set { _explicitNullValueListItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_items"); else _explicitNullProperties?.Remove("list_items"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ListOption>? ListItems { get => _explicitNullValueListItems; set { _explicitNullValueListItems = value; AdditionalData?.Remove("list_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_items"); else _explicitNullProperties?.Remove("list_items"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ListOption>? _explicitNullValueListItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ListOption> ListItems { get => _explicitNullValueListItems; set { _explicitNullValueListItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_items"); else _explicitNullProperties?.Remove("list_items"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ListOption> ListItems { get => _explicitNullValueListItems; set { _explicitNullValueListItems = value; AdditionalData?.Remove("list_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_items"); else _explicitNullProperties?.Remove("list_items"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ListOption> _explicitNullValueListItems = default!;
 #endif
         /// <summary>The displayable name of the option. E.g. Size</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptionLabel { get => _explicitNullValueOptionLabel; set { _explicitNullValueOptionLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_label"); else _explicitNullProperties?.Remove("option_label"); } }
+        public string? OptionLabel { get => _explicitNullValueOptionLabel; set { _explicitNullValueOptionLabel = value; AdditionalData?.Remove("option_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_label"); else _explicitNullProperties?.Remove("option_label"); } }
         private string? _explicitNullValueOptionLabel = default!;
 #nullable restore
 #else
-        public string OptionLabel { get => _explicitNullValueOptionLabel; set { _explicitNullValueOptionLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_label"); else _explicitNullProperties?.Remove("option_label"); } }
+        public string OptionLabel { get => _explicitNullValueOptionLabel; set { _explicitNullValueOptionLabel = value; AdditionalData?.Remove("option_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_label"); else _explicitNullProperties?.Remove("option_label"); } }
         private string _explicitNullValueOptionLabel = default!;
 #endif
         /// <summary>The type of option. Possible valid values are LIST and TEXT.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ProductOptionOptionType? OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_type"); else _explicitNullProperties?.Remove("option_type"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ProductOptionOptionType? OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; AdditionalData?.Remove("option_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_type"); else _explicitNullProperties?.Remove("option_type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ProductOptionOptionType? _explicitNullValueOptionType = default!;
         /// <summary>The product id that this option belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
+        public string? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; AdditionalData?.Remove("product_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
         private string? _explicitNullValueProductId = default!;
 #nullable restore
 #else
-        public string ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
+        public string ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; AdditionalData?.Remove("product_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
         private string _explicitNullValueProductId = default!;
 #endif
         /// <summary>Whether this option is required for product purchase.</summary>
-        public bool? Required { get => _explicitNullValueRequired; set { _explicitNullValueRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required"); else _explicitNullProperties?.Remove("required"); } }
+        public bool? Required { get => _explicitNullValueRequired; set { _explicitNullValueRequired = value; AdditionalData?.Remove("required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required"); else _explicitNullProperties?.Remove("required"); } }
         private bool? _explicitNullValueRequired = default!;
         /// <summary>The option is a user-defined free-form field. The settings define the restrictions on what can be entered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.TextOption? TextRules { get => _explicitNullValueTextRules; set { _explicitNullValueTextRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_rules"); else _explicitNullProperties?.Remove("text_rules"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.TextOption? TextRules { get => _explicitNullValueTextRules; set { _explicitNullValueTextRules = value; AdditionalData?.Remove("text_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_rules"); else _explicitNullProperties?.Remove("text_rules"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.TextOption? _explicitNullValueTextRules = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.TextOption TextRules { get => _explicitNullValueTextRules; set { _explicitNullValueTextRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_rules"); else _explicitNullProperties?.Remove("text_rules"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.TextOption TextRules { get => _explicitNullValueTextRules; set { _explicitNullValueTextRules = value; AdditionalData?.Remove("text_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_rules"); else _explicitNullProperties?.Remove("text_rules"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.TextOption _explicitNullValueTextRules = default!;
 #endif
         /// <summary>
@@ -117,7 +125,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "list_items", n => { ListItems = n.GetCollectionOfObjectValues<global::Soenneker.Keap.OpenApiClient.Models.ListOption>(global::Soenneker.Keap.OpenApiClient.Models.ListOption.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "option_label", n => { OptionLabel = n.GetStringValue(); } },
-                { "option_type", n => { OptionType = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ProductOptionOptionType>(); } },
+                { "option_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ProductOptionOptionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOptionType = default; _explicitNullProperties?.Remove("option_type"); AdditionalData["option_type"] = unknown; } else { OptionType = parsed; AdditionalData.Remove("option_type"); } } },
                 { "product_id", n => { ProductId = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
                 { "text_rules", n => { TextRules = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.TextOption>(global::Soenneker.Keap.OpenApiClient.Models.TextOption.CreateFromDiscriminatorValue); } },

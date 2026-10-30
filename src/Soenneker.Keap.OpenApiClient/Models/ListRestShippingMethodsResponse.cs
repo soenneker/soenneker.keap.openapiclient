@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shipping_methods") is { } nullNodeShippingMethods && nullNodeShippingMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingMethods = null;
+            if (parseNode.GetChildNode("shipping_methods") is null) { _explicitNullValueShippingMethods = default!; _explicitNullProperties?.Remove("shipping_methods"); }
+            else if (parseNode.GetChildNode("shipping_methods") is { } nullNodeShippingMethods && nullNodeShippingMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingMethods = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The shipping_methods property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ShippingMethod>? ShippingMethods { get => _explicitNullValueShippingMethods; set { _explicitNullValueShippingMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_methods"); else _explicitNullProperties?.Remove("shipping_methods"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ShippingMethod>? ShippingMethods { get => _explicitNullValueShippingMethods; set { _explicitNullValueShippingMethods = value; AdditionalData?.Remove("shipping_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_methods"); else _explicitNullProperties?.Remove("shipping_methods"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ShippingMethod>? _explicitNullValueShippingMethods = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ShippingMethod> ShippingMethods { get => _explicitNullValueShippingMethods; set { _explicitNullValueShippingMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_methods"); else _explicitNullProperties?.Remove("shipping_methods"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ShippingMethod> ShippingMethods { get => _explicitNullValueShippingMethods; set { _explicitNullValueShippingMethods = value; AdditionalData?.Remove("shipping_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_methods"); else _explicitNullProperties?.Remove("shipping_methods"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ShippingMethod> _explicitNullValueShippingMethods = default!;
 #endif
         /// <summary>

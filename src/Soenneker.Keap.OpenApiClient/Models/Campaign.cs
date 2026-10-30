@@ -17,98 +17,110 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("active_contact_count") is { } nullNodeActiveContactCount && nullNodeActiveContactCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveContactCount = null;
-            if (parseNode.GetChildNode("completed_contact_count") is { } nullNodeCompletedContactCount && nullNodeCompletedContactCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletedContactCount = null;
-            if (parseNode.GetChildNode("created_by_global_id") is { } nullNodeCreatedByGlobalId && nullNodeCreatedByGlobalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedByGlobalId = null;
-            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
-            if (parseNode.GetChildNode("error_message") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("locked") is { } nullNodeLocked && nullNodeLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locked = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("published_date") is { } nullNodePublishedDate && nullNodePublishedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishedDate = null;
-            if (parseNode.GetChildNode("published_status") is { } nullNodePublishedStatus && nullNodePublishedStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishedStatus = null;
-            if (parseNode.GetChildNode("published_time_zone") is { } nullNodePublishedTimeZone && nullNodePublishedTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishedTimeZone = null;
-            if (parseNode.GetChildNode("time_zone") is { } nullNodeTimeZone && nullNodeTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZone = null;
+            if (parseNode.GetChildNode("active_contact_count") is null) { _explicitNullValueActiveContactCount = default!; _explicitNullProperties?.Remove("active_contact_count"); }
+            else if (parseNode.GetChildNode("active_contact_count") is { } nullNodeActiveContactCount && nullNodeActiveContactCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveContactCount = null;
+            if (parseNode.GetChildNode("completed_contact_count") is null) { _explicitNullValueCompletedContactCount = default!; _explicitNullProperties?.Remove("completed_contact_count"); }
+            else if (parseNode.GetChildNode("completed_contact_count") is { } nullNodeCompletedContactCount && nullNodeCompletedContactCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletedContactCount = null;
+            if (parseNode.GetChildNode("created_by_global_id") is null) { _explicitNullValueCreatedByGlobalId = default!; _explicitNullProperties?.Remove("created_by_global_id"); }
+            else if (parseNode.GetChildNode("created_by_global_id") is { } nullNodeCreatedByGlobalId && nullNodeCreatedByGlobalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedByGlobalId = null;
+            if (parseNode.GetChildNode("date_created") is null) { _explicitNullValueDateCreated = default!; _explicitNullProperties?.Remove("date_created"); }
+            else if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("error_message") is null) { _explicitNullValueErrorMessage = default!; _explicitNullProperties?.Remove("error_message"); }
+            else if (parseNode.GetChildNode("error_message") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("locked") is null) { _explicitNullValueLocked = default!; _explicitNullProperties?.Remove("locked"); }
+            else if (parseNode.GetChildNode("locked") is { } nullNodeLocked && nullNodeLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locked = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("published_date") is null) { _explicitNullValuePublishedDate = default!; _explicitNullProperties?.Remove("published_date"); }
+            else if (parseNode.GetChildNode("published_date") is { } nullNodePublishedDate && nullNodePublishedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishedDate = null;
+            if (parseNode.GetChildNode("published_status") is null) { _explicitNullValuePublishedStatus = default!; _explicitNullProperties?.Remove("published_status"); }
+            else if (parseNode.GetChildNode("published_status") is { } nullNodePublishedStatus && nullNodePublishedStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishedStatus = null;
+            if (parseNode.GetChildNode("published_time_zone") is null) { _explicitNullValuePublishedTimeZone = default!; _explicitNullProperties?.Remove("published_time_zone"); }
+            else if (parseNode.GetChildNode("published_time_zone") is { } nullNodePublishedTimeZone && nullNodePublishedTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishedTimeZone = null;
+            if (parseNode.GetChildNode("time_zone") is null) { _explicitNullValueTimeZone = default!; _explicitNullProperties?.Remove("time_zone"); }
+            else if (parseNode.GetChildNode("time_zone") is { } nullNodeTimeZone && nullNodeTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZone = null;
         }
 
         /// <summary>Number of contacts currently active in this campaign</summary>
-        public int? ActiveContactCount { get => _explicitNullValueActiveContactCount; set { _explicitNullValueActiveContactCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_contact_count"); else _explicitNullProperties?.Remove("active_contact_count"); } }
+        public int? ActiveContactCount { get => _explicitNullValueActiveContactCount; set { _explicitNullValueActiveContactCount = value; AdditionalData?.Remove("active_contact_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_contact_count"); else _explicitNullProperties?.Remove("active_contact_count"); } }
         private int? _explicitNullValueActiveContactCount = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of contacts who have completed this campaign</summary>
-        public int? CompletedContactCount { get => _explicitNullValueCompletedContactCount; set { _explicitNullValueCompletedContactCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed_contact_count"); else _explicitNullProperties?.Remove("completed_contact_count"); } }
+        public int? CompletedContactCount { get => _explicitNullValueCompletedContactCount; set { _explicitNullValueCompletedContactCount = value; AdditionalData?.Remove("completed_contact_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed_contact_count"); else _explicitNullProperties?.Remove("completed_contact_count"); } }
         private int? _explicitNullValueCompletedContactCount = default!;
         /// <summary>The global ID of the user who created the campaign</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedByGlobalId { get => _explicitNullValueCreatedByGlobalId; set { _explicitNullValueCreatedByGlobalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_global_id"); else _explicitNullProperties?.Remove("created_by_global_id"); } }
+        public string? CreatedByGlobalId { get => _explicitNullValueCreatedByGlobalId; set { _explicitNullValueCreatedByGlobalId = value; AdditionalData?.Remove("created_by_global_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_global_id"); else _explicitNullProperties?.Remove("created_by_global_id"); } }
         private string? _explicitNullValueCreatedByGlobalId = default!;
 #nullable restore
 #else
-        public string CreatedByGlobalId { get => _explicitNullValueCreatedByGlobalId; set { _explicitNullValueCreatedByGlobalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_global_id"); else _explicitNullProperties?.Remove("created_by_global_id"); } }
+        public string CreatedByGlobalId { get => _explicitNullValueCreatedByGlobalId; set { _explicitNullValueCreatedByGlobalId = value; AdditionalData?.Remove("created_by_global_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_global_id"); else _explicitNullProperties?.Remove("created_by_global_id"); } }
         private string _explicitNullValueCreatedByGlobalId = default!;
 #endif
         /// <summary>The date and time when the campaign was created. In ISO-8601 format</summary>
-        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        public DateTimeOffset? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; AdditionalData?.Remove("date_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
         private DateTimeOffset? _explicitNullValueDateCreated = default!;
         /// <summary>Error message if the campaign has issues</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; AdditionalData?.Remove("error_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
         private string? _explicitNullValueErrorMessage = default!;
 #nullable restore
 #else
-        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
+        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; AdditionalData?.Remove("error_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_message"); else _explicitNullProperties?.Remove("error_message"); } }
         private string _explicitNullValueErrorMessage = default!;
 #endif
         /// <summary>The unique identifier of the campaign</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Whether the campaign is locked for editing</summary>
-        public bool? Locked { get => _explicitNullValueLocked; set { _explicitNullValueLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked"); else _explicitNullProperties?.Remove("locked"); } }
+        public bool? Locked { get => _explicitNullValueLocked; set { _explicitNullValueLocked = value; AdditionalData?.Remove("locked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked"); else _explicitNullProperties?.Remove("locked"); } }
         private bool? _explicitNullValueLocked = default!;
         /// <summary>The name of the campaign</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The date and time when the campaign was published. In ISO-8601 format</summary>
-        public DateTimeOffset? PublishedDate { get => _explicitNullValuePublishedDate; set { _explicitNullValuePublishedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("published_date"); else _explicitNullProperties?.Remove("published_date"); } }
+        public DateTimeOffset? PublishedDate { get => _explicitNullValuePublishedDate; set { _explicitNullValuePublishedDate = value; AdditionalData?.Remove("published_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("published_date"); else _explicitNullProperties?.Remove("published_date"); } }
         private DateTimeOffset? _explicitNullValuePublishedDate = default!;
         /// <summary>Whether the campaign is published</summary>
-        public bool? PublishedStatus { get => _explicitNullValuePublishedStatus; set { _explicitNullValuePublishedStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("published_status"); else _explicitNullProperties?.Remove("published_status"); } }
+        public bool? PublishedStatus { get => _explicitNullValuePublishedStatus; set { _explicitNullValuePublishedStatus = value; AdditionalData?.Remove("published_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("published_status"); else _explicitNullProperties?.Remove("published_status"); } }
         private bool? _explicitNullValuePublishedStatus = default!;
         /// <summary>The timezone used when the campaign was published</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PublishedTimeZone { get => _explicitNullValuePublishedTimeZone; set { _explicitNullValuePublishedTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("published_time_zone"); else _explicitNullProperties?.Remove("published_time_zone"); } }
+        public string? PublishedTimeZone { get => _explicitNullValuePublishedTimeZone; set { _explicitNullValuePublishedTimeZone = value; AdditionalData?.Remove("published_time_zone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("published_time_zone"); else _explicitNullProperties?.Remove("published_time_zone"); } }
         private string? _explicitNullValuePublishedTimeZone = default!;
 #nullable restore
 #else
-        public string PublishedTimeZone { get => _explicitNullValuePublishedTimeZone; set { _explicitNullValuePublishedTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("published_time_zone"); else _explicitNullProperties?.Remove("published_time_zone"); } }
+        public string PublishedTimeZone { get => _explicitNullValuePublishedTimeZone; set { _explicitNullValuePublishedTimeZone = value; AdditionalData?.Remove("published_time_zone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("published_time_zone"); else _explicitNullProperties?.Remove("published_time_zone"); } }
         private string _explicitNullValuePublishedTimeZone = default!;
 #endif
         /// <summary>The timezone of the campaign</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_zone"); else _explicitNullProperties?.Remove("time_zone"); } }
+        public string? TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; AdditionalData?.Remove("time_zone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_zone"); else _explicitNullProperties?.Remove("time_zone"); } }
         private string? _explicitNullValueTimeZone = default!;
 #nullable restore
 #else
-        public string TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_zone"); else _explicitNullProperties?.Remove("time_zone"); } }
+        public string TimeZone { get => _explicitNullValueTimeZone; set { _explicitNullValueTimeZone = value; AdditionalData?.Remove("time_zone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_zone"); else _explicitNullProperties?.Remove("time_zone"); } }
         private string _explicitNullValueTimeZone = default!;
 #endif
         /// <summary>

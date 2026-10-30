@@ -17,23 +17,25 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default_country_code") is { } nullNodeDefaultCountryCode && nullNodeDefaultCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCountryCode = null;
-            if (parseNode.GetChildNode("default_user_id") is { } nullNodeDefaultUserId && nullNodeDefaultUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultUserId = null;
+            if (parseNode.GetChildNode("default_country_code") is null) { _explicitNullValueDefaultCountryCode = default!; _explicitNullProperties?.Remove("default_country_code"); }
+            else if (parseNode.GetChildNode("default_country_code") is { } nullNodeDefaultCountryCode && nullNodeDefaultCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCountryCode = null;
+            if (parseNode.GetChildNode("default_user_id") is null) { _explicitNullValueDefaultUserId = default!; _explicitNullProperties?.Remove("default_user_id"); }
+            else if (parseNode.GetChildNode("default_user_id") is { } nullNodeDefaultUserId && nullNodeDefaultUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultUserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The default_country_code property</summary>
-        public int? DefaultCountryCode { get => _explicitNullValueDefaultCountryCode; set { _explicitNullValueDefaultCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_country_code"); else _explicitNullProperties?.Remove("default_country_code"); } }
+        public int? DefaultCountryCode { get => _explicitNullValueDefaultCountryCode; set { _explicitNullValueDefaultCountryCode = value; AdditionalData?.Remove("default_country_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_country_code"); else _explicitNullProperties?.Remove("default_country_code"); } }
         private int? _explicitNullValueDefaultCountryCode = default!;
         /// <summary>The default_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultUserId { get => _explicitNullValueDefaultUserId; set { _explicitNullValueDefaultUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_user_id"); else _explicitNullProperties?.Remove("default_user_id"); } }
+        public string? DefaultUserId { get => _explicitNullValueDefaultUserId; set { _explicitNullValueDefaultUserId = value; AdditionalData?.Remove("default_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_user_id"); else _explicitNullProperties?.Remove("default_user_id"); } }
         private string? _explicitNullValueDefaultUserId = default!;
 #nullable restore
 #else
-        public string DefaultUserId { get => _explicitNullValueDefaultUserId; set { _explicitNullValueDefaultUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_user_id"); else _explicitNullProperties?.Remove("default_user_id"); } }
+        public string DefaultUserId { get => _explicitNullValueDefaultUserId; set { _explicitNullValueDefaultUserId = value; AdditionalData?.Remove("default_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_user_id"); else _explicitNullProperties?.Remove("default_user_id"); } }
         private string _explicitNullValueDefaultUserId = default!;
 #endif
         /// <summary>

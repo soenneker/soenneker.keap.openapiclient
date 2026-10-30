@@ -17,10 +17,14 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contact1_id") is { } nullNodeContact1Id && nullNodeContact1Id.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact1Id = null;
-            if (parseNode.GetChildNode("contact2_id") is { } nullNodeContact2Id && nullNodeContact2Id.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact2Id = null;
-            if (parseNode.GetChildNode("link_type_id") is { } nullNodeLinkTypeId && nullNodeLinkTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkTypeId = null;
-            if (parseNode.GetChildNode("link_type_name") is { } nullNodeLinkTypeName && nullNodeLinkTypeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkTypeName = null;
+            if (parseNode.GetChildNode("contact1_id") is null) { _explicitNullValueContact1Id = default!; _explicitNullProperties?.Remove("contact1_id"); }
+            else if (parseNode.GetChildNode("contact1_id") is { } nullNodeContact1Id && nullNodeContact1Id.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact1Id = null;
+            if (parseNode.GetChildNode("contact2_id") is null) { _explicitNullValueContact2Id = default!; _explicitNullProperties?.Remove("contact2_id"); }
+            else if (parseNode.GetChildNode("contact2_id") is { } nullNodeContact2Id && nullNodeContact2Id.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contact2Id = null;
+            if (parseNode.GetChildNode("link_type_id") is null) { _explicitNullValueLinkTypeId = default!; _explicitNullProperties?.Remove("link_type_id"); }
+            else if (parseNode.GetChildNode("link_type_id") is { } nullNodeLinkTypeId && nullNodeLinkTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkTypeId = null;
+            if (parseNode.GetChildNode("link_type_name") is null) { _explicitNullValueLinkTypeName = default!; _explicitNullProperties?.Remove("link_type_name"); }
+            else if (parseNode.GetChildNode("link_type_name") is { } nullNodeLinkTypeName && nullNodeLinkTypeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkTypeName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>First contact ID in the link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Contact1Id { get => _explicitNullValueContact1Id; set { _explicitNullValueContact1Id = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact1_id"); else _explicitNullProperties?.Remove("contact1_id"); } }
+        public string? Contact1Id { get => _explicitNullValueContact1Id; set { _explicitNullValueContact1Id = value; AdditionalData?.Remove("contact1_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact1_id"); else _explicitNullProperties?.Remove("contact1_id"); } }
         private string? _explicitNullValueContact1Id = default!;
 #nullable restore
 #else
-        public string Contact1Id { get => _explicitNullValueContact1Id; set { _explicitNullValueContact1Id = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact1_id"); else _explicitNullProperties?.Remove("contact1_id"); } }
+        public string Contact1Id { get => _explicitNullValueContact1Id; set { _explicitNullValueContact1Id = value; AdditionalData?.Remove("contact1_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact1_id"); else _explicitNullProperties?.Remove("contact1_id"); } }
         private string _explicitNullValueContact1Id = default!;
 #endif
         /// <summary>Second contact ID in the link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Contact2Id { get => _explicitNullValueContact2Id; set { _explicitNullValueContact2Id = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact2_id"); else _explicitNullProperties?.Remove("contact2_id"); } }
+        public string? Contact2Id { get => _explicitNullValueContact2Id; set { _explicitNullValueContact2Id = value; AdditionalData?.Remove("contact2_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact2_id"); else _explicitNullProperties?.Remove("contact2_id"); } }
         private string? _explicitNullValueContact2Id = default!;
 #nullable restore
 #else
-        public string Contact2Id { get => _explicitNullValueContact2Id; set { _explicitNullValueContact2Id = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact2_id"); else _explicitNullProperties?.Remove("contact2_id"); } }
+        public string Contact2Id { get => _explicitNullValueContact2Id; set { _explicitNullValueContact2Id = value; AdditionalData?.Remove("contact2_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact2_id"); else _explicitNullProperties?.Remove("contact2_id"); } }
         private string _explicitNullValueContact2Id = default!;
 #endif
         /// <summary>Link type ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkTypeId { get => _explicitNullValueLinkTypeId; set { _explicitNullValueLinkTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type_id"); else _explicitNullProperties?.Remove("link_type_id"); } }
+        public string? LinkTypeId { get => _explicitNullValueLinkTypeId; set { _explicitNullValueLinkTypeId = value; AdditionalData?.Remove("link_type_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type_id"); else _explicitNullProperties?.Remove("link_type_id"); } }
         private string? _explicitNullValueLinkTypeId = default!;
 #nullable restore
 #else
-        public string LinkTypeId { get => _explicitNullValueLinkTypeId; set { _explicitNullValueLinkTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type_id"); else _explicitNullProperties?.Remove("link_type_id"); } }
+        public string LinkTypeId { get => _explicitNullValueLinkTypeId; set { _explicitNullValueLinkTypeId = value; AdditionalData?.Remove("link_type_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type_id"); else _explicitNullProperties?.Remove("link_type_id"); } }
         private string _explicitNullValueLinkTypeId = default!;
 #endif
         /// <summary>Link type name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkTypeName { get => _explicitNullValueLinkTypeName; set { _explicitNullValueLinkTypeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type_name"); else _explicitNullProperties?.Remove("link_type_name"); } }
+        public string? LinkTypeName { get => _explicitNullValueLinkTypeName; set { _explicitNullValueLinkTypeName = value; AdditionalData?.Remove("link_type_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type_name"); else _explicitNullProperties?.Remove("link_type_name"); } }
         private string? _explicitNullValueLinkTypeName = default!;
 #nullable restore
 #else
-        public string LinkTypeName { get => _explicitNullValueLinkTypeName; set { _explicitNullValueLinkTypeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type_name"); else _explicitNullProperties?.Remove("link_type_name"); } }
+        public string LinkTypeName { get => _explicitNullValueLinkTypeName; set { _explicitNullValueLinkTypeName = value; AdditionalData?.Remove("link_type_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type_name"); else _explicitNullProperties?.Remove("link_type_name"); } }
         private string _explicitNullValueLinkTypeName = default!;
 #endif
         /// <summary>

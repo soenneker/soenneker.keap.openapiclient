@@ -18,8 +18,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("applied_time") is { } nullNodeAppliedTime && nullNodeAppliedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppliedTime = null;
-            if (parseNode.GetChildNode("tag") is { } nullNodeTag && nullNodeTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tag = null;
+            if (parseNode.GetChildNode("applied_time") is null) { _explicitNullValueAppliedTime = default!; _explicitNullProperties?.Remove("applied_time"); }
+            else if (parseNode.GetChildNode("applied_time") is { } nullNodeAppliedTime && nullNodeAppliedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppliedTime = null;
+            if (parseNode.GetChildNode("tag") is null) { _explicitNullValueTag = default!; _explicitNullProperties?.Remove("tag"); }
+            else if (parseNode.GetChildNode("tag") is { } nullNodeTag && nullNodeTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tag = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The time the tag was applied to the contact, in ISO 8601 format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppliedTime { get => _explicitNullValueAppliedTime; set { _explicitNullValueAppliedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_time"); else _explicitNullProperties?.Remove("applied_time"); } }
+        public string? AppliedTime { get => _explicitNullValueAppliedTime; set { _explicitNullValueAppliedTime = value; AdditionalData?.Remove("applied_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_time"); else _explicitNullProperties?.Remove("applied_time"); } }
         private string? _explicitNullValueAppliedTime = default!;
 #nullable restore
 #else
-        public string AppliedTime { get => _explicitNullValueAppliedTime; set { _explicitNullValueAppliedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_time"); else _explicitNullProperties?.Remove("applied_time"); } }
+        public string AppliedTime { get => _explicitNullValueAppliedTime; set { _explicitNullValueAppliedTime = value; AdditionalData?.Remove("applied_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_time"); else _explicitNullProperties?.Remove("applied_time"); } }
         private string _explicitNullValueAppliedTime = default!;
 #endif
         /// <summary>The tag applied</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.Tag? Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.Tag? Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; AdditionalData?.Remove("tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.Tag? _explicitNullValueTag = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.Tag Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.Tag Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; AdditionalData?.Remove("tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.Tag _explicitNullValueTag = default!;
 #endif
         /// <summary>

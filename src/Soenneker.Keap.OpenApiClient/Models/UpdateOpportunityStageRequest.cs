@@ -17,11 +17,16 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("checklist_items") is { } nullNodeChecklistItems && nullNodeChecklistItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecklistItems = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
-            if (parseNode.GetChildNode("probability") is { } nullNodeProbability && nullNodeProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Probability = null;
-            if (parseNode.GetChildNode("target_number_days") is { } nullNodeTargetNumberDays && nullNodeTargetNumberDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNumberDays = null;
+            if (parseNode.GetChildNode("checklist_items") is null) { _explicitNullValueChecklistItems = default!; _explicitNullProperties?.Remove("checklist_items"); }
+            else if (parseNode.GetChildNode("checklist_items") is { } nullNodeChecklistItems && nullNodeChecklistItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecklistItems = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("order") is null) { _explicitNullValueOrder = default!; _explicitNullProperties?.Remove("order"); }
+            else if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("probability") is null) { _explicitNullValueProbability = default!; _explicitNullProperties?.Remove("probability"); }
+            else if (parseNode.GetChildNode("probability") is { } nullNodeProbability && nullNodeProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Probability = null;
+            if (parseNode.GetChildNode("target_number_days") is null) { _explicitNullValueTargetNumberDays = default!; _explicitNullProperties?.Remove("target_number_days"); }
+            else if (parseNode.GetChildNode("target_number_days") is { } nullNodeTargetNumberDays && nullNodeTargetNumberDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNumberDays = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,31 +34,31 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The checklist_items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.UpdateOpportunityStageChecklistItem>? ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.UpdateOpportunityStageChecklistItem>? ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; AdditionalData?.Remove("checklist_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.UpdateOpportunityStageChecklistItem>? _explicitNullValueChecklistItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.UpdateOpportunityStageChecklistItem> ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.UpdateOpportunityStageChecklistItem> ChecklistItems { get => _explicitNullValueChecklistItems; set { _explicitNullValueChecklistItems = value; AdditionalData?.Remove("checklist_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checklist_items"); else _explicitNullProperties?.Remove("checklist_items"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.UpdateOpportunityStageChecklistItem> _explicitNullValueChecklistItems = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The order property</summary>
-        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; AdditionalData?.Remove("order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
         private int? _explicitNullValueOrder = default!;
         /// <summary>must be an integer between 0 and 100.</summary>
-        public int? Probability { get => _explicitNullValueProbability; set { _explicitNullValueProbability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("probability"); else _explicitNullProperties?.Remove("probability"); } }
+        public int? Probability { get => _explicitNullValueProbability; set { _explicitNullValueProbability = value; AdditionalData?.Remove("probability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("probability"); else _explicitNullProperties?.Remove("probability"); } }
         private int? _explicitNullValueProbability = default!;
         /// <summary>Value should be &gt;=0.</summary>
-        public int? TargetNumberDays { get => _explicitNullValueTargetNumberDays; set { _explicitNullValueTargetNumberDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_number_days"); else _explicitNullProperties?.Remove("target_number_days"); } }
+        public int? TargetNumberDays { get => _explicitNullValueTargetNumberDays; set { _explicitNullValueTargetNumberDays = value; AdditionalData?.Remove("target_number_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_number_days"); else _explicitNullProperties?.Remove("target_number_days"); } }
         private int? _explicitNullValueTargetNumberDays = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.UpdateOpportunityStageRequest"/> and sets the default values.

@@ -17,25 +17,29 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("affiliateId") is { } nullNodeAffiliateId && nullNodeAffiliateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateId = null;
-            if (parseNode.GetChildNode("amountEarned") is { } nullNodeAmountEarned && nullNodeAmountEarned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountEarned = null;
-            if (parseNode.GetChildNode("balance") is { } nullNodeBalance && nullNodeBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Balance = null;
-            if (parseNode.GetChildNode("clawbacks") is { } nullNodeClawbacks && nullNodeClawbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clawbacks = null;
+            if (parseNode.GetChildNode("affiliateId") is null) { _explicitNullValueAffiliateId = default!; _explicitNullProperties?.Remove("affiliateId"); }
+            else if (parseNode.GetChildNode("affiliateId") is { } nullNodeAffiliateId && nullNodeAffiliateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateId = null;
+            if (parseNode.GetChildNode("amountEarned") is null) { _explicitNullValueAmountEarned = default!; _explicitNullProperties?.Remove("amountEarned"); }
+            else if (parseNode.GetChildNode("amountEarned") is { } nullNodeAmountEarned && nullNodeAmountEarned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountEarned = null;
+            if (parseNode.GetChildNode("balance") is null) { _explicitNullValueBalance = default!; _explicitNullProperties?.Remove("balance"); }
+            else if (parseNode.GetChildNode("balance") is { } nullNodeBalance && nullNodeBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Balance = null;
+            if (parseNode.GetChildNode("clawbacks") is null) { _explicitNullValueClawbacks = default!; _explicitNullProperties?.Remove("clawbacks"); }
+            else if (parseNode.GetChildNode("clawbacks") is { } nullNodeClawbacks && nullNodeClawbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clawbacks = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The affiliateId property</summary>
-        public long? AffiliateId { get => _explicitNullValueAffiliateId; set { _explicitNullValueAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliateId"); else _explicitNullProperties?.Remove("affiliateId"); } }
+        public long? AffiliateId { get => _explicitNullValueAffiliateId; set { _explicitNullValueAffiliateId = value; AdditionalData?.Remove("affiliateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliateId"); else _explicitNullProperties?.Remove("affiliateId"); } }
         private long? _explicitNullValueAffiliateId = default!;
         /// <summary>The amountEarned property</summary>
-        public double? AmountEarned { get => _explicitNullValueAmountEarned; set { _explicitNullValueAmountEarned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountEarned"); else _explicitNullProperties?.Remove("amountEarned"); } }
+        public double? AmountEarned { get => _explicitNullValueAmountEarned; set { _explicitNullValueAmountEarned = value; AdditionalData?.Remove("amountEarned"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountEarned"); else _explicitNullProperties?.Remove("amountEarned"); } }
         private double? _explicitNullValueAmountEarned = default!;
         /// <summary>The balance property</summary>
-        public double? Balance { get => _explicitNullValueBalance; set { _explicitNullValueBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance"); else _explicitNullProperties?.Remove("balance"); } }
+        public double? Balance { get => _explicitNullValueBalance; set { _explicitNullValueBalance = value; AdditionalData?.Remove("balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("balance"); else _explicitNullProperties?.Remove("balance"); } }
         private double? _explicitNullValueBalance = default!;
         /// <summary>The clawbacks property</summary>
-        public double? Clawbacks { get => _explicitNullValueClawbacks; set { _explicitNullValueClawbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clawbacks"); else _explicitNullProperties?.Remove("clawbacks"); } }
+        public double? Clawbacks { get => _explicitNullValueClawbacks; set { _explicitNullValueClawbacks = value; AdditionalData?.Remove("clawbacks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clawbacks"); else _explicitNullProperties?.Remove("clawbacks"); } }
         private double? _explicitNullValueClawbacks = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.AffiliateSummaryRecord"/> and sets the default values.

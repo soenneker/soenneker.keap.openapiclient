@@ -17,43 +17,50 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contains") is { } nullNodeContains && nullNodeContains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contains = null;
-            if (parseNode.GetChildNode("contain_spaces") is { } nullNodeContainSpaces && nullNodeContainSpaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainSpaces = null;
-            if (parseNode.GetChildNode("end_with") is { } nullNodeEndWith && nullNodeEndWith.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndWith = null;
-            if (parseNode.GetChildNode("max_chars") is { } nullNodeMaxChars && nullNodeMaxChars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxChars = null;
-            if (parseNode.GetChildNode("min_chars") is { } nullNodeMinChars && nullNodeMinChars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinChars = null;
-            if (parseNode.GetChildNode("start_with") is { } nullNodeStartWith && nullNodeStartWith.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWith = null;
-            if (parseNode.GetChildNode("validation_msg") is { } nullNodeValidationMsg && nullNodeValidationMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationMsg = null;
+            if (parseNode.GetChildNode("contains") is null) { _explicitNullValueContains = default!; _explicitNullProperties?.Remove("contains"); }
+            else if (parseNode.GetChildNode("contains") is { } nullNodeContains && nullNodeContains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contains = null;
+            if (parseNode.GetChildNode("contain_spaces") is null) { _explicitNullValueContainSpaces = default!; _explicitNullProperties?.Remove("contain_spaces"); }
+            else if (parseNode.GetChildNode("contain_spaces") is { } nullNodeContainSpaces && nullNodeContainSpaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainSpaces = null;
+            if (parseNode.GetChildNode("end_with") is null) { _explicitNullValueEndWith = default!; _explicitNullProperties?.Remove("end_with"); }
+            else if (parseNode.GetChildNode("end_with") is { } nullNodeEndWith && nullNodeEndWith.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndWith = null;
+            if (parseNode.GetChildNode("max_chars") is null) { _explicitNullValueMaxChars = default!; _explicitNullProperties?.Remove("max_chars"); }
+            else if (parseNode.GetChildNode("max_chars") is { } nullNodeMaxChars && nullNodeMaxChars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxChars = null;
+            if (parseNode.GetChildNode("min_chars") is null) { _explicitNullValueMinChars = default!; _explicitNullProperties?.Remove("min_chars"); }
+            else if (parseNode.GetChildNode("min_chars") is { } nullNodeMinChars && nullNodeMinChars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinChars = null;
+            if (parseNode.GetChildNode("start_with") is null) { _explicitNullValueStartWith = default!; _explicitNullProperties?.Remove("start_with"); }
+            else if (parseNode.GetChildNode("start_with") is { } nullNodeStartWith && nullNodeStartWith.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWith = null;
+            if (parseNode.GetChildNode("validation_msg") is null) { _explicitNullValueValidationMsg = default!; _explicitNullProperties?.Remove("validation_msg"); }
+            else if (parseNode.GetChildNode("validation_msg") is { } nullNodeValidationMsg && nullNodeValidationMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationMsg = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Requires the value (excluding start and end) to contain given type.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailContains? Contains { get => _explicitNullValueContains; set { _explicitNullValueContains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains"); else _explicitNullProperties?.Remove("contains"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailContains? Contains { get => _explicitNullValueContains; set { _explicitNullValueContains = value; AdditionalData?.Remove("contains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains"); else _explicitNullProperties?.Remove("contains"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailContains? _explicitNullValueContains = default!;
         /// <summary>If spaces are allowed for the option</summary>
-        public bool? ContainSpaces { get => _explicitNullValueContainSpaces; set { _explicitNullValueContainSpaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contain_spaces"); else _explicitNullProperties?.Remove("contain_spaces"); } }
+        public bool? ContainSpaces { get => _explicitNullValueContainSpaces; set { _explicitNullValueContainSpaces = value; AdditionalData?.Remove("contain_spaces"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contain_spaces"); else _explicitNullProperties?.Remove("contain_spaces"); } }
         private bool? _explicitNullValueContainSpaces = default!;
         /// <summary>Requires the value to end with the given type.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailEndWith? EndWith { get => _explicitNullValueEndWith; set { _explicitNullValueEndWith = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_with"); else _explicitNullProperties?.Remove("end_with"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailEndWith? EndWith { get => _explicitNullValueEndWith; set { _explicitNullValueEndWith = value; AdditionalData?.Remove("end_with"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_with"); else _explicitNullProperties?.Remove("end_with"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailEndWith? _explicitNullValueEndWith = default!;
         /// <summary>Max allowable chars. Its value must be greater than min_chars</summary>
-        public int? MaxChars { get => _explicitNullValueMaxChars; set { _explicitNullValueMaxChars = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_chars"); else _explicitNullProperties?.Remove("max_chars"); } }
+        public int? MaxChars { get => _explicitNullValueMaxChars; set { _explicitNullValueMaxChars = value; AdditionalData?.Remove("max_chars"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_chars"); else _explicitNullProperties?.Remove("max_chars"); } }
         private int? _explicitNullValueMaxChars = default!;
         /// <summary>Minimum allowable characters</summary>
-        public int? MinChars { get => _explicitNullValueMinChars; set { _explicitNullValueMinChars = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_chars"); else _explicitNullProperties?.Remove("min_chars"); } }
+        public int? MinChars { get => _explicitNullValueMinChars; set { _explicitNullValueMinChars = value; AdditionalData?.Remove("min_chars"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_chars"); else _explicitNullProperties?.Remove("min_chars"); } }
         private int? _explicitNullValueMinChars = default!;
         /// <summary>Requires the value to start with the given type.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailStartWith? StartWith { get => _explicitNullValueStartWith; set { _explicitNullValueStartWith = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_with"); else _explicitNullProperties?.Remove("start_with"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailStartWith? StartWith { get => _explicitNullValueStartWith; set { _explicitNullValueStartWith = value; AdditionalData?.Remove("start_with"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_with"); else _explicitNullProperties?.Remove("start_with"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailStartWith? _explicitNullValueStartWith = default!;
         /// <summary>Customized validation message to display when option criteria aren&apos;t met</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValidationMsg { get => _explicitNullValueValidationMsg; set { _explicitNullValueValidationMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_msg"); else _explicitNullProperties?.Remove("validation_msg"); } }
+        public string? ValidationMsg { get => _explicitNullValueValidationMsg; set { _explicitNullValueValidationMsg = value; AdditionalData?.Remove("validation_msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_msg"); else _explicitNullProperties?.Remove("validation_msg"); } }
         private string? _explicitNullValueValidationMsg = default!;
 #nullable restore
 #else
-        public string ValidationMsg { get => _explicitNullValueValidationMsg; set { _explicitNullValueValidationMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_msg"); else _explicitNullProperties?.Remove("validation_msg"); } }
+        public string ValidationMsg { get => _explicitNullValueValidationMsg; set { _explicitNullValueValidationMsg = value; AdditionalData?.Remove("validation_msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_msg"); else _explicitNullProperties?.Remove("validation_msg"); } }
         private string _explicitNullValueValidationMsg = default!;
 #endif
         /// <summary>
@@ -82,11 +89,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contain_spaces", n => { ContainSpaces = n.GetBoolValue(); } },
-                { "contains", n => { Contains = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailContains>(); } },
-                { "end_with", n => { EndWith = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailEndWith>(); } },
+                { "contains", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailContains>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueContains = default; _explicitNullProperties?.Remove("contains"); AdditionalData["contains"] = unknown; } else { Contains = parsed; AdditionalData.Remove("contains"); } } },
+                { "end_with", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailEndWith>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEndWith = default; _explicitNullProperties?.Remove("end_with"); AdditionalData["end_with"] = unknown; } else { EndWith = parsed; AdditionalData.Remove("end_with"); } } },
                 { "max_chars", n => { MaxChars = n.GetIntValue(); } },
                 { "min_chars", n => { MinChars = n.GetIntValue(); } },
-                { "start_with", n => { StartWith = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailStartWith>(); } },
+                { "start_with", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ProductVariableSettingDetailStartWith>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStartWith = default; _explicitNullProperties?.Remove("start_with"); AdditionalData["start_with"] = unknown; } else { StartWith = parsed; AdditionalData.Remove("start_with"); } } },
                 { "validation_msg", n => { ValidationMsg = n.GetStringValue(); } },
             };
         }

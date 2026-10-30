@@ -17,8 +17,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
-            if (parseNode.GetChildNode("product_interest_bundles") is { } nullNodeProductInterestBundles && nullNodeProductInterestBundles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductInterestBundles = null;
+            if (parseNode.GetChildNode("next_page_token") is null) { _explicitNullValueNextPageToken = default!; _explicitNullProperties?.Remove("next_page_token"); }
+            else if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+            if (parseNode.GetChildNode("product_interest_bundles") is null) { _explicitNullValueProductInterestBundles = default!; _explicitNullProperties?.Remove("product_interest_bundles"); }
+            else if (parseNode.GetChildNode("product_interest_bundles") is { } nullNodeProductInterestBundles && nullNodeProductInterestBundles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductInterestBundles = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The next_page_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>The product_interest_bundles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ProductInterestBundle>? ProductInterestBundles { get => _explicitNullValueProductInterestBundles; set { _explicitNullValueProductInterestBundles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_interest_bundles"); else _explicitNullProperties?.Remove("product_interest_bundles"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ProductInterestBundle>? ProductInterestBundles { get => _explicitNullValueProductInterestBundles; set { _explicitNullValueProductInterestBundles = value; AdditionalData?.Remove("product_interest_bundles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_interest_bundles"); else _explicitNullProperties?.Remove("product_interest_bundles"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ProductInterestBundle>? _explicitNullValueProductInterestBundles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ProductInterestBundle> ProductInterestBundles { get => _explicitNullValueProductInterestBundles; set { _explicitNullValueProductInterestBundles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_interest_bundles"); else _explicitNullProperties?.Remove("product_interest_bundles"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ProductInterestBundle> ProductInterestBundles { get => _explicitNullValueProductInterestBundles; set { _explicitNullValueProductInterestBundles = value; AdditionalData?.Remove("product_interest_bundles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_interest_bundles"); else _explicitNullProperties?.Remove("product_interest_bundles"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ProductInterestBundle> _explicitNullValueProductInterestBundles = default!;
 #endif
         /// <summary>

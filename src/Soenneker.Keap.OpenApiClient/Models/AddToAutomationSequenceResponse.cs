@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("add_to_automation_sequence_results") is { } nullNodeAddToAutomationSequenceResults && nullNodeAddToAutomationSequenceResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddToAutomationSequenceResults = null;
+            if (parseNode.GetChildNode("add_to_automation_sequence_results") is null) { _explicitNullValueAddToAutomationSequenceResults = default!; _explicitNullProperties?.Remove("add_to_automation_sequence_results"); }
+            else if (parseNode.GetChildNode("add_to_automation_sequence_results") is { } nullNodeAddToAutomationSequenceResults && nullNodeAddToAutomationSequenceResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddToAutomationSequenceResults = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>A map containing the contact ID as key and the result of adding them to the sequence as value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.AddToAutomationSequenceResponseAddToAutomationSequenceResultsProperty? AddToAutomationSequenceResults { get => _explicitNullValueAddToAutomationSequenceResults; set { _explicitNullValueAddToAutomationSequenceResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_to_automation_sequence_results"); else _explicitNullProperties?.Remove("add_to_automation_sequence_results"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.AddToAutomationSequenceResponseAddToAutomationSequenceResultsProperty? AddToAutomationSequenceResults { get => _explicitNullValueAddToAutomationSequenceResults; set { _explicitNullValueAddToAutomationSequenceResults = value; AdditionalData?.Remove("add_to_automation_sequence_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_to_automation_sequence_results"); else _explicitNullProperties?.Remove("add_to_automation_sequence_results"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.AddToAutomationSequenceResponseAddToAutomationSequenceResultsProperty? _explicitNullValueAddToAutomationSequenceResults = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.AddToAutomationSequenceResponseAddToAutomationSequenceResultsProperty AddToAutomationSequenceResults { get => _explicitNullValueAddToAutomationSequenceResults; set { _explicitNullValueAddToAutomationSequenceResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_to_automation_sequence_results"); else _explicitNullProperties?.Remove("add_to_automation_sequence_results"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.AddToAutomationSequenceResponseAddToAutomationSequenceResultsProperty AddToAutomationSequenceResults { get => _explicitNullValueAddToAutomationSequenceResults; set { _explicitNullValueAddToAutomationSequenceResults = value; AdditionalData?.Remove("add_to_automation_sequence_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_to_automation_sequence_results"); else _explicitNullProperties?.Remove("add_to_automation_sequence_results"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.AddToAutomationSequenceResponseAddToAutomationSequenceResultsProperty _explicitNullValueAddToAutomationSequenceResults = default!;
 #endif
         /// <summary>

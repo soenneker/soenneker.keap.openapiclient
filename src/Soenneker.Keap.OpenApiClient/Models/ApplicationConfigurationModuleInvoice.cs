@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tax_label") is { } nullNodeTaxLabel && nullNodeTaxLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxLabel = null;
+            if (parseNode.GetChildNode("tax_label") is null) { _explicitNullValueTaxLabel = default!; _explicitNullProperties?.Remove("tax_label"); }
+            else if (parseNode.GetChildNode("tax_label") is { } nullNodeTaxLabel && nullNodeTaxLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxLabel = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The tax_label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxLabel { get => _explicitNullValueTaxLabel; set { _explicitNullValueTaxLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_label"); else _explicitNullProperties?.Remove("tax_label"); } }
+        public string? TaxLabel { get => _explicitNullValueTaxLabel; set { _explicitNullValueTaxLabel = value; AdditionalData?.Remove("tax_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_label"); else _explicitNullProperties?.Remove("tax_label"); } }
         private string? _explicitNullValueTaxLabel = default!;
 #nullable restore
 #else
-        public string TaxLabel { get => _explicitNullValueTaxLabel; set { _explicitNullValueTaxLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_label"); else _explicitNullProperties?.Remove("tax_label"); } }
+        public string TaxLabel { get => _explicitNullValueTaxLabel; set { _explicitNullValueTaxLabel = value; AdditionalData?.Remove("tax_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_label"); else _explicitNullProperties?.Remove("tax_label"); } }
         private string _explicitNullValueTaxLabel = default!;
 #endif
         /// <summary>

@@ -18,162 +18,183 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
-            if (parseNode.GetChildNode("allow_tax") is { } nullNodeAllowTax && nullNodeAllowTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowTax = null;
-            if (parseNode.GetChildNode("auto_charge") is { } nullNodeAutoCharge && nullNodeAutoCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCharge = null;
-            if (parseNode.GetChildNode("billing_amount") is { } nullNodeBillingAmount && nullNodeBillingAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAmount = null;
-            if (parseNode.GetChildNode("billing_cycle") is { } nullNodeBillingCycle && nullNodeBillingCycle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycle = null;
-            if (parseNode.GetChildNode("billing_frequency") is { } nullNodeBillingFrequency && nullNodeBillingFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingFrequency = null;
-            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
-            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
-            if (parseNode.GetChildNode("days_between_retries") is { } nullNodeDaysBetweenRetries && nullNodeDaysBetweenRetries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysBetweenRetries = null;
-            if (parseNode.GetChildNode("end_date") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
-            if (parseNode.GetChildNode("lead_affiliate_id") is { } nullNodeLeadAffiliateId && nullNodeLeadAffiliateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadAffiliateId = null;
-            if (parseNode.GetChildNode("max_charge_attempts") is { } nullNodeMaxChargeAttempts && nullNodeMaxChargeAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxChargeAttempts = null;
-            if (parseNode.GetChildNode("next_bill_date") is { } nullNodeNextBillDate && nullNodeNextBillDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextBillDate = null;
-            if (parseNode.GetChildNode("payment_method_id") is { } nullNodePaymentMethodId && nullNodePaymentMethodId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodId = null;
-            if (parseNode.GetChildNode("promo_code") is { } nullNodePromoCode && nullNodePromoCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoCode = null;
-            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("reason_stopped") is { } nullNodeReasonStopped && nullNodeReasonStopped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonStopped = null;
-            if (parseNode.GetChildNode("sale_affiliate_id") is { } nullNodeSaleAffiliateId && nullNodeSaleAffiliateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaleAffiliateId = null;
-            if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
-            if (parseNode.GetChildNode("shipping_option_id") is { } nullNodeShippingOptionId && nullNodeShippingOptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingOptionId = null;
-            if (parseNode.GetChildNode("subscription_plan_id") is { } nullNodeSubscriptionPlanId && nullNodeSubscriptionPlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionPlanId = null;
+            if (parseNode.GetChildNode("active") is null) { _explicitNullValueActive = default!; _explicitNullProperties?.Remove("active"); }
+            else if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("allow_tax") is null) { _explicitNullValueAllowTax = default!; _explicitNullProperties?.Remove("allow_tax"); }
+            else if (parseNode.GetChildNode("allow_tax") is { } nullNodeAllowTax && nullNodeAllowTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowTax = null;
+            if (parseNode.GetChildNode("auto_charge") is null) { _explicitNullValueAutoCharge = default!; _explicitNullProperties?.Remove("auto_charge"); }
+            else if (parseNode.GetChildNode("auto_charge") is { } nullNodeAutoCharge && nullNodeAutoCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCharge = null;
+            if (parseNode.GetChildNode("billing_amount") is null) { _explicitNullValueBillingAmount = default!; _explicitNullProperties?.Remove("billing_amount"); }
+            else if (parseNode.GetChildNode("billing_amount") is { } nullNodeBillingAmount && nullNodeBillingAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAmount = null;
+            if (parseNode.GetChildNode("billing_cycle") is null) { _explicitNullValueBillingCycle = default!; _explicitNullProperties?.Remove("billing_cycle"); }
+            else if (parseNode.GetChildNode("billing_cycle") is { } nullNodeBillingCycle && nullNodeBillingCycle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycle = null;
+            if (parseNode.GetChildNode("billing_frequency") is null) { _explicitNullValueBillingFrequency = default!; _explicitNullProperties?.Remove("billing_frequency"); }
+            else if (parseNode.GetChildNode("billing_frequency") is { } nullNodeBillingFrequency && nullNodeBillingFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingFrequency = null;
+            if (parseNode.GetChildNode("contact_id") is null) { _explicitNullValueContactId = default!; _explicitNullProperties?.Remove("contact_id"); }
+            else if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("custom_fields") is null) { _explicitNullValueCustomFields = default!; _explicitNullProperties?.Remove("custom_fields"); }
+            else if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("days_between_retries") is null) { _explicitNullValueDaysBetweenRetries = default!; _explicitNullProperties?.Remove("days_between_retries"); }
+            else if (parseNode.GetChildNode("days_between_retries") is { } nullNodeDaysBetweenRetries && nullNodeDaysBetweenRetries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysBetweenRetries = null;
+            if (parseNode.GetChildNode("end_date") is null) { _explicitNullValueEndDate = default!; _explicitNullProperties?.Remove("end_date"); }
+            else if (parseNode.GetChildNode("end_date") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
+            if (parseNode.GetChildNode("lead_affiliate_id") is null) { _explicitNullValueLeadAffiliateId = default!; _explicitNullProperties?.Remove("lead_affiliate_id"); }
+            else if (parseNode.GetChildNode("lead_affiliate_id") is { } nullNodeLeadAffiliateId && nullNodeLeadAffiliateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadAffiliateId = null;
+            if (parseNode.GetChildNode("max_charge_attempts") is null) { _explicitNullValueMaxChargeAttempts = default!; _explicitNullProperties?.Remove("max_charge_attempts"); }
+            else if (parseNode.GetChildNode("max_charge_attempts") is { } nullNodeMaxChargeAttempts && nullNodeMaxChargeAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxChargeAttempts = null;
+            if (parseNode.GetChildNode("next_bill_date") is null) { _explicitNullValueNextBillDate = default!; _explicitNullProperties?.Remove("next_bill_date"); }
+            else if (parseNode.GetChildNode("next_bill_date") is { } nullNodeNextBillDate && nullNodeNextBillDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextBillDate = null;
+            if (parseNode.GetChildNode("payment_method_id") is null) { _explicitNullValuePaymentMethodId = default!; _explicitNullProperties?.Remove("payment_method_id"); }
+            else if (parseNode.GetChildNode("payment_method_id") is { } nullNodePaymentMethodId && nullNodePaymentMethodId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodId = null;
+            if (parseNode.GetChildNode("promo_code") is null) { _explicitNullValuePromoCode = default!; _explicitNullProperties?.Remove("promo_code"); }
+            else if (parseNode.GetChildNode("promo_code") is { } nullNodePromoCode && nullNodePromoCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoCode = null;
+            if (parseNode.GetChildNode("quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("quantity"); }
+            else if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("reason_stopped") is null) { _explicitNullValueReasonStopped = default!; _explicitNullProperties?.Remove("reason_stopped"); }
+            else if (parseNode.GetChildNode("reason_stopped") is { } nullNodeReasonStopped && nullNodeReasonStopped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonStopped = null;
+            if (parseNode.GetChildNode("sale_affiliate_id") is null) { _explicitNullValueSaleAffiliateId = default!; _explicitNullProperties?.Remove("sale_affiliate_id"); }
+            else if (parseNode.GetChildNode("sale_affiliate_id") is { } nullNodeSaleAffiliateId && nullNodeSaleAffiliateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaleAffiliateId = null;
+            if (parseNode.GetChildNode("shipping_address") is null) { _explicitNullValueShippingAddress = default!; _explicitNullProperties?.Remove("shipping_address"); }
+            else if (parseNode.GetChildNode("shipping_address") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+            if (parseNode.GetChildNode("shipping_option_id") is null) { _explicitNullValueShippingOptionId = default!; _explicitNullProperties?.Remove("shipping_option_id"); }
+            else if (parseNode.GetChildNode("shipping_option_id") is { } nullNodeShippingOptionId && nullNodeShippingOptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingOptionId = null;
+            if (parseNode.GetChildNode("subscription_plan_id") is null) { _explicitNullValueSubscriptionPlanId = default!; _explicitNullProperties?.Remove("subscription_plan_id"); }
+            else if (parseNode.GetChildNode("subscription_plan_id") is { } nullNodeSubscriptionPlanId && nullNodeSubscriptionPlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionPlanId = null;
         }
 
         /// <summary>If the subscription is active or not.</summary>
-        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Only works if the product associated with the product subscription is taxable.</summary>
-        public bool? AllowTax { get => _explicitNullValueAllowTax; set { _explicitNullValueAllowTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_tax"); else _explicitNullProperties?.Remove("allow_tax"); } }
+        public bool? AllowTax { get => _explicitNullValueAllowTax; set { _explicitNullValueAllowTax = value; AdditionalData?.Remove("allow_tax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_tax"); else _explicitNullProperties?.Remove("allow_tax"); } }
         private bool? _explicitNullValueAllowTax = default!;
         /// <summary>If the subscription should auto charge on the next billing date.</summary>
-        public bool? AutoCharge { get => _explicitNullValueAutoCharge; set { _explicitNullValueAutoCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_charge"); else _explicitNullProperties?.Remove("auto_charge"); } }
+        public bool? AutoCharge { get => _explicitNullValueAutoCharge; set { _explicitNullValueAutoCharge = value; AdditionalData?.Remove("auto_charge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_charge"); else _explicitNullProperties?.Remove("auto_charge"); } }
         private bool? _explicitNullValueAutoCharge = default!;
         /// <summary>The billing amount. Must be 0 or greater.</summary>
-        public double? BillingAmount { get => _explicitNullValueBillingAmount; set { _explicitNullValueBillingAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_amount"); else _explicitNullProperties?.Remove("billing_amount"); } }
+        public double? BillingAmount { get => _explicitNullValueBillingAmount; set { _explicitNullValueBillingAmount = value; AdditionalData?.Remove("billing_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_amount"); else _explicitNullProperties?.Remove("billing_amount"); } }
         private double? _explicitNullValueBillingAmount = default!;
         /// <summary>The billing cycle for the subscription.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionRequestBillingCycle? BillingCycle { get => _explicitNullValueBillingCycle; set { _explicitNullValueBillingCycle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle"); else _explicitNullProperties?.Remove("billing_cycle"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionRequestBillingCycle? BillingCycle { get => _explicitNullValueBillingCycle; set { _explicitNullValueBillingCycle = value; AdditionalData?.Remove("billing_cycle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle"); else _explicitNullProperties?.Remove("billing_cycle"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionRequestBillingCycle? _explicitNullValueBillingCycle = default!;
         /// <summary>The number of days between billing cycles. Must be 1 or greater.</summary>
-        public int? BillingFrequency { get => _explicitNullValueBillingFrequency; set { _explicitNullValueBillingFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_frequency"); else _explicitNullProperties?.Remove("billing_frequency"); } }
+        public int? BillingFrequency { get => _explicitNullValueBillingFrequency; set { _explicitNullValueBillingFrequency = value; AdditionalData?.Remove("billing_frequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_frequency"); else _explicitNullProperties?.Remove("billing_frequency"); } }
         private int? _explicitNullValueBillingFrequency = default!;
         /// <summary>Id of the contact associated with the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>List of custom field values to apply to this subscription</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>Number of days between charge attempts. Must be 1 or greater.</summary>
-        public int? DaysBetweenRetries { get => _explicitNullValueDaysBetweenRetries; set { _explicitNullValueDaysBetweenRetries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days_between_retries"); else _explicitNullProperties?.Remove("days_between_retries"); } }
+        public int? DaysBetweenRetries { get => _explicitNullValueDaysBetweenRetries; set { _explicitNullValueDaysBetweenRetries = value; AdditionalData?.Remove("days_between_retries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days_between_retries"); else _explicitNullProperties?.Remove("days_between_retries"); } }
         private int? _explicitNullValueDaysBetweenRetries = default!;
         /// <summary>The date the subscription will end. Must not be in the past.</summary>
-        public Date? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
+        public Date? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
         private Date? _explicitNullValueEndDate = default!;
         /// <summary>The affiliate id for the lead of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadAffiliateId { get => _explicitNullValueLeadAffiliateId; set { _explicitNullValueLeadAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_affiliate_id"); else _explicitNullProperties?.Remove("lead_affiliate_id"); } }
+        public string? LeadAffiliateId { get => _explicitNullValueLeadAffiliateId; set { _explicitNullValueLeadAffiliateId = value; AdditionalData?.Remove("lead_affiliate_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_affiliate_id"); else _explicitNullProperties?.Remove("lead_affiliate_id"); } }
         private string? _explicitNullValueLeadAffiliateId = default!;
 #nullable restore
 #else
-        public string LeadAffiliateId { get => _explicitNullValueLeadAffiliateId; set { _explicitNullValueLeadAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_affiliate_id"); else _explicitNullProperties?.Remove("lead_affiliate_id"); } }
+        public string LeadAffiliateId { get => _explicitNullValueLeadAffiliateId; set { _explicitNullValueLeadAffiliateId = value; AdditionalData?.Remove("lead_affiliate_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_affiliate_id"); else _explicitNullProperties?.Remove("lead_affiliate_id"); } }
         private string _explicitNullValueLeadAffiliateId = default!;
 #endif
         /// <summary>Maximum number of charge attempts. Must be 1 or greater.</summary>
-        public int? MaxChargeAttempts { get => _explicitNullValueMaxChargeAttempts; set { _explicitNullValueMaxChargeAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_charge_attempts"); else _explicitNullProperties?.Remove("max_charge_attempts"); } }
+        public int? MaxChargeAttempts { get => _explicitNullValueMaxChargeAttempts; set { _explicitNullValueMaxChargeAttempts = value; AdditionalData?.Remove("max_charge_attempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_charge_attempts"); else _explicitNullProperties?.Remove("max_charge_attempts"); } }
         private int? _explicitNullValueMaxChargeAttempts = default!;
         /// <summary>The next date the subscription will bill. Must not be in the past.</summary>
-        public Date? NextBillDate { get => _explicitNullValueNextBillDate; set { _explicitNullValueNextBillDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_bill_date"); else _explicitNullProperties?.Remove("next_bill_date"); } }
+        public Date? NextBillDate { get => _explicitNullValueNextBillDate; set { _explicitNullValueNextBillDate = value; AdditionalData?.Remove("next_bill_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_bill_date"); else _explicitNullProperties?.Remove("next_bill_date"); } }
         private Date? _explicitNullValueNextBillDate = default!;
         /// <summary>Id associated with the payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
+        public string? PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; AdditionalData?.Remove("payment_method_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
         private string? _explicitNullValuePaymentMethodId = default!;
 #nullable restore
 #else
-        public string PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
+        public string PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; AdditionalData?.Remove("payment_method_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
         private string _explicitNullValuePaymentMethodId = default!;
 #endif
         /// <summary>The promo code for the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PromoCode { get => _explicitNullValuePromoCode; set { _explicitNullValuePromoCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_code"); else _explicitNullProperties?.Remove("promo_code"); } }
+        public string? PromoCode { get => _explicitNullValuePromoCode; set { _explicitNullValuePromoCode = value; AdditionalData?.Remove("promo_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_code"); else _explicitNullProperties?.Remove("promo_code"); } }
         private string? _explicitNullValuePromoCode = default!;
 #nullable restore
 #else
-        public string PromoCode { get => _explicitNullValuePromoCode; set { _explicitNullValuePromoCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_code"); else _explicitNullProperties?.Remove("promo_code"); } }
+        public string PromoCode { get => _explicitNullValuePromoCode; set { _explicitNullValuePromoCode = value; AdditionalData?.Remove("promo_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promo_code"); else _explicitNullProperties?.Remove("promo_code"); } }
         private string _explicitNullValuePromoCode = default!;
 #endif
         /// <summary>The subscription quantity. Must be 1 or greater.</summary>
-        public int? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        public int? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private int? _explicitNullValueQuantity = default!;
         /// <summary>The reason the subscription is no longer active.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonStopped { get => _explicitNullValueReasonStopped; set { _explicitNullValueReasonStopped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_stopped"); else _explicitNullProperties?.Remove("reason_stopped"); } }
+        public string? ReasonStopped { get => _explicitNullValueReasonStopped; set { _explicitNullValueReasonStopped = value; AdditionalData?.Remove("reason_stopped"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_stopped"); else _explicitNullProperties?.Remove("reason_stopped"); } }
         private string? _explicitNullValueReasonStopped = default!;
 #nullable restore
 #else
-        public string ReasonStopped { get => _explicitNullValueReasonStopped; set { _explicitNullValueReasonStopped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_stopped"); else _explicitNullProperties?.Remove("reason_stopped"); } }
+        public string ReasonStopped { get => _explicitNullValueReasonStopped; set { _explicitNullValueReasonStopped = value; AdditionalData?.Remove("reason_stopped"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_stopped"); else _explicitNullProperties?.Remove("reason_stopped"); } }
         private string _explicitNullValueReasonStopped = default!;
 #endif
         /// <summary>The affiliate id for the sale of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaleAffiliateId { get => _explicitNullValueSaleAffiliateId; set { _explicitNullValueSaleAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sale_affiliate_id"); else _explicitNullProperties?.Remove("sale_affiliate_id"); } }
+        public string? SaleAffiliateId { get => _explicitNullValueSaleAffiliateId; set { _explicitNullValueSaleAffiliateId = value; AdditionalData?.Remove("sale_affiliate_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sale_affiliate_id"); else _explicitNullProperties?.Remove("sale_affiliate_id"); } }
         private string? _explicitNullValueSaleAffiliateId = default!;
 #nullable restore
 #else
-        public string SaleAffiliateId { get => _explicitNullValueSaleAffiliateId; set { _explicitNullValueSaleAffiliateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sale_affiliate_id"); else _explicitNullProperties?.Remove("sale_affiliate_id"); } }
+        public string SaleAffiliateId { get => _explicitNullValueSaleAffiliateId; set { _explicitNullValueSaleAffiliateId = value; AdditionalData?.Remove("sale_affiliate_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sale_affiliate_id"); else _explicitNullProperties?.Remove("sale_affiliate_id"); } }
         private string _explicitNullValueSaleAffiliateId = default!;
 #endif
         /// <summary>The shipping address for the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.AddressRequest? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.AddressRequest? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.AddressRequest? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.AddressRequest ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.AddressRequest ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; AdditionalData?.Remove("shipping_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_address"); else _explicitNullProperties?.Remove("shipping_address"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.AddressRequest _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>The shipping option ID for the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingOptionId { get => _explicitNullValueShippingOptionId; set { _explicitNullValueShippingOptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_option_id"); else _explicitNullProperties?.Remove("shipping_option_id"); } }
+        public string? ShippingOptionId { get => _explicitNullValueShippingOptionId; set { _explicitNullValueShippingOptionId = value; AdditionalData?.Remove("shipping_option_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_option_id"); else _explicitNullProperties?.Remove("shipping_option_id"); } }
         private string? _explicitNullValueShippingOptionId = default!;
 #nullable restore
 #else
-        public string ShippingOptionId { get => _explicitNullValueShippingOptionId; set { _explicitNullValueShippingOptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_option_id"); else _explicitNullProperties?.Remove("shipping_option_id"); } }
+        public string ShippingOptionId { get => _explicitNullValueShippingOptionId; set { _explicitNullValueShippingOptionId = value; AdditionalData?.Remove("shipping_option_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_option_id"); else _explicitNullProperties?.Remove("shipping_option_id"); } }
         private string _explicitNullValueShippingOptionId = default!;
 #endif
         /// <summary>Id of the product subscription plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionPlanId { get => _explicitNullValueSubscriptionPlanId; set { _explicitNullValueSubscriptionPlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_plan_id"); else _explicitNullProperties?.Remove("subscription_plan_id"); } }
+        public string? SubscriptionPlanId { get => _explicitNullValueSubscriptionPlanId; set { _explicitNullValueSubscriptionPlanId = value; AdditionalData?.Remove("subscription_plan_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_plan_id"); else _explicitNullProperties?.Remove("subscription_plan_id"); } }
         private string? _explicitNullValueSubscriptionPlanId = default!;
 #nullable restore
 #else
-        public string SubscriptionPlanId { get => _explicitNullValueSubscriptionPlanId; set { _explicitNullValueSubscriptionPlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_plan_id"); else _explicitNullProperties?.Remove("subscription_plan_id"); } }
+        public string SubscriptionPlanId { get => _explicitNullValueSubscriptionPlanId; set { _explicitNullValueSubscriptionPlanId = value; AdditionalData?.Remove("subscription_plan_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_plan_id"); else _explicitNullProperties?.Remove("subscription_plan_id"); } }
         private string _explicitNullValueSubscriptionPlanId = default!;
 #endif
         /// <summary>
@@ -205,7 +226,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "allow_tax", n => { AllowTax = n.GetBoolValue(); } },
                 { "auto_charge", n => { AutoCharge = n.GetBoolValue(); } },
                 { "billing_amount", n => { BillingAmount = n.GetDoubleValue(); } },
-                { "billing_cycle", n => { BillingCycle = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionRequestBillingCycle>(); } },
+                { "billing_cycle", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.UpdateSubscriptionRequestBillingCycle>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingCycle = default; _explicitNullProperties?.Remove("billing_cycle"); AdditionalData["billing_cycle"] = unknown; } else { BillingCycle = parsed; AdditionalData.Remove("billing_cycle"); } } },
                 { "billing_frequency", n => { BillingFrequency = n.GetIntValue(); } },
                 { "contact_id", n => { ContactId = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue>(global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValue.CreateFromDiscriminatorValue)?.AsList(); } },

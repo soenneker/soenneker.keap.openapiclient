@@ -17,9 +17,12 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("calculation_type") is { } nullNodeCalculationType && nullNodeCalculationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalculationType = null;
-            if (parseNode.GetChildNode("levels") is { } nullNodeLevels && nullNodeLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Levels = null;
-            if (parseNode.GetChildNode("participant_types") is { } nullNodeParticipantTypes && nullNodeParticipantTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantTypes = null;
+            if (parseNode.GetChildNode("calculation_type") is null) { _explicitNullValueCalculationType = default!; _explicitNullProperties?.Remove("calculation_type"); }
+            else if (parseNode.GetChildNode("calculation_type") is { } nullNodeCalculationType && nullNodeCalculationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalculationType = null;
+            if (parseNode.GetChildNode("levels") is null) { _explicitNullValueLevels = default!; _explicitNullProperties?.Remove("levels"); }
+            else if (parseNode.GetChildNode("levels") is { } nullNodeLevels && nullNodeLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Levels = null;
+            if (parseNode.GetChildNode("participant_types") is null) { _explicitNullValueParticipantTypes = default!; _explicitNullProperties?.Remove("participant_types"); }
+            else if (parseNode.GetChildNode("participant_types") is { } nullNodeParticipantTypes && nullNodeParticipantTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipantTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The calculation_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CalculationType { get => _explicitNullValueCalculationType; set { _explicitNullValueCalculationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculation_type"); else _explicitNullProperties?.Remove("calculation_type"); } }
+        public string? CalculationType { get => _explicitNullValueCalculationType; set { _explicitNullValueCalculationType = value; AdditionalData?.Remove("calculation_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculation_type"); else _explicitNullProperties?.Remove("calculation_type"); } }
         private string? _explicitNullValueCalculationType = default!;
 #nullable restore
 #else
-        public string CalculationType { get => _explicitNullValueCalculationType; set { _explicitNullValueCalculationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculation_type"); else _explicitNullProperties?.Remove("calculation_type"); } }
+        public string CalculationType { get => _explicitNullValueCalculationType; set { _explicitNullValueCalculationType = value; AdditionalData?.Remove("calculation_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculation_type"); else _explicitNullProperties?.Remove("calculation_type"); } }
         private string _explicitNullValueCalculationType = default!;
 #endif
         /// <summary>The levels property</summary>
-        public int? Levels { get => _explicitNullValueLevels; set { _explicitNullValueLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("levels"); else _explicitNullProperties?.Remove("levels"); } }
+        public int? Levels { get => _explicitNullValueLevels; set { _explicitNullValueLevels = value; AdditionalData?.Remove("levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("levels"); else _explicitNullProperties?.Remove("levels"); } }
         private int? _explicitNullValueLevels = default!;
         /// <summary>The participant_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipantTypes { get => _explicitNullValueParticipantTypes; set { _explicitNullValueParticipantTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_types"); else _explicitNullProperties?.Remove("participant_types"); } }
+        public string? ParticipantTypes { get => _explicitNullValueParticipantTypes; set { _explicitNullValueParticipantTypes = value; AdditionalData?.Remove("participant_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_types"); else _explicitNullProperties?.Remove("participant_types"); } }
         private string? _explicitNullValueParticipantTypes = default!;
 #nullable restore
 #else
-        public string ParticipantTypes { get => _explicitNullValueParticipantTypes; set { _explicitNullValueParticipantTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_types"); else _explicitNullProperties?.Remove("participant_types"); } }
+        public string ParticipantTypes { get => _explicitNullValueParticipantTypes; set { _explicitNullValueParticipantTypes = value; AdditionalData?.Remove("participant_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participant_types"); else _explicitNullProperties?.Remove("participant_types"); } }
         private string _explicitNullValueParticipantTypes = default!;
 #endif
         /// <summary>

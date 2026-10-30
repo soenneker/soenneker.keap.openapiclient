@@ -18,8 +18,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
-            if (parseNode.GetChildNode("user_groups") is { } nullNodeUserGroups && nullNodeUserGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserGroups = null;
+            if (parseNode.GetChildNode("next_page_token") is null) { _explicitNullValueNextPageToken = default!; _explicitNullProperties?.Remove("next_page_token"); }
+            else if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+            if (parseNode.GetChildNode("user_groups") is null) { _explicitNullValueUserGroups = default!; _explicitNullProperties?.Remove("user_groups"); }
+            else if (parseNode.GetChildNode("user_groups") is { } nullNodeUserGroups && nullNodeUserGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserGroups = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The next_page_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>List of user groups</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.UserGroup>? UserGroups { get => _explicitNullValueUserGroups; set { _explicitNullValueUserGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_groups"); else _explicitNullProperties?.Remove("user_groups"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.UserGroup>? UserGroups { get => _explicitNullValueUserGroups; set { _explicitNullValueUserGroups = value; AdditionalData?.Remove("user_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_groups"); else _explicitNullProperties?.Remove("user_groups"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.UserGroup>? _explicitNullValueUserGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.UserGroup> UserGroups { get => _explicitNullValueUserGroups; set { _explicitNullValueUserGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_groups"); else _explicitNullProperties?.Remove("user_groups"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.UserGroup> UserGroups { get => _explicitNullValueUserGroups; set { _explicitNullValueUserGroups = value; AdditionalData?.Remove("user_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_groups"); else _explicitNullProperties?.Remove("user_groups"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.UserGroup> _explicitNullValueUserGroups = default!;
 #endif
         /// <summary>

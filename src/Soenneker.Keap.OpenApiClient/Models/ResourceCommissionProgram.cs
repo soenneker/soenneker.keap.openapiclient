@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("commission_program_id") is { } nullNodeCommissionProgramId && nullNodeCommissionProgramId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommissionProgramId = null;
+            if (parseNode.GetChildNode("commission_program_id") is null) { _explicitNullValueCommissionProgramId = default!; _explicitNullProperties?.Remove("commission_program_id"); }
+            else if (parseNode.GetChildNode("commission_program_id") is { } nullNodeCommissionProgramId && nullNodeCommissionProgramId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommissionProgramId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The commission program identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommissionProgramId { get => _explicitNullValueCommissionProgramId; set { _explicitNullValueCommissionProgramId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commission_program_id"); else _explicitNullProperties?.Remove("commission_program_id"); } }
+        public string? CommissionProgramId { get => _explicitNullValueCommissionProgramId; set { _explicitNullValueCommissionProgramId = value; AdditionalData?.Remove("commission_program_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commission_program_id"); else _explicitNullProperties?.Remove("commission_program_id"); } }
         private string? _explicitNullValueCommissionProgramId = default!;
 #nullable restore
 #else
-        public string CommissionProgramId { get => _explicitNullValueCommissionProgramId; set { _explicitNullValueCommissionProgramId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commission_program_id"); else _explicitNullProperties?.Remove("commission_program_id"); } }
+        public string CommissionProgramId { get => _explicitNullValueCommissionProgramId; set { _explicitNullValueCommissionProgramId = value; AdditionalData?.Remove("commission_program_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commission_program_id"); else _explicitNullProperties?.Remove("commission_program_id"); } }
         private string _explicitNullValueCommissionProgramId = default!;
 #endif
         /// <summary>

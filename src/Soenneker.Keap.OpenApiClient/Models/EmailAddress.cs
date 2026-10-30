@@ -17,11 +17,16 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("email_opt_status") is { } nullNodeEmailOptStatus && nullNodeEmailOptStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailOptStatus = null;
-            if (parseNode.GetChildNode("field") is { } nullNodeField && nullNodeField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Field = null;
-            if (parseNode.GetChildNode("is_opt_in") is { } nullNodeIsOptIn && nullNodeIsOptIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOptIn = null;
-            if (parseNode.GetChildNode("opt_in_reason") is { } nullNodeOptInReason && nullNodeOptInReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptInReason = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("email_opt_status") is null) { _explicitNullValueEmailOptStatus = default!; _explicitNullProperties?.Remove("email_opt_status"); }
+            else if (parseNode.GetChildNode("email_opt_status") is { } nullNodeEmailOptStatus && nullNodeEmailOptStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailOptStatus = null;
+            if (parseNode.GetChildNode("field") is null) { _explicitNullValueField = default!; _explicitNullProperties?.Remove("field"); }
+            else if (parseNode.GetChildNode("field") is { } nullNodeField && nullNodeField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Field = null;
+            if (parseNode.GetChildNode("is_opt_in") is null) { _explicitNullValueIsOptIn = default!; _explicitNullProperties?.Remove("is_opt_in"); }
+            else if (parseNode.GetChildNode("is_opt_in") is { } nullNodeIsOptIn && nullNodeIsOptIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOptIn = null;
+            if (parseNode.GetChildNode("opt_in_reason") is null) { _explicitNullValueOptInReason = default!; _explicitNullProperties?.Remove("opt_in_reason"); }
+            else if (parseNode.GetChildNode("opt_in_reason") is { } nullNodeOptInReason && nullNodeOptInReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptInReason = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,30 +34,30 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>Email address. Maximum length is 75 characters for EMAIL1 and 100 characters for EMAIL2 and EMAIL3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The email_opt_status property</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.EmailAddressEmailOptStatus? EmailOptStatus { get => _explicitNullValueEmailOptStatus; set { _explicitNullValueEmailOptStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_opt_status"); else _explicitNullProperties?.Remove("email_opt_status"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.EmailAddressEmailOptStatus? EmailOptStatus { get => _explicitNullValueEmailOptStatus; set { _explicitNullValueEmailOptStatus = value; AdditionalData?.Remove("email_opt_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_opt_status"); else _explicitNullProperties?.Remove("email_opt_status"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.EmailAddressEmailOptStatus? _explicitNullValueEmailOptStatus = default!;
         /// <summary>Email address slot</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.EmailAddressField? Field { get => _explicitNullValueField; set { _explicitNullValueField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.EmailAddressField? Field { get => _explicitNullValueField; set { _explicitNullValueField = value; AdditionalData?.Remove("field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.EmailAddressField? _explicitNullValueField = default!;
         /// <summary>The is_opt_in property</summary>
-        public bool? IsOptIn { get => _explicitNullValueIsOptIn; set { _explicitNullValueIsOptIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_opt_in"); else _explicitNullProperties?.Remove("is_opt_in"); } }
+        public bool? IsOptIn { get => _explicitNullValueIsOptIn; set { _explicitNullValueIsOptIn = value; AdditionalData?.Remove("is_opt_in"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_opt_in"); else _explicitNullProperties?.Remove("is_opt_in"); } }
         private bool? _explicitNullValueIsOptIn = default!;
         /// <summary>Reason for opting in</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptInReason { get => _explicitNullValueOptInReason; set { _explicitNullValueOptInReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opt_in_reason"); else _explicitNullProperties?.Remove("opt_in_reason"); } }
+        public string? OptInReason { get => _explicitNullValueOptInReason; set { _explicitNullValueOptInReason = value; AdditionalData?.Remove("opt_in_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opt_in_reason"); else _explicitNullProperties?.Remove("opt_in_reason"); } }
         private string? _explicitNullValueOptInReason = default!;
 #nullable restore
 #else
-        public string OptInReason { get => _explicitNullValueOptInReason; set { _explicitNullValueOptInReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opt_in_reason"); else _explicitNullProperties?.Remove("opt_in_reason"); } }
+        public string OptInReason { get => _explicitNullValueOptInReason; set { _explicitNullValueOptInReason = value; AdditionalData?.Remove("opt_in_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opt_in_reason"); else _explicitNullProperties?.Remove("opt_in_reason"); } }
         private string _explicitNullValueOptInReason = default!;
 #endif
         /// <summary>
@@ -81,8 +86,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "email_opt_status", n => { EmailOptStatus = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressEmailOptStatus>(); } },
-                { "field", n => { Field = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressField>(); } },
+                { "email_opt_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressEmailOptStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEmailOptStatus = default; _explicitNullProperties?.Remove("email_opt_status"); AdditionalData["email_opt_status"] = unknown; } else { EmailOptStatus = parsed; AdditionalData.Remove("email_opt_status"); } } },
+                { "field", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressField>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueField = default; _explicitNullProperties?.Remove("field"); AdditionalData["field"] = unknown; } else { Field = parsed; AdditionalData.Remove("field"); } } },
                 { "is_opt_in", n => { IsOptIn = n.GetBoolValue(); } },
                 { "opt_in_reason", n => { OptInReason = n.GetStringValue(); } },
             };

@@ -17,56 +17,61 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("append_contact_key_to_links") is { } nullNodeAppendContactKeyToLinks && nullNodeAppendContactKeyToLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppendContactKeyToLinks = null;
-            if (parseNode.GetChildNode("default_opt_in_link") is { } nullNodeDefaultOptInLink && nullNodeDefaultOptInLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultOptInLink = null;
-            if (parseNode.GetChildNode("default_opt_out_link") is { } nullNodeDefaultOptOutLink && nullNodeDefaultOptOutLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultOptOutLink = null;
-            if (parseNode.GetChildNode("hide_emails_to_and_from_domains") is { } nullNodeHideEmailsToAndFromDomains && nullNodeHideEmailsToAndFromDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HideEmailsToAndFromDomains = null;
-            if (parseNode.GetChildNode("whitelisted_domains") is { } nullNodeWhitelistedDomains && nullNodeWhitelistedDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhitelistedDomains = null;
+            if (parseNode.GetChildNode("append_contact_key_to_links") is null) { _explicitNullValueAppendContactKeyToLinks = default!; _explicitNullProperties?.Remove("append_contact_key_to_links"); }
+            else if (parseNode.GetChildNode("append_contact_key_to_links") is { } nullNodeAppendContactKeyToLinks && nullNodeAppendContactKeyToLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppendContactKeyToLinks = null;
+            if (parseNode.GetChildNode("default_opt_in_link") is null) { _explicitNullValueDefaultOptInLink = default!; _explicitNullProperties?.Remove("default_opt_in_link"); }
+            else if (parseNode.GetChildNode("default_opt_in_link") is { } nullNodeDefaultOptInLink && nullNodeDefaultOptInLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultOptInLink = null;
+            if (parseNode.GetChildNode("default_opt_out_link") is null) { _explicitNullValueDefaultOptOutLink = default!; _explicitNullProperties?.Remove("default_opt_out_link"); }
+            else if (parseNode.GetChildNode("default_opt_out_link") is { } nullNodeDefaultOptOutLink && nullNodeDefaultOptOutLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultOptOutLink = null;
+            if (parseNode.GetChildNode("hide_emails_to_and_from_domains") is null) { _explicitNullValueHideEmailsToAndFromDomains = default!; _explicitNullProperties?.Remove("hide_emails_to_and_from_domains"); }
+            else if (parseNode.GetChildNode("hide_emails_to_and_from_domains") is { } nullNodeHideEmailsToAndFromDomains && nullNodeHideEmailsToAndFromDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HideEmailsToAndFromDomains = null;
+            if (parseNode.GetChildNode("whitelisted_domains") is null) { _explicitNullValueWhitelistedDomains = default!; _explicitNullProperties?.Remove("whitelisted_domains"); }
+            else if (parseNode.GetChildNode("whitelisted_domains") is { } nullNodeWhitelistedDomains && nullNodeWhitelistedDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhitelistedDomains = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The append_contact_key_to_links property</summary>
-        public bool? AppendContactKeyToLinks { get => _explicitNullValueAppendContactKeyToLinks; set { _explicitNullValueAppendContactKeyToLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_contact_key_to_links"); else _explicitNullProperties?.Remove("append_contact_key_to_links"); } }
+        public bool? AppendContactKeyToLinks { get => _explicitNullValueAppendContactKeyToLinks; set { _explicitNullValueAppendContactKeyToLinks = value; AdditionalData?.Remove("append_contact_key_to_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_contact_key_to_links"); else _explicitNullProperties?.Remove("append_contact_key_to_links"); } }
         private bool? _explicitNullValueAppendContactKeyToLinks = default!;
         /// <summary>The default_opt_in_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultOptInLink { get => _explicitNullValueDefaultOptInLink; set { _explicitNullValueDefaultOptInLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_in_link"); else _explicitNullProperties?.Remove("default_opt_in_link"); } }
+        public string? DefaultOptInLink { get => _explicitNullValueDefaultOptInLink; set { _explicitNullValueDefaultOptInLink = value; AdditionalData?.Remove("default_opt_in_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_in_link"); else _explicitNullProperties?.Remove("default_opt_in_link"); } }
         private string? _explicitNullValueDefaultOptInLink = default!;
 #nullable restore
 #else
-        public string DefaultOptInLink { get => _explicitNullValueDefaultOptInLink; set { _explicitNullValueDefaultOptInLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_in_link"); else _explicitNullProperties?.Remove("default_opt_in_link"); } }
+        public string DefaultOptInLink { get => _explicitNullValueDefaultOptInLink; set { _explicitNullValueDefaultOptInLink = value; AdditionalData?.Remove("default_opt_in_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_in_link"); else _explicitNullProperties?.Remove("default_opt_in_link"); } }
         private string _explicitNullValueDefaultOptInLink = default!;
 #endif
         /// <summary>The default_opt_out_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultOptOutLink { get => _explicitNullValueDefaultOptOutLink; set { _explicitNullValueDefaultOptOutLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_out_link"); else _explicitNullProperties?.Remove("default_opt_out_link"); } }
+        public string? DefaultOptOutLink { get => _explicitNullValueDefaultOptOutLink; set { _explicitNullValueDefaultOptOutLink = value; AdditionalData?.Remove("default_opt_out_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_out_link"); else _explicitNullProperties?.Remove("default_opt_out_link"); } }
         private string? _explicitNullValueDefaultOptOutLink = default!;
 #nullable restore
 #else
-        public string DefaultOptOutLink { get => _explicitNullValueDefaultOptOutLink; set { _explicitNullValueDefaultOptOutLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_out_link"); else _explicitNullProperties?.Remove("default_opt_out_link"); } }
+        public string DefaultOptOutLink { get => _explicitNullValueDefaultOptOutLink; set { _explicitNullValueDefaultOptOutLink = value; AdditionalData?.Remove("default_opt_out_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_opt_out_link"); else _explicitNullProperties?.Remove("default_opt_out_link"); } }
         private string _explicitNullValueDefaultOptOutLink = default!;
 #endif
         /// <summary>The hide_emails_to_and_from_domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HideEmailsToAndFromDomains { get => _explicitNullValueHideEmailsToAndFromDomains; set { _explicitNullValueHideEmailsToAndFromDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_emails_to_and_from_domains"); else _explicitNullProperties?.Remove("hide_emails_to_and_from_domains"); } }
+        public string? HideEmailsToAndFromDomains { get => _explicitNullValueHideEmailsToAndFromDomains; set { _explicitNullValueHideEmailsToAndFromDomains = value; AdditionalData?.Remove("hide_emails_to_and_from_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_emails_to_and_from_domains"); else _explicitNullProperties?.Remove("hide_emails_to_and_from_domains"); } }
         private string? _explicitNullValueHideEmailsToAndFromDomains = default!;
 #nullable restore
 #else
-        public string HideEmailsToAndFromDomains { get => _explicitNullValueHideEmailsToAndFromDomains; set { _explicitNullValueHideEmailsToAndFromDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_emails_to_and_from_domains"); else _explicitNullProperties?.Remove("hide_emails_to_and_from_domains"); } }
+        public string HideEmailsToAndFromDomains { get => _explicitNullValueHideEmailsToAndFromDomains; set { _explicitNullValueHideEmailsToAndFromDomains = value; AdditionalData?.Remove("hide_emails_to_and_from_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_emails_to_and_from_domains"); else _explicitNullProperties?.Remove("hide_emails_to_and_from_domains"); } }
         private string _explicitNullValueHideEmailsToAndFromDomains = default!;
 #endif
         /// <summary>The whitelisted_domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhitelistedDomains { get => _explicitNullValueWhitelistedDomains; set { _explicitNullValueWhitelistedDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_domains"); else _explicitNullProperties?.Remove("whitelisted_domains"); } }
+        public string? WhitelistedDomains { get => _explicitNullValueWhitelistedDomains; set { _explicitNullValueWhitelistedDomains = value; AdditionalData?.Remove("whitelisted_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_domains"); else _explicitNullProperties?.Remove("whitelisted_domains"); } }
         private string? _explicitNullValueWhitelistedDomains = default!;
 #nullable restore
 #else
-        public string WhitelistedDomains { get => _explicitNullValueWhitelistedDomains; set { _explicitNullValueWhitelistedDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_domains"); else _explicitNullProperties?.Remove("whitelisted_domains"); } }
+        public string WhitelistedDomains { get => _explicitNullValueWhitelistedDomains; set { _explicitNullValueWhitelistedDomains = value; AdditionalData?.Remove("whitelisted_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_domains"); else _explicitNullProperties?.Remove("whitelisted_domains"); } }
         private string _explicitNullValueWhitelistedDomains = default!;
 #endif
         /// <summary>

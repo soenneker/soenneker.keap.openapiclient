@@ -18,15 +18,24 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default_value") is { } nullNodeDefaultValue && nullNodeDefaultValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValue = null;
-            if (parseNode.GetChildNode("field_name") is { } nullNodeFieldName && nullNodeFieldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldName = null;
-            if (parseNode.GetChildNode("field_type") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
-            if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
-            if (parseNode.GetChildNode("group_name") is { } nullNodeGroupName && nullNodeGroupName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupName = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
-            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
-            if (parseNode.GetChildNode("record_type") is { } nullNodeRecordType && nullNodeRecordType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordType = null;
+            if (parseNode.GetChildNode("default_value") is null) { _explicitNullValueDefaultValue = default!; _explicitNullProperties?.Remove("default_value"); }
+            else if (parseNode.GetChildNode("default_value") is { } nullNodeDefaultValue && nullNodeDefaultValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValue = null;
+            if (parseNode.GetChildNode("field_name") is null) { _explicitNullValueFieldName = default!; _explicitNullProperties?.Remove("field_name"); }
+            else if (parseNode.GetChildNode("field_name") is { } nullNodeFieldName && nullNodeFieldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldName = null;
+            if (parseNode.GetChildNode("field_type") is null) { _explicitNullValueFieldType = default!; _explicitNullProperties?.Remove("field_type"); }
+            else if (parseNode.GetChildNode("field_type") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
+            if (parseNode.GetChildNode("group_id") is null) { _explicitNullValueGroupId = default!; _explicitNullProperties?.Remove("group_id"); }
+            else if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
+            if (parseNode.GetChildNode("group_name") is null) { _explicitNullValueGroupName = default!; _explicitNullProperties?.Remove("group_name"); }
+            else if (parseNode.GetChildNode("group_name") is { } nullNodeGroupName && nullNodeGroupName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupName = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("options") is null) { _explicitNullValueOptions = default!; _explicitNullProperties?.Remove("options"); }
+            else if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("record_type") is null) { _explicitNullValueRecordType = default!; _explicitNullProperties?.Remove("record_type"); }
+            else if (parseNode.GetChildNode("record_type") is { } nullNodeRecordType && nullNodeRecordType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,78 +43,78 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The default value for this custom field, if any</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultValue { get => _explicitNullValueDefaultValue; set { _explicitNullValueDefaultValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_value"); else _explicitNullProperties?.Remove("default_value"); } }
+        public string? DefaultValue { get => _explicitNullValueDefaultValue; set { _explicitNullValueDefaultValue = value; AdditionalData?.Remove("default_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_value"); else _explicitNullProperties?.Remove("default_value"); } }
         private string? _explicitNullValueDefaultValue = default!;
 #nullable restore
 #else
-        public string DefaultValue { get => _explicitNullValueDefaultValue; set { _explicitNullValueDefaultValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_value"); else _explicitNullProperties?.Remove("default_value"); } }
+        public string DefaultValue { get => _explicitNullValueDefaultValue; set { _explicitNullValueDefaultValue = value; AdditionalData?.Remove("default_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_value"); else _explicitNullProperties?.Remove("default_value"); } }
         private string _explicitNullValueDefaultValue = default!;
 #endif
         /// <summary>The database column name for this custom field. Use this value when filtering contacts (e.g. for field_name &apos;firstName1&apos;, filter with &apos;firstName1==John&apos;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
+        public string? FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; AdditionalData?.Remove("field_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
         private string? _explicitNullValueFieldName = default!;
 #nullable restore
 #else
-        public string FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
+        public string FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; AdditionalData?.Remove("field_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
         private string _explicitNullValueFieldName = default!;
 #endif
         /// <summary>The data type of the custom field (e.g. Text, Number, Date, Select)</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_type"); else _explicitNullProperties?.Remove("field_type"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; AdditionalData?.Remove("field_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_type"); else _explicitNullProperties?.Remove("field_type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataFieldType? _explicitNullValueFieldType = default!;
         /// <summary>The ID of the group this custom field belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
+        public string? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; AdditionalData?.Remove("group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
         private string? _explicitNullValueGroupId = default!;
 #nullable restore
 #else
-        public string GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
+        public string GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; AdditionalData?.Remove("group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
         private string _explicitNullValueGroupId = default!;
 #endif
         /// <summary>The name of the group this custom field belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupName { get => _explicitNullValueGroupName; set { _explicitNullValueGroupName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_name"); else _explicitNullProperties?.Remove("group_name"); } }
+        public string? GroupName { get => _explicitNullValueGroupName; set { _explicitNullValueGroupName = value; AdditionalData?.Remove("group_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_name"); else _explicitNullProperties?.Remove("group_name"); } }
         private string? _explicitNullValueGroupName = default!;
 #nullable restore
 #else
-        public string GroupName { get => _explicitNullValueGroupName; set { _explicitNullValueGroupName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_name"); else _explicitNullProperties?.Remove("group_name"); } }
+        public string GroupName { get => _explicitNullValueGroupName; set { _explicitNullValueGroupName = value; AdditionalData?.Remove("group_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_name"); else _explicitNullProperties?.Remove("group_name"); } }
         private string _explicitNullValueGroupName = default!;
 #endif
         /// <summary>The unique identifier of the custom field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The display label of the custom field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>The list of available options for select/radio/multiselect/drilldown field types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldOption>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldOption>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldOption>? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldOption> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldOption> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldOption> _explicitNullValueOptions = default!;
 #endif
         /// <summary>The entity type this custom field belongs to (e.g. CONTACT, COMPANY)</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataRecordType? RecordType { get => _explicitNullValueRecordType; set { _explicitNullValueRecordType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_type"); else _explicitNullProperties?.Remove("record_type"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataRecordType? RecordType { get => _explicitNullValueRecordType; set { _explicitNullValueRecordType = value; AdditionalData?.Remove("record_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_type"); else _explicitNullProperties?.Remove("record_type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataRecordType? _explicitNullValueRecordType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaData"/> and sets the default values.
@@ -134,13 +143,13 @@ namespace Soenneker.Keap.OpenApiClient.Models
             {
                 { "default_value", n => { DefaultValue = n.GetStringValue(); } },
                 { "field_name", n => { FieldName = n.GetStringValue(); } },
-                { "field_type", n => { FieldType = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataFieldType>(); } },
+                { "field_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataFieldType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFieldType = default; _explicitNullProperties?.Remove("field_type"); AdditionalData["field_type"] = unknown; } else { FieldType = parsed; AdditionalData.Remove("field_type"); } } },
                 { "group_id", n => { GroupId = n.GetStringValue(); } },
                 { "group_name", n => { GroupName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldOption>(global::Soenneker.Keap.OpenApiClient.Models.CustomFieldOption.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "record_type", n => { RecordType = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataRecordType>(); } },
+                { "record_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldMetaDataRecordType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRecordType = default; _explicitNullProperties?.Remove("record_type"); AdditionalData["record_type"] = unknown; } else { RecordType = parsed; AdditionalData.Remove("record_type"); } } },
             };
         }
         /// <summary>

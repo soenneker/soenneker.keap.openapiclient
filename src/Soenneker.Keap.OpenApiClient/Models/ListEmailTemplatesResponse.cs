@@ -17,8 +17,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email_templates") is { } nullNodeEmailTemplates && nullNodeEmailTemplates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailTemplates = null;
-            if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+            if (parseNode.GetChildNode("email_templates") is null) { _explicitNullValueEmailTemplates = default!; _explicitNullProperties?.Remove("email_templates"); }
+            else if (parseNode.GetChildNode("email_templates") is { } nullNodeEmailTemplates && nullNodeEmailTemplates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailTemplates = null;
+            if (parseNode.GetChildNode("next_page_token") is null) { _explicitNullValueNextPageToken = default!; _explicitNullProperties?.Remove("next_page_token"); }
+            else if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The email_templates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.EmailTemplateSummary>? EmailTemplates { get => _explicitNullValueEmailTemplates; set { _explicitNullValueEmailTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_templates"); else _explicitNullProperties?.Remove("email_templates"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.EmailTemplateSummary>? EmailTemplates { get => _explicitNullValueEmailTemplates; set { _explicitNullValueEmailTemplates = value; AdditionalData?.Remove("email_templates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_templates"); else _explicitNullProperties?.Remove("email_templates"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.EmailTemplateSummary>? _explicitNullValueEmailTemplates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.EmailTemplateSummary> EmailTemplates { get => _explicitNullValueEmailTemplates; set { _explicitNullValueEmailTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_templates"); else _explicitNullProperties?.Remove("email_templates"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.EmailTemplateSummary> EmailTemplates { get => _explicitNullValueEmailTemplates; set { _explicitNullValueEmailTemplates = value; AdditionalData?.Remove("email_templates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_templates"); else _explicitNullProperties?.Remove("email_templates"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.EmailTemplateSummary> _explicitNullValueEmailTemplates = default!;
 #endif
         /// <summary>The next_page_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>

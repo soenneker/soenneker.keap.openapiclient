@@ -17,9 +17,12 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("line_1") is { } nullNodeLine1 && nullNodeLine1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Line1 = null;
-            if (parseNode.GetChildNode("line_2") is { } nullNodeLine2 && nullNodeLine2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Line2 = null;
-            if (parseNode.GetChildNode("line_3") is { } nullNodeLine3 && nullNodeLine3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Line3 = null;
+            if (parseNode.GetChildNode("line_1") is null) { _explicitNullValueLine1 = default!; _explicitNullProperties?.Remove("line_1"); }
+            else if (parseNode.GetChildNode("line_1") is { } nullNodeLine1 && nullNodeLine1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Line1 = null;
+            if (parseNode.GetChildNode("line_2") is null) { _explicitNullValueLine2 = default!; _explicitNullProperties?.Remove("line_2"); }
+            else if (parseNode.GetChildNode("line_2") is { } nullNodeLine2 && nullNodeLine2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Line2 = null;
+            if (parseNode.GetChildNode("line_3") is null) { _explicitNullValueLine3 = default!; _explicitNullProperties?.Remove("line_3"); }
+            else if (parseNode.GetChildNode("line_3") is { } nullNodeLine3 && nullNodeLine3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Line3 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The line_1 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Line1 { get => _explicitNullValueLine1; set { _explicitNullValueLine1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_1"); else _explicitNullProperties?.Remove("line_1"); } }
+        public string? Line1 { get => _explicitNullValueLine1; set { _explicitNullValueLine1 = value; AdditionalData?.Remove("line_1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_1"); else _explicitNullProperties?.Remove("line_1"); } }
         private string? _explicitNullValueLine1 = default!;
 #nullable restore
 #else
-        public string Line1 { get => _explicitNullValueLine1; set { _explicitNullValueLine1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_1"); else _explicitNullProperties?.Remove("line_1"); } }
+        public string Line1 { get => _explicitNullValueLine1; set { _explicitNullValueLine1 = value; AdditionalData?.Remove("line_1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_1"); else _explicitNullProperties?.Remove("line_1"); } }
         private string _explicitNullValueLine1 = default!;
 #endif
         /// <summary>The line_2 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Line2 { get => _explicitNullValueLine2; set { _explicitNullValueLine2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_2"); else _explicitNullProperties?.Remove("line_2"); } }
+        public string? Line2 { get => _explicitNullValueLine2; set { _explicitNullValueLine2 = value; AdditionalData?.Remove("line_2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_2"); else _explicitNullProperties?.Remove("line_2"); } }
         private string? _explicitNullValueLine2 = default!;
 #nullable restore
 #else
-        public string Line2 { get => _explicitNullValueLine2; set { _explicitNullValueLine2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_2"); else _explicitNullProperties?.Remove("line_2"); } }
+        public string Line2 { get => _explicitNullValueLine2; set { _explicitNullValueLine2 = value; AdditionalData?.Remove("line_2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_2"); else _explicitNullProperties?.Remove("line_2"); } }
         private string _explicitNullValueLine2 = default!;
 #endif
         /// <summary>The line_3 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Line3 { get => _explicitNullValueLine3; set { _explicitNullValueLine3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_3"); else _explicitNullProperties?.Remove("line_3"); } }
+        public string? Line3 { get => _explicitNullValueLine3; set { _explicitNullValueLine3 = value; AdditionalData?.Remove("line_3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_3"); else _explicitNullProperties?.Remove("line_3"); } }
         private string? _explicitNullValueLine3 = default!;
 #nullable restore
 #else
-        public string Line3 { get => _explicitNullValueLine3; set { _explicitNullValueLine3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_3"); else _explicitNullProperties?.Remove("line_3"); } }
+        public string Line3 { get => _explicitNullValueLine3; set { _explicitNullValueLine3 = value; AdditionalData?.Remove("line_3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_3"); else _explicitNullProperties?.Remove("line_3"); } }
         private string _explicitNullValueLine3 = default!;
 #endif
         /// <summary>

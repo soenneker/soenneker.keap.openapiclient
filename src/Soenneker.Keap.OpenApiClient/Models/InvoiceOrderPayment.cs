@@ -17,84 +17,94 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("invoice_id") is { } nullNodeInvoiceId && nullNodeInvoiceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceId = null;
-            if (parseNode.GetChildNode("last_updated_time") is { } nullNodeLastUpdatedTime && nullNodeLastUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdatedTime = null;
-            if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
-            if (parseNode.GetChildNode("payment_id") is { } nullNodePaymentId && nullNodePaymentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentId = null;
-            if (parseNode.GetChildNode("pay_status") is { } nullNodePayStatus && nullNodePayStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayStatus = null;
-            if (parseNode.GetChildNode("pay_time") is { } nullNodePayTime && nullNodePayTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayTime = null;
-            if (parseNode.GetChildNode("refund_invoice_payment_id") is { } nullNodeRefundInvoicePaymentId && nullNodeRefundInvoicePaymentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundInvoicePaymentId = null;
-            if (parseNode.GetChildNode("skip_commission") is { } nullNodeSkipCommission && nullNodeSkipCommission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipCommission = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("invoice_id") is null) { _explicitNullValueInvoiceId = default!; _explicitNullProperties?.Remove("invoice_id"); }
+            else if (parseNode.GetChildNode("invoice_id") is { } nullNodeInvoiceId && nullNodeInvoiceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceId = null;
+            if (parseNode.GetChildNode("last_updated_time") is null) { _explicitNullValueLastUpdatedTime = default!; _explicitNullProperties?.Remove("last_updated_time"); }
+            else if (parseNode.GetChildNode("last_updated_time") is { } nullNodeLastUpdatedTime && nullNodeLastUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdatedTime = null;
+            if (parseNode.GetChildNode("note") is null) { _explicitNullValueNote = default!; _explicitNullProperties?.Remove("note"); }
+            else if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
+            if (parseNode.GetChildNode("payment_id") is null) { _explicitNullValuePaymentId = default!; _explicitNullProperties?.Remove("payment_id"); }
+            else if (parseNode.GetChildNode("payment_id") is { } nullNodePaymentId && nullNodePaymentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentId = null;
+            if (parseNode.GetChildNode("pay_status") is null) { _explicitNullValuePayStatus = default!; _explicitNullProperties?.Remove("pay_status"); }
+            else if (parseNode.GetChildNode("pay_status") is { } nullNodePayStatus && nullNodePayStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayStatus = null;
+            if (parseNode.GetChildNode("pay_time") is null) { _explicitNullValuePayTime = default!; _explicitNullProperties?.Remove("pay_time"); }
+            else if (parseNode.GetChildNode("pay_time") is { } nullNodePayTime && nullNodePayTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayTime = null;
+            if (parseNode.GetChildNode("refund_invoice_payment_id") is null) { _explicitNullValueRefundInvoicePaymentId = default!; _explicitNullProperties?.Remove("refund_invoice_payment_id"); }
+            else if (parseNode.GetChildNode("refund_invoice_payment_id") is { } nullNodeRefundInvoicePaymentId && nullNodeRefundInvoicePaymentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundInvoicePaymentId = null;
+            if (parseNode.GetChildNode("skip_commission") is null) { _explicitNullValueSkipCommission = default!; _explicitNullProperties?.Remove("skip_commission"); }
+            else if (parseNode.GetChildNode("skip_commission") is { } nullNodeSkipCommission && nullNodeSkipCommission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipCommission = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The payment amount.</summary>
-        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private double? _explicitNullValueAmount = default!;
         /// <summary>The invoice order payment ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The invoice ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
+        public string? InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; AdditionalData?.Remove("invoice_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
         private string? _explicitNullValueInvoiceId = default!;
 #nullable restore
 #else
-        public string InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
+        public string InvoiceId { get => _explicitNullValueInvoiceId; set { _explicitNullValueInvoiceId = value; AdditionalData?.Remove("invoice_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_id"); else _explicitNullProperties?.Remove("invoice_id"); } }
         private string _explicitNullValueInvoiceId = default!;
 #endif
         /// <summary>When this payment record was last updated.</summary>
-        public DateTimeOffset? LastUpdatedTime { get => _explicitNullValueLastUpdatedTime; set { _explicitNullValueLastUpdatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_updated_time"); else _explicitNullProperties?.Remove("last_updated_time"); } }
+        public DateTimeOffset? LastUpdatedTime { get => _explicitNullValueLastUpdatedTime; set { _explicitNullValueLastUpdatedTime = value; AdditionalData?.Remove("last_updated_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_updated_time"); else _explicitNullProperties?.Remove("last_updated_time"); } }
         private DateTimeOffset? _explicitNullValueLastUpdatedTime = default!;
         /// <summary>A note about the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string? _explicitNullValueNote = default!;
 #nullable restore
 #else
-        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string _explicitNullValueNote = default!;
 #endif
         /// <summary>The payment ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentId { get => _explicitNullValuePaymentId; set { _explicitNullValuePaymentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_id"); else _explicitNullProperties?.Remove("payment_id"); } }
+        public string? PaymentId { get => _explicitNullValuePaymentId; set { _explicitNullValuePaymentId = value; AdditionalData?.Remove("payment_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_id"); else _explicitNullProperties?.Remove("payment_id"); } }
         private string? _explicitNullValuePaymentId = default!;
 #nullable restore
 #else
-        public string PaymentId { get => _explicitNullValuePaymentId; set { _explicitNullValuePaymentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_id"); else _explicitNullProperties?.Remove("payment_id"); } }
+        public string PaymentId { get => _explicitNullValuePaymentId; set { _explicitNullValuePaymentId = value; AdditionalData?.Remove("payment_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_id"); else _explicitNullProperties?.Remove("payment_id"); } }
         private string _explicitNullValuePaymentId = default!;
 #endif
         /// <summary>The payment status.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.InvoiceOrderPaymentPayStatus? PayStatus { get => _explicitNullValuePayStatus; set { _explicitNullValuePayStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pay_status"); else _explicitNullProperties?.Remove("pay_status"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.InvoiceOrderPaymentPayStatus? PayStatus { get => _explicitNullValuePayStatus; set { _explicitNullValuePayStatus = value; AdditionalData?.Remove("pay_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pay_status"); else _explicitNullProperties?.Remove("pay_status"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.InvoiceOrderPaymentPayStatus? _explicitNullValuePayStatus = default!;
         /// <summary>The date and time of payment.</summary>
-        public DateTimeOffset? PayTime { get => _explicitNullValuePayTime; set { _explicitNullValuePayTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pay_time"); else _explicitNullProperties?.Remove("pay_time"); } }
+        public DateTimeOffset? PayTime { get => _explicitNullValuePayTime; set { _explicitNullValuePayTime = value; AdditionalData?.Remove("pay_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pay_time"); else _explicitNullProperties?.Remove("pay_time"); } }
         private DateTimeOffset? _explicitNullValuePayTime = default!;
         /// <summary>The refund invoice payment ID, if this is a refund.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundInvoicePaymentId { get => _explicitNullValueRefundInvoicePaymentId; set { _explicitNullValueRefundInvoicePaymentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_invoice_payment_id"); else _explicitNullProperties?.Remove("refund_invoice_payment_id"); } }
+        public string? RefundInvoicePaymentId { get => _explicitNullValueRefundInvoicePaymentId; set { _explicitNullValueRefundInvoicePaymentId = value; AdditionalData?.Remove("refund_invoice_payment_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_invoice_payment_id"); else _explicitNullProperties?.Remove("refund_invoice_payment_id"); } }
         private string? _explicitNullValueRefundInvoicePaymentId = default!;
 #nullable restore
 #else
-        public string RefundInvoicePaymentId { get => _explicitNullValueRefundInvoicePaymentId; set { _explicitNullValueRefundInvoicePaymentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_invoice_payment_id"); else _explicitNullProperties?.Remove("refund_invoice_payment_id"); } }
+        public string RefundInvoicePaymentId { get => _explicitNullValueRefundInvoicePaymentId; set { _explicitNullValueRefundInvoicePaymentId = value; AdditionalData?.Remove("refund_invoice_payment_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refund_invoice_payment_id"); else _explicitNullProperties?.Remove("refund_invoice_payment_id"); } }
         private string _explicitNullValueRefundInvoicePaymentId = default!;
 #endif
         /// <summary>Whether to skip commission for this payment.</summary>
-        public bool? SkipCommission { get => _explicitNullValueSkipCommission; set { _explicitNullValueSkipCommission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_commission"); else _explicitNullProperties?.Remove("skip_commission"); } }
+        public bool? SkipCommission { get => _explicitNullValueSkipCommission; set { _explicitNullValueSkipCommission = value; AdditionalData?.Remove("skip_commission"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_commission"); else _explicitNullProperties?.Remove("skip_commission"); } }
         private bool? _explicitNullValueSkipCommission = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.InvoiceOrderPayment"/> and sets the default values.
@@ -126,7 +136,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "invoice_id", n => { InvoiceId = n.GetStringValue(); } },
                 { "last_updated_time", n => { LastUpdatedTime = n.GetDateTimeOffsetValue(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
-                { "pay_status", n => { PayStatus = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.InvoiceOrderPaymentPayStatus>(); } },
+                { "pay_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.InvoiceOrderPaymentPayStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePayStatus = default; _explicitNullProperties?.Remove("pay_status"); AdditionalData["pay_status"] = unknown; } else { PayStatus = parsed; AdditionalData.Remove("pay_status"); } } },
                 { "pay_time", n => { PayTime = n.GetDateTimeOffsetValue(); } },
                 { "payment_id", n => { PaymentId = n.GetStringValue(); } },
                 { "refund_invoice_payment_id", n => { RefundInvoicePaymentId = n.GetStringValue(); } },

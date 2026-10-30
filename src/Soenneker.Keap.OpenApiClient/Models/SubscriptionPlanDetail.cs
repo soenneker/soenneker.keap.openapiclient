@@ -17,55 +17,63 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
-            if (parseNode.GetChildNode("billing_cycle") is { } nullNodeBillingCycle && nullNodeBillingCycle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycle = null;
-            if (parseNode.GetChildNode("billing_frequency") is { } nullNodeBillingFrequency && nullNodeBillingFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingFrequency = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("number_of_cycles") is { } nullNodeNumberOfCycles && nullNodeNumberOfCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfCycles = null;
-            if (parseNode.GetChildNode("order_index") is { } nullNodeOrderIndex && nullNodeOrderIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderIndex = null;
-            if (parseNode.GetChildNode("plan_price") is { } nullNodePlanPrice && nullNodePlanPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanPrice = null;
-            if (parseNode.GetChildNode("prorate") is { } nullNodeProrate && nullNodeProrate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prorate = null;
+            if (parseNode.GetChildNode("active") is null) { _explicitNullValueActive = default!; _explicitNullProperties?.Remove("active"); }
+            else if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("billing_cycle") is null) { _explicitNullValueBillingCycle = default!; _explicitNullProperties?.Remove("billing_cycle"); }
+            else if (parseNode.GetChildNode("billing_cycle") is { } nullNodeBillingCycle && nullNodeBillingCycle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCycle = null;
+            if (parseNode.GetChildNode("billing_frequency") is null) { _explicitNullValueBillingFrequency = default!; _explicitNullProperties?.Remove("billing_frequency"); }
+            else if (parseNode.GetChildNode("billing_frequency") is { } nullNodeBillingFrequency && nullNodeBillingFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingFrequency = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("number_of_cycles") is null) { _explicitNullValueNumberOfCycles = default!; _explicitNullProperties?.Remove("number_of_cycles"); }
+            else if (parseNode.GetChildNode("number_of_cycles") is { } nullNodeNumberOfCycles && nullNodeNumberOfCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfCycles = null;
+            if (parseNode.GetChildNode("order_index") is null) { _explicitNullValueOrderIndex = default!; _explicitNullProperties?.Remove("order_index"); }
+            else if (parseNode.GetChildNode("order_index") is { } nullNodeOrderIndex && nullNodeOrderIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderIndex = null;
+            if (parseNode.GetChildNode("plan_price") is null) { _explicitNullValuePlanPrice = default!; _explicitNullProperties?.Remove("plan_price"); }
+            else if (parseNode.GetChildNode("plan_price") is { } nullNodePlanPrice && nullNodePlanPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanPrice = null;
+            if (parseNode.GetChildNode("prorate") is null) { _explicitNullValueProrate = default!; _explicitNullProperties?.Remove("prorate"); }
+            else if (parseNode.GetChildNode("prorate") is { } nullNodeProrate && nullNodeProrate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prorate = null;
         }
 
         /// <summary>If the subscription plan should be active/available for purchase</summary>
-        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>How frequent to bill.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.SubscriptionPlanDetailBillingCycle? BillingCycle { get => _explicitNullValueBillingCycle; set { _explicitNullValueBillingCycle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle"); else _explicitNullProperties?.Remove("billing_cycle"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.SubscriptionPlanDetailBillingCycle? BillingCycle { get => _explicitNullValueBillingCycle; set { _explicitNullValueBillingCycle = value; AdditionalData?.Remove("billing_cycle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_cycle"); else _explicitNullProperties?.Remove("billing_cycle"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.SubscriptionPlanDetailBillingCycle? _explicitNullValueBillingCycle = default!;
         /// <summary>How many times per billing cycle to bill</summary>
-        public int? BillingFrequency { get => _explicitNullValueBillingFrequency; set { _explicitNullValueBillingFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_frequency"); else _explicitNullProperties?.Remove("billing_frequency"); } }
+        public int? BillingFrequency { get => _explicitNullValueBillingFrequency; set { _explicitNullValueBillingFrequency = value; AdditionalData?.Remove("billing_frequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_frequency"); else _explicitNullProperties?.Remove("billing_frequency"); } }
         private int? _explicitNullValueBillingFrequency = default!;
         /// <summary>The subscription plan id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>How many billing cycles to bill. Optional field i.e. can be no value or 0.</summary>
-        public int? NumberOfCycles { get => _explicitNullValueNumberOfCycles; set { _explicitNullValueNumberOfCycles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_cycles"); else _explicitNullProperties?.Remove("number_of_cycles"); } }
+        public int? NumberOfCycles { get => _explicitNullValueNumberOfCycles; set { _explicitNullValueNumberOfCycles = value; AdditionalData?.Remove("number_of_cycles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_cycles"); else _explicitNullProperties?.Remove("number_of_cycles"); } }
         private int? _explicitNullValueNumberOfCycles = default!;
         /// <summary>Determines the order in which the plan will be displayed</summary>
-        public int? OrderIndex { get => _explicitNullValueOrderIndex; set { _explicitNullValueOrderIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_index"); else _explicitNullProperties?.Remove("order_index"); } }
+        public int? OrderIndex { get => _explicitNullValueOrderIndex; set { _explicitNullValueOrderIndex = value; AdditionalData?.Remove("order_index"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_index"); else _explicitNullProperties?.Remove("order_index"); } }
         private int? _explicitNullValueOrderIndex = default!;
         /// <summary>The plan_price property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValueDetail? PlanPrice { get => _explicitNullValuePlanPrice; set { _explicitNullValuePlanPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_price"); else _explicitNullProperties?.Remove("plan_price"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValueDetail? PlanPrice { get => _explicitNullValuePlanPrice; set { _explicitNullValuePlanPrice = value; AdditionalData?.Remove("plan_price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_price"); else _explicitNullProperties?.Remove("plan_price"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CurrencyValueDetail? _explicitNullValuePlanPrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValueDetail PlanPrice { get => _explicitNullValuePlanPrice; set { _explicitNullValuePlanPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_price"); else _explicitNullProperties?.Remove("plan_price"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CurrencyValueDetail PlanPrice { get => _explicitNullValuePlanPrice; set { _explicitNullValuePlanPrice = value; AdditionalData?.Remove("plan_price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_price"); else _explicitNullProperties?.Remove("plan_price"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CurrencyValueDetail _explicitNullValuePlanPrice = default!;
 #endif
         /// <summary>If the subscription plan should allow prorating</summary>
-        public bool? Prorate { get => _explicitNullValueProrate; set { _explicitNullValueProrate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prorate"); else _explicitNullProperties?.Remove("prorate"); } }
+        public bool? Prorate { get => _explicitNullValueProrate; set { _explicitNullValueProrate = value; AdditionalData?.Remove("prorate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prorate"); else _explicitNullProperties?.Remove("prorate"); } }
         private bool? _explicitNullValueProrate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.SubscriptionPlanDetail"/> and sets the default values.
@@ -93,7 +101,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
-                { "billing_cycle", n => { BillingCycle = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.SubscriptionPlanDetailBillingCycle>(); } },
+                { "billing_cycle", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.SubscriptionPlanDetailBillingCycle>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingCycle = default; _explicitNullProperties?.Remove("billing_cycle"); AdditionalData["billing_cycle"] = unknown; } else { BillingCycle = parsed; AdditionalData.Remove("billing_cycle"); } } },
                 { "billing_frequency", n => { BillingFrequency = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "number_of_cycles", n => { NumberOfCycles = n.GetIntValue(); } },

@@ -17,17 +17,19 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("30_days") is { } nullNodeThreeZeroDays && nullNodeThreeZeroDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeZeroDays = null;
-            if (parseNode.GetChildNode("24_hours") is { } nullNodeTwoFourHours && nullNodeTwoFourHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwoFourHours = null;
+            if (parseNode.GetChildNode("30_days") is null) { _explicitNullValueThreeZeroDays = default!; _explicitNullProperties?.Remove("30_days"); }
+            else if (parseNode.GetChildNode("30_days") is { } nullNodeThreeZeroDays && nullNodeThreeZeroDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeZeroDays = null;
+            if (parseNode.GetChildNode("24_hours") is null) { _explicitNullValueTwoFourHours = default!; _explicitNullProperties?.Remove("24_hours"); }
+            else if (parseNode.GetChildNode("24_hours") is { } nullNodeTwoFourHours && nullNodeTwoFourHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwoFourHours = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of contacts in the last 30 days</summary>
-        public int? ThreeZeroDays { get => _explicitNullValueThreeZeroDays; set { _explicitNullValueThreeZeroDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("30_days"); else _explicitNullProperties?.Remove("30_days"); } }
+        public int? ThreeZeroDays { get => _explicitNullValueThreeZeroDays; set { _explicitNullValueThreeZeroDays = value; AdditionalData?.Remove("30_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("30_days"); else _explicitNullProperties?.Remove("30_days"); } }
         private int? _explicitNullValueThreeZeroDays = default!;
         /// <summary>Number of contacts in the last 24 hours</summary>
-        public int? TwoFourHours { get => _explicitNullValueTwoFourHours; set { _explicitNullValueTwoFourHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("24_hours"); else _explicitNullProperties?.Remove("24_hours"); } }
+        public int? TwoFourHours { get => _explicitNullValueTwoFourHours; set { _explicitNullValueTwoFourHours = value; AdditionalData?.Remove("24_hours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("24_hours"); else _explicitNullProperties?.Remove("24_hours"); } }
         private int? _explicitNullValueTwoFourHours = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.HistoricalCounts"/> and sets the default values.

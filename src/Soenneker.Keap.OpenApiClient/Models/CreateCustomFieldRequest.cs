@@ -17,56 +17,61 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("field_type") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
-            if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
-            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
-            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
-            if (parseNode.GetChildNode("user_group_id") is { } nullNodeUserGroupId && nullNodeUserGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserGroupId = null;
+            if (parseNode.GetChildNode("field_type") is null) { _explicitNullValueFieldType = default!; _explicitNullProperties?.Remove("field_type"); }
+            else if (parseNode.GetChildNode("field_type") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
+            if (parseNode.GetChildNode("group_id") is null) { _explicitNullValueGroupId = default!; _explicitNullProperties?.Remove("group_id"); }
+            else if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("options") is null) { _explicitNullValueOptions = default!; _explicitNullProperties?.Remove("options"); }
+            else if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("user_group_id") is null) { _explicitNullValueUserGroupId = default!; _explicitNullProperties?.Remove("user_group_id"); }
+            else if (parseNode.GetChildNode("user_group_id") is { } nullNodeUserGroupId && nullNodeUserGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserGroupId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The field_type property</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldRequestFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_type"); else _explicitNullProperties?.Remove("field_type"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldRequestFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; AdditionalData?.Remove("field_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_type"); else _explicitNullProperties?.Remove("field_type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldRequestFieldType? _explicitNullValueFieldType = default!;
         /// <summary>An optional tab group to place the field under in the interface.  If not specified, will default to the &apos;Custom Fields&apos; tab.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
+        public string? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; AdditionalData?.Remove("group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
         private string? _explicitNullValueGroupId = default!;
 #nullable restore
 #else
-        public string GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
+        public string GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; AdditionalData?.Remove("group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
         private string _explicitNullValueGroupId = default!;
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldOptionRequest>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldOptionRequest>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldOptionRequest>? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldOptionRequest> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldOptionRequest> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldOptionRequest> _explicitNullValueOptions = default!;
 #endif
         /// <summary>An optional user group to choose from when selecting values for User or UserListBox fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserGroupId { get => _explicitNullValueUserGroupId; set { _explicitNullValueUserGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_group_id"); else _explicitNullProperties?.Remove("user_group_id"); } }
+        public string? UserGroupId { get => _explicitNullValueUserGroupId; set { _explicitNullValueUserGroupId = value; AdditionalData?.Remove("user_group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_group_id"); else _explicitNullProperties?.Remove("user_group_id"); } }
         private string? _explicitNullValueUserGroupId = default!;
 #nullable restore
 #else
-        public string UserGroupId { get => _explicitNullValueUserGroupId; set { _explicitNullValueUserGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_group_id"); else _explicitNullProperties?.Remove("user_group_id"); } }
+        public string UserGroupId { get => _explicitNullValueUserGroupId; set { _explicitNullValueUserGroupId = value; AdditionalData?.Remove("user_group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_group_id"); else _explicitNullProperties?.Remove("user_group_id"); } }
         private string _explicitNullValueUserGroupId = default!;
 #endif
         /// <summary>
@@ -94,7 +99,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "field_type", n => { FieldType = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldRequestFieldType>(); } },
+                { "field_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldRequestFieldType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFieldType = default; _explicitNullProperties?.Remove("field_type"); AdditionalData["field_type"] = unknown; } else { FieldType = parsed; AdditionalData.Remove("field_type"); } } },
                 { "group_id", n => { GroupId = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldOptionRequest>(global::Soenneker.Keap.OpenApiClient.Models.CreateCustomFieldOptionRequest.CreateFromDiscriminatorValue)?.AsList(); } },

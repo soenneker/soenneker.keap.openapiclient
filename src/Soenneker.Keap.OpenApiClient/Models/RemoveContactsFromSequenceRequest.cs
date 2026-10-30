@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contact_ids") is { } nullNodeContactIds && nullNodeContactIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactIds = null;
+            if (parseNode.GetChildNode("contact_ids") is null) { _explicitNullValueContactIds = default!; _explicitNullProperties?.Remove("contact_ids"); }
+            else if (parseNode.GetChildNode("contact_ids") is { } nullNodeContactIds && nullNodeContactIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>List of contact IDs to remove from the sequence</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_ids"); else _explicitNullProperties?.Remove("contact_ids"); } }
+        public List<string>? ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; AdditionalData?.Remove("contact_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_ids"); else _explicitNullProperties?.Remove("contact_ids"); } }
         private List<string>? _explicitNullValueContactIds = default!;
 #nullable restore
 #else
-        public List<string> ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_ids"); else _explicitNullProperties?.Remove("contact_ids"); } }
+        public List<string> ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; AdditionalData?.Remove("contact_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_ids"); else _explicitNullProperties?.Remove("contact_ids"); } }
         private List<string> _explicitNullValueContactIds = default!;
 #endif
         /// <summary>

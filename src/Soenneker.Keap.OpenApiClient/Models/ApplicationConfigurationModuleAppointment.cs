@@ -17,8 +17,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("appointment_types") is { } nullNodeAppointmentTypes && nullNodeAppointmentTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppointmentTypes = null;
-            if (parseNode.GetChildNode("share_opportunity_with_related_user") is { } nullNodeShareOpportunityWithRelatedUser && nullNodeShareOpportunityWithRelatedUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShareOpportunityWithRelatedUser = null;
+            if (parseNode.GetChildNode("appointment_types") is null) { _explicitNullValueAppointmentTypes = default!; _explicitNullProperties?.Remove("appointment_types"); }
+            else if (parseNode.GetChildNode("appointment_types") is { } nullNodeAppointmentTypes && nullNodeAppointmentTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppointmentTypes = null;
+            if (parseNode.GetChildNode("share_opportunity_with_related_user") is null) { _explicitNullValueShareOpportunityWithRelatedUser = default!; _explicitNullProperties?.Remove("share_opportunity_with_related_user"); }
+            else if (parseNode.GetChildNode("share_opportunity_with_related_user") is { } nullNodeShareOpportunityWithRelatedUser && nullNodeShareOpportunityWithRelatedUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShareOpportunityWithRelatedUser = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The appointment_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppointmentTypes { get => _explicitNullValueAppointmentTypes; set { _explicitNullValueAppointmentTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appointment_types"); else _explicitNullProperties?.Remove("appointment_types"); } }
+        public string? AppointmentTypes { get => _explicitNullValueAppointmentTypes; set { _explicitNullValueAppointmentTypes = value; AdditionalData?.Remove("appointment_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appointment_types"); else _explicitNullProperties?.Remove("appointment_types"); } }
         private string? _explicitNullValueAppointmentTypes = default!;
 #nullable restore
 #else
-        public string AppointmentTypes { get => _explicitNullValueAppointmentTypes; set { _explicitNullValueAppointmentTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appointment_types"); else _explicitNullProperties?.Remove("appointment_types"); } }
+        public string AppointmentTypes { get => _explicitNullValueAppointmentTypes; set { _explicitNullValueAppointmentTypes = value; AdditionalData?.Remove("appointment_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appointment_types"); else _explicitNullProperties?.Remove("appointment_types"); } }
         private string _explicitNullValueAppointmentTypes = default!;
 #endif
         /// <summary>The share_opportunity_with_related_user property</summary>
-        public bool? ShareOpportunityWithRelatedUser { get => _explicitNullValueShareOpportunityWithRelatedUser; set { _explicitNullValueShareOpportunityWithRelatedUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("share_opportunity_with_related_user"); else _explicitNullProperties?.Remove("share_opportunity_with_related_user"); } }
+        public bool? ShareOpportunityWithRelatedUser { get => _explicitNullValueShareOpportunityWithRelatedUser; set { _explicitNullValueShareOpportunityWithRelatedUser = value; AdditionalData?.Remove("share_opportunity_with_related_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("share_opportunity_with_related_user"); else _explicitNullProperties?.Remove("share_opportunity_with_related_user"); } }
         private bool? _explicitNullValueShareOpportunityWithRelatedUser = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAppointment"/> and sets the default values.

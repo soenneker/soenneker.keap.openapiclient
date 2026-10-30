@@ -17,8 +17,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default_stage") is { } nullNodeDefaultStage && nullNodeDefaultStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultStage = null;
-            if (parseNode.GetChildNode("states") is { } nullNodeStates && nullNodeStates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) States = null;
+            if (parseNode.GetChildNode("default_stage") is null) { _explicitNullValueDefaultStage = default!; _explicitNullProperties?.Remove("default_stage"); }
+            else if (parseNode.GetChildNode("default_stage") is { } nullNodeDefaultStage && nullNodeDefaultStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultStage = null;
+            if (parseNode.GetChildNode("states") is null) { _explicitNullValueStates = default!; _explicitNullProperties?.Remove("states"); }
+            else if (parseNode.GetChildNode("states") is { } nullNodeStates && nullNodeStates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) States = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The default_stage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultStage { get => _explicitNullValueDefaultStage; set { _explicitNullValueDefaultStage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_stage"); else _explicitNullProperties?.Remove("default_stage"); } }
+        public string? DefaultStage { get => _explicitNullValueDefaultStage; set { _explicitNullValueDefaultStage = value; AdditionalData?.Remove("default_stage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_stage"); else _explicitNullProperties?.Remove("default_stage"); } }
         private string? _explicitNullValueDefaultStage = default!;
 #nullable restore
 #else
-        public string DefaultStage { get => _explicitNullValueDefaultStage; set { _explicitNullValueDefaultStage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_stage"); else _explicitNullProperties?.Remove("default_stage"); } }
+        public string DefaultStage { get => _explicitNullValueDefaultStage; set { _explicitNullValueDefaultStage = value; AdditionalData?.Remove("default_stage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_stage"); else _explicitNullProperties?.Remove("default_stage"); } }
         private string _explicitNullValueDefaultStage = default!;
 #endif
         /// <summary>The states property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStates? States { get => _explicitNullValueStates; set { _explicitNullValueStates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("states"); else _explicitNullProperties?.Remove("states"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStates? States { get => _explicitNullValueStates; set { _explicitNullValueStates = value; AdditionalData?.Remove("states"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("states"); else _explicitNullProperties?.Remove("states"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStates? _explicitNullValueStates = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStates States { get => _explicitNullValueStates; set { _explicitNullValueStates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("states"); else _explicitNullProperties?.Remove("states"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStates States { get => _explicitNullValueStates; set { _explicitNullValueStates = value; AdditionalData?.Remove("states"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("states"); else _explicitNullProperties?.Remove("states"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleOpportunityStates _explicitNullValueStates = default!;
 #endif
         /// <summary>

@@ -18,42 +18,47 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("automation_id") is { } nullNodeAutomationId && nullNodeAutomationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomationId = null;
-            if (parseNode.GetChildNode("call_name") is { } nullNodeCallName && nullNodeCallName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallName = null;
-            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
-            if (parseNode.GetChildNode("goal_id") is { } nullNodeGoalId && nullNodeGoalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoalId = null;
-            if (parseNode.GetChildNode("integration") is { } nullNodeIntegration && nullNodeIntegration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Integration = null;
+            if (parseNode.GetChildNode("automation_id") is null) { _explicitNullValueAutomationId = default!; _explicitNullProperties?.Remove("automation_id"); }
+            else if (parseNode.GetChildNode("automation_id") is { } nullNodeAutomationId && nullNodeAutomationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomationId = null;
+            if (parseNode.GetChildNode("call_name") is null) { _explicitNullValueCallName = default!; _explicitNullProperties?.Remove("call_name"); }
+            else if (parseNode.GetChildNode("call_name") is { } nullNodeCallName && nullNodeCallName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallName = null;
+            if (parseNode.GetChildNode("contact_id") is null) { _explicitNullValueContactId = default!; _explicitNullProperties?.Remove("contact_id"); }
+            else if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("goal_id") is null) { _explicitNullValueGoalId = default!; _explicitNullProperties?.Remove("goal_id"); }
+            else if (parseNode.GetChildNode("goal_id") is { } nullNodeGoalId && nullNodeGoalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoalId = null;
+            if (parseNode.GetChildNode("integration") is null) { _explicitNullValueIntegration = default!; _explicitNullProperties?.Remove("integration"); }
+            else if (parseNode.GetChildNode("integration") is { } nullNodeIntegration && nullNodeIntegration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Integration = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The automation ID. Required when using automation_id/goal_id approach. Use together with &apos;goal_id&apos;. Mutually exclusive with integration/call_name.</summary>
-        public long? AutomationId { get => _explicitNullValueAutomationId; set { _explicitNullValueAutomationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automation_id"); else _explicitNullProperties?.Remove("automation_id"); } }
+        public long? AutomationId { get => _explicitNullValueAutomationId; set { _explicitNullValueAutomationId = value; AdditionalData?.Remove("automation_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automation_id"); else _explicitNullProperties?.Remove("automation_id"); } }
         private long? _explicitNullValueAutomationId = default!;
         /// <summary>The call name of the goal. Required when using integration/call_name approach. Use together with &apos;integration&apos;. Mutually exclusive with automation_id/goal_id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallName { get => _explicitNullValueCallName; set { _explicitNullValueCallName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_name"); else _explicitNullProperties?.Remove("call_name"); } }
+        public string? CallName { get => _explicitNullValueCallName; set { _explicitNullValueCallName = value; AdditionalData?.Remove("call_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_name"); else _explicitNullProperties?.Remove("call_name"); } }
         private string? _explicitNullValueCallName = default!;
 #nullable restore
 #else
-        public string CallName { get => _explicitNullValueCallName; set { _explicitNullValueCallName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_name"); else _explicitNullProperties?.Remove("call_name"); } }
+        public string CallName { get => _explicitNullValueCallName; set { _explicitNullValueCallName = value; AdditionalData?.Remove("call_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_name"); else _explicitNullProperties?.Remove("call_name"); } }
         private string _explicitNullValueCallName = default!;
 #endif
         /// <summary>The contact ID for whom to achieve the goal</summary>
-        public long? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public long? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private long? _explicitNullValueContactId = default!;
         /// <summary>The goal ID within the automation. Required when using automation_id/goal_id approach. Use together with &apos;automation_id&apos;. Mutually exclusive with integration/call_name.</summary>
-        public long? GoalId { get => _explicitNullValueGoalId; set { _explicitNullValueGoalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal_id"); else _explicitNullProperties?.Remove("goal_id"); } }
+        public long? GoalId { get => _explicitNullValueGoalId; set { _explicitNullValueGoalId = value; AdditionalData?.Remove("goal_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal_id"); else _explicitNullProperties?.Remove("goal_id"); } }
         private long? _explicitNullValueGoalId = default!;
         /// <summary>The integration name of the goal. Required when using integration/call_name approach. Use together with &apos;call_name&apos;. Mutually exclusive with automation_id/goal_id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Integration { get => _explicitNullValueIntegration; set { _explicitNullValueIntegration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration"); else _explicitNullProperties?.Remove("integration"); } }
+        public string? Integration { get => _explicitNullValueIntegration; set { _explicitNullValueIntegration = value; AdditionalData?.Remove("integration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration"); else _explicitNullProperties?.Remove("integration"); } }
         private string? _explicitNullValueIntegration = default!;
 #nullable restore
 #else
-        public string Integration { get => _explicitNullValueIntegration; set { _explicitNullValueIntegration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration"); else _explicitNullProperties?.Remove("integration"); } }
+        public string Integration { get => _explicitNullValueIntegration; set { _explicitNullValueIntegration = value; AdditionalData?.Remove("integration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration"); else _explicitNullProperties?.Remove("integration"); } }
         private string _explicitNullValueIntegration = default!;
 #endif
         /// <summary>

@@ -17,27 +17,30 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("discount_method") is { } nullNodeDiscountMethod && nullNodeDiscountMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountMethod = null;
-            if (parseNode.GetChildNode("special_item_id") is { } nullNodeSpecialItemId && nullNodeSpecialItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialItemId = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("discount_method") is null) { _explicitNullValueDiscountMethod = default!; _explicitNullProperties?.Remove("discount_method"); }
+            else if (parseNode.GetChildNode("discount_method") is { } nullNodeDiscountMethod && nullNodeDiscountMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountMethod = null;
+            if (parseNode.GetChildNode("special_item_id") is null) { _explicitNullValueSpecialItemId = default!; _explicitNullProperties?.Remove("special_item_id"); }
+            else if (parseNode.GetChildNode("special_item_id") is { } nullNodeSpecialItemId && nullNodeSpecialItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialItemId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Discount amount</summary>
-        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private double? _explicitNullValueAmount = default!;
         /// <summary>Discount method</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.DiscountDiscountMethod? DiscountMethod { get => _explicitNullValueDiscountMethod; set { _explicitNullValueDiscountMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_method"); else _explicitNullProperties?.Remove("discount_method"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.DiscountDiscountMethod? DiscountMethod { get => _explicitNullValueDiscountMethod; set { _explicitNullValueDiscountMethod = value; AdditionalData?.Remove("discount_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_method"); else _explicitNullProperties?.Remove("discount_method"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.DiscountDiscountMethod? _explicitNullValueDiscountMethod = default!;
         /// <summary>Discount item ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpecialItemId { get => _explicitNullValueSpecialItemId; set { _explicitNullValueSpecialItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("special_item_id"); else _explicitNullProperties?.Remove("special_item_id"); } }
+        public string? SpecialItemId { get => _explicitNullValueSpecialItemId; set { _explicitNullValueSpecialItemId = value; AdditionalData?.Remove("special_item_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("special_item_id"); else _explicitNullProperties?.Remove("special_item_id"); } }
         private string? _explicitNullValueSpecialItemId = default!;
 #nullable restore
 #else
-        public string SpecialItemId { get => _explicitNullValueSpecialItemId; set { _explicitNullValueSpecialItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("special_item_id"); else _explicitNullProperties?.Remove("special_item_id"); } }
+        public string SpecialItemId { get => _explicitNullValueSpecialItemId; set { _explicitNullValueSpecialItemId = value; AdditionalData?.Remove("special_item_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("special_item_id"); else _explicitNullProperties?.Remove("special_item_id"); } }
         private string _explicitNullValueSpecialItemId = default!;
 #endif
         /// <summary>
@@ -66,7 +69,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
-                { "discount_method", n => { DiscountMethod = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.DiscountDiscountMethod>(); } },
+                { "discount_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.DiscountDiscountMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDiscountMethod = default; _explicitNullProperties?.Remove("discount_method"); AdditionalData["discount_method"] = unknown; } else { DiscountMethod = parsed; AdditionalData.Remove("discount_method"); } } },
                 { "special_item_id", n => { SpecialItemId = n.GetStringValue(); } },
             };
         }

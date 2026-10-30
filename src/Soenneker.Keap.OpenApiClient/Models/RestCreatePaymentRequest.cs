@@ -17,106 +17,118 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("apply_to_commissions") is { } nullNodeApplyToCommissions && nullNodeApplyToCommissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplyToCommissions = null;
-            if (parseNode.GetChildNode("external_create_time") is { } nullNodeExternalCreateTime && nullNodeExternalCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalCreateTime = null;
-            if (parseNode.GetChildNode("external_create_user") is { } nullNodeExternalCreateUser && nullNodeExternalCreateUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalCreateUser = null;
-            if (parseNode.GetChildNode("external_source") is { } nullNodeExternalSource && nullNodeExternalSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSource = null;
-            if (parseNode.GetChildNode("external_source_value") is { } nullNodeExternalSourceValue && nullNodeExternalSourceValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSourceValue = null;
-            if (parseNode.GetChildNode("external_status_value") is { } nullNodeExternalStatusValue && nullNodeExternalStatusValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalStatusValue = null;
-            if (parseNode.GetChildNode("external_update_time") is { } nullNodeExternalUpdateTime && nullNodeExternalUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUpdateTime = null;
-            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
-            if (parseNode.GetChildNode("payment_amount") is { } nullNodePaymentAmount && nullNodePaymentAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentAmount = null;
-            if (parseNode.GetChildNode("payment_method_id") is { } nullNodePaymentMethodId && nullNodePaymentMethodId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodId = null;
-            if (parseNode.GetChildNode("payment_method_type") is { } nullNodePaymentMethodType && nullNodePaymentMethodType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodType = null;
-            if (parseNode.GetChildNode("payment_time") is { } nullNodePaymentTime && nullNodePaymentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentTime = null;
+            if (parseNode.GetChildNode("apply_to_commissions") is null) { _explicitNullValueApplyToCommissions = default!; _explicitNullProperties?.Remove("apply_to_commissions"); }
+            else if (parseNode.GetChildNode("apply_to_commissions") is { } nullNodeApplyToCommissions && nullNodeApplyToCommissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplyToCommissions = null;
+            if (parseNode.GetChildNode("external_create_time") is null) { _explicitNullValueExternalCreateTime = default!; _explicitNullProperties?.Remove("external_create_time"); }
+            else if (parseNode.GetChildNode("external_create_time") is { } nullNodeExternalCreateTime && nullNodeExternalCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalCreateTime = null;
+            if (parseNode.GetChildNode("external_create_user") is null) { _explicitNullValueExternalCreateUser = default!; _explicitNullProperties?.Remove("external_create_user"); }
+            else if (parseNode.GetChildNode("external_create_user") is { } nullNodeExternalCreateUser && nullNodeExternalCreateUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalCreateUser = null;
+            if (parseNode.GetChildNode("external_source") is null) { _explicitNullValueExternalSource = default!; _explicitNullProperties?.Remove("external_source"); }
+            else if (parseNode.GetChildNode("external_source") is { } nullNodeExternalSource && nullNodeExternalSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSource = null;
+            if (parseNode.GetChildNode("external_source_value") is null) { _explicitNullValueExternalSourceValue = default!; _explicitNullProperties?.Remove("external_source_value"); }
+            else if (parseNode.GetChildNode("external_source_value") is { } nullNodeExternalSourceValue && nullNodeExternalSourceValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSourceValue = null;
+            if (parseNode.GetChildNode("external_status_value") is null) { _explicitNullValueExternalStatusValue = default!; _explicitNullProperties?.Remove("external_status_value"); }
+            else if (parseNode.GetChildNode("external_status_value") is { } nullNodeExternalStatusValue && nullNodeExternalStatusValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalStatusValue = null;
+            if (parseNode.GetChildNode("external_update_time") is null) { _explicitNullValueExternalUpdateTime = default!; _explicitNullProperties?.Remove("external_update_time"); }
+            else if (parseNode.GetChildNode("external_update_time") is { } nullNodeExternalUpdateTime && nullNodeExternalUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUpdateTime = null;
+            if (parseNode.GetChildNode("notes") is null) { _explicitNullValueNotes = default!; _explicitNullProperties?.Remove("notes"); }
+            else if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("payment_amount") is null) { _explicitNullValuePaymentAmount = default!; _explicitNullProperties?.Remove("payment_amount"); }
+            else if (parseNode.GetChildNode("payment_amount") is { } nullNodePaymentAmount && nullNodePaymentAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentAmount = null;
+            if (parseNode.GetChildNode("payment_method_id") is null) { _explicitNullValuePaymentMethodId = default!; _explicitNullProperties?.Remove("payment_method_id"); }
+            else if (parseNode.GetChildNode("payment_method_id") is { } nullNodePaymentMethodId && nullNodePaymentMethodId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodId = null;
+            if (parseNode.GetChildNode("payment_method_type") is null) { _explicitNullValuePaymentMethodType = default!; _explicitNullProperties?.Remove("payment_method_type"); }
+            else if (parseNode.GetChildNode("payment_method_type") is { } nullNodePaymentMethodType && nullNodePaymentMethodType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodType = null;
+            if (parseNode.GetChildNode("payment_time") is null) { _explicitNullValuePaymentTime = default!; _explicitNullProperties?.Remove("payment_time"); }
+            else if (parseNode.GetChildNode("payment_time") is { } nullNodePaymentTime && nullNodePaymentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to apply this payment to commissions.</summary>
-        public bool? ApplyToCommissions { get => _explicitNullValueApplyToCommissions; set { _explicitNullValueApplyToCommissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apply_to_commissions"); else _explicitNullProperties?.Remove("apply_to_commissions"); } }
+        public bool? ApplyToCommissions { get => _explicitNullValueApplyToCommissions; set { _explicitNullValueApplyToCommissions = value; AdditionalData?.Remove("apply_to_commissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apply_to_commissions"); else _explicitNullProperties?.Remove("apply_to_commissions"); } }
         private bool? _explicitNullValueApplyToCommissions = default!;
         /// <summary>The external creation timestamp of this payment. In ISO-8601 format (e.g. 2024-05-21T23:00:00Z)</summary>
-        public DateTimeOffset? ExternalCreateTime { get => _explicitNullValueExternalCreateTime; set { _explicitNullValueExternalCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_create_time"); else _explicitNullProperties?.Remove("external_create_time"); } }
+        public DateTimeOffset? ExternalCreateTime { get => _explicitNullValueExternalCreateTime; set { _explicitNullValueExternalCreateTime = value; AdditionalData?.Remove("external_create_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_create_time"); else _explicitNullProperties?.Remove("external_create_time"); } }
         private DateTimeOffset? _explicitNullValueExternalCreateTime = default!;
         /// <summary>The user who created this payment externally.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalCreateUser { get => _explicitNullValueExternalCreateUser; set { _explicitNullValueExternalCreateUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_create_user"); else _explicitNullProperties?.Remove("external_create_user"); } }
+        public string? ExternalCreateUser { get => _explicitNullValueExternalCreateUser; set { _explicitNullValueExternalCreateUser = value; AdditionalData?.Remove("external_create_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_create_user"); else _explicitNullProperties?.Remove("external_create_user"); } }
         private string? _explicitNullValueExternalCreateUser = default!;
 #nullable restore
 #else
-        public string ExternalCreateUser { get => _explicitNullValueExternalCreateUser; set { _explicitNullValueExternalCreateUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_create_user"); else _explicitNullProperties?.Remove("external_create_user"); } }
+        public string ExternalCreateUser { get => _explicitNullValueExternalCreateUser; set { _explicitNullValueExternalCreateUser = value; AdditionalData?.Remove("external_create_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_create_user"); else _explicitNullProperties?.Remove("external_create_user"); } }
         private string _explicitNullValueExternalCreateUser = default!;
 #endif
         /// <summary>The external source type of this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalSource { get => _explicitNullValueExternalSource; set { _explicitNullValueExternalSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_source"); else _explicitNullProperties?.Remove("external_source"); } }
+        public string? ExternalSource { get => _explicitNullValueExternalSource; set { _explicitNullValueExternalSource = value; AdditionalData?.Remove("external_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_source"); else _explicitNullProperties?.Remove("external_source"); } }
         private string? _explicitNullValueExternalSource = default!;
 #nullable restore
 #else
-        public string ExternalSource { get => _explicitNullValueExternalSource; set { _explicitNullValueExternalSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_source"); else _explicitNullProperties?.Remove("external_source"); } }
+        public string ExternalSource { get => _explicitNullValueExternalSource; set { _explicitNullValueExternalSource = value; AdditionalData?.Remove("external_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_source"); else _explicitNullProperties?.Remove("external_source"); } }
         private string _explicitNullValueExternalSource = default!;
 #endif
         /// <summary>The external source value of this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalSourceValue { get => _explicitNullValueExternalSourceValue; set { _explicitNullValueExternalSourceValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_source_value"); else _explicitNullProperties?.Remove("external_source_value"); } }
+        public string? ExternalSourceValue { get => _explicitNullValueExternalSourceValue; set { _explicitNullValueExternalSourceValue = value; AdditionalData?.Remove("external_source_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_source_value"); else _explicitNullProperties?.Remove("external_source_value"); } }
         private string? _explicitNullValueExternalSourceValue = default!;
 #nullable restore
 #else
-        public string ExternalSourceValue { get => _explicitNullValueExternalSourceValue; set { _explicitNullValueExternalSourceValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_source_value"); else _explicitNullProperties?.Remove("external_source_value"); } }
+        public string ExternalSourceValue { get => _explicitNullValueExternalSourceValue; set { _explicitNullValueExternalSourceValue = value; AdditionalData?.Remove("external_source_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_source_value"); else _explicitNullProperties?.Remove("external_source_value"); } }
         private string _explicitNullValueExternalSourceValue = default!;
 #endif
         /// <summary>The external status value of this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalStatusValue { get => _explicitNullValueExternalStatusValue; set { _explicitNullValueExternalStatusValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_status_value"); else _explicitNullProperties?.Remove("external_status_value"); } }
+        public string? ExternalStatusValue { get => _explicitNullValueExternalStatusValue; set { _explicitNullValueExternalStatusValue = value; AdditionalData?.Remove("external_status_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_status_value"); else _explicitNullProperties?.Remove("external_status_value"); } }
         private string? _explicitNullValueExternalStatusValue = default!;
 #nullable restore
 #else
-        public string ExternalStatusValue { get => _explicitNullValueExternalStatusValue; set { _explicitNullValueExternalStatusValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_status_value"); else _explicitNullProperties?.Remove("external_status_value"); } }
+        public string ExternalStatusValue { get => _explicitNullValueExternalStatusValue; set { _explicitNullValueExternalStatusValue = value; AdditionalData?.Remove("external_status_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_status_value"); else _explicitNullProperties?.Remove("external_status_value"); } }
         private string _explicitNullValueExternalStatusValue = default!;
 #endif
         /// <summary>The external update timestamp of this payment. In ISO-8601 format (e.g. 2024-05-21T23:00:00Z)</summary>
-        public DateTimeOffset? ExternalUpdateTime { get => _explicitNullValueExternalUpdateTime; set { _explicitNullValueExternalUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_update_time"); else _explicitNullProperties?.Remove("external_update_time"); } }
+        public DateTimeOffset? ExternalUpdateTime { get => _explicitNullValueExternalUpdateTime; set { _explicitNullValueExternalUpdateTime = value; AdditionalData?.Remove("external_update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_update_time"); else _explicitNullProperties?.Remove("external_update_time"); } }
         private DateTimeOffset? _explicitNullValueExternalUpdateTime = default!;
         /// <summary>The notes for this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
         private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
         private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>The amount to pay. Must not exceed the current balance of the order. Must be greater than 0 if charging with a payment_method_id</summary>
-        public double? PaymentAmount { get => _explicitNullValuePaymentAmount; set { _explicitNullValuePaymentAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_amount"); else _explicitNullProperties?.Remove("payment_amount"); } }
+        public double? PaymentAmount { get => _explicitNullValuePaymentAmount; set { _explicitNullValuePaymentAmount = value; AdditionalData?.Remove("payment_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_amount"); else _explicitNullProperties?.Remove("payment_amount"); } }
         private double? _explicitNullValuePaymentAmount = default!;
         /// <summary>The payment method id to charge immediately against this order. At least one of payment_method_id or payment_method_type is required. If payment_method_id is provided, payment_method_type is ignored. Omit if you want to add a payment record instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
+        public string? PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; AdditionalData?.Remove("payment_method_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
         private string? _explicitNullValuePaymentMethodId = default!;
 #nullable restore
 #else
-        public string PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
+        public string PaymentMethodId { get => _explicitNullValuePaymentMethodId; set { _explicitNullValuePaymentMethodId = value; AdditionalData?.Remove("payment_method_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_id"); else _explicitNullProperties?.Remove("payment_method_id"); } }
         private string _explicitNullValuePaymentMethodId = default!;
 #endif
         /// <summary>The manual payment method type for manually recording a payment. At least one of payment_method_id or payment_method_type is required. Ignored if payment_method_id is provided. Value must exactly match one of the Manual Payment Types configured for your application under Ecommerce Settings &gt; Orders (e.g. &apos;Credit Card (Manual)&apos;, &apos;Check&apos;, &apos;Cash&apos;, &apos;Money Order&apos;, &apos;Adjustment&apos;); unrecognized values will be rejected. Add custom types there if the one you need isn&apos;t listed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethodType { get => _explicitNullValuePaymentMethodType; set { _explicitNullValuePaymentMethodType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_type"); else _explicitNullProperties?.Remove("payment_method_type"); } }
+        public string? PaymentMethodType { get => _explicitNullValuePaymentMethodType; set { _explicitNullValuePaymentMethodType = value; AdditionalData?.Remove("payment_method_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_type"); else _explicitNullProperties?.Remove("payment_method_type"); } }
         private string? _explicitNullValuePaymentMethodType = default!;
 #nullable restore
 #else
-        public string PaymentMethodType { get => _explicitNullValuePaymentMethodType; set { _explicitNullValuePaymentMethodType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_type"); else _explicitNullProperties?.Remove("payment_method_type"); } }
+        public string PaymentMethodType { get => _explicitNullValuePaymentMethodType; set { _explicitNullValuePaymentMethodType = value; AdditionalData?.Remove("payment_method_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_type"); else _explicitNullProperties?.Remove("payment_method_type"); } }
         private string _explicitNullValuePaymentMethodType = default!;
 #endif
         /// <summary>The date and time of payment. In ISO-8601 format (e.g. 2024-05-21T23:00:00Z)</summary>
-        public DateTimeOffset? PaymentTime { get => _explicitNullValuePaymentTime; set { _explicitNullValuePaymentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_time"); else _explicitNullProperties?.Remove("payment_time"); } }
+        public DateTimeOffset? PaymentTime { get => _explicitNullValuePaymentTime; set { _explicitNullValuePaymentTime = value; AdditionalData?.Remove("payment_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_time"); else _explicitNullProperties?.Remove("payment_time"); } }
         private DateTimeOffset? _explicitNullValuePaymentTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.RestCreatePaymentRequest"/> and sets the default values.

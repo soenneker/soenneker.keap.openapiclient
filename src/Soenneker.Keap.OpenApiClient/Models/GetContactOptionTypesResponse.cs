@@ -17,7 +17,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("option_types") is { } nullNodeOptionTypes && nullNodeOptionTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionTypes = null;
+            if (parseNode.GetChildNode("option_types") is null) { _explicitNullValueOptionTypes = default!; _explicitNullProperties?.Remove("option_types"); }
+            else if (parseNode.GetChildNode("option_types") is { } nullNodeOptionTypes && nullNodeOptionTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The option_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? OptionTypes { get => _explicitNullValueOptionTypes; set { _explicitNullValueOptionTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_types"); else _explicitNullProperties?.Remove("option_types"); } }
+        public List<string>? OptionTypes { get => _explicitNullValueOptionTypes; set { _explicitNullValueOptionTypes = value; AdditionalData?.Remove("option_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_types"); else _explicitNullProperties?.Remove("option_types"); } }
         private List<string>? _explicitNullValueOptionTypes = default!;
 #nullable restore
 #else
-        public List<string> OptionTypes { get => _explicitNullValueOptionTypes; set { _explicitNullValueOptionTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_types"); else _explicitNullProperties?.Remove("option_types"); } }
+        public List<string> OptionTypes { get => _explicitNullValueOptionTypes; set { _explicitNullValueOptionTypes = value; AdditionalData?.Remove("option_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_types"); else _explicitNullProperties?.Remove("option_types"); } }
         private List<string> _explicitNullValueOptionTypes = default!;
 #endif
         /// <summary>

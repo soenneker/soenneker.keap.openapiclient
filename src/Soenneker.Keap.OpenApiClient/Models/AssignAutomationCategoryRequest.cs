@@ -18,34 +18,37 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("apply_category") is { } nullNodeApplyCategory && nullNodeApplyCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplyCategory = null;
-            if (parseNode.GetChildNode("automation_ids") is { } nullNodeAutomationIds && nullNodeAutomationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomationIds = null;
-            if (parseNode.GetChildNode("category_ids") is { } nullNodeCategoryIds && nullNodeCategoryIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategoryIds = null;
+            if (parseNode.GetChildNode("apply_category") is null) { _explicitNullValueApplyCategory = default!; _explicitNullProperties?.Remove("apply_category"); }
+            else if (parseNode.GetChildNode("apply_category") is { } nullNodeApplyCategory && nullNodeApplyCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplyCategory = null;
+            if (parseNode.GetChildNode("automation_ids") is null) { _explicitNullValueAutomationIds = default!; _explicitNullProperties?.Remove("automation_ids"); }
+            else if (parseNode.GetChildNode("automation_ids") is { } nullNodeAutomationIds && nullNodeAutomationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomationIds = null;
+            if (parseNode.GetChildNode("category_ids") is null) { _explicitNullValueCategoryIds = default!; _explicitNullProperties?.Remove("category_ids"); }
+            else if (parseNode.GetChildNode("category_ids") is { } nullNodeCategoryIds && nullNodeCategoryIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategoryIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If true, the categories will be applied to the automations. If false, the categories will be removed from the automations.</summary>
-        public bool? ApplyCategory { get => _explicitNullValueApplyCategory; set { _explicitNullValueApplyCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apply_category"); else _explicitNullProperties?.Remove("apply_category"); } }
+        public bool? ApplyCategory { get => _explicitNullValueApplyCategory; set { _explicitNullValueApplyCategory = value; AdditionalData?.Remove("apply_category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apply_category"); else _explicitNullProperties?.Remove("apply_category"); } }
         private bool? _explicitNullValueApplyCategory = default!;
         /// <summary>List of automation IDs to update. Use &apos;0&apos; as a wildcard to select all automations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AutomationIds { get => _explicitNullValueAutomationIds; set { _explicitNullValueAutomationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automation_ids"); else _explicitNullProperties?.Remove("automation_ids"); } }
+        public List<string>? AutomationIds { get => _explicitNullValueAutomationIds; set { _explicitNullValueAutomationIds = value; AdditionalData?.Remove("automation_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automation_ids"); else _explicitNullProperties?.Remove("automation_ids"); } }
         private List<string>? _explicitNullValueAutomationIds = default!;
 #nullable restore
 #else
-        public List<string> AutomationIds { get => _explicitNullValueAutomationIds; set { _explicitNullValueAutomationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automation_ids"); else _explicitNullProperties?.Remove("automation_ids"); } }
+        public List<string> AutomationIds { get => _explicitNullValueAutomationIds; set { _explicitNullValueAutomationIds = value; AdditionalData?.Remove("automation_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automation_ids"); else _explicitNullProperties?.Remove("automation_ids"); } }
         private List<string> _explicitNullValueAutomationIds = default!;
 #endif
         /// <summary>List of category IDs to assign to the automations</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CategoryIds { get => _explicitNullValueCategoryIds; set { _explicitNullValueCategoryIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category_ids"); else _explicitNullProperties?.Remove("category_ids"); } }
+        public List<string>? CategoryIds { get => _explicitNullValueCategoryIds; set { _explicitNullValueCategoryIds = value; AdditionalData?.Remove("category_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category_ids"); else _explicitNullProperties?.Remove("category_ids"); } }
         private List<string>? _explicitNullValueCategoryIds = default!;
 #nullable restore
 #else
-        public List<string> CategoryIds { get => _explicitNullValueCategoryIds; set { _explicitNullValueCategoryIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category_ids"); else _explicitNullProperties?.Remove("category_ids"); } }
+        public List<string> CategoryIds { get => _explicitNullValueCategoryIds; set { _explicitNullValueCategoryIds = value; AdditionalData?.Remove("category_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category_ids"); else _explicitNullProperties?.Remove("category_ids"); } }
         private List<string> _explicitNullValueCategoryIds = default!;
 #endif
         /// <summary>

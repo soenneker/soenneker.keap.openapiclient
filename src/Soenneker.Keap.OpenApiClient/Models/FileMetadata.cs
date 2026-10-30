@@ -17,101 +17,112 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
-            if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
-            if (parseNode.GetChildNode("created_by_id") is { } nullNodeCreatedById && nullNodeCreatedById.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedById = null;
-            if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
-            if (parseNode.GetChildNode("file_box_type") is { } nullNodeFileBoxType && nullNodeFileBoxType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileBoxType = null;
-            if (parseNode.GetChildNode("file_name") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
-            if (parseNode.GetChildNode("file_size") is { } nullNodeFileSize && nullNodeFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileSize = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("is_public") is { } nullNodeIsPublic && nullNodeIsPublic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPublic = null;
-            if (parseNode.GetChildNode("remote_file_key") is { } nullNodeRemoteFileKey && nullNodeRemoteFileKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoteFileKey = null;
-            if (parseNode.GetChildNode("updated_time") is { } nullNodeUpdatedTime && nullNodeUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTime = null;
+            if (parseNode.GetChildNode("category") is null) { _explicitNullValueCategory = default!; _explicitNullProperties?.Remove("category"); }
+            else if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
+            if (parseNode.GetChildNode("contact_id") is null) { _explicitNullValueContactId = default!; _explicitNullProperties?.Remove("contact_id"); }
+            else if (parseNode.GetChildNode("contact_id") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("created_by_id") is null) { _explicitNullValueCreatedById = default!; _explicitNullProperties?.Remove("created_by_id"); }
+            else if (parseNode.GetChildNode("created_by_id") is { } nullNodeCreatedById && nullNodeCreatedById.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedById = null;
+            if (parseNode.GetChildNode("created_time") is null) { _explicitNullValueCreatedTime = default!; _explicitNullProperties?.Remove("created_time"); }
+            else if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
+            if (parseNode.GetChildNode("file_box_type") is null) { _explicitNullValueFileBoxType = default!; _explicitNullProperties?.Remove("file_box_type"); }
+            else if (parseNode.GetChildNode("file_box_type") is { } nullNodeFileBoxType && nullNodeFileBoxType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileBoxType = null;
+            if (parseNode.GetChildNode("file_name") is null) { _explicitNullValueFileName = default!; _explicitNullProperties?.Remove("file_name"); }
+            else if (parseNode.GetChildNode("file_name") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
+            if (parseNode.GetChildNode("file_size") is null) { _explicitNullValueFileSize = default!; _explicitNullProperties?.Remove("file_size"); }
+            else if (parseNode.GetChildNode("file_size") is { } nullNodeFileSize && nullNodeFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileSize = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_public") is null) { _explicitNullValueIsPublic = default!; _explicitNullProperties?.Remove("is_public"); }
+            else if (parseNode.GetChildNode("is_public") is { } nullNodeIsPublic && nullNodeIsPublic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPublic = null;
+            if (parseNode.GetChildNode("remote_file_key") is null) { _explicitNullValueRemoteFileKey = default!; _explicitNullProperties?.Remove("remote_file_key"); }
+            else if (parseNode.GetChildNode("remote_file_key") is { } nullNodeRemoteFileKey && nullNodeRemoteFileKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoteFileKey = null;
+            if (parseNode.GetChildNode("updated_time") is null) { _explicitNullValueUpdatedTime = default!; _explicitNullProperties?.Remove("updated_time"); }
+            else if (parseNode.GetChildNode("updated_time") is { } nullNodeUpdatedTime && nullNodeUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>File category</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.FileMetadataCategory? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.FileMetadataCategory? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.FileMetadataCategory? _explicitNullValueCategory = default!;
         /// <summary>Associated contact ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; AdditionalData?.Remove("contact_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_id"); else _explicitNullProperties?.Remove("contact_id"); } }
         private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>ID of user who created the file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedById { get => _explicitNullValueCreatedById; set { _explicitNullValueCreatedById = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_id"); else _explicitNullProperties?.Remove("created_by_id"); } }
+        public string? CreatedById { get => _explicitNullValueCreatedById; set { _explicitNullValueCreatedById = value; AdditionalData?.Remove("created_by_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_id"); else _explicitNullProperties?.Remove("created_by_id"); } }
         private string? _explicitNullValueCreatedById = default!;
 #nullable restore
 #else
-        public string CreatedById { get => _explicitNullValueCreatedById; set { _explicitNullValueCreatedById = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_id"); else _explicitNullProperties?.Remove("created_by_id"); } }
+        public string CreatedById { get => _explicitNullValueCreatedById; set { _explicitNullValueCreatedById = value; AdditionalData?.Remove("created_by_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by_id"); else _explicitNullProperties?.Remove("created_by_id"); } }
         private string _explicitNullValueCreatedById = default!;
 #endif
         /// <summary>Creation timestamp (ISO-8601)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        public string? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; AdditionalData?.Remove("created_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
         private string? _explicitNullValueCreatedTime = default!;
 #nullable restore
 #else
-        public string CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        public string CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; AdditionalData?.Remove("created_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
         private string _explicitNullValueCreatedTime = default!;
 #endif
         /// <summary>File box type</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.FileMetadataFileBoxType? FileBoxType { get => _explicitNullValueFileBoxType; set { _explicitNullValueFileBoxType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_box_type"); else _explicitNullProperties?.Remove("file_box_type"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.FileMetadataFileBoxType? FileBoxType { get => _explicitNullValueFileBoxType; set { _explicitNullValueFileBoxType = value; AdditionalData?.Remove("file_box_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_box_type"); else _explicitNullProperties?.Remove("file_box_type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.FileMetadataFileBoxType? _explicitNullValueFileBoxType = default!;
         /// <summary>File name with extension</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
+        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; AdditionalData?.Remove("file_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
         private string? _explicitNullValueFileName = default!;
 #nullable restore
 #else
-        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
+        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; AdditionalData?.Remove("file_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
         private string _explicitNullValueFileName = default!;
 #endif
         /// <summary>File size in bytes</summary>
-        public long? FileSize { get => _explicitNullValueFileSize; set { _explicitNullValueFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_size"); else _explicitNullProperties?.Remove("file_size"); } }
+        public long? FileSize { get => _explicitNullValueFileSize; set { _explicitNullValueFileSize = value; AdditionalData?.Remove("file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_size"); else _explicitNullProperties?.Remove("file_size"); } }
         private long? _explicitNullValueFileSize = default!;
         /// <summary>File ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Whether file is publicly accessible</summary>
-        public bool? IsPublic { get => _explicitNullValueIsPublic; set { _explicitNullValueIsPublic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_public"); else _explicitNullProperties?.Remove("is_public"); } }
+        public bool? IsPublic { get => _explicitNullValueIsPublic; set { _explicitNullValueIsPublic = value; AdditionalData?.Remove("is_public"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_public"); else _explicitNullProperties?.Remove("is_public"); } }
         private bool? _explicitNullValueIsPublic = default!;
         /// <summary>Remote storage key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RemoteFileKey { get => _explicitNullValueRemoteFileKey; set { _explicitNullValueRemoteFileKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remote_file_key"); else _explicitNullProperties?.Remove("remote_file_key"); } }
+        public string? RemoteFileKey { get => _explicitNullValueRemoteFileKey; set { _explicitNullValueRemoteFileKey = value; AdditionalData?.Remove("remote_file_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remote_file_key"); else _explicitNullProperties?.Remove("remote_file_key"); } }
         private string? _explicitNullValueRemoteFileKey = default!;
 #nullable restore
 #else
-        public string RemoteFileKey { get => _explicitNullValueRemoteFileKey; set { _explicitNullValueRemoteFileKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remote_file_key"); else _explicitNullProperties?.Remove("remote_file_key"); } }
+        public string RemoteFileKey { get => _explicitNullValueRemoteFileKey; set { _explicitNullValueRemoteFileKey = value; AdditionalData?.Remove("remote_file_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remote_file_key"); else _explicitNullProperties?.Remove("remote_file_key"); } }
         private string _explicitNullValueRemoteFileKey = default!;
 #endif
         /// <summary>Last update timestamp (ISO-8601)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
+        public string? UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; AdditionalData?.Remove("updated_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
         private string? _explicitNullValueUpdatedTime = default!;
 #nullable restore
 #else
-        public string UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
+        public string UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; AdditionalData?.Remove("updated_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
         private string _explicitNullValueUpdatedTime = default!;
 #endif
         /// <summary>
@@ -139,11 +150,11 @@ namespace Soenneker.Keap.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.FileMetadataCategory>(); } },
+                { "category", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.FileMetadataCategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCategory = default; _explicitNullProperties?.Remove("category"); AdditionalData["category"] = unknown; } else { Category = parsed; AdditionalData.Remove("category"); } } },
                 { "contact_id", n => { ContactId = n.GetStringValue(); } },
                 { "created_by_id", n => { CreatedById = n.GetStringValue(); } },
                 { "created_time", n => { CreatedTime = n.GetStringValue(); } },
-                { "file_box_type", n => { FileBoxType = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.FileMetadataFileBoxType>(); } },
+                { "file_box_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.FileMetadataFileBoxType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFileBoxType = default; _explicitNullProperties?.Remove("file_box_type"); AdditionalData["file_box_type"] = unknown; } else { FileBoxType = parsed; AdditionalData.Remove("file_box_type"); } } },
                 { "file_name", n => { FileName = n.GetStringValue(); } },
                 { "file_size", n => { FileSize = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },

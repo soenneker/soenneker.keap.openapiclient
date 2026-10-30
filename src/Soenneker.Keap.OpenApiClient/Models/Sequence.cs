@@ -17,60 +17,66 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("active_contact_count") is { } nullNodeActiveContactCount && nullNodeActiveContactCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveContactCount = null;
-            if (parseNode.GetChildNode("active_contact_count_completed") is { } nullNodeActiveContactCountCompleted && nullNodeActiveContactCountCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveContactCountCompleted = null;
-            if (parseNode.GetChildNode("historical_contact_count") is { } nullNodeHistoricalContactCount && nullNodeHistoricalContactCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoricalContactCount = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("paths") is { } nullNodePaths && nullNodePaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paths = null;
+            if (parseNode.GetChildNode("active_contact_count") is null) { _explicitNullValueActiveContactCount = default!; _explicitNullProperties?.Remove("active_contact_count"); }
+            else if (parseNode.GetChildNode("active_contact_count") is { } nullNodeActiveContactCount && nullNodeActiveContactCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveContactCount = null;
+            if (parseNode.GetChildNode("active_contact_count_completed") is null) { _explicitNullValueActiveContactCountCompleted = default!; _explicitNullProperties?.Remove("active_contact_count_completed"); }
+            else if (parseNode.GetChildNode("active_contact_count_completed") is { } nullNodeActiveContactCountCompleted && nullNodeActiveContactCountCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveContactCountCompleted = null;
+            if (parseNode.GetChildNode("historical_contact_count") is null) { _explicitNullValueHistoricalContactCount = default!; _explicitNullProperties?.Remove("historical_contact_count"); }
+            else if (parseNode.GetChildNode("historical_contact_count") is { } nullNodeHistoricalContactCount && nullNodeHistoricalContactCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoricalContactCount = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("paths") is null) { _explicitNullValuePaths = default!; _explicitNullProperties?.Remove("paths"); }
+            else if (parseNode.GetChildNode("paths") is { } nullNodePaths && nullNodePaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paths = null;
         }
 
         /// <summary>Number of contacts currently in this sequence</summary>
-        public int? ActiveContactCount { get => _explicitNullValueActiveContactCount; set { _explicitNullValueActiveContactCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_contact_count"); else _explicitNullProperties?.Remove("active_contact_count"); } }
+        public int? ActiveContactCount { get => _explicitNullValueActiveContactCount; set { _explicitNullValueActiveContactCount = value; AdditionalData?.Remove("active_contact_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_contact_count"); else _explicitNullProperties?.Remove("active_contact_count"); } }
         private int? _explicitNullValueActiveContactCount = default!;
         /// <summary>Number of contacts who have completed this sequence</summary>
-        public int? ActiveContactCountCompleted { get => _explicitNullValueActiveContactCountCompleted; set { _explicitNullValueActiveContactCountCompleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_contact_count_completed"); else _explicitNullProperties?.Remove("active_contact_count_completed"); } }
+        public int? ActiveContactCountCompleted { get => _explicitNullValueActiveContactCountCompleted; set { _explicitNullValueActiveContactCountCompleted = value; AdditionalData?.Remove("active_contact_count_completed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_contact_count_completed"); else _explicitNullProperties?.Remove("active_contact_count_completed"); } }
         private int? _explicitNullValueActiveContactCountCompleted = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Historical contact counts for this sequence</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Keap.OpenApiClient.Models.HistoricalCounts? HistoricalContactCount { get => _explicitNullValueHistoricalContactCount; set { _explicitNullValueHistoricalContactCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historical_contact_count"); else _explicitNullProperties?.Remove("historical_contact_count"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.HistoricalCounts? HistoricalContactCount { get => _explicitNullValueHistoricalContactCount; set { _explicitNullValueHistoricalContactCount = value; AdditionalData?.Remove("historical_contact_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historical_contact_count"); else _explicitNullProperties?.Remove("historical_contact_count"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.HistoricalCounts? _explicitNullValueHistoricalContactCount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Keap.OpenApiClient.Models.HistoricalCounts HistoricalContactCount { get => _explicitNullValueHistoricalContactCount; set { _explicitNullValueHistoricalContactCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historical_contact_count"); else _explicitNullProperties?.Remove("historical_contact_count"); } }
+        public global::Soenneker.Keap.OpenApiClient.Models.HistoricalCounts HistoricalContactCount { get => _explicitNullValueHistoricalContactCount; set { _explicitNullValueHistoricalContactCount = value; AdditionalData?.Remove("historical_contact_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historical_contact_count"); else _explicitNullProperties?.Remove("historical_contact_count"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.HistoricalCounts _explicitNullValueHistoricalContactCount = default!;
 #endif
         /// <summary>The unique identifier of the sequence</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The name of the sequence</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>List of paths in this sequence</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.SequencePath>? Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.SequencePath>? Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.SequencePath>? _explicitNullValuePaths = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.SequencePath> Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.SequencePath> Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.SequencePath> _explicitNullValuePaths = default!;
 #endif
         /// <summary>

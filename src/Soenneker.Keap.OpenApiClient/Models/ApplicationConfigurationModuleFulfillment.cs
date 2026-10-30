@@ -17,8 +17,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default_message_fields") is { } nullNodeDefaultMessageFields && nullNodeDefaultMessageFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMessageFields = null;
-            if (parseNode.GetChildNode("default_message_to") is { } nullNodeDefaultMessageTo && nullNodeDefaultMessageTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMessageTo = null;
+            if (parseNode.GetChildNode("default_message_fields") is null) { _explicitNullValueDefaultMessageFields = default!; _explicitNullProperties?.Remove("default_message_fields"); }
+            else if (parseNode.GetChildNode("default_message_fields") is { } nullNodeDefaultMessageFields && nullNodeDefaultMessageFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMessageFields = null;
+            if (parseNode.GetChildNode("default_message_to") is null) { _explicitNullValueDefaultMessageTo = default!; _explicitNullProperties?.Remove("default_message_to"); }
+            else if (parseNode.GetChildNode("default_message_to") is { } nullNodeDefaultMessageTo && nullNodeDefaultMessageTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMessageTo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The default_message_fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultMessageFields { get => _explicitNullValueDefaultMessageFields; set { _explicitNullValueDefaultMessageFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_message_fields"); else _explicitNullProperties?.Remove("default_message_fields"); } }
+        public string? DefaultMessageFields { get => _explicitNullValueDefaultMessageFields; set { _explicitNullValueDefaultMessageFields = value; AdditionalData?.Remove("default_message_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_message_fields"); else _explicitNullProperties?.Remove("default_message_fields"); } }
         private string? _explicitNullValueDefaultMessageFields = default!;
 #nullable restore
 #else
-        public string DefaultMessageFields { get => _explicitNullValueDefaultMessageFields; set { _explicitNullValueDefaultMessageFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_message_fields"); else _explicitNullProperties?.Remove("default_message_fields"); } }
+        public string DefaultMessageFields { get => _explicitNullValueDefaultMessageFields; set { _explicitNullValueDefaultMessageFields = value; AdditionalData?.Remove("default_message_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_message_fields"); else _explicitNullProperties?.Remove("default_message_fields"); } }
         private string _explicitNullValueDefaultMessageFields = default!;
 #endif
         /// <summary>The default_message_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultMessageTo { get => _explicitNullValueDefaultMessageTo; set { _explicitNullValueDefaultMessageTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_message_to"); else _explicitNullProperties?.Remove("default_message_to"); } }
+        public string? DefaultMessageTo { get => _explicitNullValueDefaultMessageTo; set { _explicitNullValueDefaultMessageTo = value; AdditionalData?.Remove("default_message_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_message_to"); else _explicitNullProperties?.Remove("default_message_to"); } }
         private string? _explicitNullValueDefaultMessageTo = default!;
 #nullable restore
 #else
-        public string DefaultMessageTo { get => _explicitNullValueDefaultMessageTo; set { _explicitNullValueDefaultMessageTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_message_to"); else _explicitNullProperties?.Remove("default_message_to"); } }
+        public string DefaultMessageTo { get => _explicitNullValueDefaultMessageTo; set { _explicitNullValueDefaultMessageTo = value; AdditionalData?.Remove("default_message_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_message_to"); else _explicitNullProperties?.Remove("default_message_to"); } }
         private string _explicitNullValueDefaultMessageTo = default!;
 #endif
         /// <summary>

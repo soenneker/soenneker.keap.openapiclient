@@ -17,9 +17,12 @@ namespace Soenneker.Keap.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default_merchant_account_id") is { } nullNodeDefaultMerchantAccountId && nullNodeDefaultMerchantAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMerchantAccountId = null;
-            if (parseNode.GetChildNode("merchant_accounts") is { } nullNodeMerchantAccounts && nullNodeMerchantAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccounts = null;
-            if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+            if (parseNode.GetChildNode("default_merchant_account_id") is null) { _explicitNullValueDefaultMerchantAccountId = default!; _explicitNullProperties?.Remove("default_merchant_account_id"); }
+            else if (parseNode.GetChildNode("default_merchant_account_id") is { } nullNodeDefaultMerchantAccountId && nullNodeDefaultMerchantAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultMerchantAccountId = null;
+            if (parseNode.GetChildNode("merchant_accounts") is null) { _explicitNullValueMerchantAccounts = default!; _explicitNullProperties?.Remove("merchant_accounts"); }
+            else if (parseNode.GetChildNode("merchant_accounts") is { } nullNodeMerchantAccounts && nullNodeMerchantAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccounts = null;
+            if (parseNode.GetChildNode("next_page_token") is null) { _explicitNullValueNextPageToken = default!; _explicitNullProperties?.Remove("next_page_token"); }
+            else if (parseNode.GetChildNode("next_page_token") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <summary>The default_merchant_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultMerchantAccountId { get => _explicitNullValueDefaultMerchantAccountId; set { _explicitNullValueDefaultMerchantAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_merchant_account_id"); else _explicitNullProperties?.Remove("default_merchant_account_id"); } }
+        public string? DefaultMerchantAccountId { get => _explicitNullValueDefaultMerchantAccountId; set { _explicitNullValueDefaultMerchantAccountId = value; AdditionalData?.Remove("default_merchant_account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_merchant_account_id"); else _explicitNullProperties?.Remove("default_merchant_account_id"); } }
         private string? _explicitNullValueDefaultMerchantAccountId = default!;
 #nullable restore
 #else
-        public string DefaultMerchantAccountId { get => _explicitNullValueDefaultMerchantAccountId; set { _explicitNullValueDefaultMerchantAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_merchant_account_id"); else _explicitNullProperties?.Remove("default_merchant_account_id"); } }
+        public string DefaultMerchantAccountId { get => _explicitNullValueDefaultMerchantAccountId; set { _explicitNullValueDefaultMerchantAccountId = value; AdditionalData?.Remove("default_merchant_account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_merchant_account_id"); else _explicitNullProperties?.Remove("default_merchant_account_id"); } }
         private string _explicitNullValueDefaultMerchantAccountId = default!;
 #endif
         /// <summary>The merchant_accounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ListMerchantAccountResponse>? MerchantAccounts { get => _explicitNullValueMerchantAccounts; set { _explicitNullValueMerchantAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_accounts"); else _explicitNullProperties?.Remove("merchant_accounts"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ListMerchantAccountResponse>? MerchantAccounts { get => _explicitNullValueMerchantAccounts; set { _explicitNullValueMerchantAccounts = value; AdditionalData?.Remove("merchant_accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_accounts"); else _explicitNullProperties?.Remove("merchant_accounts"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ListMerchantAccountResponse>? _explicitNullValueMerchantAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Keap.OpenApiClient.Models.ListMerchantAccountResponse> MerchantAccounts { get => _explicitNullValueMerchantAccounts; set { _explicitNullValueMerchantAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_accounts"); else _explicitNullProperties?.Remove("merchant_accounts"); } }
+        public List<global::Soenneker.Keap.OpenApiClient.Models.ListMerchantAccountResponse> MerchantAccounts { get => _explicitNullValueMerchantAccounts; set { _explicitNullValueMerchantAccounts = value; AdditionalData?.Remove("merchant_accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_accounts"); else _explicitNullProperties?.Remove("merchant_accounts"); } }
         private List<global::Soenneker.Keap.OpenApiClient.Models.ListMerchantAccountResponse> _explicitNullValueMerchantAccounts = default!;
 #endif
         /// <summary>The next_page_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("next_page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page_token"); else _explicitNullProperties?.Remove("next_page_token"); } }
         private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>
