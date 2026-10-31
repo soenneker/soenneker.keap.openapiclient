@@ -86,7 +86,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Automations.Ids
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Automations.Ids.IdsRequestBuilder.IdsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.infusionsoft.com/crm", "/rest/v2/automations/ids", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

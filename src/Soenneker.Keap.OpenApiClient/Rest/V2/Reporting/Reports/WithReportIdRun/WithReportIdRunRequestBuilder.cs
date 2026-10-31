@@ -88,7 +88,7 @@ namespace Soenneker.Keap.OpenApiClient.Rest.V2.Reporting.Reports.WithReportIdRun
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Keap.OpenApiClient.Rest.V2.Reporting.Reports.WithReportIdRun.WithReportIdRunRequestBuilder.WithReportIdRunRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.infusionsoft.com/crm", "/rest/v2/reporting/reports/{reportId}:run", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
