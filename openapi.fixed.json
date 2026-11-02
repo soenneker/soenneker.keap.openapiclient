@@ -59445,7 +59445,6 @@
           "settings": {}
         }
       },
-      "ShippingMethodSettings": {},
       "GetContactOptionTypesResponse": {
         "type": "object",
         "properties": {
@@ -62336,46 +62335,6 @@
           }
         }
       },
-      "ApplyTagsResponseResults": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        }
-      },
-      "DeleteEmailsResponseResults": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "Map of email ID to deletion result (SUCCESS, NO_PERMISSION, EMAIL_ID_NOT_FOUND)"
-      },
-      "RemoveContactsFromSequenceResponseRemoveFromSequenceResults": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/RemoveContactsFromSequenceResponseRemoveFromSequenceResultsAdditionalProperties"
-        },
-        "description": "A map containing the contact ID as key and the result of removing them from the sequence as value"
-      },
-      "AddContactsToSequenceResponseAddToSequenceResults": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/AddContactsToSequenceResponseAddToSequenceResultsAdditionalProperties"
-        },
-        "description": "A map containing the contact ID as key and the result of adding them to the sequence as value"
-      },
-      "AddToAutomationSequenceResponseAddToAutomationSequenceResults": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/AddToAutomationSequenceResponseAddToAutomationSequenceResultsAdditionalProperties"
-        },
-        "description": "A map containing the contact ID as key and the result of adding them to the sequence as value"
-      },
-      "AddProductOptionListOptionValueRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CreateProductOptionListOption"
-        }
-      },
       "CreateProductImageFormDataRequest": {
         "required": [
           "file"
@@ -62450,25 +62409,6 @@
             "description": "Is public"
           }
         }
-      },
-      "GetHtml200HtmlResponse": {
-        "type": "string",
-        "description": "Raw HTML content of the webform"
-      },
-      "GetUserSignature200Response": {
-        "type": "string"
-      },
-      "GetFileData200Response": {
-        "type": "string",
-        "format": "byte"
-      },
-      "GetFileData1200Response": {
-        "type": "string",
-        "format": "byte"
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
       },
       "AddProductOptionListOptionValueRequestRequestBody": {
         "type": "array",
@@ -67284,94 +67224,6 @@
           ]
         }
       },
-      "RemoveContactsFromSequenceResponseRemoveFromSequenceResultsAdditionalProperties": {
-        "enum": [
-          "SUCCESS",
-          "CONTACT_DOES_NOT_EXIST",
-          "FAILED"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "RemoveContactsFromSequenceResponseRemoveFromSequenceResultsAdditionalProperties",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "SUCCESS",
-              "name": "Success"
-            },
-            {
-              "value": "CONTACT_DOES_NOT_EXIST",
-              "name": "ContactDoesNotExist"
-            },
-            {
-              "value": "FAILED",
-              "name": "Failed"
-            }
-          ]
-        }
-      },
-      "AddContactsToSequenceResponseAddToSequenceResultsAdditionalProperties": {
-        "enum": [
-          "SUCCESS",
-          "ALREADY_IN_SEQUENCE",
-          "CONTACT_DOES_NOT_EXIST",
-          "FAILED"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "AddContactsToSequenceResponseAddToSequenceResultsAdditionalProperties",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "SUCCESS",
-              "name": "Success"
-            },
-            {
-              "value": "ALREADY_IN_SEQUENCE",
-              "name": "AlreadyInSequence"
-            },
-            {
-              "value": "CONTACT_DOES_NOT_EXIST",
-              "name": "ContactDoesNotExist"
-            },
-            {
-              "value": "FAILED",
-              "name": "Failed"
-            }
-          ]
-        }
-      },
-      "AddToAutomationSequenceResponseAddToAutomationSequenceResultsAdditionalProperties": {
-        "enum": [
-          "SUCCESS",
-          "ALREADY_IN_SEQUENCE",
-          "CONTACT_DOES_NOT_EXIST",
-          "FAILED"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "AddToAutomationSequenceResponseAddToAutomationSequenceResultsAdditionalProperties",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "SUCCESS",
-              "name": "Success"
-            },
-            {
-              "value": "ALREADY_IN_SEQUENCE",
-              "name": "AlreadyInSequence"
-            },
-            {
-              "value": "CONTACT_DOES_NOT_EXIST",
-              "name": "ContactDoesNotExist"
-            },
-            {
-              "value": "FAILED",
-              "name": "Failed"
-            }
-          ]
-        }
-      },
       "RemoveContactsFromSequenceResponseRemoveFromSequenceResultsPropertyAdditionalProperties": {
         "enum": [
           "SUCCESS",
@@ -70478,5 +70330,155 @@
     {
       "oauth2": []
     }
-  ]
+  ],
+  "x-client-unused-schemas": {
+    "ShippingMethodSettings": {},
+    "ApplyTagsResponseResults": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "DeleteEmailsResponseResults": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Map of email ID to deletion result (SUCCESS, NO_PERMISSION, EMAIL_ID_NOT_FOUND)"
+    },
+    "RemoveContactsFromSequenceResponseRemoveFromSequenceResults": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/RemoveContactsFromSequenceResponseRemoveFromSequenceResultsAdditionalProperties"
+      },
+      "description": "A map containing the contact ID as key and the result of removing them from the sequence as value"
+    },
+    "AddContactsToSequenceResponseAddToSequenceResults": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/AddContactsToSequenceResponseAddToSequenceResultsAdditionalProperties"
+      },
+      "description": "A map containing the contact ID as key and the result of adding them to the sequence as value"
+    },
+    "AddToAutomationSequenceResponseAddToAutomationSequenceResults": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/AddToAutomationSequenceResponseAddToAutomationSequenceResultsAdditionalProperties"
+      },
+      "description": "A map containing the contact ID as key and the result of adding them to the sequence as value"
+    },
+    "AddProductOptionListOptionValueRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CreateProductOptionListOption"
+      }
+    },
+    "GetHtml200HtmlResponse": {
+      "type": "string",
+      "description": "Raw HTML content of the webform"
+    },
+    "GetUserSignature200Response": {
+      "type": "string"
+    },
+    "GetFileData200Response": {
+      "type": "string",
+      "format": "byte"
+    },
+    "GetFileData1200Response": {
+      "type": "string",
+      "format": "byte"
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "RemoveContactsFromSequenceResponseRemoveFromSequenceResultsAdditionalProperties": {
+      "enum": [
+        "SUCCESS",
+        "CONTACT_DOES_NOT_EXIST",
+        "FAILED"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "RemoveContactsFromSequenceResponseRemoveFromSequenceResultsAdditionalProperties",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "SUCCESS",
+            "name": "Success"
+          },
+          {
+            "value": "CONTACT_DOES_NOT_EXIST",
+            "name": "ContactDoesNotExist"
+          },
+          {
+            "value": "FAILED",
+            "name": "Failed"
+          }
+        ]
+      }
+    },
+    "AddContactsToSequenceResponseAddToSequenceResultsAdditionalProperties": {
+      "enum": [
+        "SUCCESS",
+        "ALREADY_IN_SEQUENCE",
+        "CONTACT_DOES_NOT_EXIST",
+        "FAILED"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "AddContactsToSequenceResponseAddToSequenceResultsAdditionalProperties",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "SUCCESS",
+            "name": "Success"
+          },
+          {
+            "value": "ALREADY_IN_SEQUENCE",
+            "name": "AlreadyInSequence"
+          },
+          {
+            "value": "CONTACT_DOES_NOT_EXIST",
+            "name": "ContactDoesNotExist"
+          },
+          {
+            "value": "FAILED",
+            "name": "Failed"
+          }
+        ]
+      }
+    },
+    "AddToAutomationSequenceResponseAddToAutomationSequenceResultsAdditionalProperties": {
+      "enum": [
+        "SUCCESS",
+        "ALREADY_IN_SEQUENCE",
+        "CONTACT_DOES_NOT_EXIST",
+        "FAILED"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "AddToAutomationSequenceResponseAddToAutomationSequenceResultsAdditionalProperties",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "SUCCESS",
+            "name": "Success"
+          },
+          {
+            "value": "ALREADY_IN_SEQUENCE",
+            "name": "AlreadyInSequence"
+          },
+          {
+            "value": "CONTACT_DOES_NOT_EXIST",
+            "name": "ContactDoesNotExist"
+          },
+          {
+            "value": "FAILED",
+            "name": "Failed"
+          }
+        ]
+      }
+    }
+  }
 }
