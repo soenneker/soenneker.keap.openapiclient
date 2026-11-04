@@ -48,5 +48,13 @@ namespace Soenneker.Keap.OpenApiClient.Models
         #pragma warning disable CS1591
         Discount,
         #pragma warning restore CS1591
+        [EnumMember(Value = "tax_name")]
+        #pragma warning disable CS1591
+        TaxName,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tax_rate")]
+        #pragma warning disable CS1591
+        TaxRate,
+        #pragma warning restore CS1591
     }
 }

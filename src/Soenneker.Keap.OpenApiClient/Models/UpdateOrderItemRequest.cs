@@ -38,6 +38,10 @@ namespace Soenneker.Keap.OpenApiClient.Models
             else if (parseNode.GetChildNode("subscription_plan_description") is { } nullNodeSubscriptionPlanDescription && nullNodeSubscriptionPlanDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionPlanDescription = null;
             if (parseNode.GetChildNode("subscription_plan_id") is null) { _explicitNullValueSubscriptionPlanId = default!; _explicitNullProperties?.Remove("subscription_plan_id"); }
             else if (parseNode.GetChildNode("subscription_plan_id") is { } nullNodeSubscriptionPlanId && nullNodeSubscriptionPlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionPlanId = null;
+            if (parseNode.GetChildNode("tax_name") is null) { _explicitNullValueTaxName = default!; _explicitNullProperties?.Remove("tax_name"); }
+            else if (parseNode.GetChildNode("tax_name") is { } nullNodeTaxName && nullNodeTaxName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxName = null;
+            if (parseNode.GetChildNode("tax_rate") is null) { _explicitNullValueTaxRate = default!; _explicitNullProperties?.Remove("tax_rate"); }
+            else if (parseNode.GetChildNode("tax_rate") is { } nullNodeTaxRate && nullNodeTaxRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -121,6 +125,19 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public string SubscriptionPlanId { get => _explicitNullValueSubscriptionPlanId; set { _explicitNullValueSubscriptionPlanId = value; AdditionalData?.Remove("subscription_plan_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_plan_id"); else _explicitNullProperties?.Remove("subscription_plan_id"); } }
         private string _explicitNullValueSubscriptionPlanId = default!;
 #endif
+        /// <summary>Name/label of the tax being applied. Used only for item_type TAX. Must not be whitespace.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TaxName { get => _explicitNullValueTaxName; set { _explicitNullValueTaxName = value; AdditionalData?.Remove("tax_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_name"); else _explicitNullProperties?.Remove("tax_name"); } }
+        private string? _explicitNullValueTaxName = default!;
+#nullable restore
+#else
+        public string TaxName { get => _explicitNullValueTaxName; set { _explicitNullValueTaxName = value; AdditionalData?.Remove("tax_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_name"); else _explicitNullProperties?.Remove("tax_name"); } }
+        private string _explicitNullValueTaxName = default!;
+#endif
+        /// <summary>The tax rate in percent. Used only for item_type TAX. Must be greater than 0 and less than or equal to 100.</summary>
+        public double? TaxRate { get => _explicitNullValueTaxRate; set { _explicitNullValueTaxRate = value; AdditionalData?.Remove("tax_rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate"); else _explicitNullProperties?.Remove("tax_rate"); } }
+        private double? _explicitNullValueTaxRate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.UpdateOrderItemRequest"/> and sets the default values.
         /// </summary>
@@ -156,6 +173,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "subscription_plan_description", n => { SubscriptionPlanDescription = n.GetStringValue(); } },
                 { "subscription_plan_id", n => { SubscriptionPlanId = n.GetStringValue(); } },
+                { "tax_name", n => { TaxName = n.GetStringValue(); } },
+                { "tax_rate", n => { TaxRate = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -175,6 +194,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteStringValue("subscription_plan_description", SubscriptionPlanDescription);
             writer.WriteStringValue("subscription_plan_id", SubscriptionPlanId);
+            writer.WriteStringValue("tax_name", TaxName);
+            writer.WriteDoubleValue("tax_rate", TaxRate);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

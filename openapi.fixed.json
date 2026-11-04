@@ -49980,6 +49980,10 @@
             "description": "Product details",
             "$ref": "#/components/schemas/OrderItemProduct"
           },
+          "tax": {
+            "description": "If the order item is a tax type, the details about the tax.",
+            "$ref": "#/components/schemas/Tax"
+          },
           "subscription_id": {
             "type": "string",
             "description": "If the order item is a subscription type, this refers to the subscription id that generated the order.",
@@ -50401,6 +50405,22 @@
             "description": "The order index where this plan will be displayed on a page against other plans. Smaller number indicates plan will be displayed higher in the list.",
             "format": "int32",
             "example": 1
+          }
+        }
+      },
+      "Tax": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name/label of the tax being applied. Defaults to the order item\u0027s name if not specified. Cannot be blank.",
+            "example": "Sales tax"
+          },
+          "rate": {
+            "type": "number",
+            "description": "The tax rate in percent. Must be greater than 0 and less than or equal to 100.",
+            "format": "double",
+            "example": 3.55
           }
         }
       },
@@ -51510,6 +51530,10 @@
           "discount": {
             "description": "The discount details. Used only for discount item types; ignored for every other type. When omitted, discount_method defaults to AMOUNT and amount to 0.",
             "$ref": "#/components/schemas/Discount"
+          },
+          "tax": {
+            "description": "The tax details. Only considered when item_type is TAX; ignored for every other type.",
+            "$ref": "#/components/schemas/Tax"
           },
           "product_id": {
             "type": "string",
@@ -57556,6 +57580,17 @@
             "description": "The cost per unit. Used for item_type PRODUCT or SUBSCRIPTION.",
             "format": "double",
             "example": 15.0
+          },
+          "tax_name": {
+            "type": "string",
+            "description": "Name/label of the tax being applied. Used only for item_type TAX. Must not be whitespace.",
+            "example": "Sales tax"
+          },
+          "tax_rate": {
+            "type": "number",
+            "description": "The tax rate in percent. Used only for item_type TAX. Must be greater than 0 and less than or equal to 100.",
+            "format": "double",
+            "example": 3.55
           }
         },
         "description": "order"
@@ -59933,7 +59968,11 @@
             "$ref": "#/components/schemas/CardInfo"
           },
           "status": {
-            "$ref": "#/components/schemas/ExpiredStatus"
+            "$ref": "#/components/schemas/PaymentMethodStatus"
+          },
+          "status_message": {
+            "type": "string",
+            "description": "Additional status details when the payment method status is invalid or otherwise requires explanation."
           }
         }
       },
@@ -66573,19 +66612,44 @@
           ]
         }
       },
-      "ExpiredStatus": {
+      "PaymentMethodStatus": {
         "enum": [
-          "EXPIRED"
+          "ACTIVE",
+          "EXPIRED",
+          "INVALID",
+          "UNKNOWN",
+          "INACTIVE",
+          "DEACTIVATED"
         ],
         "type": "string",
         "description": "Status of the payment method. Fow now, only EXPIRED is supported.",
         "x-ms-enum": {
-          "name": "ExpiredStatus",
+          "name": "PaymentMethodStatus",
           "modelAsString": false,
           "values": [
             {
+              "value": "ACTIVE",
+              "name": "Active"
+            },
+            {
               "value": "EXPIRED",
               "name": "Expired"
+            },
+            {
+              "value": "INVALID",
+              "name": "Invalid"
+            },
+            {
+              "value": "UNKNOWN",
+              "name": "Unknown"
+            },
+            {
+              "value": "INACTIVE",
+              "name": "Inactive"
+            },
+            {
+              "value": "DEACTIVATED",
+              "name": "Deactivated"
             }
           ]
         }
@@ -68563,7 +68627,9 @@
           "product_id",
           "subscription_plan_id",
           "subscription_plan_description",
-          "discount"
+          "discount",
+          "tax_name",
+          "tax_rate"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -68609,6 +68675,14 @@
             {
               "value": "discount",
               "name": "Discount"
+            },
+            {
+              "value": "tax_name",
+              "name": "TaxName"
+            },
+            {
+              "value": "tax_rate",
+              "name": "TaxRate"
             }
           ]
         }

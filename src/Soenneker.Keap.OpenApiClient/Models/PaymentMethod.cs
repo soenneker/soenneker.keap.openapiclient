@@ -35,6 +35,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
             else if (parseNode.GetChildNode("payment_method_type") is { } nullNodePaymentMethodType && nullNodePaymentMethodType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethodType = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
             else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("status_message") is null) { _explicitNullValueStatusMessage = default!; _explicitNullProperties?.Remove("status_message"); }
+            else if (parseNode.GetChildNode("status_message") is { } nullNodeStatusMessage && nullNodeStatusMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMessage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -99,8 +101,18 @@ namespace Soenneker.Keap.OpenApiClient.Models
         public global::Soenneker.Keap.OpenApiClient.Models.CardPaymentMethodType? PaymentMethodType { get => _explicitNullValuePaymentMethodType; set { _explicitNullValuePaymentMethodType = value; AdditionalData?.Remove("payment_method_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method_type"); else _explicitNullProperties?.Remove("payment_method_type"); } }
         private global::Soenneker.Keap.OpenApiClient.Models.CardPaymentMethodType? _explicitNullValuePaymentMethodType = default!;
         /// <summary>Status of the payment method. Fow now, only EXPIRED is supported.</summary>
-        public global::Soenneker.Keap.OpenApiClient.Models.ExpiredStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
-        private global::Soenneker.Keap.OpenApiClient.Models.ExpiredStatus? _explicitNullValueStatus = default!;
+        public global::Soenneker.Keap.OpenApiClient.Models.PaymentMethodStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Keap.OpenApiClient.Models.PaymentMethodStatus? _explicitNullValueStatus = default!;
+        /// <summary>Additional status details when the payment method status is invalid or otherwise requires explanation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StatusMessage { get => _explicitNullValueStatusMessage; set { _explicitNullValueStatusMessage = value; AdditionalData?.Remove("status_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_message"); else _explicitNullProperties?.Remove("status_message"); } }
+        private string? _explicitNullValueStatusMessage = default!;
+#nullable restore
+#else
+        public string StatusMessage { get => _explicitNullValueStatusMessage; set { _explicitNullValueStatusMessage = value; AdditionalData?.Remove("status_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_message"); else _explicitNullProperties?.Remove("status_message"); } }
+        private string _explicitNullValueStatusMessage = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Keap.OpenApiClient.Models.PaymentMethod"/> and sets the default values.
         /// </summary>
@@ -134,7 +146,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
                 { "merchant_account_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.PaymentMethodMerchantAccountType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMerchantAccountType = default; _explicitNullProperties?.Remove("merchant_account_type"); AdditionalData["merchant_account_type"] = unknown; } else { MerchantAccountType = parsed; AdditionalData.Remove("merchant_account_type"); } } },
                 { "payment_method_id", n => { PaymentMethodId = n.GetStringValue(); } },
                 { "payment_method_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CardPaymentMethodType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePaymentMethodType = default; _explicitNullProperties?.Remove("payment_method_type"); AdditionalData["payment_method_type"] = unknown; } else { PaymentMethodType = parsed; AdditionalData.Remove("payment_method_type"); } } },
-                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ExpiredStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.PaymentMethodStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "status_message", n => { StatusMessage = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -152,7 +165,8 @@ namespace Soenneker.Keap.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.PaymentMethodMerchantAccountType>("merchant_account_type", MerchantAccountType);
             writer.WriteStringValue("payment_method_id", PaymentMethodId);
             writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.CardPaymentMethodType>("payment_method_type", PaymentMethodType);
-            writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.ExpiredStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Keap.OpenApiClient.Models.PaymentMethodStatus>("status", Status);
+            writer.WriteStringValue("status_message", StatusMessage);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
