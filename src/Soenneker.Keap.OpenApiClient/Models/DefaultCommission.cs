@@ -95,7 +95,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "dollar_amount", n => { DollarAmount = n.GetDoubleValue(); } },
                 { "level_1", n => { Level1 = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.CommissionItem>(global::Soenneker.Keap.OpenApiClient.Models.CommissionItem.CreateFromDiscriminatorValue); } },

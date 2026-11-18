@@ -200,7 +200,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "affiliate", n => { Affiliate = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate>(global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleAffiliate.CreateFromDiscriminatorValue); } },
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication>(global::Soenneker.Keap.OpenApiClient.Models.ApplicationConfigurationModuleApplication.CreateFromDiscriminatorValue); } },

@@ -109,7 +109,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValueObject>(global::Soenneker.Keap.OpenApiClient.Models.CustomFieldValueObject.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "is_pinned", n => { IsPinned = n.GetBoolValue(); } },

@@ -83,7 +83,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "email_opt_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Keap.OpenApiClient.Models.EmailAddressEmailOptStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEmailOptStatus = default; _explicitNullProperties?.Remove("email_opt_status"); AdditionalData["email_opt_status"] = unknown; } else { EmailOptStatus = parsed; AdditionalData.Remove("email_opt_status"); } } },

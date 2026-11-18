@@ -102,7 +102,7 @@ namespace Soenneker.Keap.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "category", n => { Category = n.GetObjectValue<global::Soenneker.Keap.OpenApiClient.Models.CategoryReference>(global::Soenneker.Keap.OpenApiClient.Models.CategoryReference.CreateFromDiscriminatorValue); } },
                 { "create_time", n => { CreateTime = n.GetDateTimeOffsetValue(); } },
